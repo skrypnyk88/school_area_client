@@ -7,7 +7,8 @@ var groupService = require('./../common/services/group.service.js');
 var staticModule = require('./../static/static.module.js');
 var myDayReportModule = require('./../myDayReport/myDayReport.module.js');
 var toggleMessage = require('./../common/services/toggleMessage/toggleMessage.service.js');
-
+var bottleReportModule = require('.././bottle_report/bottle_report.module.js');
+	  
 require('../../css/style.scss');
 
 module.exports = angular
@@ -20,7 +21,8 @@ module.exports = angular
     groupService.name,
     staticModule.name,
     myDayReportModule.name,
-    toggleMessage.name
+    toggleMessage.name,
+    bottleReportModule.name
   ])
   .config(['$translateProvider', function($translateProvider) {
     $translateProvider.useStaticFilesLoader({

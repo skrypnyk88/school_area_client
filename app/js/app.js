@@ -1,6 +1,6 @@
-var angular = require('angular'),
-    mainModule = require('./main/main.module.js'),
-    vendorModule = require('./requirements.js');
+var angular = require('angular');
+var mainModule = require('./main/main.module.js');
+var vendorModule = require('./requirements.js');
 
 angular
   .module('schoolArea', [

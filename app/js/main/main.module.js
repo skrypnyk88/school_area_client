@@ -1,11 +1,11 @@
-var mainComponent = require('./components/main.component.js'),
-    mainRoute = require('./main.route.js'),
-    presenceModule = require('./../presence/presence.module.js');
+var mainComponent = require('./components/main.component.js');
+var mainRoute = require('./main.route.js');
+var presenceReportModule = require('./../presenceReport/presenceReport.module.js');
 require('../../css/style.scss');
 
 module.exports = angular
-  .module('schoolArea.main', [
+  .module('main', [
     mainComponent.name,
     mainRoute.name,
-    presenceModule.name
+    presenceReportModule.name
   ]);

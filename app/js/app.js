@@ -1,6 +1,7 @@
 var angular = require('angular'),
-    mainModule = require('./main/main.module.js'),
+	mainModule = require('./main/main.module.js'),
     vendorModule = require('./requirements.js');
+    
 
 angular
   .module('school_area', [
@@ -10,3 +11,4 @@ angular
   .config(function($locationProvider) {
     $locationProvider.html5Mode(true);
   });
+  

@@ -9,11 +9,12 @@
     "run": "webpack -p"
   },
   "devDependencies": {
-    "css-loader": "^0.27.3",
-    "file-loader": "^0.10.1",
+    "css-loader": "^0.28.0",
+    "file-loader": "^0.11.1",
     "node-sass": "^4.5.0",
+    "sass-lint": "^1.10.2",
     "sass-loader": "^6.0.3",
-    "style-loader": "^0.14.1",
+    "style-loader": "^0.16.1",
     "url-loader": "^0.5.8",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.2"
@@ -22,6 +23,9 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.0",
-    "angular-ui-router": "^0.3.2"
+    "angular-animate": "^1.6.4",
+    "angular-aria": "^1.6.4",
+    "angular-material": "^1.1.3",
+    "angular-ui-router": "^0.4.2"
   }
 }

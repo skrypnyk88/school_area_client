@@ -1,10 +1,10 @@
 module.exports = {
-  entry: './app/js/app.js',
+  entry: "./app/js/app.js",
   output: {
     path: __dirname,
-    filename: 'bundle.js'
+    filename: "bundle.js"
   },
-
+  
   module: {
 
     loaders: [{
@@ -15,7 +15,7 @@ module.exports = {
       loader: 'url-loader?limit=50000&name=app/img/[name].[ext]'
     }, {
       test: /\.css$/,
-      loader: 'style-loader!css-loader'
+      loader: "style-loader!css-loader"
     }]
 
   },

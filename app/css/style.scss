@@ -1,6 +1,261 @@
-h1 {
- color:yellow;
-}
-.center{
+@import './../../node_modules/angular-material/angular-material.css';
+
+body {
   text-align: center;
+}
+
+.header {
+  $font-size: 45px;
+  $cursor: pointer;
+  $color: #95c948;
+
+  .logo {
+    width: 270px;
+
+    img {
+      height: 70px;
+    }
+  }
+
+  md-toolbar {
+    background: white;
+  }
+
+  md-select {
+    background-color: white;
+    border: 1px solid #d7d7d7;
+    border-radius: 10px;
+    font-size: 14px;
+    height: 38px;
+    padding: 0 10px;
+
+    &:hover {
+      border: 1px solid #428bca;
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    }
+  }
+
+  .today {
+    color: $color;
+    cursor: $cursor;
+    font-size: $font-size;
+    margin: 0 10px;
+
+  }
+
+  .chevron {
+    cursor: $cursor;
+    font-size: $font-size;
+  }
+
+  .avatar {
+    border-radius: 50%;
+    height: 50px;
+    margin: 0 8px 0 0;
+    min-width: 50px;
+    width: 50px;
+  }
+
+  .user-button {
+    height: 64px;
+    margin: 0;
+    padding: 0 16px;
+    text-transform: none;
+  }
+
+  .username {
+    margin: 10px;
+  }
+
+  .number {
+    color: $color;
+    font-size: 30px;
+  }
+
+  .month {
+    color: $color;
+    font-size: 20px;
+  }
+
+  .day {
+    color: #b1b1b1;
+  }
+
+  .data {
+    margin: 0 10px 0 30px;
+    width: 100px;
+  }
+
+  .date {
+    margin-left: 15px;
+  }
+}
+
+nav {
+  border: 1px solid #ebebeb;
+  max-width: 270px;
+
+  a {
+    color: #9c9d9d;
+    font-size: 17px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+
+    .journal {
+      background-color: #92c948;
+      cursor: pointer;
+      margin-bottom: 15px;
+      padding: 3px 0;
+      text-align: left;
+      width: 100%;
+
+      a {
+        color: #fff;
+        display: block;
+        padding: 15px 0 15px 90px;
+        position: relative;
+        text-decoration: none;
+
+        &::before {
+          background-image: url('../img/icon/journal.svg');
+          color: white;
+          content: ' ';
+          display: block;
+          height: 40px;
+          left: 35px;
+          position: absolute;
+          top: 5px;
+        }
+      }
+    }
+
+    ul {
+      .active {
+        border-left: 5px solid #92c948;
+        max-width: 263px;
+
+        a {
+          color: #92c948;
+          display: block;
+          padding: 10px 0 10px 125px;
+          position: relative;
+        }
+      }
+
+      li {
+        padding-top: 5px;
+        position: relative;
+        width: 100%;
+
+        &:hover {
+          background-color: #eee;
+        }
+
+        a {
+          display: block;
+          padding: 10px 0 10px 130px;
+          position: relative;
+
+          &::before {
+            content: ' ';
+            display: block;
+
+
+            height: 34px;
+            position: absolute;
+            right: 150px;
+            top: 0;
+            width: 34px;
+          }
+        }
+
+        &:first-of-type {
+          a {
+            &::before {
+              background-image: url('../img/icon/attendance.svg');
+            }
+          }
+        }
+
+        &:nth-of-type(2) {
+          a {
+            &::before {
+              background-image: url('../img/icon/health.svg');
+            }
+          }
+        }
+
+        &:nth-of-type(3) {
+          a {
+            &::before {
+              background-image: url('../img/icon/bottle.svg');
+            }
+          }
+        }
+
+        &:nth-of-type(4) {
+          a {
+            &::before {
+              background-image: url('../img/icon/meals.svg');
+            }
+          }
+        }
+
+        &:nth-of-type(5) {
+          a {
+            &::before {
+              background-image: url('../img/icon/potty.svg');
+            }
+          }
+        }
+
+        &:nth-of-type(6) {
+          a {
+            &::before {
+              background-image: url('../img/icon/nap.svg');
+            }
+          }
+        }
+
+        &:nth-of-type(7) {
+          a {
+            &::before {
+              background-image: url('../img/icon/reward.svg');
+            }
+          }
+        }
+
+        &:nth-of-type(8) {
+          a {
+            &::before {
+              background-image: url('../img/icon/supplies.svg');
+            }
+          }
+        }
+
+        &:nth-of-type(9) {
+          a {
+            &::before {
+              background-image: url('../img/icon/ourday.svg');
+              color: purple;
+            }
+          }
+        }
+
+        &:last-of-type {
+          a {
+            &::before {
+              background-image: url('../img/icon/myday.svg');
+              color: blue;
+            }
+          }
+        }
+      }
+    }
+  }
 }

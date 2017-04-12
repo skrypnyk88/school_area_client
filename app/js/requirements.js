@@ -1,5 +1,5 @@
 module.exports = angular
-  .module('school_area.vendor', [
+  .module('schoolArea.vendor', [
     require('angular-ui-router'),
     require('angular-resource'),
     require('angular-material')

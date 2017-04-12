@@ -1,5 +1,5 @@
 module.exports = angular
-  .module('school_area.main.component', [])
+  .module('main.component', [])
   .component('mainComponent', {
     templateUrl: './app/js/main/components/main.template.html',
     controller: MainController
@@ -8,3 +8,4 @@ module.exports = angular
 function MainController() {
   var ctrl = this;
 };
+

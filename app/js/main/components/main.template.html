@@ -1,4 +1,85 @@
-<div class="center">
-  <h1>Hello school_area</h1>
-  <img src="./app/img/neighbors.jpg" alt="">
+<div class="header">
+  <md-toolbar id="toolbar" class="md-menu-toolbar" layout="row">
+  <div class="logo"> <img  src="app/img/profile/logo.jpg" alt="logo"> </div>
+  <div flex layout="row" layout-align="space-around center">
+    <md-select flex="10" id="select" ng-model="classes" placeholder="Class A" class="md-no-underline">
+    <md-option value="class a">Class A</md-option>
+    <md-option value="class b">Class B</md-option>
+    <md-option value="class c">Class C</md-option>
+    <md-option value="class d">Class D</md-option>
+    </md-select>
+    <div class="icon-wrapper" layout="row" role="button">
+      <a ui-sref="">
+        <md-icon class="today">today</md-icon>
+      </a>
+      <a ui-sref="" ng-click="pastDate()" role="button">
+        <md-icon id="chevron_left" class="chevron">chevron_left</md-icon>
+      </a>
+      <div class="data" layout="row" layout-align="space-around center">
+        <span class="number">{{selectedDate.getDate() + 1}}</span>
+        <div class="date" layout="column">
+          <span class="month">{{monthNames[selectedDate.getMonth()] }}</span>
+          <span class="day">{{dayNames[selectedDate.getDay()] }}</span>
+        </div>
+      </div>
+      <a ui-sref="" ng-click="nextDate()" ng-click="showMonth()" role="button">
+        <md-icon id="chevron_right" class="chevron">chevron_right</md-icon>
+      </a>
+    </div>
+    <md-button class="user-button" layout="row" layout-align="center center">
+    <img md-menu-align-target class="avatar" src="app/img/profile/educator.svg" alt="profile">
+    <span class="username">Teacher</span>
+    <md-menu md-position-mode="target-right bottom">
+    <md-icon ng-click="$mdOpenMenu()">expand_more</md-icon>
+    <md-menu-content width="3">
+    <md-menu-item>
+    <md-button>Profile</md-button>
+    </md-menu-item>
+    <md-menu-divider role="separator"></md-menu-divider>
+    <md-menu-item>
+    <md-button>Sign out</md-button>
+    </md-menu-item>
+    </md-menu-content>
+    </md-menu>
+    </md-button>
+  </div>
+  </md-toolbar>
+</div>
+<div layout="row">
+  <nav flex>
+    <ul>
+      <li class="journal">
+        <a ui-sref="#">
+          Journal
+        </a>
+      </li>
+      <li>
+        <ul>
+          <li class="active">
+            <a ui-sref="main.presence">
+              Attendance
+            </a>
+          </li>
+          <li>
+            <a ui-sref="#">
+              Health
+            </a>
+          </li>
+          <li>
+            <a ui-sref="#">
+              Bottle
+            </a>
+          </li>
+          <li><a ui-sref="#">Meals</a></li>
+          <li><a ui-sref="#">Potty</a></li>
+          <li><a ui-sref="#">Nap</a></li>
+          <li><a ui-sref="#">Achivements</a></li>
+          <li><a ui-sref="#">Supplies</a></li>
+          <li><a ui-sref="#">Our Day</a></li>
+          <li><a ui-sref="#">My Day</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+<section flex ui-view></section>
 </div>

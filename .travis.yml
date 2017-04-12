@@ -1,8 +1,14 @@
 language: node_js
 
+node_js:
+  - "7"
+
 before_script:
   - npm install
   - npm install jscs -g
+  - npm install -g sass-lint
 
 script:
   - jscs app
+  - sass-lint 'app/**/*.scss' -v -q
+  - sass-lint 'app/**/*.css' -v -q

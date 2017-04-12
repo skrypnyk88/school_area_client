@@ -27,7 +27,7 @@
     "disallowMixedSpacesAndTabs": true,
     "disallowTrailingWhitespace": true,
     "disallowSpaceAfterPrefixUnaryOperators": true,
-    "disallowMultipleVarDecl": false,
+    "disallowMultipleVarDecl": true,
     "disallowKeywordsOnNewLine": ["else"],
 
     "requireSpaceAfterKeywords": [

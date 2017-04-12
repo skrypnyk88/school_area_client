@@ -1,11 +1,13 @@
-var mainComponent = require('./components/main.component.js'),
-    mainRoute = require('./main.route.js'),
-    bottleModule = require('.././bottle_report/bottle_report.module.js');
-	require('../../css/style.scss');
+var mainComponent = require('./components/main.component.js');
+var mainRoute = require('./main.route.js');
+var presenceReportModule = require('./../presenceReport/presenceReport.module.js');
+var bottleReportModule = require('.././bottle_report/bottle_report.module.js');
+require('../../css/style.scss');
 
 module.exports = angular
-  .module('school_area.main', [
+  .module('main', [
     mainComponent.name,
     mainRoute.name,
-    bottleModule.name
+    presenceReportModule.name,
+    bottleReportModule.name
   ]);

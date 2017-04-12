@@ -21,9 +21,14 @@ var myDayReportModule = require('./../myDayReport/myDayReport.module.js');
 =======
 =======
 var toggleMessage = require('./../common/services/toggleMessage/toggleMessage.service.js');
+<<<<<<< 6d4cd144a329ea7a46ad55d43263a7810d77de69
 >>>>>>> LVRUBYM-351: Add toggleMessage service
 
 >>>>>>> LVRUBYM-328:added files
+=======
+var bottleReportModule = require('.././bottle_report/bottle_report.module.js');
+	  
+>>>>>>> LVRUBYM-221:Add module,components,services,resources to bottle report
 require('../../css/style.scss');
 
 module.exports = angular
@@ -49,8 +54,13 @@ module.exports = angular
 >>>>>>> LVRUBYM-242:added component
 =======
     myDayReportModule.name,
+<<<<<<< 6d4cd144a329ea7a46ad55d43263a7810d77de69
     toggleMessage.name
 >>>>>>> LVRUBYM-351: Add toggleMessage service
+=======
+    toggleMessage.name,
+    bottleReportModule.name
+>>>>>>> LVRUBYM-221:Add module,components,services,resources to bottle report
   ])
 <<<<<<< 5f08931b1824729a65c08636eb4467c854ebded3
   .config(['$mdThemingProvider',

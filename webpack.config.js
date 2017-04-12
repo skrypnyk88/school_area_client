@@ -1,11 +1,15 @@
 var path = require('path');
 module.exports = {
-  entry: './app/js/app.js',
+  entry: "./app/js/app.js",
   output: {
     path: path.join(__dirname, 'dist'),
     publicPath: 'dist/',
     filename: 'bundle.js'
   },
+<<<<<<< 6d4cd144a329ea7a46ad55d43263a7810d77de69
+=======
+  
+>>>>>>> LVRUBYM-221:Add module,components,services,resources to bottle report
   module: {
 
     loaders: [{
@@ -16,7 +20,7 @@ module.exports = {
       loader: 'url-loader?limit=50000&name=app/img/[name].[ext]'
     }, {
       test: /\.css$/,
-      loader: 'style-loader!css-loader'
+      loader: "style-loader!css-loader"
     }]
   },
 };

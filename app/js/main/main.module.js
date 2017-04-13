@@ -4,6 +4,8 @@ var loginModule = require('./../login/login.module.js');
 var presenceReportModule = require('./../presenceReport/presenceReport.module.js');
 var myDayReportModule = require('./../myDayReport/myDayReport.module.js');
 var studentModule = require('./../student/student.module.js');
+var healthReportModule = require('./../healthReport/healthReport.module.js');
+
 require('../../css/style.scss');
 
 module.exports = angular
@@ -13,7 +15,9 @@ module.exports = angular
     loginModule.name,
     presenceReportModule.name,
     myDayReportModule.name,
-    studentModule.name
+    studentModule.name,
+    healthReportModule.name
+
   ])
   .config(function($mdThemingProvider) {
     $mdThemingProvider
@@ -23,3 +27,4 @@ module.exports = angular
       .warnPalette('red')
       .backgroundPalette('grey');
   });
+

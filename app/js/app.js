@@ -4,6 +4,7 @@ var constantsModule = require('./common/constants.js');
 var tokenInjector = require('./common/services/tokenInjector.service.js');
 var vendorModule = require('./requirements.js');
 
+
 angular
   .module('schoolArea', [
     vendorModule.name,

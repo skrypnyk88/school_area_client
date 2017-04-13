@@ -1,6 +1,7 @@
 var authService = require('./../../common/services/auth.service.js');
 
 module.exports = angular
+
   .module('main.component', [
     authService.name
   ])

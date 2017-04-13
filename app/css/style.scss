@@ -739,7 +739,6 @@ button {
   display: inline-block;
   float: left;
   width: 300px;
-  height: 105px;
 }
 
 .display {
@@ -1131,6 +1130,22 @@ md-toast {
 }
 
 
+.report-teacher {
+  background: none;
+  border: none;
+
+  .upload-photo-teacher {
+    height: 170px;
+    width: 170px;
+
+    label {
+      padding-top: 45%;
+    }
+  }
+}
+
+
+
 // Bottle report styles fix //
 
 .report,
@@ -1178,6 +1193,7 @@ md-input-container:last-of-type {
 md-card-content {
   padding-bottom: 0;
 }
+
 // Style for profile component
 
 .profile-title {

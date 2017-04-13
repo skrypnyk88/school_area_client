@@ -5,7 +5,7 @@ var presenceReportModule = require('./../presenceReport/presenceReport.module.js
 var studentModule = require('./../student/student.module.js');
 var groupService = require('./../common/services/group.service.js');
 var staticModule = require('./../static/static.module.js');
-
+var myDayReportModule = require('./../myDayReport/myDayReport.module.js');
 require('../../css/style.scss');
 
 module.exports = angular
@@ -16,7 +16,8 @@ module.exports = angular
     presenceReportModule.name,
     studentModule.name,
     groupService.name,
-    staticModule.name
+    staticModule.name,
+    myDayReportModule.name
   ])
   .config(function($mdThemingProvider) {
     $mdThemingProvider

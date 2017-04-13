@@ -7,11 +7,15 @@ var presenceReportModule = require('./../presenceReport/presenceReport.module.js
 var studentModule = require('./../student/student.module.js');
 var groupService = require('./../common/services/group.service.js');
 var staticModule = require('./../static/static.module.js');
+<<<<<<< b58d66a93707ee896c6d162c5c842ea61db242b2
 var toggleMessage = require('./../common/services/toggleMessage/toggleMessage.service.js');
 var bottleReportModule = require('.././bottleReport/bottleReport.module.js');
 var sideBarModule = require('./../sidebar/sidebar.module.js');
 var studentService = require('./../common/services/student.service.js');
 
+=======
+var myDayReportModule = require('./../myDayReport/myDayReport.module.js');
+>>>>>>> LVRUBYM-242:added component
 require('../../css/style.scss');
 
 module.exports = angular
@@ -23,12 +27,17 @@ module.exports = angular
     studentModule.name,
     bottleReportModule.name,
     groupService.name,
+<<<<<<< b58d66a93707ee896c6d162c5c842ea61db242b2
     toggleMessage.name,
     staticModule.name,
     sideBarModule.name,
     studentService.name,
     forgotPasswordModule.name,
     resetPasswordModule.name
+=======
+    staticModule.name,
+    myDayReportModule.name
+>>>>>>> LVRUBYM-242:added component
   ])
   .config(['$mdThemingProvider',
     function($mdThemingProvider) {

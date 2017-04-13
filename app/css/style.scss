@@ -27,6 +27,27 @@ main {
   color: white;
 }
 
+<<<<<<< b58d66a93707ee896c6d162c5c842ea61db242b2
+=======
+#myDayReport {
+  margin-top: 15px;
+  border: 1px solid red;
+  border-radius: 7px;
+
+  textarea {
+    border:3px solid black;
+    border-radius: 10px;
+    margin: auto auto;
+  }
+
+  button {
+    margin: auto 40px;
+    height: 50px;
+    border-radius: 5px; 
+  }   
+}
+
+>>>>>>> LVRUBYM-242:added component
 .header {
   margin: 10px 30px 0;
   $font-size: 45px;

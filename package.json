@@ -23,6 +23,7 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.0",
+    "angular-resource": "^1.6.4",
     "angular-animate": "^1.6.4",
     "angular-aria": "^1.6.4",
     "angular-local-storage": "^0.5.2",

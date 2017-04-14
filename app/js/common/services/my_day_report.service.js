@@ -3,10 +3,10 @@ module.exports = angular
   .module('myDayReport.service', [
     Resource.name
     ])
-  .factory('Report', Report);
+  .factory('MyDayReport', MyDayReport);
 
-Report.$inject = ['myDayReportResource'];
-function Report(myDayReportResource) {
+MyDayReport.$inject = ['myDayReportResource'];
+function MyDayReport(myDayReportResource) {
   var service = {
     getReports: getReports,
     updateReports: updateReports

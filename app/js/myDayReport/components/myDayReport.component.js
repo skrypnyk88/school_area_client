@@ -1,8 +1,8 @@
-var service = require('./../../common/services/my_day_report.service');
+var myDayReportservice = require('./../../common/services/my_day_report.service');
 
 module.exports = angular
   .module('myDayReport.component', [
-    service.name
+    myDayReportservice.name
   ])
   .component('myDayComponent', {
     templateUrl: './app/js/myDayReport/components/myDayReport.template.html',
@@ -19,8 +19,9 @@ function MyDayReportController(MyDayReport) {
     }
     );
 
-  ctrl.myDayReportUpdate = function(note, id) {
-    MyDayReport.updateReports(note, id).then(function() {
+  ctrl.myDayReportUpdate = function(student) {
+    MyDayReport.updateReports(student.my_day_report_note, student.my_day_report_id)
+      .then(function(note) {
       return note;
     });
   };

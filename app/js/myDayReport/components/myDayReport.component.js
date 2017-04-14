@@ -12,6 +12,7 @@ module.exports = angular
 MyDayReportController.$inject = ['MyDayReport'];
 function MyDayReportController(MyDayReport) {
   var ctrl = this;
+  ctrl.photo = 'app/img/photo.png';
   ctrl.students = [];
   MyDayReport.getReports().then(
     function(data) {

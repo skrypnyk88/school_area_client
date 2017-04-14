@@ -309,3 +309,89 @@ login-component {
   }
 }
 
+.health-report {
+  a:focus,
+  a:visited,
+  a:hover,
+  a:active {
+    text-decoration: none;
+}
+
+  .groupX {
+    background-color: #92c948;
+    color: rgb(49, 46, 46);
+    font-size: 16px;
+    font-weight: 400;
+    margin: 20px 0;
+    min-width: 100px;
+    padding: 3px 15px;
+    text-transform: none;
+  }
+
+  .md-button.left {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .md-button.right {
+    border-radius: 0 10px 10px 0;
+  }
+
+  .md-button:not([disabled]):hover {
+    background-color: rgba(193, 193, 193, .96);
+    color: rgba(44, 65, 164, .96);
+    transition: .3s;
+  }
+
+  .double-button {
+    margin-top: 0;
+  }
+  input,
+  textarea {
+    outline: none;
+  }
+
+  .text-area-health-note {
+    border-radius: 10px;
+    margin-top: 0;
+    resize: none;
+  }
+
+  .update-note-button {
+    background-color: #92c948;
+    border-radius: 10px;
+    color: rgb(49, 46, 46);
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 40px;
+    margin-top: 0;
+    text-transform: none;
+    &:hover {
+      background-color: #00bff3;
+    }
+  }
+
+  .view-journal-button {
+    background-color: #00bff3;
+    border: 1px solid #00bff3;
+    border-radius: 10px;
+    color: rgb(49, 46, 46);
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 40px;
+    text-transform: none;
+  }
+  .md-button {
+    &:hover {
+      background-color: #00bff3;
+    }
+  }
+
+  .avatar {
+    border-radius: 50%;
+    height: 50px;
+    margin: 0 8px 0 0;
+    min-width: 50px;
+    width: 50px;
+  }
+}
+

@@ -278,15 +278,12 @@ nav {
   }
 }
 
-//  Login component  //
-
-login-component {
-  .hero-container{
-    background-image: url('../img/misc/pattern.png');
-  }
-
-  .login-form {
-    width: 300px;
-    margin-top: 15vh;
+potty-component {
+  .btn {
+    background-color: #92c948;
+    border: 1px solid #92c948;
+    border-radius: 10px;
+    color: #fff;
+    width: 150px;
   }
 }

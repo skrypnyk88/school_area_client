@@ -3,9 +3,7 @@ module.exports = angular
   .component('studentComponent', {
     templateUrl: './app/js/student/components/student.template.html',
     bindings: {
-      name: '=',
-      surname: '=',
-      photo: '='
+      student: '='
     },
     controller: StudentController
   });

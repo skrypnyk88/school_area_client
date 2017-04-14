@@ -5,10 +5,10 @@ module.exports = angular
   ])
   .factory('myDayReportResource', myDayReportResource);
 
-myDayReportResource.$inject = ['$resource', 'constants'];
+myDayReportResource.$inject = ['$resource', 'globalSettings'];
 
-function myDayReportResource($resource, constants) {
-  return $resource(constants.URL + '/groups/1/my_day_reports/:id.json', {id: '@id'},
+function myDayReportResource($resource, globalSettings) {
+  return $resource(globalSettings.SERVER_URL_V1 + '/groups/1/my_day_reports/:id.json', {id: '@id'},
     {
       'update': {method: 'PUT'}
     });

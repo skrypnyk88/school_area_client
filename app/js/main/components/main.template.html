@@ -5,7 +5,6 @@
     </div>
 
     <div flex layout="row" layout-align="space-around center">
-
       <md-select ng-model="$ctrl.currentGroupDay.group_id" >
         <md-option ng-value="group.id" ng-repeat="group in $ctrl.groups">
           {{ group.name }}
@@ -64,7 +63,7 @@
           <li><a ui-sref="#">Achivements</a></li>
           <li><a ui-sref="#">Supplies</a></li>
           <li><a ui-sref="#">Our Day</a></li>
-          <li><a ui-sref="main.my-day-report">My Day</a></li>
+          <li><a ui-sref="main.myDayReport">My Day</a></li>
         </ul>
       </li>
     </ul>

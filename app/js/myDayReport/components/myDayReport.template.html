@@ -1,9 +1,8 @@
 <div id="myDayReport" layout="row" ng-repeat="student in $ctrl.students">
-    <div flex="25"></div>
-    <md-input-container flex="55" class="md-block">
-        <textarea ng-model="student.my_day_report_note" rows="3"></textarea>
-    </md-input-container>
-    <md-button flex="20" class="md-raised md-primary" 
-    ng-click="$ctrl.myDayReportUpdate(student.my_day_report_note,
-    student.my_day_report_id)">Update note</md-button>
+  <div flex="25"></div>
+  <md-input-container flex="55" class="md-block">
+    <textarea ng-model="student.my_day_report_note" rows="3"></textarea>
+  </md-input-container>
+  <md-button flex="20" class="md-raised md-primary" 
+    ng-click="$ctrl.myDayReportUpdate(student)">Update note</md-button>
 </div>

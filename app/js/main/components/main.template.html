@@ -3,7 +3,12 @@
       <img src="app/img/profile/logo.gif" alt="logo">
     </div>
 
+<<<<<<< 6feb0511f6dcab6d3fd1e13b02059581c94251e7
       <md-select class="group-select" ng-model="$ctrl.currentGroupDay.group_id" >
+=======
+    <div flex layout="row" layout-align="space-around center">
+      <md-select ng-model="$ctrl.currentGroupDay.group_id" >
+>>>>>>> LVRUBYM-242:deleted console.log, changed one module name, factory name ,formatted  main.template.html
         <md-option ng-value="group.id" ng-repeat="group in $ctrl.groups">
           {{ group.name }}
         </md-option>
@@ -81,7 +86,7 @@
           <li><a ui-sref="#">Achivements</a></li>
           <li><a ui-sref="#">Supplies</a></li>
           <li><a ui-sref="#">Our Day</a></li>
-          <li><a ui-sref="main.my-day-report">My Day</a></li>
+          <li><a ui-sref="main.myDayReport">My Day</a></li>
         </ul>
       </li>
     </ul>

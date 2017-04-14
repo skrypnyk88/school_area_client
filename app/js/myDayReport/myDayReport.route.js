@@ -3,7 +3,7 @@ module.exports = angular
   .config(function($stateProvider) {
     $stateProvider.state({
       url: '/my-day-report',
-      name: 'main.my-day-report',
+      name: 'main.myDayReport',
       template: '<my-day-component></my-day-component>'
     });
   });

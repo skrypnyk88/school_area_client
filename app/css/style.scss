@@ -25,21 +25,21 @@ html, body, main {
 }
 
 #myDayReport {
-  margin-top: 15px;
   border: 1px solid red;
   border-radius: 7px;
+  margin-top: 15px;
 
   textarea {
-    border:3px solid black;
+    border: 3px solid black;
     border-radius: 10px;
-    margin: auto auto;
+    margin: auto;
   }
 
   button {
-    margin: auto 40px;
+    border-radius: 5px;
     height: 50px;
-    border-radius: 5px; 
-  }   
+    margin: auto 40px;
+  }
 }
 
 .header {

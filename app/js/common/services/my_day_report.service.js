@@ -21,7 +21,6 @@ function MyDayReport(myDayReportResource) {
 
   function updateReports(note, id) {
     return myDayReportResource.update({report: {note: note},id: id}).$promise.then(function(note) {
-      console.log(note);
       return note;
     });
   };

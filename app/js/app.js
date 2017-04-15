@@ -14,8 +14,8 @@ angular
     valuesModule.name,
     mainModule.name,
     tokenInjector.name,
-    healthReportResourceModule.name,
-    healthReportModule.name
+    healthReportModule.name,
+    healthReportResourceModule.name
   ])
  .config(['$locationProvider', '$httpProvider', 'localStorageServiceProvider',
     function($locationProvider, $httpProvider, localStorageServiceProvider) {

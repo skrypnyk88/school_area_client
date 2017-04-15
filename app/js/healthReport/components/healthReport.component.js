@@ -1,33 +1,43 @@
-var serv = require('./../../common/services/healthReport.service');
+var service = require('./../../common/services/healthReport.service');
 
 module.exports = angular
-  .module('healthReport.component', [serv.name])
+  .module('healthReport.component', [
+    service.name
+    ])
   .component('healthComponent', {
     templateUrl: './app/js/healthReport/components/healthReport.template.html',
     controller: HealthReportController
   });
 
-function HealthReportController() {
+HealthReportController.$inject = ['HealthReport', 'currentGroupDay', '$state'];
+
+function HealthReportController(HealthReport, currentGroupDay, $state) {
   var ctrl = this;
-  ctrl.users = [];
-  // this.name1 = 'asdasd';
-  console.log('Report');
-  Report.getReports().then(
-    function(a) {
-      console.log(a);
-      ctrl.users = a;
+  ctrl.reports = [];
+  ctrl.currentGroupDay = currentGroupDay;
+
+  ctrl.loadHealthReport = function() {
+    HealthReport.getReports().then(
+      function(data) {
+        ctrl.reports = data;
+      }
+    );
+  };
+
+  ctrl.healthReportUpdate = function(report) {
+    HealthReport.updateReports(report.report.health_note,
+                               report.report.id,
+                               report.report.special_care,
+                               report.student.id
+                               ).then(function() {
+      return report;
     });
-  console.log('ctrl.a');
+  };
+
+  ctrl.reloadRoute = function() {
+    ctrl.loadHealthReport();
+    $state.reload($state.current);
+  };
+
+  ctrl.loadHealthReport();
 };
-
-// module.exports = angular
-//   .module('healthReport.component', [])
-//   .component('healthComponent', {
-//     templateUrl: './app/js/healthReport/components/healthReport.template.html',
-//     controller: HealthReportController
-//   });
-
-// function HealthReportController() {
-//   var ctrl = this;
-// };
-

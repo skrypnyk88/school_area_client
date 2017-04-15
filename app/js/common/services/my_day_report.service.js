@@ -1,15 +1,17 @@
-var Resource = require('./../resources/my_day_report.resource.js');
+var myDayReportResource = require('./../resources/my_day_report.resource.js');
+
 module.exports = angular
   .module('myDayReport.service', [
-    Resource.name
+    myDayReportResource.name
     ])
   .factory('MyDayReport', MyDayReport);
 
 MyDayReport.$inject = ['myDayReportResource'];
+
 function MyDayReport(myDayReportResource) {
   var service = {
     getReports: getReports,
-    updateReports: updateReports
+    updateReport: updateReport
   };
   return service;
 
@@ -19,8 +21,9 @@ function MyDayReport(myDayReportResource) {
     });
   };
 
-  function updateReports(note, id) {
-    return myDayReportResource.update({report: {note: note},id: id}).$promise.then(function(note) {
+  function updateReport(note, id) {
+    var params = {report: {note: note},id: id};
+    return myDayReportResource.update(params).$promise.then(function(note) {
       return note;
     });
   };

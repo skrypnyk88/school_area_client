@@ -1,8 +1,8 @@
-var service = require('./../../common/services/my_day_report.service');
+var myDayReportService = require('./../../common/services/my_day_report.service');
 
 module.exports = angular
   .module('myDayReport.component', [
-    service.name
+    myDayReportService.name
   ])
   .component('myDayComponent', {
     templateUrl: './app/js/myDayReport/components/myDayReport.template.html',
@@ -10,9 +10,9 @@ module.exports = angular
   });
 
 MyDayReportController.$inject = ['MyDayReport'];
+
 function MyDayReportController(MyDayReport) {
   var ctrl = this;
-  ctrl.photo = 'app/img/photo.png';
   ctrl.students = [];
   MyDayReport.getReports().then(
     function(data) {
@@ -20,8 +20,9 @@ function MyDayReportController(MyDayReport) {
     }
     );
 
-  ctrl.myDayReportUpdate = function(note, id) {
-    MyDayReport.updateReports(note, id).then(function() {
+  ctrl.myDayReportUpdate = function(student) {
+    MyDayReport.updateReport(student.my_day_report_note, student.my_day_report_id)
+      .then(function(note) {
       return note;
     });
   };

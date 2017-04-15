@@ -1,4 +1,5 @@
 var constants = require('./../constants');
+
 module.exports = angular
   .module('myDayReport.resource', [
     constants.name

@@ -14,7 +14,7 @@ module.exports = angular
     presenceReportModule.name,
     myDayReportModule.name,
     studentModule.name
-  ]);
+  ])
   .config(function($mdThemingProvider) {
     $mdThemingProvider
       .theme('default')

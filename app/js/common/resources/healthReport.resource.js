@@ -1,15 +1,15 @@
-var con = require('./../constants');
+var constants = require('./../constants');
 
 module.exports = angular
   .module('healthReport.resource', [
-    con.name
+    constants.name
     ])
   .factory('healthReportResource', healthReportResource);
 
-healthReportResource.$inject = ['$resource', 'constants'];
-function healthReportResource($resource, constants) {
-  console.log(constants.serverUrlV1);
-  return $resource(constants.serverUrlV1 + '/groups/1/health_report.json',
+healthReportResource.$inject = ['$resource', 'globalSettings'];
+
+function healthReportResource($resource, globalSettings) {
+  return $resource(globalSettings.SERVER_URL_V1 + '/groups/1/health_reports/:id.json', {id: '@id'},
   {
     'update': {method: 'PUT'}
   });

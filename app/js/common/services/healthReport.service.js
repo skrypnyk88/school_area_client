@@ -1,22 +1,30 @@
 var Resource = require('./../resources/healthReport.resource.js');
 
 module.exports = angular
-  .module('service', [
+  .module('healthReport.service', [
     Resource.name
   ])
-  .factory('Report', Report);
+  .factory('HealthReport', HealthReport);
 
-Report.$inject = ['healthReportResource'];
-function Report(healthReportResource) {
+HealthReport.$inject = ['healthReportResource'];
+
+function HealthReport(healthReportResource) {
   var service = {
-    getReports: getReports
+    getReports: getReports,
+    updateReports: updateReports
   };
   return service;
 
   function getReports() {
-    return healthReportResource.query().$promice.then(function(data) {
-      console.log('data');
+    return healthReportResource.query().$promise.then(function(data) {
       return data;
     });
-  }
+  };
+
+  function updateReports(health_note, id, health_care) {
+    var params = {report: {health_note: health_note, health_care: health_care},id: id};
+    return healthReportResource.update(params).$promise.then(function(report) {
+      return report;
+    });
+  };
 }

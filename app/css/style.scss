@@ -309,8 +309,22 @@ login-component {
   }
 }
 
+//  Health report component  //
+
+.health-report-title {
+  h3 {
+    color: #ccc;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}
+
 .health-report {
-  margin-bottom: 45px;
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+
+
 
   button {
     background-color: #92c948;
@@ -332,13 +346,19 @@ login-component {
   .text-area-health-note {
     border-color: #ccc;
     border-radius: 10px;
-    margin-top: 0;
+    color: #555;
+    line-height: 1.43;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 10px;
     resize: none;
   }
 
   .button-switch {
     button {
       background: white;
+      height: 40px;
+      margin-top: 30px;
     }
 
     .left {
@@ -366,6 +386,33 @@ login-component {
     }
   }
 
+  .true {
+    .left {
+      background: #92c948;
+      border: 1px solid #92c948;
+      color: white;
+
+      &:hover {
+        background: white;
+        color: #92c948;
+      }
+    }
+  }
+
+  .false {
+    .right {
+      background: #bd362f;
+      border: 1px solid #bd362f;
+      color: white;
+
+      &:hover {
+        background: white;
+        border: 1px solid #bd362f;
+        color: #bd362f;
+      }
+    }
+  }
+
 
   .double-button {
     margin-top: 0;
@@ -376,7 +423,7 @@ login-component {
       border-radius: 10px;
       color: white;
       margin-left: 40px;
-      margin-top: 0;
+      margin-top: 30px;
 
       &:hover {
         background-color: white;

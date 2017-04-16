@@ -21,8 +21,8 @@ function HealthReport(healthReportResource) {
     });
   };
 
-  function updateReports(health_note, id, health_care) {
-    var params = {report: {health_note: health_note, health_care: health_care},id: id};
+  function updateReports(health_note, id, special_care) {
+    var params = {report: {health_note: health_note, special_care: special_care}, id: id};
     return healthReportResource.update(params).$promise.then(function(report) {
       return report;
     });

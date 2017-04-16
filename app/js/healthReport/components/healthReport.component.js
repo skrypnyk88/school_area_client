@@ -18,23 +18,14 @@ function HealthReportController(HealthReport) {
   HealthReport.getReports().then(
     function(data) {
       ctrl.students = data;
-      console.log(ctrl.students)
     }
   );
 
-
   ctrl.healthReportUpdate = function(student) {
-    console.log(student.health_care)
     HealthReport.updateReports(student.health_note,
                                student.health_id,
-                               student.health_care).then(function() {
+                               student.special_care).then(function() {
       return student;
     });
   };
-
-  //   ctrl.healthReportUpdate = function(health_note, id) {
-  //   HealthReport.updateReports(health_note, id).then(function() {
-  //     return health_note;
-  //   });
-  // };
 };

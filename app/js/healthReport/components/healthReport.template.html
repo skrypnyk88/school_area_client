@@ -3,13 +3,12 @@
 </div>
 
 <div class="health-report" layout="row" ng-repeat="student in $ctrl.students">
-  <div flex="20">
-
+  <div flex="25">
+    <student-component student="student"></student-component>
   </div>
-  <div flex="30" ng-class="student.special_care == true ? 'true' : 'false'"
+  <div flex="25" ng-class="student.special_care == true ? 'true' : 'false'"
                  layout="row"
                  class="button-switch">
-                 <!-- layout-align="center center" -->
     <button ng-click="student.special_care = true"
             class="group-x left double-button">
       Spacial care

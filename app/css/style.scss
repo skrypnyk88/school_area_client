@@ -15,12 +15,12 @@ html, body, main {
   height: 100%;
 }
 
-.hero-container{
+.hero-container {
   display: block;
   height: 100%;
 }
 
-.md-accent{
+.md-accent {
   color: white !important;
 }
 
@@ -343,6 +343,7 @@ login-component {
       border-radius: 10px;
     }
 }
+
 //style for static.html
 @mixin border {
   border-bottom: 1px solid #ebebeb;

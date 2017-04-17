@@ -18,6 +18,7 @@ function HealthReportController(HealthReport) {
   HealthReport.getReports().then(
     function(data) {
       ctrl.students = data;
+      console.log(ctrl.students);
     }
   );
 

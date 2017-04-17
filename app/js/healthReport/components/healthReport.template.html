@@ -1,0 +1,32 @@
+<div class="health-report-title">
+  <h3>Health</h3>
+</div>
+
+<div class="health-report" layout="row" ng-repeat="student in $ctrl.students">
+  <div flex="25">
+    <student-component student="student"></student-component>
+  </div>
+  <div flex="25" ng-class="student.special_care == true ? 'true' : 'false'"
+                 layout="row"
+                 class="button-switch">
+    <button ng-click="student.special_care = true"
+            class="group-x left double-button">
+      Spacial care
+    </button>
+    <button ng-click="student.special_care = false"
+            class="group-x right double-button">
+      Normal
+    </button>
+  </div>
+  <div flex="30">
+    <textarea rows="5" cols="45" ng-model="student.health_note"
+                                 name="text"
+                                 class="text-area-health-note"></textarea>
+  </div>
+  <div flex="20" class="update" >
+    <button class="group-x update-note-button"
+            ng-click="$ctrl.healthReportUpdate(student)">
+      Update note
+    </button>
+  </div>
+</div>

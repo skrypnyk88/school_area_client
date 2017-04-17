@@ -11,7 +11,7 @@ module.exports = angular
     mainRoute.name,
     loginModule.name,
     presenceReportModule.name,
-    bottleReportModule
+    bottleReportModule.name
   ])
   .config(function($mdThemingProvider) {
     $mdThemingProvider

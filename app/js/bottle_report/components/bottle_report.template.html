@@ -9,7 +9,7 @@
 		<md-button ng-click="$ctrl.addBottle(bottleReport)" class="bottle">Add Bottle</md-button>		
 <div ng-repeat="bottle in bottleReport.bottles">
   		
-  		<md-select ng-change="$ctrl.updateBottle(bottle)" name="bottle_{{bottle.id}}_quantity" id="quantity" ng-model="bottle.quantity" convert-to-number placeholder="30 ml" class="">
+  		<md-select ng-change="$ctrl.updateBottle(bottle, bottleReport)" name="bottle_{{bottle.id}}_quantity" id="quantity" ng-model="bottle.quantity" convert-to-number placeholder="30 ml" class="">
   		<md-option value="10">10 ml</md-option>
   		<md-option value="20">20 ml</md-option>
     	<md-option value="30">30 ml</md-option>
@@ -19,9 +19,9 @@
   		</md-select>
 
 <div>
-  		<md-button ng-click="$ctrl.deleteBottle(bottle)">x</md-button>
+  		<md-button ng-click="$ctrl.deleteBottle(bottle, bottleReport)">x</md-button>
       </div>
-      <input name="bottle_{{bottle.id}}_time" ng-blur="$ctrl.updateBottle(bottle)"  ng-model="bottle.time" type='text' placeholder="HH:mm">
+      <input name="bottle_{{bottle.id}}_time" ng-blur="$ctrl.updateBottle(bottle, bottleReport)"  ng-model="bottle.time" type='text' placeholder="HH:mm">
   		
 		
 </div>

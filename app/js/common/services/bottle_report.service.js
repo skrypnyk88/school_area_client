@@ -13,7 +13,7 @@ function bottleReportService(bottleReportResource) {
   };
 
   function getBottleReports() {
-    return bottleReportResource.query().$promise.then(function(bottleReports) {
+    return bottleReportResource.query({group_id: 21}).$promise.then(function(bottleReports) {
       return bottleReports;
     });
   };

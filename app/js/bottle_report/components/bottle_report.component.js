@@ -23,20 +23,21 @@ function BottleReportController(bottleReportService, bottleService) {
   };
 
   ctrl.addBottle = function(bottleReport) {
-    bottleService.addBottle(bottleReport.id).then(function(bottle) {
+    bottleService.addBottle(bottleReport)
+                 .then(function(bottle) {
       bottleReport.bottles.push(bottle);
     });
   };
 
-  ctrl.updateBottle = function(bottle) {
-    bottleService.updateBottle(bottle).then(function(bottle) {
+  ctrl.updateBottle = function(bottle, bottleReport) {
+    bottleService.updateBottle(bottle, bottleReport).then(function(bottle) {
       return bottle;
     });
   };
 
-  ctrl.deleteBottle = function(bottle) {
+  ctrl.deleteBottle = function(bottle, bottleReport) {
     if (confirm('Are you sure, you want to delete this bottle?')) {
-      bottleService.deleteBottle(bottle).then(function() {
+      bottleService.deleteBottle(bottle, bottleReport).then(function() {
         ctrl.loadBottleReports();
       });
     }

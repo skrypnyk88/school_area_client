@@ -1,12 +1,10 @@
 var bottleCon = require('./../constants.js');
 module.exports = angular
-  .module('bottleReport.resource', [
-  	bottleCon.name
-  ])
-  .factory('bottleReportResource', bottleReportResource)
+.module('bottleReport.resource', [bottleCon.name])
+.factory('bottleReportResource', bottleReportResource);
 
+bottleReportResource.$inject = ['$resource', 'globalSettings'];
 
-bottleReportResource.$inject = ['$resource', 'api'];
-
-function bottleReportResource($resource, api) {
-	return $resource(api.URL + '/groups/21/bottle_reports.json') }
+function bottleReportResource($resource, globalSettings) {
+  return $resource(globalSettings.SERVER_URL_V1 + '/groups/21/bottle_reports.json');
+}

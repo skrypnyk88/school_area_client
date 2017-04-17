@@ -1,8 +1,25 @@
 @import './../../node_modules/angular-material/angular-material.css';
 
+//  General  //
+
 body {
   text-align: center;
 }
+
+html, body, main {
+  height: 100%;
+}
+
+.hero-container {
+  display: block;
+  height: 100%;
+}
+
+.md-accent {
+  color: white !important;
+}
+
+//  Header  //
 
 .header {
   $font-size: 45px;
@@ -90,6 +107,8 @@ body {
     margin-left: 15px;
   }
 }
+
+//  Sidebar  //
 
 nav {
   border: 1px solid #ebebeb;
@@ -260,6 +279,7 @@ nav {
   }
 }
 
+\\ Bottle Report Component \\
 .bottle_report {
   border-bottom-style: solid;
   border-color: lightgray;
@@ -305,4 +325,16 @@ nav {
       width: 150px;
       border-radius: 10px;
     }
+}
+//  Login component  //
+
+login-component {
+  .hero-container{
+    background-image: url('../img/misc/pattern.png');
+  }
+
+  .login-form {
+    width: 300px;
+    margin-top: 15vh;
+  }
 }

@@ -3,5 +3,6 @@ module.exports = angular
     require('angular-ui-router'),
     require('angular-resource'),
     require('angular-material'),
-    require('angular-messages')
+    require('angular-messages'),
+    require('angular-local-storage')
     ]);

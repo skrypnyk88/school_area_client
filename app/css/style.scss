@@ -497,6 +497,13 @@ main {
 
     }
   }
+<<<<<<< 7e2b78612584ecdd869040d8426b59d05d3d472d
+=======
+}
+
+
+//  Login component  //
+>>>>>>> LVRUBYM-221:Add component for bottle report
 
   a {
     font-size: 17px;
@@ -504,6 +511,61 @@ main {
     text-decoration: none;
   }
 
+<<<<<<< 7e2b78612584ecdd869040d8426b59d05d3d472d
+=======
+  .login-form {
+    width: 300px;
+    margin-top: 15vh;
+  }
+
+// Bottle Report Component //
+
+.bottle_report {
+  border-bottom-style: solid;
+  border-color: lightgray;
+  border-width: 1px;
+
+    md-toolbar {
+      background-color: white;
+      border-style: solid;
+      border-color: lightgray;
+      border-width: 1px;
+      position: relative;
+      top: 15px;
+
+        span{
+          text-align: center;
+          color: lightgray;
+          position: relative;
+          top: 15px;
+          font-family:Courier New;
+          font-size: 150%;
+        }
+    }
+
+    .container {
+      position: relative;
+      top: 15px;
+    }
+
+    md-sidenav.md-locked-open {
+    }
+
+    md-content {
+
+    }
+
+    .bottle {
+      background-color: yellowgreen;
+      color: white;
+      position: relative;
+      right: 70px;
+      top:10px;
+      text-align: center;
+      width: 150px;
+      border-radius: 10px;
+    }
+>>>>>>> LVRUBYM-221:Add component for bottle report
 }
 
 //style for static.html

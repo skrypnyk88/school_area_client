@@ -1,4 +1,3 @@
-var bottleCon = require('./../constants.js');
 module.exports = angular
 .module('bottle.resource', [bottleCon.name])
 .factory('bottleResource', bottleResource);

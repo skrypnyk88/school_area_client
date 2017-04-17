@@ -1,24 +1,20 @@
 var authService = require('./../../common/services/auth.service.js');
 
 module.exports = angular
-.module('main.component', [
-  authService.name
+  .module('main.component', [
+    authService.name
   ])
-.component('mainComponent', {
-  templateUrl: './app/js/main/components/main.template.html',
-  controller: MainController
-});
+  .component('mainComponent', {
+    templateUrl: './app/js/main/components/main.template.html',
+    controller: MainController
+  });
 
-function MainController() {
+MainController.$inject = ['auth'];
+
+function MainController(auth) {
   var ctrl = this;
 
-  MainController.$inject = ['auth'];
-
-  function MainController(auth) {
-    var ctrl = this;
-
-    ctrl.logout = function() {
-      auth.logout();
-    };
-  }
+  ctrl.logout = function() {
+    auth.logout();
+  };
 }

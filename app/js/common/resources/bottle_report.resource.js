@@ -5,6 +5,5 @@ module.exports = angular
 bottleReportResource.$inject = ['$resource', 'globalSettings'];
 
 function bottleReportResource($resource, globalSettings) {
-  return $resource(globalSettings.SERVER_URL_V1 + '/groups/:group_id/bottle_reports.json',
-  {group_id: '@group_id'});
+  return $resource(globalSettings.SERVER_URL_V1 + '/groups/1/bottle_reports.json')
 }

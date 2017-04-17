@@ -20,8 +20,25 @@ html, body, main {
   color: white !important;
 }
 
-//  Header  //
+.my-day-report {
+  border: 1px solid red;
+  border-radius: 7px;
+  margin-top: 15px;
 
+  textarea {
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: auto;
+  }
+
+  button {
+    border-radius: 5px;
+    height: 50px;
+    margin: auto 40px;
+  }
+}
+
+//  Header  //
 .header {
   $font-size: 45px;
   $cursor: pointer;
@@ -281,6 +298,7 @@ nav {
 }
 
 \\ Bottle Report Component \\
+
 .bottle_report {
   border-bottom-style: solid;
   border-color: lightgray;
@@ -294,7 +312,7 @@ nav {
       position: relative;
       top: 15px;
 
-        span{
+        span {
           text-align: center;
           color: lightgray;
           position: relative;
@@ -313,18 +331,16 @@ nav {
     }
 
     md-content {
-
-    }
-
-    .bottle {
-      background-color: yellowgreen;
-      color: white;
-      position: relative;
-      right: 70px;
-      top:10px;
-      text-align: center;
-      width: 150px;
-      border-radius: 10px;
+      md-button {
+        background-color: yellowgreen;
+        color: white;
+        position: relative;
+        right: 70px;
+        top:10px;
+        text-align: center;
+        width: 150px;
+        border-radius: 10px;
+      }
     }
 }
 
@@ -338,5 +354,130 @@ login-component {
   .login-form {
     width: 300px;
     margin-top: 15vh;
+  }
+}
+
+//  Health report component  //
+
+.health-report-title {
+  h3 {
+    color: #ccc;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}
+
+.health-report {
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+
+
+
+  button {
+    background-color: #92c948;
+    border: 1px solid #92c948;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 20px 0;
+    min-width: 100px;
+    padding: 10px 15px;
+    text-transform: none;
+    transition: background .3s linear;
+  }
+
+  * {
+    outline: none;
+  }
+
+  .text-area-health-note {
+    border-color: #ccc;
+    border-radius: 10px;
+    color: #555;
+    line-height: 1.43;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 10px;
+    resize: none;
+  }
+
+  .button-switch {
+    button {
+      background: white;
+      height: 40px;
+      margin-top: 30px;
+    }
+
+    .left {
+      background: white;
+      border-radius: 10px 0 0 10px;
+      color: #92c948;
+
+      &:hover {
+        background: #92c948;
+        border: 1px solid #92c948;
+        color: white;
+      }
+    }
+
+    .right {
+      border: 1px solid #bd362f;
+      border-radius: 0 10px 10px 0;
+      color: #bd362f;
+
+      &:hover {
+        background: #bd362f;
+        border: 1px solid #bd362f;
+        color: white;
+      }
+    }
+  }
+
+  .true {
+    .left {
+      background: #92c948;
+      border: 1px solid #92c948;
+      color: white;
+
+      &:hover {
+        background: white;
+        color: #92c948;
+      }
+    }
+  }
+
+  .false {
+    .right {
+      background: #bd362f;
+      border: 1px solid #bd362f;
+      color: white;
+
+      &:hover {
+        background: white;
+        border: 1px solid #bd362f;
+        color: #bd362f;
+      }
+    }
+  }
+
+
+  .double-button {
+    margin-top: 0;
+  }
+
+  .update {
+    button {
+      border-radius: 10px;
+      color: white;
+      margin-left: 40px;
+      margin-top: 30px;
+
+      &:hover {
+        background-color: white;
+        border-color: #92c948;
+        color: #92c948;
+      }
+    }
   }
 }

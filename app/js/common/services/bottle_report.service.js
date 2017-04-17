@@ -1,21 +1,22 @@
-var bottleResource = require('./../resources/bottle_report.resource.js');
+var bottleReportResource = require('./../resources/bottle_report.resource.js');
 module.exports = angular
-  .module('bottle.service', [
-    bottleResource.name
+  .module('bottleReport.service', [
+    bottleReportResource.name
     ])
-  .factory('bottleReport', bottleReport);
+  .factory('bottleReportService', bottleReportService);
 
-  bottleResource.$inject = ['bottleResource'];
-  function bottleReport(bottleResource) {
+  bottleReportService.$inject = ['bottleReportResource'];
+
+  function bottleReportService(bottleReportResource) {
   var service = {
-    getReports: getReports
+    getBottleReports: getBottleReports
   };
   return service;
   
   
-  function getReports() {
-    return bottleResource.query().$promise.then(function(data) {
-        return data;
+  function getBottleReports() {
+    return bottleReportResource.query().$promise.then(function(bottleReports) {
+        return bottleReports;
       })
   };
 };

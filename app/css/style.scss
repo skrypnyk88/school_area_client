@@ -282,6 +282,7 @@ nav {
   }
 }
 
+
 //  Login component  //
 
 login-component {
@@ -293,6 +294,54 @@ login-component {
     width: 300px;
     margin-top: 15vh;
   }
+
+// Bottle Report Component //
+
+.bottle_report {
+  border-bottom-style: solid;
+  border-color: lightgray;
+  border-width: 1px;
+
+    md-toolbar {
+      background-color: white;
+      border-style: solid;
+      border-color: lightgray;
+      border-width: 1px;
+      position: relative;
+      top: 15px;
+
+        span{
+          text-align: center;
+          color: lightgray;
+          position: relative;
+          top: 15px;
+          font-family:Courier New;
+          font-size: 150%;
+        }
+    }
+
+    .container {
+      position: relative;
+      top: 15px;
+    }
+
+    md-sidenav.md-locked-open {
+    }
+
+    md-content {
+
+    }
+
+    .bottle {
+      background-color: yellowgreen;
+      color: white;
+      position: relative;
+      right: 70px;
+      top:10px;
+      text-align: center;
+      width: 150px;
+      border-radius: 10px;
+    }
 }
 //style for static.html
 @mixin border {

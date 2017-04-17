@@ -13,7 +13,7 @@ angular
     mainModule.name,
     tokenInjector.name
   ])
-  .config(['$locationProvider', '$httpProvider', 'localStorageServiceProvider',
+ .config(['$locationProvider', '$httpProvider', 'localStorageServiceProvider',
     function($locationProvider, $httpProvider, localStorageServiceProvider) {
       $locationProvider.html5Mode(true);
       localStorageServiceProvider.setPrefix('schoolArea');

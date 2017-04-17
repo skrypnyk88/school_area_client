@@ -15,33 +15,39 @@ function bottleService(bottleResource) {
     updateBottle: updateBottle
   };
 
-  function getBottles(bottle_report_id) {
-    return bottleResource.query({bottle_report_id: bottle_report_id})
+  function getBottles(bottleReport) {
+    return bottleResource.query({bottle_report_id: bottleReport.id,
+                                 group_id: bottleReport.group_id})
     .$promise
     .then(function(bottles) {
       return bottles;
     });
   };
 
-  function addBottle(bottle_report_id) {
-    return bottleResource.save({bottle_report_id: bottle_report_id})
+  function addBottle(bottleReport) {
+    return bottleResource.save({bottle_report_id: bottleReport.id,
+                                group_id: bottleReport.group_id,
+                                student_id: bottleReport.student_id})
     .$promise
     .then(function(bottle) {
       return bottle;
     });
   };
 
-  function deleteBottle(bottle) {
-    return bottleResource.delete({id: bottle.id, bottle_report_id: bottle.bottle_report_id})
+  function deleteBottle(bottle, bottleReport) {
+    return bottleResource.delete({id: bottle.id,
+                                  bottle_report_id: bottleReport.id,
+                                  group_id: bottleReport.group_id})
     .$promise
     .then(function() {
     });
   };
 
-  function updateBottle(bottle) {
+  function updateBottle(bottle, bottleReport) {
     return bottleResource.update({bottle: bottle,
       id: bottle.id,
-      bottle_report_id: bottle.bottle_report_id})
+      bottle_report_id: bottleReport.id,
+      group_id: bottleReport.group_id})
     .$promise
     .then(function(updatedBottle) {
       return updatedBottle;

@@ -1,10 +1,10 @@
-var bottleCon = require('./../constants.js');
 module.exports = angular
-.module('bottleReport.resource', [bottleCon.name])
+.module('bottleReport.resource', [])
 .factory('bottleReportResource', bottleReportResource);
 
 bottleReportResource.$inject = ['$resource', 'globalSettings'];
 
 function bottleReportResource($resource, globalSettings) {
-  return $resource(globalSettings.SERVER_URL_V1 + '/groups/21/bottle_reports.json');
+  return $resource(globalSettings.SERVER_URL_V1 + '/groups/:group_id/bottle_reports.json',
+  {group_id: '@group_id'});
 }

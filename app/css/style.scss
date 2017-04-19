@@ -15,12 +15,20 @@ html, body, main {
   height: 100%;
 }
 
+<<<<<<< 061ae7223cc65d4138b738a8b663a312d1b3b2bc
 .hero-container {
+=======
+.hero-container{
+>>>>>>> LVRUBYM-221:Fixed name of file
   display: block;
   height: 100%;
 }
 
+<<<<<<< 061ae7223cc65d4138b738a8b663a312d1b3b2bc
 .md-accent {
+=======
+.md-accent{
+>>>>>>> LVRUBYM-221:Fixed name of file
   color: white !important;
 }
 
@@ -282,7 +290,6 @@ nav {
   }
 }
 
-
 //  Login component  //
 
 login-component {
@@ -294,7 +301,7 @@ login-component {
     width: 300px;
     margin-top: 15vh;
   }
-
+}
 // Bottle Report Component //
 
 .bottle_report {
@@ -310,38 +317,45 @@ login-component {
       position: relative;
       top: 15px;
 
-        span{
-          text-align: center;
-          color: lightgray;
-          position: relative;
-          top: 15px;
-          font-family:Courier New;
-          font-size: 150%;
-        }
+      span {
+        text-align: center;
+        color: lightgray;
+        position: relative;
+        top: 15px;
+        font-family:Courier New;
+        font-size: 150%;
+      }
     }
 
     .container {
       position: relative;
       top: 15px;
+      border-bottom-style: solid;
+      border-color: lightgray;
+      border-width: 1px;
     }
 
-    md-sidenav.md-locked-open {
+    .bottles {
+      border-bottom-style: solid;
+      border-color: lightgray;
+      border-width: 1px;
+      margin-top: 20px;
+      padding: 20px;
     }
 
-    md-content {
-
-    }
-
-    .bottle {
+    .button {
       background-color: yellowgreen;
       color: white;
       position: relative;
-      right: 70px;
       top:10px;
+      right: 10px;
       text-align: center;
       width: 150px;
-      border-radius: 10px;
+      border-radius: 30px;
+      padding: 10px;
+      margin-top: 10px;
     }
+<<<<<<< 061ae7223cc65d4138b738a8b663a312d1b3b2bc
 }
 
 //style for static.html
@@ -366,9 +380,28 @@ login-component {
     &:hover {
       background-color: white;
     }
+=======
+
+    .delete {
+      background-color: white;
+      position: relative;
+      left: 20px;
+      border-radius: 30px;
+      padding: 10px;
+    }
+
+  .time_input {
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 1px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+>>>>>>> LVRUBYM-221:Fixed name of file
   }
 }
 
+<<<<<<< 061ae7223cc65d4138b738a8b663a312d1b3b2bc
 .green-btn {
   background-color: $green-color;
   border: 1px solid $green-color;
@@ -624,5 +657,16 @@ md-toast .md-toast-content{
 .md-bottom{
   .md-toast-content{
     margin-top: 20px;
+=======
+  md-select {
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 1px;
+    border-radius: 20px;
+    text-align: center;
+    width: 250px;
+    position: relative;
+    left: 180px;
+>>>>>>> LVRUBYM-221:Fixed name of file
   }
 }

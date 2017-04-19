@@ -1,5 +1,6 @@
 var bottleReportServ = require('./../../common/services/bottle_report.service');
 var bottleServ = require('./../../common/services/bottle.service');
+
 module.exports = angular
 .module('bottleReport.component', [
   bottleReportServ.name,

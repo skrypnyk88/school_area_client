@@ -1,0 +1,26 @@
+<div class="bottle_report">
+  <md-toolbar><span>Bottle</span></md-toolbar>
+  <form>
+    <div ng-repeat="bottleReport in $ctrl.bottleReports" class="container"  layout="row" flex>
+     <div flex="25">
+      <student-component student="bottleReport.student"></student-component>
+    </div>
+    <md-content layout-wrap flex="50">  
+      <button ng-click="$ctrl.addBottle(bottleReport)" class="button">Add Bottle</button>   
+      <div ng-repeat="bottle in bottleReport.bottles" class="bottles">
+        <md-select ng-change="$ctrl.updateBottle(bottle, bottleReport)" name="bottle_{{bottle.id}}_quantity" id="quantity" ng-model="bottle.quantity" convert-to-number placeholder="30 ml">
+          <md-option value="10">10 ml</md-option>
+          <md-option value="20">20 ml</md-option>
+          <md-option value="30">30 ml</md-option>
+          <md-option value="45">45 ml</md-option>
+          <md-option value="60">60 ml</md-option>
+          <md-option value="75">75 ml</md-option>
+        </md-select>
+        <input name="bottle_{{bottle.id}}_time" ng-blur="$ctrl.updateBottle(bottle, bottleReport)"  ng-model="bottle.time" type='text' 
+        placeholder="HH:mm" class="time_input">
+        <button class="delete" ng-click="$ctrl.deleteBottle(bottle, bottleReport)">X</button>
+      </div>
+    </md-content>
+  </div>
+</form>
+</div>

@@ -1,4 +1,5 @@
 var bottleResource = require('./../resources/bottle.resource.js');
+
 module.exports = angular
 .module('bottle.service', [
   bottleResource.name
@@ -17,7 +18,7 @@ function bottleService(bottleResource) {
 
   function getBottles(bottleReport) {
     return bottleResource.query({bottle_report_id: bottleReport.id,
-                                 group_id: bottleReport.group_id})
+                                  group_id: bottleReport.group_id})
     .$promise
     .then(function(bottles) {
       return bottles;
@@ -45,9 +46,9 @@ function bottleService(bottleResource) {
 
   function updateBottle(bottle, bottleReport) {
     return bottleResource.update({bottle: bottle,
-      id: bottle.id,
-      bottle_report_id: bottleReport.id,
-      group_id: bottleReport.group_id})
+                                  id: bottle.id,
+                                  bottle_report_id: bottleReport.id,
+                                  group_id: bottleReport.group_id})
     .$promise
     .then(function(updatedBottle) {
       return updatedBottle;

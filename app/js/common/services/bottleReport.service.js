@@ -1,4 +1,5 @@
 var bottleReportResource = require('./../resources/bottle_report.resource.js');
+
 module.exports = angular
 .module('bottleReport.service', [
   bottleReportResource.name

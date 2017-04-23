@@ -14,8 +14,15 @@ main {
   height: 100%;
 }
 
+<<<<<<< 379f0a8c4c1289155443946b2927dc8657f0fd6c
 * {
   box-sizing: border-box;
+=======
+html,
+body,
+main {
+  height: 100%;
+>>>>>>> LVRUBYM-191: created presenceReport
 }
 
 .hero-container {
@@ -24,7 +31,11 @@ main {
 }
 
 .md-accent {
+<<<<<<< 379f0a8c4c1289155443946b2927dc8657f0fd6c
   color: white;
+=======
+  color: white !important;
+>>>>>>> LVRUBYM-191: created presenceReport
 }
 
 .header {
@@ -466,12 +477,24 @@ main {
     }
   }
 
+<<<<<<< 379f0a8c4c1289155443946b2927dc8657f0fd6c
   a {
     font-size: 17px;
     font-weight: 400;
     text-decoration: none;
   }
 
+=======
+login-component {
+  .hero-container {
+    background-image: url('../img/misc/pattern.png');
+  }
+
+  .login-form {
+    margin-top: 15vh;
+    width: 300px;
+  }
+>>>>>>> LVRUBYM-191: created presenceReport
 }
 
 //style for static.html

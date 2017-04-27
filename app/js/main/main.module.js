@@ -10,6 +10,7 @@ var toggleMessage = require('./../common/services/toggleMessage/toggleMessage.se
 var bottleReportModule = require('.././bottleReport/bottleReport.module.js');
 var sideBarModule = require('./../sidebar/sidebar.module.js');
 var studentService = require('./../common/services/student.service.js');
+var profileModule = require('./../profile/profile.module.js');
 
 require('../../css/style.scss');
 
@@ -25,8 +26,9 @@ module.exports = angular
     staticModule.name,
     toggleMessage.name,
     myDayReportModule.name,
-    sideBarModule.name
-    studentService.name
+    sideBarModule.name,
+    studentService.name,
+    profileModule.name
   ])
   .config(['$translateProvider', function($translateProvider) {
     $translateProvider.useStaticFilesLoader({

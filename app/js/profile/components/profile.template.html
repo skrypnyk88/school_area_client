@@ -1,0 +1,69 @@
+<div>
+  <div>
+    <div >Edit profile of Ivan Zagorodniy</div>
+  </div>
+
+  <div layout="row">
+    <div flex="50">
+      <img alt="Avatar 4" src="https://letsshareapps.s3.amazonaws.com/teachers/logos/000/000/003/medium/avatar-4.png?1476046377">
+    </div>
+
+    <div flex="50">
+      <div layout="row">
+        <div flex="50">
+          Name:
+        </div>
+        <div flex="50">
+          {{$ctrl.teacher.first_name + " " + $ctrl.teacher.last_name}}
+        </div>
+      </div>
+
+      <div layout="row">
+        <div flex="50">
+          Phone:
+        </div>
+        <div flex="50">
+          {{$ctrl.teacher.phone}}
+        </div>
+      </div>
+
+      <div layout="row">
+        <div flex="50">
+          Email:
+        </div>
+        <div flex="50">
+          {{$ctrl.teacher.email}}
+        </div>
+      </div>
+
+      <div layout="row">
+        <div flex="50">
+          Language:
+        </div>
+        <div flex="50">
+          {{$ctrl.teacher.locale}}
+        </div>
+      </div>
+
+      <div layout="row">
+        <div flex="50">
+        </div>
+        <div flex="50">
+          <md-select name="teacher" ng-model="$ctrl.teacher.locale"
+                                    placeholder="$ctrl.teacher.locale">
+            <md-option value="en">English</md-option>
+            <md-option value="ua">Українська</md-option>
+          </md-select>
+        </div>
+      </div>
+
+      <div layout="row">
+        <div flex="50">
+        </div>
+        <div flex="50">
+          <button ng-click="$ctrl.profileUpdate($ctrl.teacher)">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

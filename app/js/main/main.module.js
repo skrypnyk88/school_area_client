@@ -44,6 +44,7 @@ var bottleReportModule = require('.././bottleReport/bottleReport.module.js');
 var bottleReportModule = require('.././bottleReport/bottleReport.module.js');
 var sideBarModule = require('./../sidebar/sidebar.module.js');
 var studentService = require('./../common/services/student.service.js');
+var profileModule = require('./../profile/profile.module.js');
 
 require('../../css/style.scss');
 
@@ -106,6 +107,7 @@ module.exports = angular
 =======
     toggleMessage.name,
     myDayReportModule.name,
+<<<<<<< 91db8629bf762b4891a4729d097de50faf4a1225
 >>>>>>> LVRUBYM-349:Fixed jscs
     sideBarModule.name
 <<<<<<< e751d26b89ff24d1009a8759da2b99e8b53c8160
@@ -113,6 +115,11 @@ module.exports = angular
 =======
     studentService.name
 >>>>>>> LVRUBYM-347: Add student resource and service
+=======
+    sideBarModule.name,
+    studentService.name,
+    profileModule.name
+>>>>>>> LVRUBYM-325: Add component for profile
   ])
 <<<<<<< 5f08931b1824729a65c08636eb4467c854ebded3
   .config(['$mdThemingProvider',

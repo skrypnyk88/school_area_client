@@ -9,6 +9,7 @@ module.exports = angular
     controller: ProfileController
   });
 
+<<<<<<< 43c1e46ea7b1202edcb88ff46c4a6898d5cdd2e4
 ProfileController.$inject = ['profileService',
                              'currentUser',
                              'toggleMessage',
@@ -49,4 +50,28 @@ function ProfileController(profileService, currentUser, toggleMessage, globalSet
   };
 
   ctrl.reload = function() { $state.reload($state.current); };
+=======
+ProfileController.$inject = ['Profile'];
+
+function ProfileController(Profile) {
+  var ctrl = this;
+  ctrl.teacher = [];
+
+  Profile.getProfile().then(
+    function(data) {
+      ctrl.teacher = data;
+    }
+  );
+
+  ctrl.profileUpdate = function(teacher) {
+    Profile.updateProfile(teacher.first_name,
+                          teacher.last_name,
+                          teacher.email,
+                          teacher.phone,
+                          teacher.locale,
+                          teacher.id).then(function() {
+      return teacher;
+    });
+  };
+>>>>>>> LVRUBYM-325: Add component for profile
 };

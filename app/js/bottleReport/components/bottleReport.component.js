@@ -20,7 +20,7 @@ function BottleReportController(bottleReportService) {
     bottleReportService.getBottleReports().then(
       function(bottleReports) {
         ctrl.bottleReports = bottleReports;
-      });
+    });
   };
 
   ctrl.addBottle = function(bottleReport) {
@@ -39,9 +39,17 @@ function BottleReportController(bottleReportService) {
   ctrl.deleteBottle = function(bottle, bottleReport) {
     if (confirm('Are you sure, you want to delete this bottle?')) {
       bottleReportService.deleteBottle(bottle, bottleReport).then(function() {
+<<<<<<< 78cc606e23ca9236ad1c001671c581f64c62f056
         loadBottleReports();
       });
     }
   };
   loadBottleReports();
+=======
+        ctrl.loadBottleReports();
+      });
+    }
+  };
+  ctrl.loadBottleReports();
+>>>>>>> LVRUBYM-221:Fixed file's name
 };

@@ -12,10 +12,17 @@ bottleResource.$inject = ['$resource', 'globalSettings'];
 
 function bottleResource($resource, globalSettings) {
   return $resource(globalSettings
+<<<<<<< 78cc606e23ca9236ad1c001671c581f64c62f056
 <<<<<<< c1277f2601881303dd01af6f108129014ab59b51
     .SERVER_URL_V1 + '/bottle_reports/:bottle_report_id/bottles/:id.json',
     {id: '@id',
     bottle_report_id: '@bottle_report_id'},
+=======
+    .SERVER_URL_V1 + '/v1/bottle_reports/:bottle_report_id/bottles/:id.json',
+    {id: '@id',
+    bottle_report_id: '@bottle_report_id',
+    group_id: currentGroupDay.group_id},
+>>>>>>> LVRUBYM-221:Fixed file's name
     {
       'update': {method: 'PUT'}
     });

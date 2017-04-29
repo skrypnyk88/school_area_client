@@ -23,6 +23,7 @@ MainController.$inject = [
 function MainController($scope, $state, auth, currentGroupDay, $translate) {
   var ctrl = this;
 
+<<<<<<< 401e0eef0b897db26c8bb33bd841bd73d15e1127
   ctrl.currentGroupDay = currentGroupDay;
   ctrl.logout = function() {
     auth.logout();

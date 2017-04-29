@@ -1,5 +1,4 @@
 var presenceReportServ = require('./../../common/services/presenceReport.service');
-var reportTimeServ = require('./../../common/services/reportTime.service');
 
 module.exports = angular
 <<<<<<< 379f0a8c4c1289155443946b2927dc8657f0fd6c
@@ -11,18 +10,21 @@ module.exports = angular
 function PresenceReportController() {
 =======
 .module('presenceReport.component', [
-  presenceReportServ.name,
-  reportTimeServ.name
+  presenceReportServ.name
   ])
 .component('presenceReport', {
   templateUrl: './app/js/presenceReport/components/presenceReport.template.html',
   controller: PresenceReportController
 });
 
-PresenceReportController.$inject = ['presenceReportService','reportTimeService','currentGroupDay'];
+PresenceReportController.$inject = ['presenceReportService','currentGroupDay'];
+function PresenceReportController(presenceReportService, currentGroupDay) {
 
+<<<<<<< d67a62bd3f27dfc6312ee18febfeaba50bf23308
 function PresenceReportController(presenceReportService, reportTimeService, currentGroupDay) {
 >>>>>>> LVRUBYM-191: created presenceReport
+=======
+>>>>>>> LVRUBYM-191: Changed component, resourse, and service
   var ctrl = this;
   ctrl.currentGroupDay = currentGroupDay;
 
@@ -34,32 +36,44 @@ function PresenceReportController(presenceReportService, reportTimeService, curr
   };
 
   ctrl.addReportTime = function(presenceReport) {
-    reportTimeService.addReportTime(presenceReport)
-                 .then(function(reportTime) {
-      presenceReport.report_time.push(reportTime);
-      ctrl.loadPresenceReports();
-    });
+    if (presenceReport.report_time == false || presenceReport.report_time.slice(-1)[0].end_time) {
+      presenceReport.start_time = new Date().toLocaleTimeString([], {hour: '2-digit',
+                                                                      minute: '2-digit',
+                                                                      hour12: false});
+      presenceReportService.addReportTime(presenceReport)
+                       .then(function(reportTime) {
+          presenceReport.report_time.push(reportTime);
+          ctrl.loadPresenceReports();
+        });
+    };
   };
 
   ctrl.updateReportTime = function(reportTime, presenceReport) {
-    reportTimeService.updateReportTime(reportTime, presenceReport).then(function(reportTime) {
-      return reportTime;
-    });
+    if (reportTime.end_time == null || reportTime.start_time < reportTime.end_time)  {
+      presenceReportService.updateReportTime(reportTime, presenceReport).then(function(reportTime) {
+        return reportTime;
+      });
+    } else {
+      ctrl.loadPresenceReports();
+    };
   };
 
   ctrl.updateEndTime = function(presenceReport) {
-    reportTime = presenceReport.report_time.slice(-1)[0];
-    reportTime.end_time = new Date();
-    reportTimeService.updateEndTime(reportTime, presenceReport).then(function(reportTime) {
-      return reportTime;
-
-    });
+    if (presenceReport.report_time.slice(-1)[0].end_time == null) {
+      reportTime = presenceReport.report_time.slice(-1)[0];
+      reportTime.end_time = new Date().toLocaleTimeString([], {hour: '2-digit',
+                                                                minute: '2-digit',
+                                                                hour12: false});
+      presenceReportService.updateEndTime(reportTime, presenceReport).then(function(reportTime) {
+        return reportTime;
+      });
       ctrl.loadPresenceReports();
+    };
   };
 
   ctrl.deleteReportTime = function(reportTime, presenceReport) {
     if (confirm('Are you sure, you want to delete this report?')) {
-      reportTimeService.deleteReportTime(reportTime, presenceReport).then(function() {
+      presenceReportService.deleteReportTime(reportTime, presenceReport).then(function() {
         ctrl.loadPresenceReports();
       });
     }

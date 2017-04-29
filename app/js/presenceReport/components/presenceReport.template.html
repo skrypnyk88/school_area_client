@@ -2,18 +2,23 @@
 <h1>{{ 'HELLO' | translate }}</h1>
 =======
 <h1>Hello {{$ctrl.currentGroupDay.group_id}}</h1>
-
- <div ng-repeat="presenceReport in $ctrl.presenceReports" class="container"  >
-
-  <button ng-click="$ctrl.addReportTime(presenceReport)" class="button">Present</button>
-   <button ng-click="$ctrl.updateEndTime(presenceReport)" class="button">Absent</button> 
-   <div ng-repeat="reportTime in presenceReport.report_time" class="reportTimes">
-
-   <input name="report_start_{reportTime.id}}_time" ng-blur="$ctrl.updateReportTime(reportTime, presenceReport)"  ng-model="reportTime.start_time" type='datetime' placeholder="HH:mm" class="time_input">
-   <input name="report_end_{{reportTime.id}}_time" ng-blur="$ctrl.updateReportTime(reportTime, presenceReport)"  ng-model="reportTime.end_time" type='datetime' placeholder="HH:mm" class="time_input"> 
-       <button class="delete" ng-click="$ctrl.deleteReportTime(reportTime, presenceReport)">X</button>
-       <p></p>
+  <div ng-repeat="presenceReport in $ctrl.presenceReports"  class="container" layout="row" flex >
+    <student-component student="presenceReport.student" flex="25"></student-component>
+    <div>
+      <div>
+        <button ng-click="$ctrl.addReportTime(presenceReport)" class="button">Present</button>
+        <button ng-click="$ctrl.updateEndTime(presenceReport)" class="button">Absent</button> 
+      </div>  
+        <div ng-repeat="reportTime in presenceReport.report_time"  class="report-times">
+          <input name="report_start_{reportTime.id}}_time" ng-blur="$ctrl.updateReportTime(reportTime, presenceReport)"  ng-model="reportTime.start_time" type='datetime' placeholder="HH:mm" class="time_input">
+          <input name="report_end_{{reportTime.id}}_time" ng-blur="$ctrl.updateReportTime(reportTime, presenceReport)"  ng-model="reportTime.end_time" type='datetime' placeholder="HH:mm" class="time_input" ng-if="reportTime.end_time != null" class="end-time-hidden"> 
+          <button class="delete" ng-click="$ctrl.deleteReportTime(reportTime, presenceReport)">X</button>
         </div>
+<<<<<<< d67a62bd3f27dfc6312ee18febfeaba50bf23308
    </div>
    
 >>>>>>> LVRUBYM-191: created presenceReport
+=======
+    </div>
+  </div>
+>>>>>>> LVRUBYM-191: Changed component, resourse, and service

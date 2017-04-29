@@ -43,6 +43,7 @@ function MainController($scope, $state, auth, currentGroupDay,
     function() { return currentGroupDay.group_id; },
     function() { $state.reload($state.current); }
   );
+<<<<<<< d67a62bd3f27dfc6312ee18febfeaba50bf23308
 
   $scope.$watch(
     function() { return currentUser; },
@@ -53,4 +54,6 @@ function MainController($scope, $state, auth, currentGroupDay,
     function() { return currentUser.locale; },
     function() { $translate.use(currentUser.locale); }
   );
+=======
+>>>>>>> LVRUBYM-191: Changed component, resourse, and service
 };

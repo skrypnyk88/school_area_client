@@ -1,47 +1,45 @@
-var bottleReportServ = require('./../../common/services/bottle_report.service');
-var bottleServ = require('./../../common/services/bottle.service');
+var bottleReportService = require('./../../common/services/bottleReport.service');
 
 module.exports = angular
 .module('bottleReport.component', [
-  bottleReportServ.name,
-  bottleServ.name
+  bottleReportService.name,
   ])
-.component('bottleReportComponent', {
-  templateUrl: './app/js/bottle_report/components/bottle_report.template.html',
+.component('bottleReport', {
+  templateUrl: './app/js/bottleReport/components/bottleReport.template.html',
   controller: BottleReportController
 });
 
-BottleReportController.$inject = ['bottleReportService','bottleService'];
+BottleReportController.$inject = ['bottleReportService'];
 
-function BottleReportController(bottleReportService, bottleService) {
+function BottleReportController(bottleReportService) {
   var ctrl = this;
 
   ctrl.loadBottleReports = function() {
     bottleReportService.getBottleReports().then(
       function(bottleReports) {
         ctrl.bottleReports = bottleReports;
-      });
+    });
   };
 
   ctrl.addBottle = function(bottleReport) {
-    bottleService.addBottle(bottleReport)
+    bottleReportService.addBottle(bottleReport)
                  .then(function(bottle) {
       bottleReport.bottles.push(bottle);
     });
   };
 
   ctrl.updateBottle = function(bottle, bottleReport) {
-    bottleService.updateBottle(bottle, bottleReport).then(function(bottle) {
+    bottleReportService.updateBottle(bottle, bottleReport).then(function(bottle) {
       return bottle;
     });
   };
 
   ctrl.deleteBottle = function(bottle, bottleReport) {
     if (confirm('Are you sure, you want to delete this bottle?')) {
-      bottleService.deleteBottle(bottle, bottleReport).then(function() {
+      bottleReportService.deleteBottle(bottle, bottleReport).then(function() {
         ctrl.loadBottleReports();
       });
     }
   };
   ctrl.loadBottleReports();
-}
+};

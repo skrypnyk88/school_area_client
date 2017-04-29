@@ -3,6 +3,6 @@ module.exports = angular
 .config(function($stateProvider) {
     $stateProvider.state('main.bottleReport', {
       url: '/bottle_report',
-      template: '<bottle-report-component></bottle-report-component>'
+      template: '<bottle-report></bottle-report>'
     });
   });

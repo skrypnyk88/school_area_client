@@ -33,4 +33,3 @@ function MainController($scope, $state, auth, currentGroupDay) {
     function() { $state.reload($state.current); }
   );
 };
-

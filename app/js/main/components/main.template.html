@@ -1,75 +1,95 @@
-<div class="header">
-  <md-toolbar id="toolbar" class="md-menu-toolbar" layout="row">
+<header class="header" layout="row" layout-align="space-between center">
     <div class="logo">
-      <img  src="app/img/profile/logo.jpg" alt="logo">
+      <img class="logo" src="app/img/profile/logo.gif" alt="logo">
     </div>
-
-    <div flex layout="row" layout-align="space-around center">
-
-      <md-select ng-model="$ctrl.currentGroupDay.group_id" >
-        <md-option ng-value="group.id" ng-repeat="group in $ctrl.groups">
-          {{ group.name }}
-        </md-option>
-      </md-select>
-
-      <div class="icon-wrapper" layout="row" role="button">
-        <a ui-sref="#"><md-icon class="today">today</md-icon></a>
-        <a ui-sref="#" ng-click="pastDate()" role="button">
-          <md-icon id="chevron_left" class="chevron">chevron_left</md-icon>
-        </a>
-        <div class="data" layout="row" layout-align="space-around center">
-          <span class="number">{{selectedDate.getDate() + 1}}</span>
-          <div class="date" layout="column">
-            <span class="month">{{monthNames[selectedDate.getMonth()] }}</span>
-            <span class="day">{{dayNames[selectedDate.getDay()] }}</span>
-          </div>
-        </div>
-        <a ui-sref="#" ng-click="nextDate()" ng-click="showMonth()" role="button">
-          <md-icon id="chevron_right" class="chevron">chevron_right</md-icon>
-        </a>
+    <div class="calendar" layout="row">
+      <a ui-sref="">
+        <md-icon class="today">today</md-icon>
+      </a>
+      <a ui-sref="">
+        <md-icon id="chevron_left" class="chevron">chevron_left</md-icon>
+      </a>
+      <span class="day" layout="row" layout-align="center center">22</span>
+      <div class="date" layout="column">
+            <span class="month">Apr</span>
+            <span class="day">Sun</span>
       </div>
-
-      <md-button class="user-button" layout="row" layout-align="center center">
-        <img md-menu-align-target class="avatar" src="app/img/profile/educator.svg" alt="profile">
-        <span class="username">Teacher</span>
-        <md-menu md-position-mode="target-right bottom">
-          <md-icon ng-click="$mdOpenMenu()">expand_more</md-icon>
-          <md-menu-content width="3">
-            <md-menu-item>
-              <md-button>Profile</md-button>
-            </md-menu-item>
-            <md-menu-divider role="separator"></md-menu-divider>
-            <md-menu-item>
-              <md-button ng-click="$ctrl.logout()">Sign out</md-button>
-            </md-menu-item>
-          </md-menu-content>
-        </md-menu>
-      </md-button>
+      <a ui-sref="">
+        <md-icon id="chevron_right" class="chevron">chevron_right</md-icon>
+      </a>
     </div>
-  </md-toolbar>
-</div>
+    <md-button class="user-button" layout="row" layout-align="center center">
 
-<div layout="row">
-  <nav flex>
+    <span class="username">Jesica Alba</span>
+      <md-menu md-position-mode="target-right bottom">
+      <md-icon ng-click="$mdOpenMenu()">expand_more</md-icon>
+      <md-menu-content width="3">
+      <md-menu-item>
+        <md-button>Profile</md-button>
+      </md-menu-item>
+      <md-menu-divider role="separator"></md-menu-divider>
+      <md-menu-item>
+        <md-button>Sign out</md-button>
+      </md-menu-item>
+    </md-menu-content>
+    </md-menu>
+    </md-button>
+</header>
+
+<div class="teacher-report" layout="row">
+  <nav class="navbar">
     <ul>
-      <li class="journal"><a ui-sref="#">Journal</a></li>
-      <li>
-        <ul>
-          <li class="active"><a ui-sref="main.presenceReport">Attendance</a></li>
-          <li><a ui-sref="#">Health</a></li>
-          <li><a ui-sref="#">Bottle</a></li>
-          <li><a ui-sref="#">Meals</a></li>
-          <li><a ui-sref="main.potty_report">Potty</a></li>
-          <li><a ui-sref="#">Nap</a></li>
-          <li><a ui-sref="#">Achivements</a></li>
-          <li><a ui-sref="#">Supplies</a></li>
-          <li><a ui-sref="#">Our Day</a></li>
-          <li><a ui-sref="#">My Day</a></li>
-        </ul>
+      <li class="teacher">
+        <a ui-sref="#">
+          Teacher report
+        </a>
       </li>
+      <!-- <li> -->
+        <ul class="reports1">
+          <li>
+            <a ui-sref="main.presence">
+              Presence
+            </a>
+          </li>
+          <li>
+            <a ui-sref="main.presence">
+              Diet
+            </a>
+          </li>
+          <li>
+            <a ui-sref="#">
+              Bottle
+            </a>
+          </li>
+          <li>
+            <a ui-sref="#">
+              Meals
+            </a>
+          </li>
+          <li>
+            <a ui-sref="">
+              Potty
+            </a>
+          </li>
+          <!-- <li><a ui-sref="main.potty_report">Potty</a></li> -->
+          <li><a ui-sref="#">Nap</a></li>
+          <li><a ui-sref="#">Rewards</a></li>
+          <li><a ui-sref="#">Personal notes</a></li>
+          <li><a ui-sref="#">Class notes</a></li>
+          <!-- <li><a ui-sref="#">My Day</a></li> -->
+        </ul>
+        <ul class="reports2">
+          <li><a href="">Parent Sharings</a></li>
+          <li><a href="">Messages</a></li>
+          <li><a href="">Notifications</a></li>
+          <li><a href="">Calendar</a></li>
+          <li><a href="">Photo Gallery</a></li>
+          <li><a href="">Rewards</a></li>
+          <li><a href="">Contacts</a></li>
+        </ul>
+      <!-- </li> -->
     </ul>
   </nav>
-
-  <section flex ui-view></section>
+<section flex ui-view></section>
 </div>
 

@@ -4,6 +4,6 @@ module.exports = angular
     $stateProvider.state('main.static', {
       url: '/static',
       name: 'main.static',
-     templateUrl: './app/js/static/components/static.template.html'
+      templateUrl: './app/js/static/components/static.template.html'
     });
   });

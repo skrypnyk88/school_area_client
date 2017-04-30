@@ -1,5 +1,6 @@
 @import './../../node_modules/angular-material/angular-material.css';
 
+<<<<<<< b2b01b9e89c69f67aefb510157b51c7ee95b97a6
 //  General  //
 
 $blue-color: #00bff3;
@@ -7,6 +8,9 @@ $green-color: #95c948;
 $red-color: #ec4e2c;
 $btn-border: 1px solid #b1b1b1;
 $text-transform: none;
+=======
+// General  //
+>>>>>>> LVRUBYM-191: Added style.scss
 
 html,
 body,
@@ -497,6 +501,7 @@ login-component {
 >>>>>>> LVRUBYM-191: created presenceReport
 }
 
+<<<<<<< b2b01b9e89c69f67aefb510157b51c7ee95b97a6
 //style for static.html
 @mixin border {
   border-bottom: 1px solid #ebebeb;
@@ -515,10 +520,33 @@ login-component {
     font-weight: 200;
     padding: 2px 12px;
     text-transform: $text-transform;
+=======
+// style for static.html //
+
+$btn-border: 1px solid #b1b1b1;
+$green-color: #95c948;
+$text-transform: none;
+
+@mixin border {
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+}
+
+@mixin btn-font {
+  font-size: 18pt;
+  font-weight: 900;
+}
+
+.btn {
+  &:not([disabled]) {
+
+    border-radius: 13px;
+>>>>>>> LVRUBYM-191: Added style.scss
 
     &:hover {
       background-color: white;
     }
+<<<<<<< b2b01b9e89c69f67aefb510157b51c7ee95b97a6
   }
 }
 
@@ -542,12 +570,49 @@ login-component {
 }
 
 
+=======
+  }
+}
+
+.green-btn {
+  background-color: $green-color;
+  border: 1px solid $green-color;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 200;
+  text-transform: $text-transform;
+
+  &:not([disabled]) {
+
+    &:hover {
+      background-color: #fff;
+      color: #55585e;
+    }
+
+    &:focus {
+      background-color: $green-color;
+      border: 1px solid $green-color;
+      color: #fff;
+    }
+  }
+}
+
+>>>>>>> LVRUBYM-191: Added style.scss
 .gray-btn {
   background-color: #fff;
   border: 1px solid #e1e1e1;
   color: #55585e;
+<<<<<<< b2b01b9e89c69f67aefb510157b51c7ee95b97a6
 
   &:not([disabled]) {
+=======
+  font-size: 16px;
+  font-weight: 200;
+  text-transform: $text-transform;
+
+  &:not([disabled]) {
+
+>>>>>>> LVRUBYM-191: Added style.scss
     &:hover {
       background-color: #e5e4e4;
       color: #55585e;
@@ -559,6 +624,7 @@ login-component {
   }
 }
 
+<<<<<<< b2b01b9e89c69f67aefb510157b51c7ee95b97a6
 
 .report {
   @include border;
@@ -566,11 +632,26 @@ login-component {
 
   .student {
     margin: 10px 150px 10px 10px;
+=======
+.student {
+  @include border;
+
+  background-color: #fff;
+  width: 100%;
+
+  .student-info {
+    height: 150px;
+    margin-bottom: 15px;
+>>>>>>> LVRUBYM-191: Added style.scss
 
     .avatar {
       border-radius: 50%;
       height: 70px;
+<<<<<<< b2b01b9e89c69f67aefb510157b51c7ee95b97a6
       margin: 15px 20px 15px 100px;
+=======
+      margin: 40px 20px 15px 100px;
+>>>>>>> LVRUBYM-191: Added style.scss
       min-width: 70px;
       width: 70px;
     }
@@ -586,6 +667,7 @@ login-component {
     }
   }
 }
+<<<<<<< b2b01b9e89c69f67aefb510157b51c7ee95b97a6
 
 .green-group-btn {
   @include btn-font;
@@ -688,6 +770,121 @@ login-component {
 
     &:focus {
       border: 1px solid $blue-color;
+=======
+
+// Presence Report
+
+.presence-report {
+  .student-btn {
+    margin: 10px 0 20px 100px;
+
+    .group-x {
+
+      margin: 10px 0;
+      min-height: 25px;
+      min-width: 200px;
+      padding: 3px 15px;
+    }
+
+    .present-btn {
+
+      @include btn-font;
+      background-color: #fff;
+      border: $btn-border;
+      border-radius: 20px 0 0 20px;
+      color: #e1e1e1;
+      text-transform: $text-transform;
+
+      &:not([disabled]) {
+
+        &:hover {
+          background-color: $green-color;
+          color: #fff;
+        }
+
+        &:focus {
+          background-color: $green-color;
+          border: $btn-border;
+          color: #fff;
+
+          &:hover {
+            background-color: #fff;
+            border: 1px solid $green-color;
+            color: #55585e;
+          }
+        }
+      }
+    }
+
+    .absent-btn {
+
+      @include btn-font;
+      background-color: #fff;
+      border: $btn-border;
+      border-radius: 0 20px 20px 0;
+      color: #e1e1e1;
+      text-transform: $text-transform;
+
+      &:not([disabled]) {
+
+        &:hover {
+
+          background-color: #ec4e2c;
+          color: #fff;
+          }
+
+        &:focus {
+
+          background-color: #ec4e2c;
+          border: $btn-border;
+          color: #fff;
+
+          &:hover {
+            background-color: #fff;
+            border: 1px solid #ec4e2c;
+            color: #55585e;
+          }
+        }
+      }
+    }
+
+    .time {
+      background-color: #fff;
+      border: 1px solid white;
+      color: #6e6b6b;
+      font-size: 18px;
+      height: 30px;
+      margin: 3px 60px;
+      text-align: center;
+      width: 85px;
+
+      &:focus {
+        border: 1px solid #dfdbdb;
+        border-radius: 12px;
+        outline: none;
+
+      }
+
+      &:hover {
+        border: 1px solid #dfdbdb;
+        border-radius: 12px;
+      }
+
+    }
+
+    .delete {
+      background-color: white;
+      background-image: url('../img/icon/cross-out.svg');
+      background-repeat: no-repeat;
+      border: hidden;
+      height: 10px;
+      margin-top: 12px;
+      width: 10px;
+
+      &:focus {
+        outline: none;
+      }
+>>>>>>> LVRUBYM-191: Added style.scss
     }
   }
 }

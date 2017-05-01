@@ -2,6 +2,19 @@
     <div class="logo">
       <img class="logo" src="app/img/profile/logo.gif" alt="logo">
     </div>
+        <md-select flex="8" ng-model="classes" placeholder="Class A" class="group-select md-no-underline">
+          <md-option value="class a">Class A</md-option>
+          <md-option value="class b">Class B</md-option>
+          <md-option value="class c">Class C</md-option>
+          <md-option value="class d">Class D</md-option>
+        </md-select>
+
+<!--       <md-select ng-model="$ctrl.currentGroupDay.group_id" >
+        <md-option ng-value="group.id" ng-repeat="group in $ctrl.groups">
+          {{ group.name }}
+        </md-option>
+      </md-select> -->
+
     <div class="calendar" layout="row">
       <a ui-sref="">
         <md-icon class="today">today</md-icon>
@@ -92,4 +105,3 @@
   </nav>
 <section flex ui-view></section>
 </div>
-

@@ -23,7 +23,7 @@ body {
     background: white;
   }
 
-  md-select {
+  .group-select {
     background-color: white;
     border: 1px solid #d7d7d7;
     border-radius: 10px;
@@ -35,7 +35,7 @@ body {
       border: 1px solid #428bca;
       box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
     }
-  }
+}
 
   .today {
     color: $color;
@@ -373,6 +373,7 @@ body {
 
 //style for static.html
 $btn-border: 1px solid #b1b1b1;
+$blue-color: #00bff3;
 $green-color: #95c948;
 $text-transform: none;
 
@@ -389,6 +390,10 @@ $text-transform: none;
 .btn {
   &:not([disabled]) {
     border-radius: 13px;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 4px 30px;
+    text-transform: $text-transform;
 
     &:hover {
       background-color: white;
@@ -400,9 +405,6 @@ $text-transform: none;
   background-color: $green-color;
   border: 1px solid $green-color;
   color: #fff;
-  font-size: 16px;
-  font-weight: 200;
-  text-transform: $text-transform;
 
   &:not([disabled]) {
     &:hover {
@@ -423,9 +425,6 @@ $text-transform: none;
   background-color: #fff;
   border: 1px solid #e1e1e1;
   color: #55585e;
-  font-size: 16px;
-  font-weight: 200;
-  text-transform: $text-transform;
 
   &:not([disabled]) {
     &:hover {
@@ -534,22 +533,62 @@ $text-transform: none;
          }
        }
     }
+  }
+}
 
-    .time {
+.input-time {
+  background-color: #fff;
+  border: hidden;
+  color: #6e6b6b;
+  font-size: 18px;
+  height: 30px;
+  margin: 0 60px;
+  text-align: center;
+  width: 85px;
+
+  &:hover {
+    border: 1px solid #dfdbdb;
+    border-radius: 12px;
+  }
+}
+
+.blue-btn {
+  background-color: $blue-color;
+  border: 1px solid $blue-color;
+  color: #fff;
+
+  &:not([disabled]) {
+    &:hover {
       background-color: #fff;
-      border: hidden;
-      color: #6e6b6b;
-      font-size: 18px;
-      height: 30px;
-      margin: 0 60px;
-      text-align: center;
-      width: 85px;
+      color: #55585e;
+    }
 
-      &:hover {
-        border: 1px solid #dfdbdb;
-        border-radius: 12px;
-      }
+    &:focus {
+      border: 1px solid $blue-color;
     }
   }
 }
 
+.blue-select {
+  &:not([disabled]) {
+    background-color: #fff;
+    border-bottom: 2px solid $blue-color;
+    font-size: 14px;
+    height: 38px;
+
+    .md-select-icon {
+      border-bottom: 13px solid $blue-color;
+      border-left: 13px solid transparent;
+      height: 0;
+      left: 6px;
+      margin-left: 15px;
+      position: relative;
+      top: 12px;
+      width: 0;
+
+      &::after {
+        content: '';
+      }
+    }
+  }
+}

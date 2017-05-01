@@ -1,12 +1,12 @@
 module.exports = angular
   .module('main.route', [])
   .config(function($stateProvider, $urlRouterProvider) {
-    // $urlRouterProvider.otherwise('/potty_report');
+    $urlRouterProvider.otherwise('/presence_report');
     $stateProvider.state('main', {
       name: 'main',
       template: '<main-component groups="$resolve.groups"></main-component>',
       resolve: {
-        groups: getGroups
+        groups: getGroups,
       }
     });
   });

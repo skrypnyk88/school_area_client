@@ -6,6 +6,7 @@ var resetPasswordModule = require('./../resetPassword/resetPassword.module.js');
 var presenceReportModule = require('./../presenceReport/presenceReport.module.js');
 var studentModule = require('./../student/student.module.js');
 var groupService = require('./../common/services/group.service.js');
+<<<<<<< 110a2349bbde235cfd99b7d4f923344a087a6a29
 <<<<<<< 6591626350f205011fe4ba3afc8ffcf0c584d96b
 var staticModule = require('./../static/static.module.js');
 <<<<<<< b58d66a93707ee896c6d162c5c842ea61db242b2
@@ -36,6 +37,10 @@ var groupListModule = require('./../groupList/groupList.module.js');
 var bottleReportModule = require('.././bottleReport/bottleReport.module.js');
 	  require('../../css/style.scss');
 >>>>>>> LVRUBYM-221:Fixed file's name
+=======
+var bottleReportModule = require('.././bottleReport/bottleReport.module.js');
+require('../../css/style.scss');
+>>>>>>> LVRUBYM-221:Added validation and failure response
 
 module.exports = angular
   .module('main', [
@@ -46,8 +51,12 @@ module.exports = angular
     studentModule.name,
     bottleReportModule.name,
     groupService.name,
+<<<<<<< b1263744d5dbac2df9f7478c666c2beb7b7604de
 <<<<<<< b58d66a93707ee896c6d162c5c842ea61db242b2
     toggleMessage.name,
+=======
+<<<<<<< 110a2349bbde235cfd99b7d4f923344a087a6a29
+>>>>>>> LVRUBYM-221:Added validation and failure response
     staticModule.name,
     sideBarModule.name,
     studentService.name,
@@ -65,6 +74,8 @@ module.exports = angular
 >>>>>>> LVRUBYM-351: Add toggleMessage service
 =======
     toggleMessage.name,
+=======
+>>>>>>> LVRUBYM-221:Added validation and failure response
     bottleReportModule.name
 >>>>>>> LVRUBYM-221:Add module,components,services,resources to bottle report
   ])

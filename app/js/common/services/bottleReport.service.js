@@ -32,9 +32,12 @@ function bottleReportService(bottleReportResource,
   ])
 .factory('bottleReportService', bottleReportService);
 
-bottleReportService.$inject = ['bottleReportResource', 'bottleResource'];
+bottleReportService.$inject = ['bottleReportResource',
+                               'bottleResource',
+                               'currentGroupDay',
+                               'errorMessages'];
 
-function bottleReportService(bottleReportResource, bottleResource) {
+function bottleReportService(bottleReportResource, bottleResource, currentGroupDay, errorMessages) {
   var service = {
     getBottleReports: getBottleReports,
     getBottles: getBottles,
@@ -45,11 +48,15 @@ function bottleReportService(bottleReportResource, bottleResource) {
   };
 
   function getBottleReports() {
+<<<<<<< b1263744d5dbac2df9f7478c666c2beb7b7604de
 <<<<<<< 78cc606e23ca9236ad1c001671c581f64c62f056
+=======
+>>>>>>> LVRUBYM-221:Added validation and failure response
     var params = {
       group_id: currentGroupDay.group_id
     };
 
+<<<<<<< b1263744d5dbac2df9f7478c666c2beb7b7604de
     return bottleReportResource.query(params)
     .$promise
     .then(responseSuccess, responseFailure);
@@ -104,16 +111,23 @@ function bottleReportService(bottleReportResource, bottleResource) {
     }
 =======
     return bottleReportResource.query().$promise.then(function(bottleReports) {
+=======
+    return bottleReportResource.query(params).$promise.then(function(bottleReports) {
+>>>>>>> LVRUBYM-221:Added validation and failure response
       return bottleReports;
+    }, function(errors) {
+      responseFailure(errors.data);
     });
   };
 
   function getBottles(bottleReport) {
     return bottleResource.query({bottle_report_id: bottleReport.id,
-                                  group_id: bottleReport.group_id})
+                                group_id: bottleReport.group_id})
     .$promise
     .then(function(bottles) {
       return bottles;
+    }, function(errors) {
+      responseFailure(errors.data);
     });
   };
 
@@ -124,6 +138,8 @@ function bottleReportService(bottleReportResource, bottleResource) {
     .$promise
     .then(function(bottle) {
       return bottle;
+    }, function(errors) {
+      responseFailure(errors.data);
     });
   };
 
@@ -133,6 +149,8 @@ function bottleReportService(bottleReportResource, bottleResource) {
                                   group_id: bottleReport.group_id})
     .$promise
     .then(function() {
+    }, function(errors) {
+      responseFailure(errors.data);
     });
   };
 
@@ -144,8 +162,15 @@ function bottleReportService(bottleReportResource, bottleResource) {
     .$promise
     .then(function(updatedBottle) {
       return updatedBottle;
+    }, function(errors) {
+      responseFailure(errors.data);
     });
 >>>>>>> LVRUBYM-221:Fixed file's name
+  };
+
+  function responseFailure(errorDetails) {
+    console.log(errorDetails);
+    alert(errorMessages.FAIL_RESPONSE);
   };
 
   return service;

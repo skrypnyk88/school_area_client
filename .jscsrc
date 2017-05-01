@@ -24,6 +24,7 @@
     ],
     "requireOperatorBeforeLineBreak": true,
     "requireCamelCaseOrUpperCaseIdentifiers": {
+<<<<<<< b1263744d5dbac2df9f7478c666c2beb7b7604de
 <<<<<<< c1277f2601881303dd01af6f108129014ab59b51
        "allExcept": ["var_args", {regex:{pattern:"^ignore",flags:"i"}}]
 =======
@@ -33,6 +34,9 @@
        "allExcept": ["var_args", {regex:{pattern:"^ignore",flags:"i"}}]
 >>>>>>> LVRUBYM-221:Add action on front-end
 >>>>>>> LVRUBYM-221:Add action on front-end
+=======
+       "allExcept": ["var_args", {regex:{pattern:"^ignore",flags:"i"}}]
+>>>>>>> LVRUBYM-221:Added validation and failure response
     },
     "maximumLineLength": {
       "value": 100,

@@ -10,6 +10,7 @@ module.exports = angular
   .constant('errorMessages', {
     NO_AUTH: 'Invalid Email/Password',
     AUTH_TIMEOUT: 'Session has expired',
+<<<<<<< b1263744d5dbac2df9f7478c666c2beb7b7604de
     FAIL_RESPONSE: 'Oops! Something went wrong!Please, try again later!'
   })
   .constant('menuItems', [
@@ -33,3 +34,7 @@ module.exports = angular
       {name: 'Contacts',        link: '#'}
     ]
   );
+=======
+    FAIL_RESPONSE: 'Oops! Something went wrong! Please, try again later!'
+  });
+>>>>>>> LVRUBYM-221:Added validation and failure response

@@ -16,11 +16,7 @@
     ],
     "requireOperatorBeforeLineBreak": true,
     "requireCamelCaseOrUpperCaseIdentifiers": {
-<<<<<<< 2f2697354c6b16cf178aeb75d84096f1e9bfcf9c
-        "allExcept": ["var_args", {regex:{pattern:"^ignore",flags:"i"}}]
-=======
        "allExcept": ["var_args", {regex:{pattern:"^ignore",flags:"i"}}]
->>>>>>> LVRUBYM-221:Add action on front-end
     },
     "maximumLineLength": {
       "value": 100,

@@ -3,6 +3,6 @@ var bottleReportRoute = require('./bottleReport.route.js');
 
 module.exports = angular
 .module('bottleReport', [
-	bottleReportComponent.name,
-	bottleReportRoute.name
+  bottleReportComponent.name,
+  bottleReportRoute.name
 ]);

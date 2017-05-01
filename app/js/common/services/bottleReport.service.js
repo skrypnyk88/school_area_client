@@ -8,9 +8,12 @@ module.exports = angular
   ])
 .factory('bottleReportService', bottleReportService);
 
-bottleReportService.$inject = ['bottleReportResource', 'bottleResource'];
+bottleReportService.$inject = ['bottleReportResource',
+                               'bottleResource',
+                               'currentGroupDay',
+                               'errorMessages'];
 
-function bottleReportService(bottleReportResource, bottleResource) {
+function bottleReportService(bottleReportResource, bottleResource, currentGroupDay, errorMessages) {
   var service = {
     getBottleReports: getBottleReports,
     getBottles: getBottles,
@@ -20,17 +23,25 @@ function bottleReportService(bottleReportResource, bottleResource) {
   };
 
   function getBottleReports() {
-    return bottleReportResource.query().$promise.then(function(bottleReports) {
+    var params = {
+      group_id: currentGroupDay.group_id
+    };
+
+    return bottleReportResource.query(params).$promise.then(function(bottleReports) {
       return bottleReports;
+    }, function(errors) {
+      responseFailure(errors.data);
     });
   };
 
   function getBottles(bottleReport) {
     return bottleResource.query({bottle_report_id: bottleReport.id,
-                                  group_id: bottleReport.group_id})
+                                group_id: bottleReport.group_id})
     .$promise
     .then(function(bottles) {
       return bottles;
+    }, function(errors) {
+      responseFailure(errors.data);
     });
   };
 
@@ -41,6 +52,8 @@ function bottleReportService(bottleReportResource, bottleResource) {
     .$promise
     .then(function(bottle) {
       return bottle;
+    }, function(errors) {
+      responseFailure(errors.data);
     });
   };
 
@@ -50,6 +63,8 @@ function bottleReportService(bottleReportResource, bottleResource) {
                                   group_id: bottleReport.group_id})
     .$promise
     .then(function() {
+    }, function(errors) {
+      responseFailure(errors.data);
     });
   };
 
@@ -61,7 +76,14 @@ function bottleReportService(bottleReportResource, bottleResource) {
     .$promise
     .then(function(updatedBottle) {
       return updatedBottle;
+    }, function(errors) {
+      responseFailure(errors.data);
     });
+  };
+
+  function responseFailure(errorDetails) {
+    console.log(errorDetails);
+    alert(errorMessages.FAIL_RESPONSE);
   };
 
   return service;

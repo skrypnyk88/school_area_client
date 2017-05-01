@@ -18,7 +18,7 @@ function BottleReportController(bottleReportService) {
     bottleReportService.getBottleReports().then(
       function(bottleReports) {
         ctrl.bottleReports = bottleReports;
-    });
+      });
   };
 
   ctrl.addBottle = function(bottleReport) {

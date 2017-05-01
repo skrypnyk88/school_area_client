@@ -1,23 +1,33 @@
 <div class="bottle_report">
   <md-toolbar><span>Bottle</span></md-toolbar>
-  <form>
-    <div ng-repeat="bottleReport in $ctrl.bottleReports" class="container"  layout="row" flex>
+  <form name='bottleReportsForm' novalidate>
+      <div ng-repeat="bottleReport in $ctrl.bottleReports" class="container"  layout="row" flex>
      <div flex="25">
       <student-component student="bottleReport.student"></student-component>
     </div>
     <md-content layout-wrap flex="50">  
-      <button ng-click="$ctrl.addBottle(bottleReport)" class="button">Add Bottle</button>   
+       <button ng-click="$ctrl.addBottle(bottleReport)" class="button">Add Bottle</button>   
       <div ng-repeat="bottle in bottleReport.bottles" class="bottles">
         <md-select ng-change="$ctrl.updateBottle(bottle, bottleReport)" name="bottle_{{bottle.id}}_quantity" id="quantity" ng-model="bottle.quantity" convert-to-number placeholder="30 ml">
-          <md-option value="10">10 ml</md-option>
-          <md-option value="20">20 ml</md-option>
           <md-option value="30">30 ml</md-option>
           <md-option value="45">45 ml</md-option>
           <md-option value="60">60 ml</md-option>
           <md-option value="75">75 ml</md-option>
+          <md-option value="90">90 ml</md-option>
+          <md-option value="105">105 ml</md-option>
         </md-select>
-        <input name="bottle_{{bottle.id}}_time" ng-blur="$ctrl.updateBottle(bottle, bottleReport)"  ng-model="bottle.time" type='text' 
-        placeholder="HH:mm" class="time_input">
+        
+        <md-input-container>
+        <label>Time</label>
+        <input name="time_{{bottle.id}}" 
+               ng-blur="$ctrl.updateBottle(bottle, bottleReport)" 
+               ng-model="bottle.time" type='text'
+               placeholder="HH:mm" 
+                class="time_input" pattern="([01]?[0-9]{1}|2[0-3]{1}):[0-5]{1}[0-9]{1}" required>
+        <div ng-messages="bottleReportsForm['time_' + bottle.id].$error" role="alert">
+            <ng-message when="pattern">Must be a valid time format.</ng-message>
+        </div>
+        </md-input-container>
         <button class="delete" ng-click="$ctrl.deleteBottle(bottle, bottleReport)">X</button>
       </div>
     </md-content>

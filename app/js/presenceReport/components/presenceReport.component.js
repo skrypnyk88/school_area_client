@@ -4,7 +4,6 @@ module.exports = angular
     templateUrl: './app/js/presenceReport/components/presenceReport.template.html',
     controller: PresenceReportController
   });
-
 function PresenceReportController() {
   var ctrl = this;
 };

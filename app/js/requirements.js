@@ -4,5 +4,8 @@ module.exports = angular
     require('angular-resource'),
     require('angular-messages'),
     require('angular-local-storage'),
-    require('angular-material')
+    require('angular-material'),
+    'pascalprecht.translate',
+    require('angular-translate'),
+    require('angular-translate-loader-static-files')
     ]);

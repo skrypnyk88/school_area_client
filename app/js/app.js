@@ -19,6 +19,19 @@ angular
       localStorageServiceProvider.setPrefix('schoolArea');
       $httpProvider.interceptors.push('tokenInjector');
     })
+  .config(['$translateProvider', function($translateProvider) {
+    $translateProvider.useStaticFilesLoader({
+      prefix: 'app/js/i18n/locale-',
+      suffix: '.json'
+    });
+    $translateProvider.preferredLanguage('en');
+  }])
+  .controller('Ctrl', ['$translate', function($translate) {
+    var ctrl = this;
+    ctrl.changeLanguage = function(langKey) {
+      $translate.use(langKey);
+    };
+  }])
   .run(['$rootScope', '$state', 'auth',
     function($rootScope, $state, auth) {
       $rootScope.$on('$stateChangeStart',

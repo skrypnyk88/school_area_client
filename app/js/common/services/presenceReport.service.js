@@ -8,41 +8,44 @@ module.exports = angular
   ])
 .factory('presenceReportService', presenceReportService);
 
-presenceReportService.$inject = ['presenceReportResource','reportTimeResource','currentGroupDay'];
+presenceReportService.$inject = ['presenceReportResource',
+                                 'reportTimeResource',
+                                 'currentGroupDay',
+                                 '$mdToast'];
 
-function presenceReportService(presenceReportResource, reportTimeResource, currentGroupDay) {
+function presenceReportService(
+  presenceReportResource,
+  reportTimeResource,
+  currentGroupDay,
+  $mdToast) {
   var service = {
     getPresenceReports: getPresenceReports,
     getReportTimes: getReportTimes,
     addReportTime: addReportTime,
     deleteReportTime: deleteReportTime,
     updateReportTime: updateReportTime,
-    updateEndTime: updateEndTime
+    updateEndTime: updateEndTime,
+    toggleErrorMsg: toggleErrorMsg
   };
   return service;
 
   function getPresenceReports() {
-    var params = {
-      group_id: currentGroupDay.group_id,
-      day: currentGroupDay.day
-    };
-    return presenceReportResource.query(params).$promise.then(function(presenceReports) {
+    return presenceReportResource.query({group_id: currentGroupDay.group_id,
+                                      day: currentGroupDay.day})
+    .$promise.then(function(presenceReports) {
       return presenceReports;
+    }, function() {
     });
   };
 
   function getReportTimes(presenceReport) {
-
-    var params = {
-      presence_report_id: presenceReport.id,
-      group_id: currentGroupDay.group_id,
-      day: currentGroupDay.day
-    };
-
-    return reportTimeResource.query(params)
+    return reportTimeResource.query({presence_report_id: presenceReport.id,
+                                  group_id: currentGroupDay.group_id,
+                                  day: currentGroupDay.day})
     .$promise
     .then(function(reportTimes) {
       return reportTimes;
+    }, function() {
     });
   };
 
@@ -55,6 +58,8 @@ function presenceReportService(presenceReportResource, reportTimeResource, curre
     .$promise
     .then(function(reportTimes) {
       return reportTimes;
+    }, function(response) {
+      service.toggleErrorMsg(response);
     });
   };
 
@@ -65,6 +70,8 @@ function presenceReportService(presenceReportResource, reportTimeResource, curre
                                   student_id: presenceReport.student_id})
     .$promise
     .then(function() {
+    }, function(response) {
+      service.toggleErrorMsg(response);
     });
   };
 
@@ -80,6 +87,8 @@ function presenceReportService(presenceReportResource, reportTimeResource, curre
     .$promise
     .then(function(updatedReportTime) {
       return updatedReportTime;
+    }, function(response) {
+      service.toggleErrorMsg(response);
     });
   };
 
@@ -95,6 +104,18 @@ function presenceReportService(presenceReportResource, reportTimeResource, curre
     .$promise
     .then(function(updatedReportTime) {
       return updatedReportTime;
+    }, function(response) {
+      service.toggleErrorMsg(response);
     });
   };
+
+  function toggleErrorMsg(response) {
+    var msg = response.data.errors;
+    $mdToast.show({
+      template: '<md-toast><div class="md-toast-content">' +
+                  msg +
+                '</div></md-toast>',
+      position: 'top right'
+    });
+  }
 };

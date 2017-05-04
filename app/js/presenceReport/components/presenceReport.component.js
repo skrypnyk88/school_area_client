@@ -17,8 +17,8 @@ function PresenceReportController() {
   controller: PresenceReportController
 });
 
-PresenceReportController.$inject = ['presenceReportService','currentGroupDay'];
-function PresenceReportController(presenceReportService, currentGroupDay) {
+PresenceReportController.$inject = ['presenceReportService'];
+function PresenceReportController(presenceReportService) {
 
 <<<<<<< d67a62bd3f27dfc6312ee18febfeaba50bf23308
 function PresenceReportController(presenceReportService, reportTimeService, currentGroupDay) {
@@ -26,7 +26,7 @@ function PresenceReportController(presenceReportService, reportTimeService, curr
 =======
 >>>>>>> LVRUBYM-191: Changed component, resourse, and service
   var ctrl = this;
-  ctrl.currentGroupDay = currentGroupDay;
+  var regex = /^[\d\- ]{2}:[\d\- ]{2}$/;
 
   ctrl.loadPresenceReports = function() {
     presenceReportService.getPresenceReports().then(
@@ -49,7 +49,10 @@ function PresenceReportController(presenceReportService, reportTimeService, curr
   };
 
   ctrl.updateReportTime = function(reportTime, presenceReport) {
-    if (reportTime.end_time == null || reportTime.start_time < reportTime.end_time)  {
+    if ((reportTime.end_time != null ||
+         reportTime.start_time < reportTime.end_time) &&
+         (regex.test(reportTime.start_time)) &&
+         (regex.test(reportTime.end_time))) {
       presenceReportService.updateReportTime(reportTime, presenceReport).then(function(reportTime) {
         return reportTime;
       });

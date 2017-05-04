@@ -1,3 +1,4 @@
+<<<<<<< 9d3dd3a2ee75f1cb2597cdb93306c2038c2ef99c
 <<<<<<< 8004e26ca6452ee9354191c96ad577f31acefe33
 <<<<<<< 379f0a8c4c1289155443946b2927dc8657f0fd6c
 <h1>{{ 'HELLO' | translate }}</h1>
@@ -32,35 +33,23 @@
   </div> -->
 
 
+=======
+>>>>>>> LVRUBYM-191: added md-toast, toggleErrorMsg
 <div class="student" ng-repeat="presenceReport in $ctrl.presenceReports" layout="row" flex>
-
-      <student-component student="presenceReport.student" class="student-info" layout="row" flex="25">
-      </student-component>
-
-<!--     <section class="student_btn" layout="column" layout-align="center center">
-      <div class="btn_container" layout="row">
-        <md-button class="btn groupX present">Present</md-button>
-        <md-button class="btn groupX absent">Absent</md-button>
+  <student-component student="presenceReport.student" class="student-info" layout="row" flex="25">
+  </student-component>
+  <div class="presence-report">
+    <section class="student-btn" layout="column" layout-align="center center">
+      <div class="btn-container" layout="row">
+        <md-button ng-click="$ctrl.addReportTime(presenceReport)" class="group-x present-btn">Present</md-button>
+        <md-button ng-click="$ctrl.updateEndTime(presenceReport)" class="group-x absent-btn">Absent</md-button>
       </div>
-      <div class="input-container" layout="row" layout-align="space-around">
-          <input class="time" type="text" name="hours" value="13:15">
-          <input class="time" type="text" name="minutes" value="18:45">
+      <div ng-repeat="reportTime in presenceReport.report_time" class="input-container" layout="row" layout-align="space-between">
+        <input name="report_start_{reportTime.id}}_time" ng-blur="$ctrl.updateReportTime(reportTime, presenceReport)"  ng-model="reportTime.start_time" type='datetime' placeholder="HH:mm" class="time_input time">
+        <input name="report_end_{{reportTime.id}}_time" ng-blur="$ctrl.updateReportTime(reportTime, presenceReport)"  ng-model="reportTime.end_time" type='datetime' placeholder="HH:mm" class="time-input time" ng-if="reportTime.end_time != null" class="end-time-hidden">
+        <button class="delete" ng-click="$ctrl.deleteReportTime(reportTime, presenceReport)"></button>
       </div>
-    </section>  -->
-      
-    <div class="presence-report">
-          <section class="student-btn" layout="column" layout-align="center center">
-          <div class="btn-container" layout="row">
-            <md-button ng-click="$ctrl.addReportTime(presenceReport)" class="group-x present-btn">Present</md-button>
-            <md-button ng-click="$ctrl.updateEndTime(presenceReport)" class="group-x absent-btn">Absent</md-button>
-          </div>
-          <div ng-repeat="reportTime in presenceReport.report_time" class="input-container" layout="row" layout-align="space-between">
-               <input name="report_start_{reportTime.id}}_time" ng-blur="$ctrl.updateReportTime(reportTime, presenceReport)"  ng-model="reportTime.start_time" type='datetime' placeholder="HH:mm" class="time_input time">
-                <input name="report_end_{{reportTime.id}}_time" ng-blur="$ctrl.updateReportTime(reportTime, presenceReport)"  ng-model="reportTime.end_time" type='datetime' placeholder="HH:mm" class="time-input time" ng-if="reportTime.end_time != null" class="end-time-hidden">
-                <button class="delete" ng-click="$ctrl.deleteReportTime(reportTime, presenceReport)"></button>
-          </div>
-        </section>
-    </div>
-
+    </section>
+  </div>
 </div>
 >>>>>>> LVRUBYM-191: Added style.scss

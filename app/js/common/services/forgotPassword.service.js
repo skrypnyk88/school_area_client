@@ -6,17 +6,32 @@ module.exports = angular
   ])
   .factory('forgotPasswordService', forgotPasswordService);
 
-forgotPasswordService.$inject = ['forgotPasswordResource'];
+forgotPasswordService.$inject = ['forgotPasswordResource', '$mdToast'];
 
-function forgotPasswordService(forgotPasswordResource) {
+function forgotPasswordService(forgotPasswordResource, $mdToast) {
   var service = {
-    forgot: forgot
+    forgot: forgot,
+    toggleErrorMsg: toggleErrorMsg
   };
   return service;
 
   function forgot(user) {
     forgotPasswordResource.forgot(user).$promise.then(
-      function() {
+      function(response) {
+        service.toggleErrorMsg(response);
+      }, function(response) {
+        service.toggleErrorMsg(response);
       });
   };
+
+  function toggleErrorMsg(response) {
+    var msg = response.data;
+
+    $mdToast.show({
+      template: '<md-toast><div class="md-toast-content">' +
+                  msg +
+                '</div></md-toast>',
+      position: 'top right'
+    });
+  }
 };

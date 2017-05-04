@@ -375,7 +375,12 @@ body {
 $btn-border: 1px solid #b1b1b1;
 $blue-color: #00bff3;
 $green-color: #95c948;
+$red-color: #ec4e2c;
 $text-transform: none;
+@font-face {
+  font-family: MyriadProRegular;
+  // src: url('../fonts/MyriadPro-Regular.otf');
+}
 
 @mixin border {
   border-bottom: 1px solid #ebebeb;
@@ -457,6 +462,7 @@ $text-transform: none;
 
     .name {
       color: #55585e;
+      font-family: 'Myriad Pro Regular';
       font-size: 20px;
       font-weight: 300;
 
@@ -467,72 +473,78 @@ $text-transform: none;
   }
 }
 
-.presence-report {
-  .student-btn {
-    margin: 10px 0 20px 100px;
+.present-btn {
+  @include btn-font;
+  background-color: #fff;
+  border: $btn-border;
+  border-radius: 20px 0 0 20px;
+  color: #e1e1e1;
+  text-transform: $text-transform;
 
-    .group-btn {
-      margin: 10px 0;
-      min-height: 25px;
-      min-width: 200px;
-      padding: 3px 15px;
-     }
+  &:not([disabled]) {
+    &:hover {
+      background-color: $green-color;
+      color: #fff;
+    }
 
-    .present-btn {
-      @include btn-font;
-      background-color: #fff;
+    &:focus {
+      background-color: $green-color;
       border: $btn-border;
-      border-radius: 20px 0 0 20px;
-      color: #e1e1e1;
-      text-transform: $text-transform;
+      color: #fff;
 
-      &:not([disabled]) {
-        &:hover {
-          background-color: $green-color;
-          color: #fff;
-        }
+      &:hover {
+        background-color: #fff;
+        border: 1px solid $green-color;
+        color: #55585e;
 
-        &:focus {
-          background-color: $green-color;
-          border: $btn-border;
-          color: #fff;
+      }
 
-          &:hover {
-            background-color: #fff;
-            border: 1px solid $green-color;
-            color: #55585e;
-          }
-        }
+    }
+  }
+}
+
+.absent-btn {
+  @include btn-font;
+  background-color: #fff;
+  border: $btn-border;
+  border-radius: 0 20px 20px 0;
+  color: #e1e1e1;
+  text-transform: $text-transform;
+
+  &:not([disabled]) {
+    &:hover {
+      background-color: $red-color;
+      color: #fff;
+    }
+
+    &:focus {
+      background-color: $red-color;
+      border: $btn-border;
+      color: #fff;
+
+      &:hover {
+        background-color: #fff;
+        border: 1px solid $red-color;
+        color: #55585e;
+
       }
     }
 
-    .absent-btn {
-      @include btn-font;
-      background-color: #fff;
-      border: $btn-border;
-      border-radius: 0 20px 20px 0;
-      color: #e1e1e1;
-      text-transform: $text-transform;
+  }
+}
 
-      &:not([disabled]) {
-        &:hover {
-          background-color: #ec4e2c;
-          color: #fff;
 
-          &:focus {
-            background-color: #ec4e2c;
-            border: $btn-border;
-            color: #fff;
+.group-btn {
+  margin: 10px 0;
+  min-height: 25px;
+  min-width: 200px;
+  padding: 3px 15px;
 
-            &:hover {
-              background-color: #fff;
-              border: 1px solid #ec4e2c;
-              color: #55585e;
-            }
-          }
-         }
-       }
-    }
+}
+
+.presence-report {
+  .student-btn {
+    margin: 10px 0 20px 100px;
   }
 }
 

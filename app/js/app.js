@@ -18,7 +18,24 @@ angular
       $locationProvider.html5Mode(true);
       localStorageServiceProvider.setPrefix('schoolArea');
       $httpProvider.interceptors.push('tokenInjector');
+<<<<<<< 5aa93ff66840d81756341fcc2ce5b06387f4ab36
     }])
+=======
+    })
+  .config(['$translateProvider', function($translateProvider) {
+    $translateProvider.useStaticFilesLoader({
+      prefix: 'app/js/i18n/locale-',
+      suffix: '.json'
+    });
+    $translateProvider.preferredLanguage('en');
+  }])
+  .controller('Ctrl', ['$translate', function($translate) {
+    var ctrl = this;
+    ctrl.changeLanguage = function(langKey) {
+      $translate.use(langKey);
+    };
+  }])
+>>>>>>> LVRUBYM-328:added files
   .run(['$rootScope', '$state', 'auth',
     function($rootScope, $state, auth) {
       $rootScope.$on('$stateChangeStart',

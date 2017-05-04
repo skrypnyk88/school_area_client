@@ -15,7 +15,11 @@ var studentService = require('./../common/services/student.service.js');
 
 =======
 var myDayReportModule = require('./../myDayReport/myDayReport.module.js');
+<<<<<<< 5aa93ff66840d81756341fcc2ce5b06387f4ab36
 >>>>>>> LVRUBYM-242:added component
+=======
+
+>>>>>>> LVRUBYM-328:added files
 require('../../css/style.scss');
 
 module.exports = angular

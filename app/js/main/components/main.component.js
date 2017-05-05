@@ -16,10 +16,11 @@ MainController.$inject = [
   '$scope',
   '$state',
   'auth',
-  'currentGroupDay'
+  'currentGroupDay',
+  '$translate'
 ];
 
-function MainController($scope, $state, auth, currentGroupDay) {
+function MainController($scope, $state, auth, currentGroupDay, $translate) {
   var ctrl = this;
 
   ctrl.currentGroupDay = currentGroupDay;
@@ -28,9 +29,12 @@ function MainController($scope, $state, auth, currentGroupDay) {
     auth.logout();
   };
 
+  ctrl.changeLanguage = function(langKey) {
+      $translate.use(langKey);
+    };
+
   $scope.$watch(
     function() { return currentGroupDay.group_id; },
     function() { $state.reload($state.current); }
   );
 };
-

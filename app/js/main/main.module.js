@@ -20,6 +20,13 @@ module.exports = angular
     staticModule.name,
     myDayReportModule.name
   ])
+  .config(['$translateProvider', function($translateProvider) {
+    $translateProvider.useStaticFilesLoader({
+      prefix: 'app/js/i18n/locale-',
+      suffix: '.json'
+    });
+    $translateProvider.preferredLanguage('en');
+  }])
   .config(function($mdThemingProvider) {
     $mdThemingProvider
       .theme('default')

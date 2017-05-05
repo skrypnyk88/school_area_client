@@ -16,10 +16,11 @@ MainController.$inject = [
   '$scope',
   '$state',
   'auth',
-  'currentGroupDay'
+  'currentGroupDay',
+  '$translate'
 ];
 
-function MainController($scope, $state, auth, currentGroupDay) {
+function MainController($scope, $state, auth, currentGroupDay, $translate) {
   var ctrl = this;
 
   ctrl.currentGroupDay = currentGroupDay;
@@ -28,6 +29,10 @@ function MainController($scope, $state, auth, currentGroupDay) {
     localStorage.removeItem('activeMenu');
     localStorage.removeItem('activeSubmenu');
   };
+
+  ctrl.changeLanguage = function(langKey) {
+      $translate.use(langKey);
+    };
 
   $scope.$watch(
     function() { return currentGroupDay.group_id; },

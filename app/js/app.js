@@ -22,6 +22,7 @@ angular
     }])
 =======
     })
+<<<<<<< 5f08931b1824729a65c08636eb4467c854ebded3
   .config(['$translateProvider', function($translateProvider) {
     $translateProvider.useStaticFilesLoader({
       prefix: 'app/js/i18n/locale-',
@@ -36,6 +37,8 @@ angular
     };
   }])
 >>>>>>> LVRUBYM-328:added files
+=======
+>>>>>>> LVRUBYM-328:moved config and function to main component
   .run(['$rootScope', '$state', 'auth',
     function($rootScope, $state, auth) {
       $rootScope.$on('$stateChangeStart',

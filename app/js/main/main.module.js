@@ -43,6 +43,7 @@ module.exports = angular
     myDayReportModule.name
 >>>>>>> LVRUBYM-242:added component
   ])
+<<<<<<< 5f08931b1824729a65c08636eb4467c854ebded3
   .config(['$mdThemingProvider',
     function($mdThemingProvider) {
       $mdThemingProvider
@@ -52,3 +53,20 @@ module.exports = angular
         .warnPalette('red')
         .backgroundPalette('grey');
     }]);
+=======
+  .config(['$translateProvider', function($translateProvider) {
+    $translateProvider.useStaticFilesLoader({
+      prefix: 'app/js/i18n/locale-',
+      suffix: '.json'
+    });
+    $translateProvider.preferredLanguage('en');
+  }])
+  .config(function($mdThemingProvider) {
+    $mdThemingProvider
+      .theme('default')
+      .primaryPalette('light-green')
+      .accentPalette('deep-purple')
+      .warnPalette('red')
+      .backgroundPalette('grey');
+  });
+>>>>>>> LVRUBYM-328:moved config and function to main component

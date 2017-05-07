@@ -1145,3 +1145,47 @@ side-bar {
 .menu {
   margin-top: 0;
 }
+
+
+// Style for profile component
+
+.profile-title {
+  background-color: $green;
+
+  h1 {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 100;
+    padding: 42px 25px;
+  }
+}
+
+.profile-main {
+  text-align: left;
+
+  .profile-main-info {
+    padding-bottom: 15px;
+
+    b {
+      display: inline-block;
+      padding-right: 10px;
+    }
+  }
+}
+
+.profile-title-update {
+  .profile-main-info {
+    padding-bottom: 0;
+  }
+
+  .profile-input-container {
+    margin-bottom: 0;
+  }
+
+  .profile-select-language {
+    width: 50%;
+  }
+}
+
+

@@ -12,7 +12,8 @@ AuthFactory.$inject = [
   'localStorageService',
   'globalSettings',
   'errorMessages',
-  'authResource'
+  'authResource',
+  'currentUserValues'
 ];
 
 function AuthFactory(
@@ -21,7 +22,8 @@ function AuthFactory(
   localStorageService,
   globalSettings,
   errorMessages,
-  authResource
+  authResource,
+  currentUserValues
 ) {
   var toState;
   var fromState;
@@ -37,7 +39,8 @@ function AuthFactory(
     removeToken: removeToken,
     redirect: redirect,
     getErrorMsg: getErrorMsg,
-    toggleErrorMsg: toggleErrorMsg
+    toggleErrorMsg: toggleErrorMsg,
+    saveCourentUser: saveCourentUser
   };
 
   return service;
@@ -59,6 +62,7 @@ function AuthFactory(
     authResource.authenticate(user).$promise.then(
       function(response) {
         service.saveToken(response);
+        service.saveCourentUser(response);
         $state.go(savedState);
       },
       function(response) {
@@ -68,7 +72,10 @@ function AuthFactory(
 
   function refreshToken() {
     authResource.refreshToken().$promise.then(
-      service.saveToken,
+      function(response) {
+        service.saveToken(response);
+        service.saveCourentUser(response);
+      },
       function(response) {
         service.toggleErrorMsg(response);
         service.removeToken();
@@ -113,5 +120,11 @@ function AuthFactory(
                 '</div></md-toast>',
       position: 'top right'
     });
+  }
+
+  function saveCourentUser(response) {
+    currentUserValues.first_name = response.data.first_name;
+    currentUserValues.last_name = response.data.last_name;
+    currentUserValues.locale = response.data.locale;
   }
 }

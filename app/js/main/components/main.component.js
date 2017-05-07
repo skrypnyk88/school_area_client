@@ -9,6 +9,7 @@ module.exports = angular
     controller: MainController,
     bindings: {
       groups: '<'
+
     }
   });
 
@@ -17,13 +18,19 @@ MainController.$inject = [
   '$state',
   'auth',
   'currentGroupDay',
+  'currentUser',
+  'globalSettings',
   '$translate'
 ];
 
-function MainController($scope, $state, auth, currentGroupDay, $translate) {
+function MainController($scope, $state, auth, currentGroupDay, currentUser, globalSettings,  $translate) {
   var ctrl = this;
 
   ctrl.currentGroupDay = currentGroupDay;
+  ctrl.currentUser = currentUser;
+  ctrl.fullname = currentUser.first_name + ' ' + currentUser.last_name;
+  ctrl.avatar = ctrl.currentUser.url || globalSettings.STUDENT_IMG;
+
   ctrl.logout = function() {
     auth.logout();
     localStorage.removeItem('activeMenu');
@@ -33,9 +40,13 @@ function MainController($scope, $state, auth, currentGroupDay, $translate) {
   ctrl.changeLanguage = function(langKey) {
       $translate.use(langKey);
     };
-
   $scope.$watch(
     function() { return currentGroupDay.group_id; },
     function() { $state.reload($state.current); }
+  );
+
+  $scope.$watch(
+    function() { return currentUser; },
+    function(currentUser) { $scope.currentUser = currentUser; }
   );
 };

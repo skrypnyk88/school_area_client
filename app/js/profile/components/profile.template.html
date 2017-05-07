@@ -1,67 +1,140 @@
-<div>
-  <div>
-    <div >Edit profile of Ivan Zagorodniy</div>
+<div ng-show="!showDiv">
+  <div class="profile-title">
+    <h1>Profile of {{$ctrl.teacher.first_name + " " + $ctrl.teacher.last_name}}</h1>
   </div>
 
-  <div layout="row">
+  <div layout="row" class="profile-main"  layout-align="none">
+    <div flex="50" >
+      <img alt="Avatar 4" src="https://letsshareapps.s3.amazonaws.com/teachers/logos/000/000/003/medium/avatar-4.png?1476046377">
+    </div>
+
+    <div flex="50">
+      <div layout="row" class="profile-main-info">
+        <div flex="50">
+          <b>Name:</b>{{$ctrl.teacher.first_name + " " + $ctrl.teacher.last_name}}
+        </div>
+      </div>
+
+      <div layout="row" class="profile-main-info">
+        <div flex="50">
+          <b>Phone:</b>{{$ctrl.teacher.phone}}
+        </div>
+      </div>
+
+      <div layout="row" class="profile-main-info">
+        <div flex="50">
+          <b>Email:</b>{{$ctrl.teacher.email}}
+        </div>
+      </div>
+
+      <div layout="row" class="profile-main-info">
+        <div flex="50">
+          <b>Language:</b>{{$ctrl.teacher.locale}}
+        </div>
+      </div>
+
+      <div layout="row">
+        <div flex="50">
+        </div>
+        <div flex="50">
+          <md-button class="btn green-btn" ng-click="showDiv=true">Edit</md-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div ng-show="showDiv">
+  <div class="profile-title ">
+    <h1>Edit profile of {{$ctrl.teacher.first_name + " " + $ctrl.teacher.last_name}}</h1>
+  </div>
+
+  <div layout="row" layout-align="none" class="profile-main profile-title-update">
     <div flex="50">
       <img alt="Avatar 4" src="https://letsshareapps.s3.amazonaws.com/teachers/logos/000/000/003/medium/avatar-4.png?1476046377">
     </div>
 
     <div flex="50">
-      <div layout="row">
-        <div flex="50">
-          Name:
+      <div layout="row" class="profile-main-info"  layout-align="center center">
+        <div flex="20">
+          <b>First Name:</b>
         </div>
-        <div flex="50">
-          {{$ctrl.teacher.first_name + " " + $ctrl.teacher.last_name}}
-        </div>
-      </div>
-
-      <div layout="row">
-        <div flex="50">
-          Phone:
-        </div>
-        <div flex="50">
-          {{$ctrl.teacher.phone}}
+        <div flex="80">
+          <md-input-container class="profile-input-container">
+            <label>First Name</label>
+            <input type="text" ng-model="$ctrl.teacher.first_name" required md-maxlength="25">
+          </md-input-container>
         </div>
       </div>
 
-      <div layout="row">
-        <div flex="50">
-          Email:
+      <div layout="row" class="profile-main-info" layout-align="center center">
+        <div flex="20">
+          <b>Last Name:</b>
         </div>
-        <div flex="50">
-          {{$ctrl.teacher.email}}
-        </div>
-      </div>
-
-      <div layout="row">
-        <div flex="50">
-          Language:
-        </div>
-        <div flex="50">
-          {{$ctrl.teacher.locale}}
+        <div flex="80">
+          <md-input-container class="profile-input-container">
+            <label>Last Name</label>
+            <input type="text" ng-model="$ctrl.teacher.last_name" required md-maxlength="25">
+          </md-input-container>
         </div>
       </div>
 
-      <div layout="row">
-        <div flex="50">
+      <div layout="row" class="profile-main-info" layout-align="center center">
+        <div flex="20">
+          <b>Phone:</b>
         </div>
-        <div flex="50">
-          <md-select name="teacher" ng-model="$ctrl.teacher.locale"
-                                    placeholder="$ctrl.teacher.locale">
+        <div flex="80">
+          <md-input-container class="profile-input-container">
+            <label>Phone</label>
+            <input type="text" ng-model="$ctrl.teacher.phone" required md-maxlength="9">
+          </md-input-container>
+        </div>
+      </div>
+
+      <div layout="row" class="profile-main-info" layout-align="center center">
+        <div flex="20">
+          <b>Email:</b>
+        </div>
+        <div flex="80">
+          <md-input-container class="profile-input-container">
+            <label>Email</label>
+            <input type="text" ng-model="$ctrl.teacher.email" required md-maxlength="25">
+          </md-input-container>
+        </div>
+      </div>
+
+      <div layout="row" class="profile-main-info" layout-align="center center">
+        <div flex="20">
+          <b>Language:</b>
+        </div>
+        <div flex="80">
+          <md-select flex="45" name="teacher" ng-model="$ctrl.teacher.locale"
+                                    placeholder="$ctrl.teacher.locale"
+                                    >
             <md-option value="en">English</md-option>
             <md-option value="ua">Українська</md-option>
           </md-select>
         </div>
       </div>
 
+      <div layout="row" layout-align="center center">
+        <div flex="20">
+          <b>Image</b>
+        </div>
+        <div flex="80">
+           <md-button class="btn gray-btn">Choose a photo</md-button>
+        </div>
+      </div>
+
       <div layout="row">
         <div flex="50">
         </div>
-        <div flex="50">
-          <button ng-click="$ctrl.profileUpdate($ctrl.teacher)">Update</button>
+        <div flex="25">
+          <md-button ng-click="showDiv=false" class="btn gray-btn">Cancel</md-button>
+        </div>
+        <div flex="25">
+          <md-button class="btn green-btn" ng-click="$ctrl.profileUpdate($ctrl.teacher); showDiv=false">Update</md-button>
         </div>
       </div>
     </div>

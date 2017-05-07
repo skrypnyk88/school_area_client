@@ -2021,6 +2021,7 @@ side-bar {
 .menu {
   margin-top: 0;
 }
+<<<<<<< d9d7a29521927b85dfed3c5ee9f0ab998ec013d4
 <<<<<<< 6159bd0c87083603c63dd777bf6fd18bc197d05a
 
 md-input-container:last-of-type {
@@ -2144,10 +2145,38 @@ md-toast {
 
     &:focus {
       border: 1px solid $blue-color;
+=======
+
+
+// Style for profile component
+
+.profile-title {
+  background-color: $green;
+
+  h1 {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 100;
+    padding: 42px 25px;
+  }
+}
+
+.profile-main {
+  text-align: left;
+
+  .profile-main-info {
+    padding-bottom: 15px;
+
+    b {
+      display: inline-block;
+      padding-right: 10px;
+>>>>>>> LVRUBYM-325: Change profile.template
     }
   }
 }
 
+<<<<<<< d9d7a29521927b85dfed3c5ee9f0ab998ec013d4
 .blue-select {
   &:not([disabled]) {
     background-color: #fff;
@@ -2222,3 +2251,20 @@ button {
 >>>>>>> LVRUBYM-347: Add upload photo form for student template and styles
 =======
 >>>>>>> LVRUBYM-347: Fix main template and routes
+=======
+.profile-title-update {
+  .profile-main-info {
+    padding-bottom: 0;
+  }
+
+  .profile-input-container {
+    margin-bottom: 0;
+  }
+
+  .profile-select-language {
+    width: 50%;
+  }
+}
+
+
+>>>>>>> LVRUBYM-325: Change profile.template

@@ -1,6 +1,11 @@
 {
+    "excludeFiles": [
+       "app/js/coverage/**",
+       "node_modules/**"
+    ],
     "preset": "google",
     "fileExtensions": [".js", "jscs"],
+<<<<<<< d9d7a29521927b85dfed3c5ee9f0ab998ec013d4
 <<<<<<< ae62f48681472c72961377fd0034e564f05352f7
      "excludeFiles": [
        "app/js/coverage/**",
@@ -13,6 +18,8 @@
       "node_modules/**"
        ],
 >>>>>>> LVRUBYM-242:added files
+=======
+>>>>>>> LVRUBYM-325: Change profile.template
     "requireCurlyBraces": [
         "if",
         "else",
@@ -116,4 +123,5 @@
         "checkRedundantAccess": true,
         "requireNewlineAfterDescription": true
     }
+
 }

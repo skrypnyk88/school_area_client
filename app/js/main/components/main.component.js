@@ -9,6 +9,7 @@ module.exports = angular
     controller: MainController,
     bindings: {
       groups: '<'
+
     }
   });
 
@@ -17,13 +18,16 @@ MainController.$inject = [
   '$state',
   'auth',
   'currentGroupDay',
+  'currentUser',
+  'globalSettings',
   '$translate'
 ];
 
-function MainController($scope, $state, auth, currentGroupDay, $translate) {
+function MainController($scope, $state, auth, currentGroupDay, currentUser, globalSettings,  $translate) {
   var ctrl = this;
 
   ctrl.currentGroupDay = currentGroupDay;
+<<<<<<< d9d7a29521927b85dfed3c5ee9f0ab998ec013d4
 <<<<<<< 84e0fcc266847b89c0aea5cdeb271beadaaeb1ce
 <<<<<<< e10be0b01dcf0aed273bbfa06318df88200c0060
 <<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
@@ -50,6 +54,12 @@ function MainController($scope, $state, auth, currentGroupDay, $translate) {
 >>>>>>> LVRUBYM-344: Create main template style
 =======
 >>>>>>> LVRUBYM-349:Deleted callendar
+=======
+  ctrl.currentUser = currentUser;
+  ctrl.fullname = currentUser.first_name + ' ' + currentUser.last_name;
+  ctrl.avatar = ctrl.currentUser.url || globalSettings.STUDENT_IMG;
+
+>>>>>>> LVRUBYM-325: Change profile.template
   ctrl.logout = function() {
     auth.logout();
     localStorage.removeItem('activeMenu');
@@ -59,9 +69,13 @@ function MainController($scope, $state, auth, currentGroupDay, $translate) {
   ctrl.changeLanguage = function(langKey) {
       $translate.use(langKey);
     };
-
   $scope.$watch(
     function() { return currentGroupDay.group_id; },
     function() { $state.reload($state.current); }
+  );
+
+  $scope.$watch(
+    function() { return currentUser; },
+    function(currentUser) { $scope.currentUser = currentUser; }
   );
 };

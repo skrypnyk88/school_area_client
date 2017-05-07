@@ -6,12 +6,13 @@ module.exports = angular
   ])
   .factory('Profile', Profile);
 
-Profile.$inject = ['profileResource'];
+Profile.$inject = ['profileResource', '$mdToast'];
 
-function Profile(profileResource) {
+function Profile(profileResource, $mdToast) {
   var service = {
     getProfile: getProfile,
-    updateProfile: updateProfile
+    updateProfile: updateProfile,
+    toggleErrorMsg: toggleErrorMsg
   };
   return service;
   var teacher = {first_name: first_name,
@@ -28,14 +29,26 @@ function Profile(profileResource) {
   };
 
   function updateProfile(first_name, last_name, email, phone, locale, id) {
-    var params = {teacher: {first_name: first_name,
-                            last_name: last_name,
-                            email: email,
-                            phone: phone,
-                            locale: locale,
-                            }, id: id};
+    var params = {teacher: {
+                  first_name: first_name,
+                  last_name: last_name,
+                  email: email,
+                  phone: phone,
+                  locale: locale}, id: id};
     return profileResource.update(params).$promise.then(function(data) {
       return data;
+    }, function(response) {
+      service.toggleErrorMsg(response);
+    });
+  };
+
+  function toggleErrorMsg(response) {
+    var msg = response.data.errors;
+    $mdToast.show({
+      template: '<md-toast><div class="md-toast-content">' +
+                  msg +
+                '</div></md-toast>',
+      position: 'top right'
     });
   };
 }

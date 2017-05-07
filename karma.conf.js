@@ -3,10 +3,7 @@ module.exports = function(config) {
     basePath: 'app/js/',
     frameworks: ['angular', 'jasmine'],
     files: [
-      './specs.webpack.js',
-      './../../node_modules/angular-mocks/angular-mocks.js'
-    ],
-    exclude: [
+      './specs.webpack.js'
     ],
     reporters: ['progress', 'coverage'],
     preprocessors: {

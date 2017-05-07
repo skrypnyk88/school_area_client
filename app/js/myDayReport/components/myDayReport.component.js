@@ -4,7 +4,7 @@ module.exports = angular
   .module('myDayReport.component', [
     myDayReportservice.name
   ])
-  .component('myDayComponent', {
+  .component('myDayReport', {
     templateUrl: './app/js/myDayReport/components/myDayReport.template.html',
     controller: MyDayReportController
   });
@@ -20,7 +20,7 @@ function MyDayReportController(MyDayReport) {
     );
 
   ctrl.myDayReportUpdate = function(student) {
-    MyDayReport.updateReports(student.my_day_report_note, student.my_day_report_id)
+    MyDayReport.updateReports(student.my_day_report.note, student.my_day_report.id)
       .then(function(note) {
       return note;
     });

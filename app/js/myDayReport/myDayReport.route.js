@@ -4,6 +4,6 @@ module.exports = angular
     $stateProvider.state({
       url: '/my-day-report',
       name: 'main.myDayReport',
-      template: '<my-day-component></my-day-component>'
+      template: '<my-day-report></my-day-report>'
     });
   });

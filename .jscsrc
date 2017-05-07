@@ -1,11 +1,18 @@
 {
     "preset": "google",
     "fileExtensions": [".js", "jscs"],
+<<<<<<< ae62f48681472c72961377fd0034e564f05352f7
      "excludeFiles": [
        "app/js/coverage/**",
        "node_modules/**"
     ],
 
+=======
+    "excludeFiles": [
+      "app/js/coverage/**",
+      "node_modules/**"
+       ],
+>>>>>>> LVRUBYM-242:added files
     "requireCurlyBraces": [
         "if",
         "else",

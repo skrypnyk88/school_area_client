@@ -5,8 +5,8 @@ module.exports = angular
     ])
   .factory('MyDayReport', MyDayReport);
 
-MyDayReport.$inject = ['myDayReportResource'];
-function MyDayReport(myDayReportResource) {
+MyDayReport.$inject = ['myDayReportResource', 'currentGroupDay'];
+function MyDayReport(myDayReportResource, currentGroupDay) {
   var service = {
     getReports: getReports,
     updateReports: updateReports
@@ -14,15 +14,22 @@ function MyDayReport(myDayReportResource) {
   return service;
 
   function getReports() {
-    return myDayReportResource.query().$promise.then(function(data) {
+    return myDayReportResource.query({group_id: currentGroupDay.group_id,
+                                      day: currentGroupDay.day}).$promise.then(function(data) {
       return data;
+    }, function(errors) {
+      return errors;
     });
   };
 
   function updateReports(note, id) {
-    return myDayReportResource.update({report: {note: note},id: id}).$promise.then(function(note) {
-      console.log(note);
+    return myDayReportResource.update({report: {note: note},
+                                      id: id,
+                                      group_id: currentGroupDay.group_id,
+                                      day: currentGroupDay.day}).$promise.then(function(note) {
       return note;
+    }, function(errors) {
+      alert(errors.data.errors);
     });
   };
 };

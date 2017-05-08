@@ -1,17 +1,29 @@
 @import './../../node_modules/angular-material/angular-material.css';
 
+<<<<<<< HEAD
 //  General  //
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
 
+=======
+=======
+>>>>>>> LVRUBYM-344: Create main template style
+>>>>>>> LVRUBYM-344: Create main template style
 $blue-color: #00bff3;
 $green-color: #95c948;
 $red-color: #ec4e2c;
 $btn-border: 1px solid #b1b1b1;
 $text-transform: none;
 
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
 html,
 body,
 main {
   height: 100%;
+=======
+body {
+<<<<<<< HEAD
+  text-align: center;
+>>>>>>> LVRUBYM-344: Create main template style
 }
 
 * {
@@ -56,7 +68,14 @@ main {
 =======
 >>>>>>> LVRUBYM-221:Changed fail response
   color: white !important;
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
 >>>>>>> LVRUBYM-221:Add action on front-end
+=======
+=======
+  font-family: 'Lato', sans-serif;
+  // text-align: center;
+>>>>>>> LVRUBYM-344: Create main template style
+>>>>>>> LVRUBYM-344: Create main template style
 }
 <<<<<<< b4c6fc7a641cbed9d17fed7ac7f693846f859a93
 
@@ -81,6 +100,13 @@ main {
     }
   }
 
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
+=======
+  md-toolbar {
+    background: white;
+  }
+
+>>>>>>> LVRUBYM-344: Create main template style
   .group-select {
     background-color: white;
     border: 1px solid #d7d7d7;
@@ -129,7 +155,11 @@ main {
   }
 
   .number {
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
     color: $green-color;
+=======
+    color: $color;
+>>>>>>> LVRUBYM-344: Create main template style
     font-size: 35px;
   }
 
@@ -152,7 +182,10 @@ main {
   }
 }
 
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
 
+=======
+>>>>>>> LVRUBYM-344: Create main template style
 .teacher-report {
   @mixin background-image {
     background-repeat: no-repeat;
@@ -165,6 +198,7 @@ main {
     .menu {
       list-style-type: none;
       padding-left: 0;
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
 
       div {
         li {
@@ -173,12 +207,27 @@ main {
             outline: none;
             width: 100%;
 
+=======
+
+      div {
+        li {
+          &.menu-item {
+            border-left: 5px solid transparent;
+            outline: none;
+            width: 100%;
+
+>>>>>>> LVRUBYM-344: Create main template style
             &:hover {
               color: $green-color;
             }
 
             &.active-menu {
               background-color: $green-color;
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
+=======
+              margin-bottom: 15px;
+              padding: 3px 0;
+>>>>>>> LVRUBYM-344: Create main template style
               text-align: left;
               width: 100%;
 
@@ -186,6 +235,10 @@ main {
                 color: #fff;
                 display: block;
                 font-weight: bold;
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
+=======
+                padding: 15px 0 15px 90px;
+>>>>>>> LVRUBYM-344: Create main template style
                 position: relative;
                 text-decoration: none;
 
@@ -193,6 +246,25 @@ main {
                   color: #fff;
                 }
               }
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
+=======
+
+              // &:first-of-type {
+              //   a {
+              //     &::before {
+              //       background-image: url('../img/Out/TeacherReportActive.svg');
+              //     }
+              //   }
+              // }
+
+              // &:nth-of-type(2) {
+              //   a {
+              //     &::before {
+              //       background-image: url('../img/Out/ParentSharingActive.svg');
+              //     }
+              //   }
+              // }
+>>>>>>> LVRUBYM-344: Create main template style
             }
 
             a {
@@ -223,7 +295,11 @@ main {
         &:first-of-type {
           a {
             &::before {
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
               background-image: url('../img/icons/TeacherReport.svg');
+=======
+              background-image: url('../img/Out/TeacherReport.svg');
+>>>>>>> LVRUBYM-344: Create main template style
             }
           }
 
@@ -240,6 +316,7 @@ main {
         &:nth-of-type(2) {
           a {
             &::before {
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
               background-image: url('../img/icons/ParentSharing.svg');
             }
           }
@@ -249,6 +326,9 @@ main {
               &::before {
                 background-image: url('../img/icons/ParentSharingActive.svg');
               }
+=======
+              background-image: url('../img/Out/ParentSharing.svg');
+>>>>>>> LVRUBYM-344: Create main template style
             }
 
           }
@@ -257,6 +337,7 @@ main {
         &:nth-of-type(3) {
           a {
             &::before {
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
               background-image: url('../img/icons/Messages.svg');
             }
           }
@@ -266,6 +347,9 @@ main {
               &::before {
                 background-image: url('../img/icons/MessagesActive.svg');
               }
+=======
+              background-image: url('../img/Out/Messages.svg');
+>>>>>>> LVRUBYM-344: Create main template style
             }
 
           }
@@ -274,6 +358,7 @@ main {
         &:nth-of-type(4) {
           a {
             &::before {
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
               background-image: url('../img/icons/Notifications.svg');
             }
           }
@@ -283,6 +368,9 @@ main {
               &::before {
                 background-image: url('../img/icons/NotificationsActive.svg');
               }
+=======
+              background-image: url('../img/Out/Notifications.svg');
+>>>>>>> LVRUBYM-344: Create main template style
             }
 
           }
@@ -292,7 +380,11 @@ main {
         &:nth-of-type(5) {
           a {
             &::before {
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
               background-image: url('../img/icons/Calendar.svg');
+=======
+              background-image: url('../img/Out/Calendar.svg');
+>>>>>>> LVRUBYM-344: Create main template style
             }
           }
 
@@ -310,6 +402,7 @@ main {
         &:nth-of-type(6) {
           a {
             &::before {
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
               background-image: url('../img/icons/PhotoGallery.svg');
             }
           }
@@ -319,6 +412,9 @@ main {
               &::before {
                 background-image: url('../img/icons/PhotoGalleryActive.svg');
               }
+=======
+              background-image: url('../img/Out/PhotoGallery.svg');
+>>>>>>> LVRUBYM-344: Create main template style
             }
 
           }
@@ -327,6 +423,7 @@ main {
         &:nth-of-type(7) {
           a {
             &::before {
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
               background-image: url('../img/icons/Rewards.svg');
             }
           }
@@ -336,6 +433,9 @@ main {
               &::before {
                 background-image: url('../img/icons/RewardsActive.svg');
               }
+=======
+              background-image: url('../img/Out/Rewards.svg');
+>>>>>>> LVRUBYM-344: Create main template style
             }
 
           }
@@ -344,6 +444,7 @@ main {
         &:nth-of-type(8) {
           a {
             &::before {
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
               background-image: url('../img/icons/Contacts.svg');
             }
           }
@@ -369,6 +470,24 @@ main {
               display: initial;
             }
 
+=======
+              background-image: url('../img/Out/Contacts.svg');
+            }
+          }
+        }
+        //end of menu images
+
+        //start of submenu
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+
+          &.submenu {
+            &.opened {
+              display: initial;
+            }
+
+>>>>>>> LVRUBYM-344: Create main template style
             &.closed {
               display: none;
             }
@@ -425,7 +544,11 @@ main {
               &:first-of-type {
                 a {
                   &::before {
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
                     background-image: url('../img/icons/Presence.svg');
+=======
+                    background-image: url('../img/Out/Presence.svg');
+>>>>>>> LVRUBYM-344: Create main template style
                   }
                 }
               }
@@ -433,7 +556,11 @@ main {
               &:nth-of-type(2) {
                 a {
                   &::before {
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
                     background-image: url('../img/icons/Diet.svg');
+=======
+                    background-image: url('../img/Out/Diet.svg');
+>>>>>>> LVRUBYM-344: Create main template style
                   }
                 }
               }
@@ -441,7 +568,11 @@ main {
               &:nth-of-type(3) {
                 a {
                   &::before {
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
                     background-image: url('../img/icons/Bottle.svg');
+=======
+                    background-image: url('../img/Out/Bottle.svg');
+>>>>>>> LVRUBYM-344: Create main template style
                   }
                 }
               }
@@ -449,7 +580,11 @@ main {
               &:nth-of-type(4) {
                 a {
                   &::before {
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
                     background-image: url('../img/icons/Meals.svg');
+=======
+                    background-image: url('../img/Out/Meals.svg');
+>>>>>>> LVRUBYM-344: Create main template style
                   }
                 }
               }
@@ -457,7 +592,11 @@ main {
               &:nth-of-type(5) {
                 a {
                   &::before {
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
                     background-image: url('../img/icons/Potty.svg');
+=======
+                    background-image: url('../img/Out/Potty.svg');
+>>>>>>> LVRUBYM-344: Create main template style
                   }
                 }
               }
@@ -465,7 +604,11 @@ main {
               &:nth-of-type(6) {
                 a {
                   &::before {
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
                     background-image: url('../img/icons/Nap.svg');
+=======
+                    background-image: url('../img/Out/Nap.svg');
+>>>>>>> LVRUBYM-344: Create main template style
                   }
                 }
               }
@@ -473,7 +616,11 @@ main {
               &:nth-of-type(7) {
                 a {
                   &::before {
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
                     background-image: url('../img/icons/Reward.svg');
+=======
+                    background-image: url('../img/Out/Reward.svg');
+>>>>>>> LVRUBYM-344: Create main template style
                   }
                 }
               }
@@ -482,7 +629,11 @@ main {
               &:nth-of-type(8) {
                 a {
                   &::before {
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
                     background-image: url('../img/icons/PersonalNotes.svg');
+=======
+                    background-image: url('../img/Out/PersonalNotes.svg');
+>>>>>>> LVRUBYM-344: Create main template style
 
                   }
                 }
@@ -491,7 +642,11 @@ main {
               &:last-of-type {
                 a {
                   &::before {
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
                     background-image: url('../img/icons/ClassNotes.svg');
+=======
+                    background-image: url('../img/Out/ClassNotes.svg');
+>>>>>>> LVRUBYM-344: Create main template style
                   }
                 }
               }
@@ -500,6 +655,137 @@ main {
           }
         }
         //end of submenu
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
+=======
+      }
+
+    }
+  }
+
+  a {
+    font-size: 17px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+}
+
+//style for static.html
+
+@mixin border {
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+}
+
+@mixin btn-font {
+  font-size: 18pt;
+  font-weight: 900;
+}
+
+.btn {
+  &:not([disabled]) {
+    border-radius: 13px;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 2px 12px;
+    text-transform: $text-transform;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+}
+
+.green-btn {
+  background-color: $green-color;
+  border: 1px solid $green-color;
+  color: #fff;
+
+  &:not([disabled]) {
+    &:hover {
+      background-color: #fff;
+      color: #55585e;
+    }
+
+    &:focus {
+      background-color: $green-color;
+      border: 1px solid $green-color;
+      color: #fff;
+    }
+  }
+}
+
+
+.gray-btn {
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  color: #55585e;
+
+  &:not([disabled]) {
+    &:hover {
+      background-color: #e5e4e4;
+      color: #55585e;
+    }
+
+    &:focus {
+      border: 1px solid #55585e;
+    }
+  }
+}
+
+
+.report {
+  @include border;
+  background-color: #fff;
+
+  .student {
+    margin: 10px 150px 10px 10px;
+
+    .avatar {
+      border-radius: 50%;
+      height: 70px;
+      margin: 15px 20px 15px 100px;
+      min-width: 70px;
+      width: 70px;
+    }
+
+    .name {
+      color: #55585e;
+      font-size: 20px;
+      font-weight: 300;
+
+      .first-name {
+        padding-bottom: 5px;
+      }
+    }
+  }
+}
+
+.green-group-btn {
+  @include btn-font;
+  background-color: #fff;
+  border: $btn-border;
+  border-radius: 20px 0 0 20px;
+  color: #e1e1e1;
+  text-transform: $text-transform;
+
+  &:not([disabled]) {
+    &:hover {
+      background-color: $green-color;
+      color: #fff;
+    }
+
+    &:focus {
+      background-color: $green-color;
+      border: $btn-border;
+      color: #fff;
+
+      &:hover {
+        background-color: #fff;
+        border: 1px solid $green-color;
+        color: #55585e;
+
+>>>>>>> LVRUBYM-344: Create main template style
       }
 
     }
@@ -508,6 +794,7 @@ main {
 =======
 }
 
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
 
 //  Login component  //
 >>>>>>> LVRUBYM-221:Add component for bottle report
@@ -516,13 +803,145 @@ main {
     font-size: 17px;
     font-weight: 400;
     text-decoration: none;
-  }
+=======
+.red-group-btn {
+  @include btn-font;
+  background-color: #fff;
+  border: $btn-border;
+  border-radius: 0 20px 20px 0;
+  color: #e1e1e1;
+  text-transform: $text-transform;
 
+  &:not([disabled]) {
+    &:hover {
+      background-color: $red-color;
+      color: #fff;
+    }
+
+    &:focus {
+      background-color: $red-color;
+      border: $btn-border;
+      color: #fff;
+
+      &:hover {
+        background-color: #fff;
+        border: 1px solid $red-color;
+        color: #55585e;
+
+      }
+    }
+
+>>>>>>> LVRUBYM-344: Create main template style
+  }
+}
+
+
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
 <<<<<<< 7e2b78612584ecdd869040d8426b59d05d3d472d
 =======
   .login-form {
     width: 300px;
     margin-top: 15vh;
+=======
+.group-btn {
+  margin: 10px 0;
+  min-height: 25px;
+  min-width: 200px;
+  padding: 3px 15px;
+
+}
+
+.input-time {
+  background-color: #fff;
+  border: 1px solid transparent;
+  color: #6e6b6b;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  height: 30px;
+  margin: 0 60px;
+  outline: none;
+  resize: none;
+  text-align: center;
+  width: 85px;
+
+  &:hover {
+    border: 1px solid #dfdbdb;
+    border-radius: 12px;
+  }
+}
+
+.blue-btn {
+  background-color: $blue-color;
+  border: 1px solid $blue-color;
+  color: #fff;
+
+  &:not([disabled]) {
+    &:hover {
+      background-color: #fff;
+      color: #55585e;
+    }
+
+    &:focus {
+      border: 1px solid $blue-color;
+    }
+  }
+}
+
+.blue-select {
+  &:not([disabled]) {
+    background-color: #fff;
+    border-bottom: 2px solid $blue-color;
+    font-size: 14px;
+    height: 38px;
+
+    .md-select-icon {
+      border-bottom: 13px solid $blue-color;
+      border-left: 13px solid transparent;
+      height: 0;
+      left: 6px;
+      margin-left: 15px;
+      position: relative;
+      top: 12px;
+      width: 0;
+
+      &::after {
+        content: '';
+      }
+    }
+  }
+}
+
+.general {
+  border: 1px solid #cdcdd5;
+  border-radius: 10px;
+  color: #82838a;
+  font-family: 'Lato', sans-serif;
+  height: 75px;
+  min-width: 420px;
+  padding: 11px 25px;
+  resize: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.class-notes {
+  height: 125px;
+  @extend.general;
+}
+
+button {
+  &.md-raised {
+    border: 1px solid #00bff3;
+
+    &:not([disabled]) {
+      .add {
+        color: #00bff3;
+
+      }
+    }
+>>>>>>> LVRUBYM-344: Create main template style
   }
 <<<<<<< f850bfdd973ddd81d4c9a8b834d6fb260d39f714
 

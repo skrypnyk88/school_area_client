@@ -84,6 +84,7 @@ module.exports = angular
 >>>>>>> LVRUBYM-351: Add toggleMessage service
 =======
     toggleMessage.name,
+<<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
     bottleReportModule.name
 <<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
 <<<<<<< f850bfdd973ddd81d4c9a8b834d6fb260d39f714
@@ -95,6 +96,8 @@ module.exports = angular
 >>>>>>> LVRUBYM-221:Changed template
 =======
 >>>>>>> LVRUBYM-221:Changed fail response
+=======
+>>>>>>> LVRUBYM-344: Create main template style
   ])
 <<<<<<< 5f08931b1824729a65c08636eb4467c854ebded3
   .config(['$mdThemingProvider',

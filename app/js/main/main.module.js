@@ -23,7 +23,6 @@ module.exports = angular
     staticModule.name,
     myDayReportModule.name,
     toggleMessage.name,
-    bottleReportModule.name
   ])
   .config(['$translateProvider', function($translateProvider) {
     $translateProvider.useStaticFilesLoader({

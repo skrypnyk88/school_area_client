@@ -1,3 +1,4 @@
+<<<<<<< 6769fb5de075bf9e4907a8f0cc63c0caa37b0dcf
 <<<<<<< 9d3dd3a2ee75f1cb2597cdb93306c2038c2ef99c
 <<<<<<< 8004e26ca6452ee9354191c96ad577f31acefe33
 <<<<<<< 379f0a8c4c1289155443946b2927dc8657f0fd6c
@@ -39,17 +40,30 @@
   <student-component student="presenceReport.student" class="student-info" layout="row" flex="25">
   </student-component>
   <div class="presence-report">
+=======
+<div class="report" ng-repeat="presenceReport in $ctrl.presenceReports" layout="row" flex>
+    <md-list>
+    <md-list-item>
+    <student-component student="presenceReport.student" class="student" layout="row">
+    </student-component>
+>>>>>>> LVRUBYM-191: Add message service
     <section class="student-btn" layout="column" layout-align="center center">
-      <div class="btn-container" layout="row">
-        <md-button ng-click="$ctrl.addReportTime(presenceReport)" class="group-x present-btn">Present</md-button>
-        <md-button ng-click="$ctrl.updateEndTime(presenceReport)" class="group-x absent-btn">Absent</md-button>
-      </div>
-      <div ng-repeat="reportTime in presenceReport.report_time" class="input-container" layout="row" layout-align="space-between">
-        <input name="report_start_{reportTime.id}}_time" ng-blur="$ctrl.updateReportTime(reportTime, presenceReport)"  ng-model="reportTime.start_time" type='datetime' placeholder="HH:mm" class="time_input time">
-        <input name="report_end_{{reportTime.id}}_time" ng-blur="$ctrl.updateReportTime(reportTime, presenceReport)"  ng-model="reportTime.end_time" type='datetime' placeholder="HH:mm" class="time-input time" ng-if="reportTime.end_time != null" class="end-time-hidden">
-        <button class="delete" ng-click="$ctrl.deleteReportTime(reportTime, presenceReport)"></button>
-      </div>
+        <div class="btn-container" layout="row">
+            <md-button ng-click="$ctrl.addReportTime(presenceReport)" class="group-btn green-group-btn">Present</md-button>
+            <md-button ng-click="$ctrl.updateEndTime(presenceReport)" class="group-btn red-group-btn">Absent</md-button>
+        </div>
+        <div ng-repeat="reportTime in presenceReport.report_time" class="input-container" layout="row" layout-align="space-around">        
+            <input name="report_start_{reportTime.id}}_time" ng-blur="$ctrl.updateReportTime(reportTime, presenceReport)"  ng-model="reportTime.start_time" type='datetime' placeholder="HH:mm" class="input-time">
+            <input name="report_end_{{reportTime.id}}_time" ng-blur="$ctrl.updateReportTime(reportTime, presenceReport)"  ng-model="reportTime.end_time" type='datetime' placeholder="HH:mm" class="input-time" ng-if="reportTime.end_time != null" class="end-time-hidden">
+            <button class="delete" ng-click="$ctrl.deleteReportTime(reportTime, presenceReport)"></button>
+        </div>
     </section>
+<<<<<<< 6769fb5de075bf9e4907a8f0cc63c0caa37b0dcf
   </div>
 </div>
 >>>>>>> LVRUBYM-191: Added style.scss
+=======
+    </md-list-item>
+    </md-list>
+</div>
+>>>>>>> LVRUBYM-191: Add message service

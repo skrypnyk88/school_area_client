@@ -1,31 +1,32 @@
 var presenceReportResource = require('./../resources/presenceReport.resource.js');
 var reportTimeResource = require('./../resources/reportTime.resource.js');
+var messageService = require('./message.service.js');
 
 module.exports = angular
 .module('presenceReport.service', [
   presenceReportResource.name,
-  reportTimeResource.name
+  reportTimeResource.name,
+  messageService.name
   ])
 .factory('presenceReportService', presenceReportService);
 
 presenceReportService.$inject = ['presenceReportResource',
                                  'reportTimeResource',
                                  'currentGroupDay',
-                                 '$mdToast'];
+                                 'messageService'];
 
 function presenceReportService(
   presenceReportResource,
   reportTimeResource,
   currentGroupDay,
-  $mdToast) {
+  messageService) {
   var service = {
     getPresenceReports: getPresenceReports,
     getReportTimes: getReportTimes,
     addReportTime: addReportTime,
     deleteReportTime: deleteReportTime,
     updateReportTime: updateReportTime,
-    updateEndTime: updateEndTime,
-    toggleErrorMsg: toggleErrorMsg
+    updateEndTime: updateEndTime
   };
   return service;
 
@@ -59,7 +60,7 @@ function presenceReportService(
     .then(function(reportTimes) {
       return reportTimes;
     }, function(response) {
-      service.toggleErrorMsg(response);
+      messageService.toggleMsg(response);
     });
   };
 
@@ -71,7 +72,7 @@ function presenceReportService(
     .$promise
     .then(function() {
     }, function(response) {
-      service.toggleErrorMsg(response);
+      messageService.toggleMsg(response);
     });
   };
 
@@ -88,7 +89,7 @@ function presenceReportService(
     .then(function(updatedReportTime) {
       return updatedReportTime;
     }, function(response) {
-      service.toggleErrorMsg(response);
+      messageService.toggleMsg(response);
     });
   };
 
@@ -105,17 +106,7 @@ function presenceReportService(
     .then(function(updatedReportTime) {
       return updatedReportTime;
     }, function(response) {
-      service.toggleErrorMsg(response);
+      messageService.toggleMsg(response);
     });
   };
-
-  function toggleErrorMsg(response) {
-    var msg = response.data.errors;
-    $mdToast.show({
-      template: '<md-toast><div class="md-toast-content">' +
-                  msg +
-                '</div></md-toast>',
-      position: 'top right'
-    });
-  }
 };

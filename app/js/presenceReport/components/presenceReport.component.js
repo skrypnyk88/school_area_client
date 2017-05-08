@@ -26,7 +26,11 @@ function PresenceReportController(presenceReportService, reportTimeService, curr
 =======
 >>>>>>> LVRUBYM-191: Changed component, resourse, and service
   var ctrl = this;
-  var regex = /^[\d\- ]{2}:[\d\- ]{2}$/;
+  var timeRegex = /^[\d\- ]{2}:[\d\- ]{2}$/;
+  var validTime = {hour: '2-digit',
+                  minute: '2-digit',
+                  hour12: false
+                };
 
   ctrl.loadPresenceReports = function() {
     presenceReportService.getPresenceReports().then(
@@ -37,9 +41,7 @@ function PresenceReportController(presenceReportService, reportTimeService, curr
 
   ctrl.addReportTime = function(presenceReport) {
     if (presenceReport.report_time == false || presenceReport.report_time.slice(-1)[0].end_time) {
-      presenceReport.start_time = new Date().toLocaleTimeString([], {hour: '2-digit',
-                                                                      minute: '2-digit',
-                                                                      hour12: false});
+      presenceReport.start_time = new Date().toLocaleTimeString([], validTime);
       presenceReportService.addReportTime(presenceReport)
                        .then(function(reportTime) {
           presenceReport.report_time.push(reportTime);
@@ -49,10 +51,11 @@ function PresenceReportController(presenceReportService, reportTimeService, curr
   };
 
   ctrl.updateReportTime = function(reportTime, presenceReport) {
-    if ((reportTime.end_time != null ||
-         reportTime.start_time < reportTime.end_time) &&
-         (regex.test(reportTime.start_time)) &&
-         (regex.test(reportTime.end_time))) {
+
+    if ((reportTime.end_time != null) &&
+         (reportTime.start_time < reportTime.end_time) &&
+         (timeRegex.test(reportTime.start_time)) &&
+         (timeRegex.test(reportTime.end_time))) {
       presenceReportService.updateReportTime(reportTime, presenceReport).then(function(reportTime) {
         return reportTime;
       });

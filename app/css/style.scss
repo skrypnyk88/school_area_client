@@ -28,8 +28,11 @@ html, body, main {
   color: white !important;
 =======
   font-family: 'Lato', sans-serif;
+<<<<<<< HEAD
   // text-align: center;
 >>>>>>> LVRUBYM-344: Create main template style
+=======
+>>>>>>> change some styles
 }
 
 .header {
@@ -44,10 +47,6 @@ html, body, main {
     img {
       height: 45px;
     }
-  }
-
-  md-toolbar {
-    background: white;
   }
 
   .group-select {
@@ -98,7 +97,7 @@ html, body, main {
   }
 
   .number {
-    color: $color;
+    color: $green-color;
     font-size: 35px;
   }
 
@@ -164,22 +163,6 @@ html, body, main {
                   color: #fff;
                 }
               }
-
-              // &:first-of-type {
-              //   a {
-              //     &::before {
-              //       background-image: url('../img/Out/TeacherReportActive.svg');
-              //     }
-              //   }
-              // }
-
-              // &:nth-of-type(2) {
-              //   a {
-              //     &::before {
-              //       background-image: url('../img/Out/ParentSharingActive.svg');
-              //     }
-              //   }
-              // }
             }
 
             a {
@@ -210,7 +193,7 @@ html, body, main {
         &:first-of-type {
           a {
             &::before {
-              background-image: url('../img/Out/TeacherReport.svg');
+              background-image: url('../img/icons/TeacherReport.svg');
             }
           }
         }
@@ -218,7 +201,7 @@ html, body, main {
         &:nth-of-type(2) {
           a {
             &::before {
-              background-image: url('../img/Out/ParentSharing.svg');
+              background-image: url('../img/icons/ParentSharing.svg');
             }
           }
         }
@@ -226,7 +209,7 @@ html, body, main {
         &:nth-of-type(3) {
           a {
             &::before {
-              background-image: url('../img/Out/Messages.svg');
+              background-image: url('../img/icons/Messages.svg');
             }
           }
         }
@@ -234,7 +217,7 @@ html, body, main {
         &:nth-of-type(4) {
           a {
             &::before {
-              background-image: url('../img/Out/Notifications.svg');
+              background-image: url('../img/icons/Notifications.svg');
             }
           }
         }
@@ -242,7 +225,7 @@ html, body, main {
         &:nth-of-type(5) {
           a {
             &::before {
-              background-image: url('../img/Out/Calendar.svg');
+              background-image: url('../img/icons/Calendar.svg');
             }
           }
         }
@@ -250,7 +233,7 @@ html, body, main {
         &:nth-of-type(6) {
           a {
             &::before {
-              background-image: url('../img/Out/PhotoGallery.svg');
+              background-image: url('../img/icons/PhotoGallery.svg');
             }
           }
         }
@@ -258,7 +241,7 @@ html, body, main {
         &:nth-of-type(7) {
           a {
             &::before {
-              background-image: url('../img/Out/Rewards.svg');
+              background-image: url('../img/icons/Rewards.svg');
             }
           }
         }
@@ -266,7 +249,7 @@ html, body, main {
         &:nth-of-type(8) {
           a {
             &::before {
-              background-image: url('../img/Out/Contacts.svg');
+              background-image: url('../img/icons/Contacts.svg');
             }
           }
         }
@@ -338,7 +321,7 @@ html, body, main {
               &:first-of-type {
                 a {
                   &::before {
-                    background-image: url('../img/Out/Presence.svg');
+                    background-image: url('../img/icons/Presence.svg');
                   }
                 }
               }
@@ -346,7 +329,7 @@ html, body, main {
               &:nth-of-type(2) {
                 a {
                   &::before {
-                    background-image: url('../img/Out/Diet.svg');
+                    background-image: url('../img/icons/Diet.svg');
                   }
                 }
               }
@@ -354,7 +337,7 @@ html, body, main {
               &:nth-of-type(3) {
                 a {
                   &::before {
-                    background-image: url('../img/Out/Bottle.svg');
+                    background-image: url('../img/icons/Bottle.svg');
                   }
                 }
               }
@@ -362,7 +345,7 @@ html, body, main {
               &:nth-of-type(4) {
                 a {
                   &::before {
-                    background-image: url('../img/Out/Meals.svg');
+                    background-image: url('../img/icons/Meals.svg');
                   }
                 }
               }
@@ -370,7 +353,7 @@ html, body, main {
               &:nth-of-type(5) {
                 a {
                   &::before {
-                    background-image: url('../img/Out/Potty.svg');
+                    background-image: url('../img/icons/Potty.svg');
                   }
                 }
               }
@@ -378,7 +361,7 @@ html, body, main {
               &:nth-of-type(6) {
                 a {
                   &::before {
-                    background-image: url('../img/Out/Nap.svg');
+                    background-image: url('../img/icons/Nap.svg');
                   }
                 }
               }
@@ -386,7 +369,7 @@ html, body, main {
               &:nth-of-type(7) {
                 a {
                   &::before {
-                    background-image: url('../img/Out/Reward.svg');
+                    background-image: url('../img/icons/Reward.svg');
                   }
                 }
               }
@@ -395,7 +378,7 @@ html, body, main {
               &:nth-of-type(8) {
                 a {
                   &::before {
-                    background-image: url('../img/Out/PersonalNotes.svg');
+                    background-image: url('../img/icons/PersonalNotes.svg');
 
                   }
                 }
@@ -404,7 +387,7 @@ html, body, main {
               &:last-of-type {
                 a {
                   &::before {
-                    background-image: url('../img/Out/ClassNotes.svg');
+                    background-image: url('../img/icons/ClassNotes.svg');
                   }
                 }
               }

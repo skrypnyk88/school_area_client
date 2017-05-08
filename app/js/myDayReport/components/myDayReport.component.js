@@ -16,14 +16,16 @@ function MyDayReportController(MyDayReport) {
   MyDayReport.getReports().then(
     function(data) {
       ctrl.students = data;
-    }
-    );
+    }, function(errors) {
+        return errors;
+      });
 
   ctrl.myDayReportUpdate = function(student) {
     MyDayReport.updateReports(student.my_day_report.note, student.my_day_report.id)
       .then(function(note) {
       return note;
-    });
+    }, function(errors) {
+        return errors;
+      });
   };
-
 }

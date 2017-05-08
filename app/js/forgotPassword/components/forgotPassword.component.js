@@ -1,22 +1,22 @@
-var forgotPasswordService = require('./../../common/services/forgotPassword.service.js');
+var passwordService = require('./../../common/services/password.service.js');
 
 module.exports = angular
 .module('forgotPassword.component', [
-  forgotPasswordService.name
+  passwordService.name
   ])
 .component('forgotComponent', {
   templateUrl: './app/js/forgotPassword/components/forgotPassword.template.html',
   controller: ForgotPasswordController
 });
 
-ForgotPasswordController.$inject = ['forgotPasswordService'];
+ForgotPasswordController.$inject = ['passwordService'];
 
-function ForgotPasswordController(forgotPasswordService) {
+function ForgotPasswordController(passwordService) {
   var ctrl = this;
 
   ctrl.forgot = function(user, valid) {
     if (valid) {
-      forgotPasswordService.forgot({user: user});
+      passwordService.forgot({user: user});
     }
   };
 };

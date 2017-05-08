@@ -1,24 +1,24 @@
-var resetPasswordService = require('./../../common/services/resetPassword.service.js');
+var passwordService = require('./../../common/services/password.service.js');
 
 module.exports = angular
 .module('resetPassword.component', [
-  resetPasswordService.name
+  passwordService.name
   ])
 .component('resetComponent', {
   templateUrl: './app/js/resetPassword/components/resetPassword.template.html',
   controller: ResetPasswordController
 });
 
-ResetPasswordController.$inject = ['$location','resetPasswordService',];
+ResetPasswordController.$inject = ['$location','passwordService',];
 
-function ResetPasswordController($location, resetPasswordService) {
+function ResetPasswordController($location, passwordService) {
   var ctrl = this;
   var token = $location.search().reset_password_token;
 
   ctrl.reset = function(user, valid) {
     if (valid) {
       user.reset_token = token;
-      resetPasswordService.reset({user: user});
+      passwordService.reset({user: user});
     }
   };
 };

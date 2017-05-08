@@ -5,20 +5,22 @@ module.exports = angular
     ])
   .factory('MyDayReport', MyDayReport);
 
-MyDayReport.$inject = ['myDayReportResource', 'currentGroupDay'];
-function MyDayReport(myDayReportResource, currentGroupDay) {
+MyDayReport.$inject = ['myDayReportResource', 'currentGroupDay', '$mdToast'];
+function MyDayReport(myDayReportResource, currentGroupDay, $mdToast) {
   var service = {
     getReports: getReports,
-    updateReports: updateReports
+    updateReports: updateReports,
+    toggleErrorMsg: toggleErrorMsg
   };
   return service;
 
   function getReports() {
     return myDayReportResource.query({group_id: currentGroupDay.group_id,
-                                      day: currentGroupDay.day}).$promise.then(function(data) {
+                                      day: currentGroupDay.day})
+    .$promise.then(function(data) {
       return data;
     }, function(errors) {
-      return errors;
+      service.toggleErrorMsg(errors);
     });
   };
 
@@ -26,10 +28,22 @@ function MyDayReport(myDayReportResource, currentGroupDay) {
     return myDayReportResource.update({report: {note: note},
                                       id: id,
                                       group_id: currentGroupDay.group_id,
-                                      day: currentGroupDay.day}).$promise.then(function(note) {
+                                      day: currentGroupDay.day})
+    .$promise.then(function(note) {
       return note;
     }, function(errors) {
-      alert(errors.data.errors);
+      service.toggleErrorMsg(errors);
     });
   };
+
+  function toggleErrorMsg(response) {
+    var msg = response.data.errors;
+
+    $mdToast.show({
+      template: '<md-toast><div class="md-toast-content">' +
+                msg +
+              '</div></md-toast>',
+      position: 'top right'
+    });
+  }
 };

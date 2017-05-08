@@ -1,74 +1,69 @@
-<div class="header">
-  <md-toolbar id="toolbar" class="md-menu-toolbar" layout="row">
+<header class="header" layout="row" layout-align="space-between center">
     <div class="logo">
-      <img  src="app/img/profile/logo.jpg" alt="logo">
+      <img src="app/img/profile/logo.gif" alt="logo">
     </div>
 
-    <div flex layout="row" layout-align="space-around center">
-
-      <md-select ng-model="$ctrl.currentGroupDay.group_id" >
+      <md-select class="group-select" ng-model="$ctrl.currentGroupDay.group_id" >
         <md-option ng-value="group.id" ng-repeat="group in $ctrl.groups">
           {{ group.name }}
         </md-option>
       </md-select>
 
-      <div class="icon-wrapper" layout="row" role="button">
-        <a ui-sref="#"><md-icon class="today">today</md-icon></a>
-        <a ui-sref="#" ng-click="pastDate()" role="button">
-          <md-icon id="chevron_left" class="chevron">chevron_left</md-icon>
-        </a>
-        <div class="data" layout="row" layout-align="space-around center">
-          <span class="number">{{selectedDate.getDate() + 1}}</span>
-          <div class="date" layout="column">
-            <span class="month">{{monthNames[selectedDate.getMonth()] }}</span>
-            <span class="day">{{dayNames[selectedDate.getDay()] }}</span>
-          </div>
-        </div>
-        <a ui-sref="#" ng-click="nextDate()" ng-click="showMonth()" role="button">
-          <md-icon id="chevron_right" class="chevron">chevron_right</md-icon>
-        </a>
+    <div class="calendar" layout="row" layout-align="center start">
+      <a ui-sref="" class="calendar-img">
+        <img src="app/img/Out/callendar.png" alt="callendar">
+      </a>
+      <a ui-sref="" ng-click="$ctrl.pastDate()">
+         <img src="app/img/Out/arrow_left.png" alt="callendar">
+      </a>
+
+      <span class="number">{{$ctrl.selectedDate.getDate()}}</span>
+
+      <div class="date" layout="column">
+            <span class="month">{{$ctrl.monthNames[$ctrl.selectedDate.getMonth()] }}</span>
+            <span class="day">{{$ctrl.dayNames[$ctrl.selectedDate.getDay()] }}</span>
       </div>
 
-      <md-button class="user-button" layout="row" layout-align="center center">
-        <img md-menu-align-target class="avatar" src="app/img/profile/educator.svg" alt="profile">
-        <span class="username">Teacher</span>
-        <md-menu md-position-mode="target-right bottom">
-          <md-icon ng-click="$mdOpenMenu()">expand_more</md-icon>
-          <md-menu-content width="3">
-            <md-menu-item>
-              <md-button>Profile</md-button>
-            </md-menu-item>
-            <md-menu-divider role="separator"></md-menu-divider>
-            <md-menu-item>
-              <md-button ng-click="$ctrl.logout()">Sign out</md-button>
-            </md-menu-item>
-          </md-menu-content>
-        </md-menu>
-      </md-button>
+      <a ui-sref="" ng-click="$ctrl.nextDate()">
+        <img src="app/img/Out/arrow_right.png" alt="callendar">
+      </a>
     </div>
-  </md-toolbar>
-</div>
+    <md-button class="user-button" layout="row" layout-align="center center">
 
-<div layout="row">
-  <nav flex>
-    <ul>
-      <li class="journal"><a ui-sref="#">Journal</a></li>
-      <li>
-        <ul>
-          <li class="active"><a ui-sref="main.presenceReport">Attendance</a></li>
-          <li><a ui-sref="#">Health</a></li>
-          <li><a ui-sref="#">Bottle</a></li>
-          <li><a ui-sref="#">Meals</a></li>
-          <li><a ui-sref="#">Potty</a></li>
-          <li><a ui-sref="#">Nap</a></li>
-          <li><a ui-sref="#">Achivements</a></li>
-          <li><a ui-sref="#">Supplies</a></li>
-          <li><a ui-sref="#">Our Day</a></li>
-          <li><a ui-sref="#">My Day</a></li>
+    <span class="username">Jesica Alba</span>
+      <md-menu md-position-mode="target-right bottom">
+      <md-icon ng-click="$mdOpenMenu()">expand_more</md-icon>
+      <md-menu-content width="3">
+      <md-menu-item>
+        <md-button>Profile</md-button>
+      </md-menu-item>
+      <md-menu-divider role="separator"></md-menu-divider>
+      <md-menu-item>
+        <md-button ng-click="$ctrl.logout()">Sign out</md-button>
+      </md-menu-item>
+    </md-menu-content>
+    </md-menu>
+    </md-button>
+</header>
+
+<div class="teacher-report" layout="row">
+  <nav class="navbar">
+    <ul class="menu">
+      <div ng-repeat="menu in $ctrl.menuItems">
+        <li class="menu-item" ng-click="$ctrl.setActiveMenu($index)" ng-class="$ctrl.activeMenu == $index ? 'active-menu' : ''">
+          <a ui-sref={{menu.link}}>
+            {{menu.name}}
+          </a>
+        </li>
+        <ul class="submenu" ng-if="menu.submenu" ng-class="$ctrl.submenuOpened ? 'opened' : 'closed'">
+          <li ng-repeat="submenu in menu.submenu" ng-click="$ctrl.setActiveSubmenu($index)" ng-class="$ctrl.activeSubmenu == $index ? 'active-submenu' : ''">
+            <a ui-sref={{submenu.link}}>
+              {{submenu.name}}
+            </a>
+          </li>
         </ul>
-      </li>
+      </div>
     </ul>
   </nav>
-
-  <section flex ui-view></section>
+<section flex ui-view></section>
 </div>

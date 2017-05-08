@@ -1,0 +1,43 @@
+<div class="report">
+    <md-list>
+    <md-list-item>
+    <div class="student" layout="row">
+        <img class="avatar" src="app/img/profile/educator.svg" alt="profile">
+        <div class="name" layout="column" layout-align="center">
+            <span class="first-name">Andriy</span>
+            <span class="last-name">Kalyta</span>
+        </div>
+    </div>
+    <section class="student-btn" layout="column" layout-align="center center">
+        <div class="btn-container" layout="row">
+            <md-button class="group-btn green-group-btn">Present</md-button>
+            <md-button class="group-btn red-group-btn">Absent</md-button>
+        </div>
+        <div class="input-container" layout="row" layout-align="space-around">
+            <input class="input-time" type="text" name="hours" value="13:15">
+            <input class="input-time" type="text" name="minutes" value="18:45">
+        </div>
+    </section>
+    </md-list-item>
+    </md-list>
+</div>
+<md-select flex="5" ng-model="" placeholder="20 ml" class="blue-select md-no-underline" layout="row" layout-align="end end">
+<md-option value="30 ml">30 ml</md-option>
+<md-option value="45 ml">45 ml</md-option>
+<md-option value="60 ml">60 ml</md-option>
+<md-option value="75 ml">75 ml</md-option>
+<md-option value="90 ml">90 ml</md-option>
+<md-option value="105 ml">105 ml</md-option>
+</md-select>
+<md-button class="btn green-btn">Update</md-button>
+<md-button class="btn gray-btn">Cancel</md-button>
+<md-button class="btn blue-btn">View daily reports</md-button>
+<textarea class="general" name="" id="" >lorem inpu</textarea>
+<textarea class="class-notes" name="" id="" >lorem inpu</textarea>
+<md-button class="md-fab md-mini md-raised" aria-label="Add a category">
+<md-icon class="add">add</md-icon>
+</md-button>
+<md-input-container>
+<label>Title</label>
+<input ng-model="user.title">
+</md-input-container>

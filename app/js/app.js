@@ -4,6 +4,7 @@ var constantsModule = require('./common/constants.js');
 var tokenInjector = require('./common/services/tokenInjector.service.js');
 var vendorModule = require('./requirements.js');
 var valuesModule = require('./common/values.js');
+var messageService = require('./common/services/message.service.js');
 
 angular
   .module('schoolArea', [
@@ -11,7 +12,8 @@ angular
     constantsModule.name,
     valuesModule.name,
     mainModule.name,
-    tokenInjector.name
+    tokenInjector.name,
+    messageService.name
   ])
  .config(['$locationProvider', '$httpProvider', 'localStorageServiceProvider',
     function($locationProvider, $httpProvider, localStorageServiceProvider) {

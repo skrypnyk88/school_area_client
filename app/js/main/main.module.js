@@ -26,7 +26,7 @@ module.exports = angular
     toggleMessage.name,
     staticModule.name,
     sideBarModule.name,
-    studentService.name
+    studentService.name,
     forgotPasswordModule.name,
     resetPasswordModule.name
   ])

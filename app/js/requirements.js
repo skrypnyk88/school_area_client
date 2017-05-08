@@ -7,5 +7,6 @@ module.exports = angular
     require('angular-material'),
     'pascalprecht.translate',
     require('angular-translate'),
-    require('angular-translate-loader-static-files')
+    require('angular-translate-loader-static-files'),
+    require('angular-base64-upload')
     ]);

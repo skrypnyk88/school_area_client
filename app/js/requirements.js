@@ -11,6 +11,7 @@ module.exports = angular
 =======
     'pascalprecht.translate',
     require('angular-translate'),
-    require('angular-translate-loader-static-files')
+    require('angular-translate-loader-static-files'),
+    require('angular-base64-upload')
     ]);
 >>>>>>> LVRUBYM-328:added files

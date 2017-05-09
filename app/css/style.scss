@@ -23,7 +23,7 @@ html, body, main {
 .md-accent{
   color: white !important;
 }
-
+/*
 #myDayReport {
   border: 1px solid red;
   border-radius: 7px;
@@ -41,7 +41,7 @@ html, body, main {
     margin: auto 40px;
   }
 }
-
+*/
 .header {
   $font-size: 45px;
   $cursor: pointer;
@@ -385,7 +385,7 @@ login-component {
     .avatar {
       border-radius: 50%;
       height: 70px;
-      margin: 15px 20px 15px 100px;
+      margin: 15px 30px 15px 30px;
       min-width: 70px;
       width: 70px;
     }
@@ -564,3 +564,6 @@ button {
   }
 }
 
+.my-day .student-info {
+  width: 30%
+}

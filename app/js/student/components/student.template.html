@@ -1,3 +1,7 @@
-<div>{{$ctrl.student.first_name}}</div>
-<div>{{$ctrl.student.last_name}}</div>
-<img src="app/img/photo.png" height='100' alt="avatar">
+<div class="student" layout="row">
+    <img class="avatar" src="app/img/profile/educator.svg" alt="profile">
+    <div class="name" layout="column" layout-align="center">
+        <span class="first-name">{{$ctrl.student.first_name}}</span>
+        <span class="last-name">{{$ctrl.student.last_name}}</span>
+    </div>
+</div>

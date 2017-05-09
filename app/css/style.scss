@@ -26,9 +26,13 @@ main {
 .md-accent {
   color: white;
 }
+<<<<<<< b4c6fc7a641cbed9d17fed7ac7f693846f859a93
 
 <<<<<<< b58d66a93707ee896c6d162c5c842ea61db242b2
 =======
+=======
+/*
+>>>>>>> LVRUBYM-242:changed teamplate for myDayReport and student coponent
 #myDayReport {
   border: 1px solid red;
   border-radius: 7px;
@@ -46,8 +50,12 @@ main {
     margin: auto 40px;
   }
 }
+<<<<<<< b4c6fc7a641cbed9d17fed7ac7f693846f859a93
 
 >>>>>>> LVRUBYM-242:added component
+=======
+*/
+>>>>>>> LVRUBYM-242:changed teamplate for myDayReport and student coponent
 .header {
   margin: 10px 30px 0;
   $font-size: 45px;
@@ -567,7 +575,7 @@ main {
     .avatar {
       border-radius: 50%;
       height: 70px;
-      margin: 15px 20px 15px 100px;
+      margin: 15px 30px 15px 30px;
       min-width: 70px;
       width: 70px;
     }
@@ -746,6 +754,7 @@ button {
   }
 }
 
+<<<<<<< b4c6fc7a641cbed9d17fed7ac7f693846f859a93
 //  Bottle Report component  //
 
 .container {
@@ -1170,3 +1179,8 @@ md-input-container:last-of-type {
 md-card-content{
   padding-bottom: 0;
 }
+=======
+.my-day .student-info {
+  width: 30%
+}
+>>>>>>> LVRUBYM-242:changed teamplate for myDayReport and student coponent

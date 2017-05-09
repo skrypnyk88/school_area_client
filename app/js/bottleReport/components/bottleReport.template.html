@@ -6,7 +6,7 @@
       <student-component student="bottleReport.student"></student-component>
     </div>
     <md-content layout-wrap flex="50">  
-       <md-button class="md-fab md-mini md-raised" ng-click="$ctrl.addBottle(bottleReport)" class="button">Add Bottle</md-button>   
+       <md-button class="group-btn red-group-btn" ng-click="$ctrl.addBottle(bottleReport)" class="button">Add Bottle</md-button>   
        
       <div ng-repeat="bottle in bottleReport.bottles" class="bottles">
         <md-select ng-change="$ctrl.updateBottle(bottle, bottleReport)" name="bottle_{{bottle.id}}_quantity" id="quantity" 

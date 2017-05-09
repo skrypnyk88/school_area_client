@@ -5,7 +5,7 @@ module.exports = angular
 AuthResource.$inject = ['$resource', 'globalSettings'];
 
 function AuthResource($resource, globalSettings) {
-  var resource = $resource(globalSettings.SERVER_URL + '/:action', {},
+  var resource = $resource(globalSettings.SERVER_URL + '/:action.json', {},
     {
       'authenticate': {
         params: {action: 'signin'},

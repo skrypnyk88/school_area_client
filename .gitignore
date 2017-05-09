@@ -1,3 +1,4 @@
 /node_modules
 npm-debug.log
 /app/js/coverage
+bundle.js

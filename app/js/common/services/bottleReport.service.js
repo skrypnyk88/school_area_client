@@ -11,12 +11,16 @@ module.exports = angular
 bottleReportService.$inject = ['bottleReportResource',
                                'bottleResource',
                                'currentGroupDay',
-                               'errorMessages'];
+                               'errorMessages',
+                               '$mdToast'];
 
-function bottleReportService(bottleReportResource, bottleResource, currentGroupDay, errorMessages) {
+function bottleReportService(bottleReportResource,
+                             bottleResource,
+                             currentGroupDay,
+                             errorMessages,
+                             $mdToast) {
   var service = {
     getBottleReports: getBottleReports,
-    getBottles: getBottles,
     addBottle: addBottle,
     deleteBottle: deleteBottle,
     updateBottle: updateBottle
@@ -26,20 +30,8 @@ function bottleReportService(bottleReportResource, bottleResource, currentGroupD
     var params = {
       group_id: currentGroupDay.group_id
     };
-
     return bottleReportResource.query(params).$promise.then(function(bottleReports) {
       return bottleReports;
-    }, function(errors) {
-      responseFailure(errors.data);
-    });
-  };
-
-  function getBottles(bottleReport) {
-    return bottleResource.query({bottle_report_id: bottleReport.id,
-                                group_id: bottleReport.group_id})
-    .$promise
-    .then(function(bottles) {
-      return bottles;
     }, function(errors) {
       responseFailure(errors.data);
     });
@@ -83,7 +75,13 @@ function bottleReportService(bottleReportResource, bottleResource, currentGroupD
 
   function responseFailure(errorDetails) {
     console.log(errorDetails);
-    alert(errorMessages.FAIL_RESPONSE);
+    var fail = errorMessages.FAIL_RESPONSE;
+    $mdToast.show({
+      template: '<md-toast><div class="md-toast-content">' +
+                  fail +
+                '</div></md-toast>',
+      position: 'top right'
+    });
   };
 
   return service;

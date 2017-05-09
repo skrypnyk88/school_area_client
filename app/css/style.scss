@@ -521,6 +521,7 @@ main {
     width: 300px;
     margin-top: 15vh;
   }
+<<<<<<< f850bfdd973ddd81d4c9a8b834d6fb260d39f714
 
 // Bottle Report Component //
 
@@ -528,15 +529,35 @@ main {
   border-bottom-style: solid;
   border-color: lightgray;
   border-width: 1px;
+=======
+}
+//style for static.html
+@mixin border {
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+}
 
-    md-toolbar {
+@mixin btn-font {
+  font-size: 18pt;
+  font-weight: 900;
+}
+
+.btn {
+  &:not([disabled]) {
+    border-radius: 13px;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 2px 12px;
+    text-transform: $text-transform;
+>>>>>>> LVRUBYM-221:Changed template
+
+    &:hover {
       background-color: white;
-      border-style: solid;
-      border-color: lightgray;
-      border-width: 1px;
-      position: relative;
-      top: 15px;
+    }
+  }
+}
 
+<<<<<<< f850bfdd973ddd81d4c9a8b834d6fb260d39f714
         span{
           text-align: center;
           color: lightgray;
@@ -557,9 +578,52 @@ main {
 
     md-content {
 
+=======
+.green-btn {
+  background-color: $green-color;
+  border: 1px solid $green-color;
+  color: #fff;
+
+  &:not([disabled]) {
+    &:hover {
+      background-color: #fff;
+      color: #55585e;
     }
 
+    &:focus {
+      background-color: $green-color;
+      border: 1px solid $green-color;
+      color: #fff;
+    }
+  }
+}
+
+
+.gray-btn {
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  color: #55585e;
+
+  &:not([disabled]) {
+    &:hover {
+      background-color: #e5e4e4;
+      color: #55585e;
+    }
+
+    &:focus {
+      border: 1px solid #55585e;
+>>>>>>> LVRUBYM-221:Changed template
+    }
+  }
+}
+
+<<<<<<< f850bfdd973ddd81d4c9a8b834d6fb260d39f714
     .bottle {
+=======
+<<<<<<< 8e755c941e1599e7941a3fe118b61f581682a2f1
+<<<<<<< 5846dbb9a8cee90083bef2dfc055f7584d026f6a
+    .button {
+>>>>>>> LVRUBYM-221:Changed template
       background-color: yellowgreen;
       color: white;
       position: relative;
@@ -658,6 +722,35 @@ main {
       .first-name {
         padding-bottom: 5px;
       }
+<<<<<<< f850bfdd973ddd81d4c9a8b834d6fb260d39f714
+=======
+>>>>>>> LVRUBYM-221:Added indentations
+=======
+
+.report {
+  @include border;
+  background-color: #fff;
+
+  .student {
+    margin: 10px 150px 10px 10px;
+
+    .avatar {
+      border-radius: 50%;
+      height: 70px;
+      margin: 15px 20px 15px 100px;
+      min-width: 70px;
+      width: 70px;
+    }
+
+    .name {
+      color: #55585e;
+      font-size: 20px;
+      font-weight: 300;
+
+      .first-name {
+        padding-bottom: 5px;
+      }
+>>>>>>> LVRUBYM-221:Changed template
     }
   }
 }
@@ -685,6 +778,7 @@ main {
         background-color: #fff;
         border: 1px solid $green-color;
         color: #55585e;
+<<<<<<< f850bfdd973ddd81d4c9a8b834d6fb260d39f714
 
       }
 
@@ -885,6 +979,22 @@ button {
     &:hover {
       background-color: white;
     }
+=======
+>>>>>>> LVRUBYM-221:Changed template
+
+      }
+
+<<<<<<< 8e755c941e1599e7941a3fe118b61f581682a2f1
+<<<<<<< 5846dbb9a8cee90083bef2dfc055f7584d026f6a
+  .time_input {
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 1px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+>>>>>>> LVRUBYM-221:Fixed name of file
+>>>>>>> LVRUBYM-221:Changed template
   }
 }
 
@@ -977,6 +1087,8 @@ button {
 
       }
 
+=======
+>>>>>>> LVRUBYM-221:Changed template
     }
   }
 }
@@ -1005,6 +1117,7 @@ button {
         border: 1px solid $red-color;
         color: #55585e;
 
+<<<<<<< 8e755c941e1599e7941a3fe118b61f581682a2f1
       }
     }
 
@@ -1285,5 +1398,128 @@ md-toast .md-toast-content{
   .md-toast-content{
     margin-top: 20px;
   }
+<<<<<<< f850bfdd973ddd81d4c9a8b834d6fb260d39f714
+=======
+=======
+      .time_input {
+        border-style: solid;
+        border-color: lightgray;
+        border-width: 1px;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 10px;
+=======
+>>>>>>> LVRUBYM-221:Changed template
+      }
+    }
+
+  }
+}
+
+
+.group-btn {
+  margin: 10px 0;
+  min-height: 25px;
+  min-width: 200px;
+  padding: 3px 15px;
+
+}
+
+.input-time {
+  background-color: #fff;
+  border: 1px solid transparent;
+  color: #6e6b6b;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  height: 30px;
+  margin: 0 60px;
+  outline: none;
+  resize: none;
+  text-align: center;
+  width: 85px;
+
+  &:hover {
+    border: 1px solid #dfdbdb;
+    border-radius: 12px;
+  }
+}
+
+.blue-btn {
+  background-color: $blue-color;
+  border: 1px solid $blue-color;
+  color: #fff;
+
+  &:not([disabled]) {
+    &:hover {
+      background-color: #fff;
+      color: #55585e;
+    }
+
+    &:focus {
+      border: 1px solid $blue-color;
+    }
+  }
+}
+
+.blue-select {
+  &:not([disabled]) {
+    background-color: #fff;
+    border-bottom: 2px solid $blue-color;
+    font-size: 14px;
+    height: 38px;
+
+    .md-select-icon {
+      border-bottom: 13px solid $blue-color;
+      border-left: 13px solid transparent;
+      height: 0;
+      left: 6px;
+      margin-left: 15px;
+      position: relative;
+      top: 12px;
+      width: 0;
+
+      &::after {
+        content: '';
+      }
+    }
+  }
+}
+
+.general {
+  border: 1px solid #cdcdd5;
+  border-radius: 10px;
+  color: #82838a;
+  font-family: 'Lato', sans-serif;
+  height: 75px;
+  min-width: 420px;
+  padding: 11px 25px;
+  resize: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.class-notes {
+  height: 125px;
+  @extend.general;
+}
+
+button {
+  &.md-raised {
+    border: 1px solid #00bff3;
+
+    &:not([disabled]) {
+      .add {
+        color: #00bff3;
+
+      }
+<<<<<<< 8e755c941e1599e7941a3fe118b61f581682a2f1
+>>>>>>> LVRUBYM-221:Added indentations
+=======
+    }
+  }
+>>>>>>> LVRUBYM-221:Changed template
+>>>>>>> LVRUBYM-221:Changed template
 }
 >>>>>>> LVRUBYM-351: Add toggleMessage service

@@ -5,6 +5,7 @@ var forgotPasswordModule = require('./../forgotPassword/forgotPassword.module.js
 var resetPasswordModule = require('./../resetPassword/resetPassword.module.js');
 var presenceReportModule = require('./../presenceReport/presenceReport.module.js');
 var studentModule = require('./../student/student.module.js');
+<<<<<<< 8e755c941e1599e7941a3fe118b61f581682a2f1
 var groupService = require('./../common/services/group.service.js');
 <<<<<<< 110a2349bbde235cfd99b7d4f923344a087a6a29
 <<<<<<< 6591626350f205011fe4ba3afc8ffcf0c584d96b
@@ -38,7 +39,12 @@ var bottleReportModule = require('.././bottleReport/bottleReport.module.js');
 	  require('../../css/style.scss');
 >>>>>>> LVRUBYM-221:Fixed file's name
 =======
+=======
+>>>>>>> LVRUBYM-221:Changed template
 var bottleReportModule = require('.././bottleReport/bottleReport.module.js');
+var groupService = require('./../common/services/group.service.js');
+var staticModule = require('./../static/static.module.js');
+
 require('../../css/style.scss');
 >>>>>>> LVRUBYM-221:Added validation and failure response
 
@@ -51,10 +57,14 @@ module.exports = angular
     studentModule.name,
     bottleReportModule.name,
     groupService.name,
+<<<<<<< f850bfdd973ddd81d4c9a8b834d6fb260d39f714
 <<<<<<< b1263744d5dbac2df9f7478c666c2beb7b7604de
 <<<<<<< b58d66a93707ee896c6d162c5c842ea61db242b2
     toggleMessage.name,
 =======
+=======
+<<<<<<< 8e755c941e1599e7941a3fe118b61f581682a2f1
+>>>>>>> LVRUBYM-221:Changed template
 <<<<<<< 110a2349bbde235cfd99b7d4f923344a087a6a29
 >>>>>>> LVRUBYM-221:Added validation and failure response
     staticModule.name,
@@ -77,7 +87,13 @@ module.exports = angular
 =======
 >>>>>>> LVRUBYM-221:Added validation and failure response
     bottleReportModule.name
+<<<<<<< f850bfdd973ddd81d4c9a8b834d6fb260d39f714
 >>>>>>> LVRUBYM-221:Add module,components,services,resources to bottle report
+=======
+=======
+    staticModule.name
+>>>>>>> LVRUBYM-221:Changed template
+>>>>>>> LVRUBYM-221:Changed template
   ])
 <<<<<<< 5f08931b1824729a65c08636eb4467c854ebded3
   .config(['$mdThemingProvider',

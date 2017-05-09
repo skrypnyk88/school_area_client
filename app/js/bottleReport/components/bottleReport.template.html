@@ -35,10 +35,17 @@
       <student-component student="bottleReport.student"></student-component>
     </div>
     <md-content layout-wrap flex="50">  
-       <button ng-click="$ctrl.addBottle(bottleReport)" class="button">Add Bottle</button>   
+       <md-button class="md-fab md-mini md-raised" ng-click="$ctrl.addBottle(bottleReport)" class="button">Add Bottle</md-button>   
+       
       <div ng-repeat="bottle in bottleReport.bottles" class="bottles">
+<<<<<<< f850bfdd973ddd81d4c9a8b834d6fb260d39f714
         <md-select ng-change="$ctrl.updateBottle(bottle, bottleReport)" name="bottle_{{bottle.id}}_quantity" id="quantity" ng-model="bottle.quantity" convert-to-number placeholder="30 ml">
 >>>>>>> LVRUBYM-221:Added validation and failure response
+=======
+        <md-select ng-change="$ctrl.updateBottle(bottle, bottleReport)" name="bottle_{{bottle.id}}_quantity" id="quantity" 
+        ng-model="bottle.quantity" convert-to-number placeholder="30 ml"
+        flex="5" class="blue-select md-no-underline" layout="row" layout-align="end end">
+>>>>>>> LVRUBYM-221:Changed template
           <md-option value="30">30 ml</md-option>
           <md-option value="45">45 ml</md-option>
           <md-option value="60">60 ml</md-option>

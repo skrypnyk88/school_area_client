@@ -10,7 +10,6 @@ module.exports = {
 >>>>>>> LVRUBYM-221:Fixed file's name
     filename: 'bundle.js'
   },
-  
   module: {
 
     loaders: [{

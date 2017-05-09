@@ -61,6 +61,7 @@ module.exports = angular
     });
     $translateProvider.preferredLanguage('en');
   }])
+<<<<<<< 699e9b37f1d13ef6c9a01fdab584884a4e8468d9
   .config(function($mdThemingProvider) {
     $mdThemingProvider
       .theme('default')
@@ -70,3 +71,14 @@ module.exports = angular
       .backgroundPalette('grey');
   });
 >>>>>>> LVRUBYM-328:moved config and function to main component
+=======
+  .config(['$mdThemingProvider',
+    function($mdThemingProvider) {
+      $mdThemingProvider
+        .theme('default')
+        .primaryPalette('light-green')
+        .accentPalette('deep-purple')
+        .warnPalette('red')
+        .backgroundPalette('grey');
+    }]);
+>>>>>>> LVRUBYM-339: Fix injections

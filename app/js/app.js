@@ -13,11 +13,16 @@ angular
     mainModule.name,
     tokenInjector.name
   ])
+<<<<<<< 699e9b37f1d13ef6c9a01fdab584884a4e8468d9
  .config(['$locationProvider', '$httpProvider', 'localStorageServiceProvider',
+=======
+  .config(['$locationProvider', '$httpProvider', 'localStorageServiceProvider',
+>>>>>>> LVRUBYM-339: Fix injections
     function($locationProvider, $httpProvider, localStorageServiceProvider) {
       $locationProvider.html5Mode(true);
       localStorageServiceProvider.setPrefix('schoolArea');
       $httpProvider.interceptors.push('tokenInjector');
+<<<<<<< 699e9b37f1d13ef6c9a01fdab584884a4e8468d9
 <<<<<<< 5aa93ff66840d81756341fcc2ce5b06387f4ab36
     }])
 =======
@@ -39,6 +44,9 @@ angular
 >>>>>>> LVRUBYM-328:added files
 =======
 >>>>>>> LVRUBYM-328:moved config and function to main component
+=======
+    }])
+>>>>>>> LVRUBYM-339: Fix injections
   .run(['$rootScope', '$state', 'auth',
     function($rootScope, $state, auth) {
       $rootScope.$on('$stateChangeStart',

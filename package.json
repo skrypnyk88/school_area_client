@@ -6,6 +6,7 @@
   "scripts": {
     "server": "webpack-dev-server --history-api-fallback --watch-content-base --hot --progress --port 1111",
     "start": "npm run server",
+<<<<<<< 850b4eaf712652d184dcb0f78730e7eb3ec70239
 <<<<<<< 56e718bd889d592ec30118caaf794a6cb3c79ad2
     "deploy": "NODE_ENV=production webpack -p && NODE_ENV=production node server",
     "test": "karma start ./karma.conf.js --single-run"
@@ -13,6 +14,10 @@
     "run": "webpack -p",
     "test": "karma start ./karma.conf.js "
 >>>>>>> LVRUBYM-224:added changes to tests
+=======
+    "deploy": "NODE_ENV=production webpack -p && NODE_ENV=production node server",
+    "test": "karma start ./karma.conf.js --single-run"
+>>>>>>> LVRUBYM-339: Add express server
   },
   "devDependencies": {
     "angular-mocks": "^1.6.4",

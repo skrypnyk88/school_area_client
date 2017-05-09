@@ -10,6 +10,7 @@
 <<<<<<< 56e718bd889d592ec30118caaf794a6cb3c79ad2
     "deploy": "NODE_ENV=production webpack -p && NODE_ENV=production node server",
     "test": "karma start ./karma.conf.js --single-run"
+<<<<<<< 9458cd5378bf962a69a67e447b8aaefcc78afab8
 =======
     "run": "webpack -p",
     "test": "karma start ./karma.conf.js "
@@ -18,36 +19,58 @@
     "deploy": "NODE_ENV=production webpack -p && NODE_ENV=production node server",
     "test": "karma start ./karma.conf.js --single-run"
 >>>>>>> LVRUBYM-339: Add express server
+=======
+<<<<<<< 830c59749f7d23980876b1fd095ed4ece00a3e44
+>>>>>>> LVRUBYM-221:Changed package.json
   },
   "devDependencies": {
     "angular-mocks": "^1.6.4",
     "angular-translate": "^2.15.1",
+=======
+=======
+    "run": "webpack -p",
+<<<<<<< 82e7a24a16b4d39d77711d0ba7ba4e1b612e4489
+    "test": "karma start ./karma.conf.js"
+>>>>>>> LVRUBYM-221:Added tests for service
+=======
+    "test": "karma start ./karma.conf.js --single-run"
+>>>>>>> LVRUBYM-221:Changed package.json
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.6.4",
+>>>>>>> LVRUBYM-221:Changed package.json
     "css-loader": "^0.27.3",
     "file-loader": "^0.10.1",
     "jasmine-core": "^2.5.2",
-    "karma": "^0.13.22",
+    "karma": "^1.6.0",
     "karma-angular": "0.0.6",
+<<<<<<< 9458cd5378bf962a69a67e447b8aaefcc78afab8
 <<<<<<< 830abdfadbc27494806e306ed6b21698c939cc08
     "karma-chrome-launcher": "^2.1.1",
+=======
+>>>>>>> LVRUBYM-221:Changed package.json
     "karma-coverage": "^1.1.1",
     "karma-jasmine": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-webpack": "^2.0.3",
+<<<<<<< 9458cd5378bf962a69a67e447b8aaefcc78afab8
 =======
     "karma-coverage": "^1.0.0",
     "karma-jasmine": "^1.0.2",
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-webpack": "^1.7.0",
 >>>>>>> LVRUBYM-221:Added tests for service
+=======
+>>>>>>> LVRUBYM-221:Changed package.json
     "node-sass": "^4.5.0",
     "phantomjs": "^2.1.7",
-    "phantomjs-prebuilt": "^2.1.7",
+    "phantomjs-prebuilt": "^2.1.14",
     "sass-lint": "^1.10.2",
     "sass-loader": "^6.0.3",
-    "style-loader": "^0.16.1",
+    "style-loader": "^0.14.1",
     "url-loader": "^0.5.8",
-    "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.0.0"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2"
   },
   "author": "LV-227",
   "license": "ISC",

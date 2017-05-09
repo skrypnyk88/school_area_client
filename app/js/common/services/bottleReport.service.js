@@ -35,13 +35,21 @@ function bottleReportService(bottleReportResource,
 bottleReportService.$inject = ['bottleReportResource',
                                'bottleResource',
                                'currentGroupDay',
-                               'errorMessages'];
+                               'errorMessages',
+                               '$mdToast'];
 
-function bottleReportService(bottleReportResource, bottleResource, currentGroupDay, errorMessages) {
+function bottleReportService(bottleReportResource,
+                             bottleResource,
+                             currentGroupDay,
+                             errorMessages,
+                             $mdToast) {
   var service = {
     getBottleReports: getBottleReports,
+<<<<<<< 830abdfadbc27494806e306ed6b21698c939cc08
     getBottles: getBottles,
 >>>>>>> LVRUBYM-221:Fixed file's name
+=======
+>>>>>>> LVRUBYM-221:Added tests for service
     addBottle: addBottle,
     deleteBottle: deleteBottle,
     updateBottle: updateBottle
@@ -55,6 +63,7 @@ function bottleReportService(bottleReportResource, bottleResource, currentGroupD
     var params = {
       group_id: currentGroupDay.group_id
     };
+<<<<<<< 830abdfadbc27494806e306ed6b21698c939cc08
 
 <<<<<<< b1263744d5dbac2df9f7478c666c2beb7b7604de
     return bottleReportResource.query(params)
@@ -112,20 +121,11 @@ function bottleReportService(bottleReportResource, bottleResource, currentGroupD
 =======
     return bottleReportResource.query().$promise.then(function(bottleReports) {
 =======
+=======
+>>>>>>> LVRUBYM-221:Added tests for service
     return bottleReportResource.query(params).$promise.then(function(bottleReports) {
 >>>>>>> LVRUBYM-221:Added validation and failure response
       return bottleReports;
-    }, function(errors) {
-      responseFailure(errors.data);
-    });
-  };
-
-  function getBottles(bottleReport) {
-    return bottleResource.query({bottle_report_id: bottleReport.id,
-                                group_id: bottleReport.group_id})
-    .$promise
-    .then(function(bottles) {
-      return bottles;
     }, function(errors) {
       responseFailure(errors.data);
     });
@@ -170,7 +170,13 @@ function bottleReportService(bottleReportResource, bottleResource, currentGroupD
 
   function responseFailure(errorDetails) {
     console.log(errorDetails);
-    alert(errorMessages.FAIL_RESPONSE);
+    var fail = errorMessages.FAIL_RESPONSE;
+    $mdToast.show({
+      template: '<md-toast><div class="md-toast-content">' +
+                  fail +
+                '</div></md-toast>',
+      position: 'top right'
+    });
   };
 
   return service;

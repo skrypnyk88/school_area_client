@@ -12,12 +12,20 @@ function messageService($mdToast) {
   return service;
 
   function toggleMsg(response) {
-    var msg = response.data;
-    $mdToast.show({
-      template: '<md-toast><div class="md-toast-content">' +
-                  msg +
-                '</div></md-toast>',
-      position: 'top right'
-    });
+
+    if (Array.isArray(response.data)) {
+      var msgs = response.data.join('; ');
+    } else {
+      var msgs = response.data;
+    }
+
+    var toast = $mdToast.simple()
+      .textContent(msgs)
+      .action('OK')
+      .highlightAction(false)
+      .position('top right')
+      .hideDelay(9000);
+
+    $mdToast.show(toast);
   }
 };

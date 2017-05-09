@@ -3,7 +3,10 @@ module.exports = function(config) {
     basePath: 'app/js/',
     frameworks: ['angular', 'jasmine'],
     files: [
-      './specs.webpack.js'
+      './specs.webpack.js',
+      './../../node_modules/angular-mocks/angular-mocks.js'
+    ],
+    exclude: [
     ],
     reporters: ['progress', 'coverage'],
     preprocessors: {
@@ -14,8 +17,7 @@ module.exports = function(config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['PhantomJS'],
-    singleRun: true,
     concurrency: Infinity,
-    failOnEmptyTestSuite : false
+    failOnEmptyTestSuite: false
   });
 };

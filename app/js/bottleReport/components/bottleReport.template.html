@@ -6,9 +6,12 @@
       <student-component student="bottleReport.student"></student-component>
     </div>
     <md-content layout-wrap flex="50">  
-       <button ng-click="$ctrl.addBottle(bottleReport)" class="button">Add Bottle</button>   
+       <md-button class="md-fab md-mini md-raised" ng-click="$ctrl.addBottle(bottleReport)" class="button">Add Bottle</md-button>   
+       
       <div ng-repeat="bottle in bottleReport.bottles" class="bottles">
-        <md-select ng-change="$ctrl.updateBottle(bottle, bottleReport)" name="bottle_{{bottle.id}}_quantity" id="quantity" ng-model="bottle.quantity" convert-to-number placeholder="30 ml">
+        <md-select ng-change="$ctrl.updateBottle(bottle, bottleReport)" name="bottle_{{bottle.id}}_quantity" id="quantity" 
+        ng-model="bottle.quantity" convert-to-number placeholder="30 ml"
+        flex="5" class="blue-select md-no-underline" layout="row" layout-align="end end">
           <md-option value="30">30 ml</md-option>
           <md-option value="45">45 ml</md-option>
           <md-option value="60">60 ml</md-option>

@@ -27,11 +27,12 @@ module.exports = angular
     });
     $translateProvider.preferredLanguage('en');
   }])
-  .config(function($mdThemingProvider) {
-    $mdThemingProvider
-      .theme('default')
-      .primaryPalette('light-green')
-      .accentPalette('deep-purple')
-      .warnPalette('red')
-      .backgroundPalette('grey');
-  });
+  .config(['$mdThemingProvider',
+    function($mdThemingProvider) {
+      $mdThemingProvider
+        .theme('default')
+        .primaryPalette('light-green')
+        .accentPalette('deep-purple')
+        .warnPalette('red')
+        .backgroundPalette('grey');
+    }]);

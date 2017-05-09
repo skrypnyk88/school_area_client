@@ -13,12 +13,12 @@ angular
     mainModule.name,
     tokenInjector.name
   ])
-  .config(
+  .config(['$locationProvider', '$httpProvider', 'localStorageServiceProvider',
     function($locationProvider, $httpProvider, localStorageServiceProvider) {
       $locationProvider.html5Mode(true);
       localStorageServiceProvider.setPrefix('schoolArea');
       $httpProvider.interceptors.push('tokenInjector');
-    })
+    }])
   .run(['$rootScope', '$state', 'auth',
     function($rootScope, $state, auth) {
       $rootScope.$on('$stateChangeStart',

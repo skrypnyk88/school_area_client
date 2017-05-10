@@ -426,6 +426,7 @@ body {
             a {
               &::before {
                 background-image: url('../img/icons/NotificationsActive.svg');
+<<<<<<< e10be0b01dcf0aed273bbfa06318df88200c0060
 <<<<<<< e07b464d152d3e24981a7fada5ff913310f40da3
               }
 =======
@@ -436,6 +437,9 @@ body {
 >>>>>>> change some styles
 =======
                 bottom: 0;
+=======
+                bottom: 8px;
+>>>>>>> LVRUBYM-349:Fixed component
               }
 >>>>>>> LVRUBYM-349:Create sidebar component
             }
@@ -474,7 +478,7 @@ body {
             a {
               &::before {
                 background-image: url('../img/icons/CalendarActive.svg');
-                bottom: 0;
+                bottom: 10px;
               }
             }
 
@@ -546,7 +550,7 @@ body {
             a {
               &::before {
                 background-image: url('../img/icons/RewardsActive.svg');
-                bottom: 0;
+                bottom: 5px;
               }
             }
 
@@ -595,7 +599,7 @@ body {
             a {
               &::before {
                 background-image: url('../img/icons/ContactsActive.svg');
-                bottom: 0;
+                bottom: 7px;
               }
             }
 

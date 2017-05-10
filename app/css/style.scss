@@ -120,6 +120,7 @@ html, body, main {
   }
 }
 
+
 .teacher-report {
   @mixin background-image {
     background-repeat: no-repeat;
@@ -155,7 +156,6 @@ html, body, main {
                 color: #fff;
                 display: block;
                 font-weight: bold;
-                padding: 15px 0 15px 90px;
                 position: relative;
                 text-decoration: none;
 
@@ -196,13 +196,32 @@ html, body, main {
               background-image: url('../img/icons/TeacherReport.svg');
             }
           }
-        }
+
+          .active-menu {
+            a {
+              &::before {
+                background-image: url('../img/icons/TeacherReportActive.svg');
+              }
+            }
+
+          }
+     }
 
         &:nth-of-type(2) {
           a {
             &::before {
               background-image: url('../img/icons/ParentSharing.svg');
             }
+          }
+
+          .active-menu {
+            a {
+              &::before {
+                background-image: url('../img/icons/ParentSharingActive.svg');
+                bottom: 0;
+              }
+            }
+
           }
         }
 
@@ -212,6 +231,16 @@ html, body, main {
               background-image: url('../img/icons/Messages.svg');
             }
           }
+
+          .active-menu {
+            a {
+              &::before {
+                background-image: url('../img/icons/MessagesActive.svg');
+                bottom: 0;
+              }
+            }
+
+          }
         }
 
         &:nth-of-type(4) {
@@ -220,6 +249,17 @@ html, body, main {
               background-image: url('../img/icons/Notifications.svg');
             }
           }
+
+          .active-menu {
+            a {
+              &::before {
+                background-image: url('../img/icons/NotificationsActive.svg');
+                bottom: 0;
+              }
+            }
+
+          }
+
         }
 
         &:nth-of-type(5) {
@@ -228,6 +268,17 @@ html, body, main {
               background-image: url('../img/icons/Calendar.svg');
             }
           }
+
+          .active-menu {
+            a {
+              &::before {
+                background-image: url('../img/icons/CalendarActive.svg');
+                bottom: 0;
+              }
+            }
+
+          }
+
         }
 
         &:nth-of-type(6) {
@@ -235,6 +286,16 @@ html, body, main {
             &::before {
               background-image: url('../img/icons/PhotoGallery.svg');
             }
+          }
+
+          .active-menu {
+            a {
+              &::before {
+                background-image: url('../img/icons/PhotoGalleryActive.svg');
+                bottom: 0;
+              }
+            }
+
           }
         }
 
@@ -244,6 +305,16 @@ html, body, main {
               background-image: url('../img/icons/Rewards.svg');
             }
           }
+
+          .active-menu {
+            a {
+              &::before {
+                background-image: url('../img/icons/RewardsActive.svg');
+                bottom: 0;
+              }
+            }
+
+          }
         }
 
         &:nth-of-type(8) {
@@ -251,6 +322,16 @@ html, body, main {
             &::before {
               background-image: url('../img/icons/Contacts.svg');
             }
+          }
+
+          .active-menu {
+            a {
+              &::before {
+                background-image: url('../img/icons/ContactsActive.svg');
+                bottom: 0;
+              }
+            }
+
           }
         }
         //end of menu images

@@ -1,0 +1,21 @@
+<div class="teacher-report" layout="row">
+  <nav class="navbar">
+    <ul class="menu">
+      <div ng-repeat="menu in $ctrl.menuItems">
+        <li class="menu-item" ng-click="$ctrl.setActiveMenu($index)" ng-class="$ctrl.activeMenu == $index ? 'active-menu' : ''">
+          <a ui-sref={{menu.link}}>
+            {{menu.name}}
+          </a>
+        </li>
+        <ul class="submenu" ng-if="menu.submenu" ng-class="$ctrl.submenuOpened ? 'opened' : 'closed'">
+          <li ng-repeat="submenu in menu.submenu" ng-click="$ctrl.setActiveSubmenu($index)" ng-class="$ctrl.activeSubmenu == $index ? 'active-submenu' : ''">
+            <a ui-sref={{submenu.link}}>
+              {{submenu.name}}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </ul>
+  </nav>
+</div>
+

@@ -243,11 +243,14 @@ body {
 
             &.active-menu {
               background-color: $green-color;
+<<<<<<< 84e0fcc266847b89c0aea5cdeb271beadaaeb1ce
 <<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
 =======
               margin-bottom: 15px;
               padding: 3px 0;
 >>>>>>> LVRUBYM-344: Create main template style
+=======
+>>>>>>> LVRUBYM-349:Deleted callendar
               text-align: left;
               width: 100%;
 
@@ -371,7 +374,6 @@ body {
             a {
               &::before {
                 background-image: url('../img/icons/ParentSharingActive.svg');
-                bottom: 0;
               }
             }
 
@@ -406,7 +408,6 @@ body {
             a {
               &::before {
                 background-image: url('../img/icons/MessagesActive.svg');
-                bottom: 0;
               }
             }
 
@@ -426,6 +427,7 @@ body {
             a {
               &::before {
                 background-image: url('../img/icons/NotificationsActive.svg');
+<<<<<<< 84e0fcc266847b89c0aea5cdeb271beadaaeb1ce
 <<<<<<< e10be0b01dcf0aed273bbfa06318df88200c0060
 <<<<<<< e07b464d152d3e24981a7fada5ff913310f40da3
               }
@@ -440,6 +442,8 @@ body {
 =======
                 bottom: 8px;
 >>>>>>> LVRUBYM-349:Fixed component
+=======
+>>>>>>> LVRUBYM-349:Deleted callendar
               }
 >>>>>>> LVRUBYM-349:Create sidebar component
             }
@@ -478,7 +482,6 @@ body {
             a {
               &::before {
                 background-image: url('../img/icons/CalendarActive.svg');
-                bottom: 10px;
               }
             }
 
@@ -515,7 +518,6 @@ body {
             a {
               &::before {
                 background-image: url('../img/icons/PhotoGalleryActive.svg');
-                bottom: 0;
               }
             }
 
@@ -550,7 +552,6 @@ body {
             a {
               &::before {
                 background-image: url('../img/icons/RewardsActive.svg');
-                bottom: 5px;
               }
             }
 
@@ -599,7 +600,6 @@ body {
             a {
               &::before {
                 background-image: url('../img/icons/ContactsActive.svg');
-                bottom: 7px;
               }
             }
 

@@ -24,6 +24,7 @@ function MainController($scope, $state, auth, currentGroupDay, $translate) {
   var ctrl = this;
 
   ctrl.currentGroupDay = currentGroupDay;
+<<<<<<< 84e0fcc266847b89c0aea5cdeb271beadaaeb1ce
 <<<<<<< e10be0b01dcf0aed273bbfa06318df88200c0060
 <<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
 =======
@@ -47,6 +48,8 @@ function MainController($scope, $state, auth, currentGroupDay, $translate) {
   };
 
 >>>>>>> LVRUBYM-344: Create main template style
+=======
+>>>>>>> LVRUBYM-349:Deleted callendar
   ctrl.logout = function() {
     auth.logout();
     localStorage.removeItem('activeMenu');

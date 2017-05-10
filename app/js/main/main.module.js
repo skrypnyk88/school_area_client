@@ -75,6 +75,7 @@ module.exports = angular
 =======
 >>>>>>> LVRUBYM-221:Changed fail response
     staticModule.name,
+<<<<<<< f422c9c7864c23ac4a4cf2c30f5d463d878b9bcd
 <<<<<<< 432dd6448ea5a85579652742e0f542a28624147a
     myDayReportModule.name
 >>>>>>> LVRUBYM-242:added component
@@ -101,6 +102,10 @@ module.exports = angular
 =======
 >>>>>>> LVRUBYM-344: Create main template style
 =======
+=======
+    toggleMessage.name,
+    myDayReportModule.name,
+>>>>>>> LVRUBYM-349:Fixed jscs
     sideBarModule.name
 >>>>>>> LVRUBYM-349:Create sidebar component
   ])

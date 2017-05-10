@@ -1,6 +1,5 @@
 module.exports = angular
   .module('static.route', [])
-<<<<<<< HEAD
   .config(['$stateProvider',
     function($stateProvider) {
       $stateProvider.state('main.static', {
@@ -18,7 +17,11 @@ module.exports = angular
 >>>>>>> LVRUBYM-339: Fix injections
 =======
 <<<<<<< HEAD
+<<<<<<< f422c9c7864c23ac4a4cf2c30f5d463d878b9bcd
 >>>>>>> LVRUBYM-344: Create main template style
+=======
+<<<<<<< HEAD
+>>>>>>> LVRUBYM-349:Fixed jscs
 =======
 =======
   .config(function($stateProvider) {
@@ -37,4 +40,9 @@ module.exports = angular
 >>>>>>> LVRUBYM-344: Create main template style
 
 >>>>>>> LVRUBYM-344: Create main template style
+<<<<<<< f422c9c7864c23ac4a4cf2c30f5d463d878b9bcd
 >>>>>>> LVRUBYM-344: Create main template style
+=======
+=======
+>>>>>>> LVRUBYM-349:Fixed jscs
+>>>>>>> LVRUBYM-349:Fixed jscs

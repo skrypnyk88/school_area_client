@@ -22,8 +22,8 @@ module.exports = angular
     bottleReportModule.name,
     groupService.name,
     staticModule.name,
-    myDayReportModule.name,
     toggleMessage.name,
+    myDayReportModule.name,
     sideBarModule.name
   ])
   .config(['$translateProvider', function($translateProvider) {

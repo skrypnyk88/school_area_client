@@ -1,9 +1,7 @@
 @import './../../node_modules/angular-material/angular-material.css';
 
-<<<<<<< HEAD
 //  General  //
-=======
->>>>>>> LVRUBYM-344: Create main template style
+
 $blue-color: #00bff3;
 $green-color: #95c948;
 $red-color: #ec4e2c;
@@ -742,6 +740,7 @@ button {
   }
 }
 
+<<<<<<< HEAD
 //  Bottle Report component  //
 
 .container {
@@ -1034,35 +1033,41 @@ button {
     }
   }
 }
+<<<<<<< 4e176a5bf6f9311b1711554a8be2cf1b4ac0380f
 
 .my-day .student-info {
   width: 30%
 }
 
+=======
+=======
+>>>>>>> LVRUBYM-349:Fixed jscs
+>>>>>>> LVRUBYM-349:Fixed jscs
 // ToggleMessages //
 
-md-toast .md-toast-content{
-  position: relative;
-  background-color: #666;
+md-toast {
+  .md-toast-content {
+    background-color: #666;
+    position: relative;
 
-  button {
-    position: absolute;
-    top: 0;
-    right: 15px;
-    text-transform: uppercase;
-    font-weight: bold;
+    button {
+      font-weight: bold;
+      position: absolute;
+      right: 15px;
+      text-transform: uppercase;
+      top: 0;
+    }
   }
 }
 
-
-.md-top{
-  .md-toast-content{
+.md-top {
+  .md-toast-content {
     margin-bottom: 20px;
   }
 }
 
-.md-bottom{
-  .md-toast-content{
+.md-bottom {
+  .md-toast-content {
     margin-top: 20px;
   }
 }

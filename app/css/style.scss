@@ -195,10 +195,14 @@ body {
   }
 }
 
+<<<<<<< e07b464d152d3e24981a7fada5ff913310f40da3
 <<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
 
 =======
 >>>>>>> LVRUBYM-344: Create main template style
+=======
+
+>>>>>>> LVRUBYM-349:Create sidebar component
 .teacher-report {
   @mixin background-image {
     background-repeat: no-repeat;
@@ -248,10 +252,13 @@ body {
                 color: #fff;
                 display: block;
                 font-weight: bold;
+<<<<<<< e07b464d152d3e24981a7fada5ff913310f40da3
 <<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
 =======
                 padding: 15px 0 15px 90px;
 >>>>>>> LVRUBYM-344: Create main template style
+=======
+>>>>>>> LVRUBYM-349:Create sidebar component
                 position: relative;
                 text-decoration: none;
 
@@ -356,6 +363,16 @@ body {
             }
 
           }
+
+          .active-menu {
+            a {
+              &::before {
+                background-image: url('../img/icons/ParentSharingActive.svg');
+                bottom: 0;
+              }
+            }
+
+          }
         }
 
         &:nth-of-type(3) {
@@ -381,6 +398,16 @@ body {
             }
 
           }
+
+          .active-menu {
+            a {
+              &::before {
+                background-image: url('../img/icons/MessagesActive.svg');
+                bottom: 0;
+              }
+            }
+
+          }
         }
 
         &:nth-of-type(4) {
@@ -396,6 +423,7 @@ body {
             a {
               &::before {
                 background-image: url('../img/icons/NotificationsActive.svg');
+<<<<<<< e07b464d152d3e24981a7fada5ff913310f40da3
               }
 =======
               background-image: url('../img/Out/Notifications.svg');
@@ -403,6 +431,10 @@ body {
 =======
               background-image: url('../img/icons/Notifications.svg');
 >>>>>>> change some styles
+=======
+                bottom: 0;
+              }
+>>>>>>> LVRUBYM-349:Create sidebar component
             }
 
           }
@@ -433,6 +465,19 @@ body {
 
           }
 
+<<<<<<< e07b464d152d3e24981a7fada5ff913310f40da3
+=======
+          .active-menu {
+            a {
+              &::before {
+                background-image: url('../img/icons/CalendarActive.svg');
+                bottom: 0;
+              }
+            }
+
+          }
+
+>>>>>>> LVRUBYM-349:Create sidebar component
         }
 
         &:nth-of-type(6) {
@@ -458,6 +503,16 @@ body {
             }
 
           }
+
+          .active-menu {
+            a {
+              &::before {
+                background-image: url('../img/icons/PhotoGalleryActive.svg');
+                bottom: 0;
+              }
+            }
+
+          }
         }
 
         &:nth-of-type(7) {
@@ -480,6 +535,16 @@ body {
 =======
               background-image: url('../img/icons/Rewards.svg');
 >>>>>>> change some styles
+            }
+
+          }
+
+          .active-menu {
+            a {
+              &::before {
+                background-image: url('../img/icons/RewardsActive.svg');
+                bottom: 0;
+              }
             }
 
           }
@@ -521,6 +586,16 @@ body {
               background-image: url('../img/icons/Contacts.svg');
 >>>>>>> change some styles
             }
+          }
+
+          .active-menu {
+            a {
+              &::before {
+                background-image: url('../img/icons/ContactsActive.svg');
+                bottom: 0;
+              }
+            }
+
           }
         }
         //end of menu images

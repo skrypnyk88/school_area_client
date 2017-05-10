@@ -42,6 +42,7 @@ var bottleReportModule = require('.././bottleReport/bottleReport.module.js');
 =======
 >>>>>>> LVRUBYM-221:Changed fail response
 var bottleReportModule = require('.././bottleReport/bottleReport.module.js');
+var sideBarModule = require('./../sidebar/sidebar.module.js');
 
 require('../../css/style.scss');
 
@@ -84,6 +85,7 @@ module.exports = angular
 >>>>>>> LVRUBYM-351: Add toggleMessage service
 =======
     toggleMessage.name,
+<<<<<<< e07b464d152d3e24981a7fada5ff913310f40da3
 <<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
     bottleReportModule.name
 <<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
@@ -98,6 +100,9 @@ module.exports = angular
 >>>>>>> LVRUBYM-221:Changed fail response
 =======
 >>>>>>> LVRUBYM-344: Create main template style
+=======
+    sideBarModule.name
+>>>>>>> LVRUBYM-349:Create sidebar component
   ])
 <<<<<<< 5f08931b1824729a65c08636eb4467c854ebded3
   .config(['$mdThemingProvider',

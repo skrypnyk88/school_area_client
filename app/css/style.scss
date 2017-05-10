@@ -302,6 +302,44 @@ login-component {
     margin-top: 15vh;
   }
 }
+//  Bottle Report component  //
+
+.container {
+  border-bottom: 1px solid gainsboro;
+}
+
+.addbottle {
+  top: 45px;
+}
+
+.bottles {
+  display:inline-block;
+  width:300px;
+  float: left;
+}
+
+.display {
+  display: inline-block;
+}
+
+.buttonposition {
+  float: left;
+  width: 20%;
+  height: 100%;
+}
+
+.position {
+  float: right;
+  width: 80%;
+  height: 100%;
+}
+
+.invalid {
+  color: red;
+  font-size: 14px;
+}
+
+
 //style for static.html
 @mixin border {
   border-bottom: 1px solid #ebebeb;
@@ -796,6 +834,9 @@ md-toast .md-toast-content{
   text-align: center;
   width: 85px;
 
+  &.time {
+    margin:0 5px;
+   }
   &:hover {
     border: 1px solid #dfdbdb;
     border-radius: 12px;

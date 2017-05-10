@@ -30,51 +30,54 @@ function bottleReportService(bottleReportResource,
     var params = {
       group_id: currentGroupDay.group_id
     };
-    return bottleReportResource.query(params).$promise.then(function(bottleReports) {
-      return bottleReports;
-    }, function(errors) {
-      responseFailure(errors.data);
-    });
+
+    return bottleReportResource.query(params)
+                               .$promise
+                               .then(responseSuccess, responseFailure);
   };
 
   function addBottle(bottleReport) {
-    return bottleResource.save({bottle_report_id: bottleReport.id,
-                                group_id: bottleReport.group_id,
-                                student_id: bottleReport.student_id})
+    var params = {
+      bottle_report_id: bottleReport.id,
+      group_id: bottleReport.group_id,
+      student_id: bottleReport.student_id
+    };
+
+    return bottleResource.save(params)
     .$promise
-    .then(function(bottle) {
-      return bottle;
-    }, function(errors) {
-      responseFailure(errors.data);
-    });
+    .then(responseSuccess, responseFailure);
   };
 
   function deleteBottle(bottle, bottleReport) {
-    return bottleResource.delete({id: bottle.id,
-                                  bottle_report_id: bottleReport.id,
-                                  group_id: bottleReport.group_id})
+    var params = {
+      id: bottle.id,
+      bottle_report_id: bottleReport.id,
+      group_id: bottleReport.group_id
+    };
+
+    return bottleResource.delete(params)
     .$promise
-    .then(function() {
-    }, function(errors) {
-      responseFailure(errors.data);
-    });
+    .then(responseSuccess, responseFailure);
   };
 
   function updateBottle(bottle, bottleReport) {
-    return bottleResource.update({bottle: bottle,
-                                  id: bottle.id,
-                                  bottle_report_id: bottleReport.id,
-                                  group_id: bottleReport.group_id})
+    var params = {
+      bottle: bottle,
+      id: bottle.id,
+      bottle_report_id: bottleReport.id,
+      group_id: bottleReport.group_id
+    };
+
+    return bottleResource.update(params)
     .$promise
-    .then(function(updatedBottle) {
-      return updatedBottle;
-    }, function(errors) {
-      responseFailure(errors.data);
-    });
+    .then(responseSuccess, responseFailure);
   };
 
-  function responseFailure(errorDetails) {
-    console.log(errorDetails);
+  function responseSuccess(data) {
+    return data;
+  };
+
+  function responseFailure(error) {
     var fail = errorMessages.FAIL_RESPONSE;
     $mdToast.show({
       template: '<md-toast><div class="md-toast-content">' +

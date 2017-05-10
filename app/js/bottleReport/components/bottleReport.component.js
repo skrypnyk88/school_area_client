@@ -14,7 +14,9 @@ BottleReportController.$inject = ['bottleReportService'];
 function BottleReportController(bottleReportService) {
   var ctrl = this;
 
-  ctrl.loadBottleReports = function() {
+  ctrl.timePattern = '([01]?[0-9]{1}|2[0-3]{1}):[0-5]{1}[0-9]{1}';
+
+  var loadBottleReports = function() {
     bottleReportService.getBottleReports().then(
       function(bottleReports) {
         ctrl.bottleReports = bottleReports;
@@ -37,9 +39,9 @@ function BottleReportController(bottleReportService) {
   ctrl.deleteBottle = function(bottle, bottleReport) {
     if (confirm('Are you sure, you want to delete this bottle?')) {
       bottleReportService.deleteBottle(bottle, bottleReport).then(function() {
-        ctrl.loadBottleReports();
+        loadBottleReports();
       });
     }
   };
-  ctrl.loadBottleReports();
+  loadBottleReports();
 };

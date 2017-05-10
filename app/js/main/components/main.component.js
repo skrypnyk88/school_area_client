@@ -24,19 +24,6 @@ function MainController($scope, $state, auth, currentGroupDay, $translate) {
   var ctrl = this;
 
   ctrl.currentGroupDay = currentGroupDay;
-  ctrl.selectedDate = new Date();
-  ctrl.monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June',
-  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  ctrl.dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-
-  ctrl.nextDate = function() {
-    ctrl.selectedDate.setDate(ctrl.selectedDate.getDate() + 1);
-  };
-
-  ctrl.pastDate = function() {
-    ctrl.selectedDate.setDate(ctrl.selectedDate.getDate() - 1);
-  };
-
   ctrl.logout = function() {
     auth.logout();
     localStorage.removeItem('activeMenu');

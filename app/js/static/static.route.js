@@ -1,6 +1,5 @@
 module.exports = angular
   .module('static.route', [])
-<<<<<<< 8e755c941e1599e7941a3fe118b61f581682a2f1
   .config(['$stateProvider',
     function($stateProvider) {
       $stateProvider.state('main.static', {
@@ -9,6 +8,7 @@ module.exports = angular
         templateUrl: './app/js/static/components/static.template.html'
       });
     }]);
+<<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
 <<<<<<< 699e9b37f1d13ef6c9a01fdab584884a4e8468d9
 =======
 
@@ -25,3 +25,5 @@ module.exports = angular
   });
 >>>>>>> LVRUBYM-221:Changed template
 >>>>>>> LVRUBYM-221:Changed template
+=======
+>>>>>>> LVRUBYM-221:Changed fail response

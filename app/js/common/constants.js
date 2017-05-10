@@ -10,6 +10,7 @@ module.exports = angular
   .constant('errorMessages', {
     NO_AUTH: 'Invalid Email/Password',
     AUTH_TIMEOUT: 'Session has expired',
+<<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
 <<<<<<< b1263744d5dbac2df9f7478c666c2beb7b7604de
     FAIL_RESPONSE: 'Oops! Something went wrong!Please, try again later!'
   })
@@ -36,5 +37,8 @@ module.exports = angular
   );
 =======
     FAIL_RESPONSE: 'Oops! Something went wrong! Please, try again later!'
+=======
+    FAIL_RESPONSE: 'Oops! Something went wrong!Please, try again later!'
+>>>>>>> LVRUBYM-221:Changed fail response
   });
 >>>>>>> LVRUBYM-221:Added validation and failure response

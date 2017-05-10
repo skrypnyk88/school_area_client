@@ -13,15 +13,20 @@ angular
     mainModule.name,
     tokenInjector.name
   ])
+<<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
 <<<<<<< 699e9b37f1d13ef6c9a01fdab584884a4e8468d9
  .config(['$locationProvider', '$httpProvider', 'localStorageServiceProvider',
 =======
   .config(['$locationProvider', '$httpProvider', 'localStorageServiceProvider',
 >>>>>>> LVRUBYM-339: Fix injections
+=======
+ .config(['$locationProvider', '$httpProvider', 'localStorageServiceProvider',
+>>>>>>> LVRUBYM-221:Changed fail response
     function($locationProvider, $httpProvider, localStorageServiceProvider) {
       $locationProvider.html5Mode(true);
       localStorageServiceProvider.setPrefix('schoolArea');
       $httpProvider.interceptors.push('tokenInjector');
+<<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
 <<<<<<< 699e9b37f1d13ef6c9a01fdab584884a4e8468d9
 <<<<<<< 5aa93ff66840d81756341fcc2ce5b06387f4ab36
     }])
@@ -47,6 +52,9 @@ angular
 =======
     }])
 >>>>>>> LVRUBYM-339: Fix injections
+=======
+    }])
+>>>>>>> LVRUBYM-221:Changed fail response
   .run(['$rootScope', '$state', 'auth',
     function($rootScope, $state, auth) {
       $rootScope.$on('$stateChangeStart',

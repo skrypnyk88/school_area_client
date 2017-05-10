@@ -24,6 +24,7 @@ main {
 }
 
 .md-accent {
+<<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
 <<<<<<< c1277f2601881303dd01af6f108129014ab59b51
   color: white;
 }
@@ -52,6 +53,8 @@ main {
     margin: auto 40px;
   }
 =======
+=======
+>>>>>>> LVRUBYM-221:Changed fail response
   color: white !important;
 >>>>>>> LVRUBYM-221:Add action on front-end
 }
@@ -531,6 +534,7 @@ main {
   border-width: 1px;
 =======
 }
+
 //  Bottle Report component  //
 
 .container {
@@ -655,6 +659,7 @@ main {
   }
 }
 
+<<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
 <<<<<<< f850bfdd973ddd81d4c9a8b834d6fb260d39f714
     .bottle {
 =======
@@ -764,6 +769,8 @@ main {
 =======
 >>>>>>> LVRUBYM-221:Added indentations
 =======
+=======
+>>>>>>> LVRUBYM-221:Changed fail response
 
 .report {
   @include border;
@@ -816,6 +823,7 @@ main {
         background-color: #fff;
         border: 1px solid $green-color;
         color: #55585e;
+<<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
 <<<<<<< f850bfdd973ddd81d4c9a8b834d6fb260d39f714
 
       }
@@ -1127,6 +1135,11 @@ button {
 
 =======
 >>>>>>> LVRUBYM-221:Changed template
+=======
+
+      }
+
+>>>>>>> LVRUBYM-221:Changed fail response
     }
   }
 }
@@ -1155,7 +1168,6 @@ button {
         border: 1px solid $red-color;
         color: #55585e;
 
-<<<<<<< 8e755c941e1599e7941a3fe118b61f581682a2f1
       }
     }
 
@@ -1185,9 +1197,14 @@ button {
   width: 85px;
 
   &.time {
+<<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
     margin: 0 5px;
   }
 
+=======
+    margin:0 5px;
+   }
+>>>>>>> LVRUBYM-221:Changed fail response
   &:hover {
     border: 1px solid #dfdbdb;
     border-radius: 12px;
@@ -1404,12 +1421,16 @@ md-card-content{
 .my-day .student-info {
   width: 30%
 }
+<<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
 <<<<<<< 432dd6448ea5a85579652742e0f542a28624147a
 <<<<<<< 7b2481b92e0f9b46a66d3c7bf23ddae72b00ca26
 >>>>>>> LVRUBYM-242:changed teamplate for myDayReport and student coponent
 =======
 >>>>>>> LVRUBYM-344: change styles
 =======
+=======
+
+>>>>>>> LVRUBYM-221:Changed fail response
 // ToggleMessages //
 
 md-toast .md-toast-content{
@@ -1435,6 +1456,7 @@ md-toast .md-toast-content{
 .md-bottom{
   .md-toast-content{
     margin-top: 20px;
+<<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
   }
 <<<<<<< f850bfdd973ddd81d4c9a8b834d6fb260d39f714
 =======
@@ -1564,3 +1586,8 @@ button {
 >>>>>>> LVRUBYM-221:Changed template
 }
 >>>>>>> LVRUBYM-351: Add toggleMessage service
+=======
+  }
+}
+
+>>>>>>> LVRUBYM-221:Changed fail response

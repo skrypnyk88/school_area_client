@@ -1,13 +1,18 @@
 var bottleReportResource = require('./../resources/bottleReport.resource.js');
 var bottleResource = require('./../resources/bottle.resource.js');
+<<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
 <<<<<<< 78cc606e23ca9236ad1c001671c581f64c62f056
 var toggleMessage = require('./toggleMessage/toggleMessage.service.js');
 =======
 >>>>>>> LVRUBYM-221:Fixed file's name
+=======
+var toggleMessage = require('./toggleMessage/toggleMessage.service.js');
+>>>>>>> LVRUBYM-221:Changed fail response
 
 module.exports = angular
 .module('bottleReport.service', [
   bottleReportResource.name,
+<<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
 <<<<<<< 78cc606e23ca9236ad1c001671c581f64c62f056
   bottleResource.name,
   toggleMessage.name
@@ -29,6 +34,10 @@ function bottleReportService(bottleReportResource,
     getBottleReports: getBottleReports,
 =======
   bottleResource.name
+=======
+  bottleResource.name,
+  toggleMessage.name
+>>>>>>> LVRUBYM-221:Changed fail response
   ])
 .factory('bottleReportService', bottleReportService);
 
@@ -36,13 +45,13 @@ bottleReportService.$inject = ['bottleReportResource',
                                'bottleResource',
                                'currentGroupDay',
                                'errorMessages',
-                               '$mdToast'];
+                               'toggleMessage'];
 
 function bottleReportService(bottleReportResource,
                              bottleResource,
                              currentGroupDay,
                              errorMessages,
-                             $mdToast) {
+                             toggleMessage) {
   var service = {
     getBottleReports: getBottleReports,
 <<<<<<< 830abdfadbc27494806e306ed6b21698c939cc08
@@ -188,14 +197,12 @@ function bottleReportService(bottleReportResource,
 >>>>>>> LVRUBYM-221:Added success and error function; fixed tests; changed css style and template
   };
 
-  function responseFailure(error) {
-    var fail = errorMessages.FAIL_RESPONSE;
-    $mdToast.show({
-      template: '<md-toast><div class="md-toast-content">' +
-                  fail +
-                '</div></md-toast>',
-      position: 'top right'
-    });
+  function responseFailure(errorInfo) {
+    if (!errorInfo.data || errorInfo.data.length === 0) {
+      toggleMessage.showMessages([errorMessages.FAIL_RESPONSE]);
+    }else {
+      toggleMessage.showMessages([errorInfo.data.error]);
+    }
   };
 
   return service;

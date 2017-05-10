@@ -11,6 +11,7 @@ var bottleReportModule = require('.././bottleReport/bottleReport.module.js');
 var sideBarModule = require('./../sidebar/sidebar.module.js');
 var studentService = require('./../common/services/student.service.js');
 var profileModule = require('./../profile/profile.module.js');
+var toggleMessage = require('./../common/services/toggleMessage/toggleMessage.service.js');
 
 require('../../css/style.scss');
 

@@ -4,51 +4,36 @@ module.exports = angular
   .module('profile.service', [
     Resource.name
   ])
-  .factory('Profile', Profile);
+  .factory('profileService', profileService);
 
-Profile.$inject = ['profileResource', '$mdToast'];
+profileService.$inject = ['profileResource', '$mdToast', 'toggleMessage'];
 
-function Profile(profileResource, $mdToast) {
+function profileService(profileResource, $mdToast, toggleMessage) {
   var service = {
     getProfile: getProfile,
-    updateProfile: updateProfile,
-    toggleErrorMsg: toggleErrorMsg
+    updateProfile: updateProfile
   };
   return service;
-  var teacher = {first_name: first_name,
-                last_name: last_name,
-                email: email,
-                phone: phone,
-                locale: locale,
-                id: id};
 
-  function getProfile(first_name, last_name, email, phone, locale, id) {
-    return profileResource.get(teacher).$promise.then(function(data) {
+  function getProfile(id) {
+    return profileResource.get({id: id}).$promise.then(function(data) {
       return data;
+    }, function(response) {
+      toggleMessage.showMessages(response.data.errors);
     });
   };
 
-  function updateProfile(first_name, last_name, email, phone, locale, id) {
+  function updateProfile(teacher) {
     var params = {teacher: {
-                  first_name: first_name,
-                  last_name: last_name,
-                  email: email,
-                  phone: phone,
-                  locale: locale}, id: id};
+                  first_name: teacher.first_name,
+                  last_name: teacher.last_name,
+                  email: teacher.email,
+                  phone: teacher.phone,
+                  locale: teacher.locale}, id: teacher.id};
     return profileResource.update(params).$promise.then(function(data) {
       return data;
     }, function(response) {
-      service.toggleErrorMsg(response);
-    });
-  };
-
-  function toggleErrorMsg(response) {
-    var msg = response.data.errors;
-    $mdToast.show({
-      template: '<md-toast><div class="md-toast-content">' +
-                  msg +
-                '</div></md-toast>',
-      position: 'top right'
+      toggleMessage.showMessages(response.data.errors);
     });
   };
 }

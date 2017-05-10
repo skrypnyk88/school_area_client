@@ -252,7 +252,7 @@ html, body, main {
             a {
               &::before {
                 background-image: url('../img/icons/NotificationsActive.svg');
-                bottom: 0;
+                bottom: 8px;
               }
             }
 
@@ -271,7 +271,7 @@ html, body, main {
             a {
               &::before {
                 background-image: url('../img/icons/CalendarActive.svg');
-                bottom: 0;
+                bottom: 10px;
               }
             }
 
@@ -308,7 +308,7 @@ html, body, main {
             a {
               &::before {
                 background-image: url('../img/icons/RewardsActive.svg');
-                bottom: 0;
+                bottom: 5px;
               }
             }
 
@@ -326,7 +326,7 @@ html, body, main {
             a {
               &::before {
                 background-image: url('../img/icons/ContactsActive.svg');
-                bottom: 0;
+                bottom: 7px;
               }
             }
 

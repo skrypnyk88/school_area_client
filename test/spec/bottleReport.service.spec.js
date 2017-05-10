@@ -47,6 +47,7 @@ describe('Service: BottleReport', function() {
     $httpBackend.verifyNoOutstandingRequest();
   });
 
+<<<<<<< 4d2e088911569f28dbc8ad1c75137c5f102ce51b
   it('addBottle function should be defined', function() {
     expect(service.addBottle).toBeDefined();
   });
@@ -60,6 +61,21 @@ describe('Service: BottleReport', function() {
   });
 
   it('getBottleReports function should be defined', function() {
+=======
+  it('is define', function() {
+    expect(service.addBottle).toBeDefined();
+  });
+
+  it('is define', function() {
+    expect(service.updateBottle).toBeDefined();
+  });
+
+  it('is define', function() {
+    expect(service.deleteBottle).toBeDefined();
+  });
+
+  it('is define', function() {
+>>>>>>> LVRUBYM-221:Added success and error function; fixed tests; changed css style and template
     expect(service.getBottleReports).toBeDefined();
   });
 

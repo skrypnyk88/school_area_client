@@ -63,6 +63,7 @@ function bottleReportService(bottleReportResource,
     var params = {
       group_id: currentGroupDay.group_id
     };
+<<<<<<< 4d2e088911569f28dbc8ad1c75137c5f102ce51b
 <<<<<<< 830abdfadbc27494806e306ed6b21698c939cc08
 
 <<<<<<< b1263744d5dbac2df9f7478c666c2beb7b7604de
@@ -129,47 +130,65 @@ function bottleReportService(bottleReportResource,
     }, function(errors) {
       responseFailure(errors.data);
     });
+=======
+
+    return bottleReportResource.query(params)
+                               .$promise
+                               .then(responseSuccess, responseFailure);
+>>>>>>> LVRUBYM-221:Added success and error function; fixed tests; changed css style and template
   };
 
   function addBottle(bottleReport) {
-    return bottleResource.save({bottle_report_id: bottleReport.id,
-                                group_id: bottleReport.group_id,
-                                student_id: bottleReport.student_id})
+    var params = {
+      bottle_report_id: bottleReport.id,
+      group_id: bottleReport.group_id,
+      student_id: bottleReport.student_id
+    };
+
+    return bottleResource.save(params)
     .$promise
-    .then(function(bottle) {
-      return bottle;
-    }, function(errors) {
-      responseFailure(errors.data);
-    });
+    .then(responseSuccess, responseFailure);
   };
 
   function deleteBottle(bottle, bottleReport) {
-    return bottleResource.delete({id: bottle.id,
-                                  bottle_report_id: bottleReport.id,
-                                  group_id: bottleReport.group_id})
+    var params = {
+      id: bottle.id,
+      bottle_report_id: bottleReport.id,
+      group_id: bottleReport.group_id
+    };
+
+    return bottleResource.delete(params)
     .$promise
-    .then(function() {
-    }, function(errors) {
-      responseFailure(errors.data);
-    });
+    .then(responseSuccess, responseFailure);
   };
 
   function updateBottle(bottle, bottleReport) {
-    return bottleResource.update({bottle: bottle,
-                                  id: bottle.id,
-                                  bottle_report_id: bottleReport.id,
-                                  group_id: bottleReport.group_id})
+    var params = {
+      bottle: bottle,
+      id: bottle.id,
+      bottle_report_id: bottleReport.id,
+      group_id: bottleReport.group_id
+    };
+
+    return bottleResource.update(params)
     .$promise
+<<<<<<< 4d2e088911569f28dbc8ad1c75137c5f102ce51b
     .then(function(updatedBottle) {
       return updatedBottle;
     }, function(errors) {
       responseFailure(errors.data);
     });
 >>>>>>> LVRUBYM-221:Fixed file's name
+=======
+    .then(responseSuccess, responseFailure);
   };
 
-  function responseFailure(errorDetails) {
-    console.log(errorDetails);
+  function responseSuccess(data) {
+    return data;
+>>>>>>> LVRUBYM-221:Added success and error function; fixed tests; changed css style and template
+  };
+
+  function responseFailure(error) {
     var fail = errorMessages.FAIL_RESPONSE;
     $mdToast.show({
       template: '<md-toast><div class="md-toast-content">' +

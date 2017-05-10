@@ -39,6 +39,7 @@ function BottleReportController(bottleReportService) {
   ctrl.deleteBottle = function(bottle, bottleReport) {
     if (confirm('Are you sure, you want to delete this bottle?')) {
       bottleReportService.deleteBottle(bottle, bottleReport).then(function() {
+<<<<<<< 4d2e088911569f28dbc8ad1c75137c5f102ce51b
 <<<<<<< 78cc606e23ca9236ad1c001671c581f64c62f056
         loadBottleReports();
       });
@@ -52,4 +53,11 @@ function BottleReportController(bottleReportService) {
   };
   ctrl.loadBottleReports();
 >>>>>>> LVRUBYM-221:Fixed file's name
+=======
+        loadBottleReports();
+      });
+    }
+  };
+  loadBottleReports();
+>>>>>>> LVRUBYM-221:Added success and error function; fixed tests; changed css style and template
 };

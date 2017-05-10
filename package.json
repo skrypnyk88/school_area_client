@@ -82,13 +82,21 @@
     "angular-local-storage": "^0.5.2",
     "angular-material": "^1.1.3",
     "angular-messages": "^1.6.4",
+<<<<<<< 4d2e088911569f28dbc8ad1c75137c5f102ce51b
 <<<<<<< 5aa93ff66840d81756341fcc2ce5b06387f4ab36
 =======
+=======
+    "angular-moment": "^1.0.1",
+>>>>>>> LVRUBYM-221:Added success and error function; fixed tests; changed css style and template
     "angular-resource": "^1.6.4",
     "angular-translate-loader-static-files": "^2.15.1",
 >>>>>>> LVRUBYM-328:added files
     "angular-ui-router": "^0.3.2",
+<<<<<<< cce292a29e5ad8d9b9a6c221854bd206445884c4
     "express": "^4.15.2",
+=======
+    "moment": "^2.18.1",
+>>>>>>> LVRUBYM-221:Added success and error function; fixed tests; changed css style and template
     "scsslint": "0.0.3"
   }
 }

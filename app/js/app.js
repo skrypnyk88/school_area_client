@@ -13,20 +13,12 @@ angular
     mainModule.name,
     tokenInjector.name
   ])
-<<<<<<< 061ae7223cc65d4138b738a8b663a312d1b3b2bc
  .config(['$locationProvider', '$httpProvider', 'localStorageServiceProvider',
-=======
-  .config(
->>>>>>> LVRUBYM-221:Fixed name of file
     function($locationProvider, $httpProvider, localStorageServiceProvider) {
       $locationProvider.html5Mode(true);
       localStorageServiceProvider.setPrefix('schoolArea');
       $httpProvider.interceptors.push('tokenInjector');
-<<<<<<< 061ae7223cc65d4138b738a8b663a312d1b3b2bc
     }])
-=======
-    })
->>>>>>> LVRUBYM-221:Fixed name of file
   .run(['$rootScope', '$state', 'auth',
     function($rootScope, $state, auth) {
       $rootScope.$on('$stateChangeStart',

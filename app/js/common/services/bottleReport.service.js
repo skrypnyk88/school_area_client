@@ -1,10 +1,12 @@
 var bottleReportResource = require('./../resources/bottleReport.resource.js');
 var bottleResource = require('./../resources/bottle.resource.js');
+var toggleMessage = require('./toggleMessage/toggleMessage.service.js');
 
 module.exports = angular
 .module('bottleReport.service', [
   bottleReportResource.name,
-  bottleResource.name
+  bottleResource.name,
+  toggleMessage.name
   ])
 .factory('bottleReportService', bottleReportService);
 
@@ -12,13 +14,13 @@ bottleReportService.$inject = ['bottleReportResource',
                                'bottleResource',
                                'currentGroupDay',
                                'errorMessages',
-                               '$mdToast'];
+                               'toggleMessage'];
 
 function bottleReportService(bottleReportResource,
                              bottleResource,
                              currentGroupDay,
                              errorMessages,
-                             $mdToast) {
+                             toggleMessage) {
   var service = {
     getBottleReports: getBottleReports,
     addBottle: addBottle,
@@ -77,14 +79,12 @@ function bottleReportService(bottleReportResource,
     return data;
   };
 
-  function responseFailure(error) {
-    var fail = errorMessages.FAIL_RESPONSE;
-    $mdToast.show({
-      template: '<md-toast><div class="md-toast-content">' +
-                  fail +
-                '</div></md-toast>',
-      position: 'top right'
-    });
+  function responseFailure(errorInfo) {
+    if (!errorInfo.data || errorInfo.data.length === 0) {
+      toggleMessage.showMessages([errorMessages.FAIL_RESPONSE]);
+    }else {
+      toggleMessage.showMessages([errorInfo.data.error]);
+    }
   };
 
   return service;

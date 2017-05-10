@@ -1,0 +1,6 @@
+<md-toast>
+  <div class="md-toast-content" ng-repeat="message in $ctrl.messages">
+    <p>{{message}}</p>
+    <md-button ng-if="$first" ng-click="$ctrl.closeToast()">OK</md-button>
+  </div>
+</md-toast>

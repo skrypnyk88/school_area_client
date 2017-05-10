@@ -1187,7 +1187,37 @@ md-card-content{
 .my-day .student-info {
   width: 30%
 }
+<<<<<<< 432dd6448ea5a85579652742e0f542a28624147a
 <<<<<<< 7b2481b92e0f9b46a66d3c7bf23ddae72b00ca26
 >>>>>>> LVRUBYM-242:changed teamplate for myDayReport and student coponent
 =======
 >>>>>>> LVRUBYM-344: change styles
+=======
+// ToggleMessages //
+
+md-toast .md-toast-content{
+  position: relative;
+  background-color: #666;
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+
+.md-top{
+  .md-toast-content{
+    margin-bottom: 20px;
+  }
+}
+
+.md-bottom{
+  .md-toast-content{
+    margin-top: 20px;
+  }
+}
+>>>>>>> LVRUBYM-351: Add toggleMessage service

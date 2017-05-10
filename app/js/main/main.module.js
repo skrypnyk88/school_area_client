@@ -15,9 +15,13 @@ var studentService = require('./../common/services/student.service.js');
 
 =======
 var myDayReportModule = require('./../myDayReport/myDayReport.module.js');
+<<<<<<< 432dd6448ea5a85579652742e0f542a28624147a
 <<<<<<< 5aa93ff66840d81756341fcc2ce5b06387f4ab36
 >>>>>>> LVRUBYM-242:added component
 =======
+=======
+var toggleMessage = require('./../common/services/toggleMessage/toggleMessage.service.js');
+>>>>>>> LVRUBYM-351: Add toggleMessage service
 
 >>>>>>> LVRUBYM-328:added files
 require('../../css/style.scss');
@@ -40,8 +44,13 @@ module.exports = angular
     resetPasswordModule.name
 =======
     staticModule.name,
+<<<<<<< 432dd6448ea5a85579652742e0f542a28624147a
     myDayReportModule.name
 >>>>>>> LVRUBYM-242:added component
+=======
+    myDayReportModule.name,
+    toggleMessage.name
+>>>>>>> LVRUBYM-351: Add toggleMessage service
   ])
 <<<<<<< 5f08931b1824729a65c08636eb4467c854ebded3
   .config(['$mdThemingProvider',

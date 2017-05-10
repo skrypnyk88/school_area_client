@@ -9,26 +9,24 @@ module.exports = angular
     controller: ProfileController
   });
 
-ProfileController.$inject = ['Profile'];
+ProfileController.$inject = ['profileService', 'currentUser'];
 
-function ProfileController(Profile) {
+function ProfileController(profileService, currentUser) {
   var ctrl = this;
   ctrl.teacher = [];
 
-  Profile.getProfile().then(
+  ctrl.renderProfile = function() {profileService.getProfile(currentUser.id).then(
     function(data) {
       ctrl.teacher = data;
-    }
-  );
+      ctrl.fullname = ctrl.teacher.first_name + ' ' + ctrl.teacher.last_name;
+      ctrl.showDiv = true;
+    });
+  };
 
   ctrl.profileUpdate = function(teacher) {
-    Profile.updateProfile(teacher.first_name,
-                          teacher.last_name,
-                          teacher.email,
-                          teacher.phone,
-                          teacher.locale,
-                          teacher.id).then(function() {
+    profileService.updateProfile(teacher).then(function() {
       return teacher;
     });
   };
+  ctrl.renderProfile();
 };

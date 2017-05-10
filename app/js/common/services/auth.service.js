@@ -13,7 +13,7 @@ AuthFactory.$inject = [
   'globalSettings',
   'errorMessages',
   'authResource',
-  'currentUserValues'
+  'currentUser'
 ];
 
 function AuthFactory(
@@ -23,7 +23,7 @@ function AuthFactory(
   globalSettings,
   errorMessages,
   authResource,
-  currentUserValues
+  currentUser
 ) {
   var toState;
   var fromState;
@@ -40,7 +40,7 @@ function AuthFactory(
     redirect: redirect,
     getErrorMsg: getErrorMsg,
     toggleErrorMsg: toggleErrorMsg,
-    saveCourentUser: saveCourentUser
+    saveCurrentUser: saveCurrentUser
   };
 
   return service;
@@ -62,7 +62,7 @@ function AuthFactory(
     authResource.authenticate(user).$promise.then(
       function(response) {
         service.saveToken(response);
-        service.saveCourentUser(response);
+        service.saveCurrentUser(response.data);
         $state.go(savedState);
       },
       function(response) {
@@ -74,7 +74,7 @@ function AuthFactory(
     authResource.refreshToken().$promise.then(
       function(response) {
         service.saveToken(response);
-        service.saveCourentUser(response);
+        service.saveCurrentUser(response.data);
       },
       function(response) {
         service.toggleErrorMsg(response);
@@ -122,9 +122,10 @@ function AuthFactory(
     });
   }
 
-  function saveCourentUser(response) {
-    currentUserValues.first_name = response.data.first_name;
-    currentUserValues.last_name = response.data.last_name;
-    currentUserValues.locale = response.data.locale;
+  function saveCurrentUser(response) {
+    currentUser.first_name = response.first_name;
+    currentUser.last_name = response.last_name;
+    currentUser.locale = response.locale;
+    currentUser.id = response.id;
   }
 }

@@ -34,8 +34,8 @@ function bottleReportService(bottleReportResource,
     };
 
     return bottleReportResource.query(params)
-                               .$promise
-                               .then(responseSuccess, responseFailure);
+    .$promise
+    .then(responseSuccess, responseFailure);
   };
 
   function addBottle(bottleReport) {

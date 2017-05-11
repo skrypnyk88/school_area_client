@@ -42,19 +42,19 @@ describe('Service: BottleReport', function() {
     $httpBackend.verifyNoOutstandingRequest();
   });
 
-  it('is define', function() {
+  it('addBottle function should be defined', function() {
     expect(service.addBottle).toBeDefined();
   });
 
-  it('is define', function() {
+  it('updateBottle function should be defined', function() {
     expect(service.updateBottle).toBeDefined();
   });
 
-  it('is define', function() {
+  it('deleteBottle function should be defined', function() {
     expect(service.deleteBottle).toBeDefined();
   });
 
-  it('is define', function() {
+  it('getBottleReports function should be defined', function() {
     expect(service.getBottleReports).toBeDefined();
   });
 
@@ -65,7 +65,9 @@ describe('Service: BottleReport', function() {
     service.getBottleReports().then(function(bReports) {
       response = bReports;
     });
+
     $httpBackend.flush();
+
     expect(JSON.stringify(response)).toEqual(JSON.stringify(bottleReports));
   });
 
@@ -78,7 +80,9 @@ describe('Service: BottleReport', function() {
     service.updateBottle(bottle, bottleReport).then(function(updatedBottle) {
       response = updatedBottle;
     });
+
     $httpBackend.flush();
+
     expect(JSON.stringify(response)).toEqual(JSON.stringify(bottle));
   });
 
@@ -90,7 +94,9 @@ describe('Service: BottleReport', function() {
     service.addBottle(bottleReport).then(function(newBottle) {
       response = newBottle;
     });
+
     $httpBackend.flush();
+
     expect(JSON.stringify(response)).toEqual(JSON.stringify(bottle));
   });
 });

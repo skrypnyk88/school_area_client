@@ -1,0 +1,17 @@
+<div class="our-day-report" layout="row">
+  <div class="students" flex="25">
+    <div  ng-repeat="student in $ctrl.students">
+      <div><student-component student="student"></student-component></div>
+    </div>
+  </div>
+  <div class="all-student-absent" ng-if="!$ctrl.report" layout="row">
+    <h1>All students are absent</h1>
+  </div>
+  <div class="our-day-report-form" ng-if="$ctrl.report">
+    <textarea class="class-notes" ng-model="$ctrl.report.description" layout="row">
+    </textarea>
+    <md-button class="green-btn"
+      ng-click="$ctrl.ourDayReportUpdate($ctrl.report.description)">Update
+    </md-button>
+  </div>
+</div>

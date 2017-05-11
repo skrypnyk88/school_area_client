@@ -12,6 +12,10 @@ function profileResource($resource, globalSettings) {
   return $resource(globalSettings.SERVER_URL_V1 + '/teachers/:id.json',
   {id: '@id'},
   {
-    'update': {method: 'PUT'}
+    'update': {method: 'PUT'},
+    'upload': {
+      url: globalSettings.SERVER_URL_V1 + '/teachers/:id/upload.json',
+      method: 'PUT'
+    }
   });
 }

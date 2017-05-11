@@ -1934,6 +1934,13 @@ md-toast {
       width: 75px;
     }
   }
+
+  .teacher {
+    .avatar {
+      height: 170px;
+      width: 170px;
+    }
+  }
 }
 
 .upload-photo {
@@ -1967,6 +1974,21 @@ md-toast {
 
     md-icon {
       color: #fff;
+    }
+  }
+}
+
+
+.report-teacher {
+  background: none;
+  border: none;
+
+  .upload-photo-teacher {
+    height: 170px;
+    width: 170px;
+
+    label {
+      padding-top: 45%;
     }
   }
 }
@@ -2265,6 +2287,9 @@ button {
     width: 50%;
   }
 }
+<<<<<<< 74774db8e8481aeb3ad50cb3af62439194790e78
 
 
 >>>>>>> LVRUBYM-325: Change profile.template
+=======
+>>>>>>> LVRUBYM-353: Add upload to teacher

@@ -4,8 +4,10 @@
   </div>
 
   <div layout="row" class="profile-main"  layout-align="none">
-    <div flex="50" >
-      <img alt="Avatar 4" src="https://letsshareapps.s3.amazonaws.com/teachers/logos/000/000/003/medium/avatar-4.png?1476046377">
+    <div flex="50" class='report report-teacher'>
+      <div class="student teacher">
+          <img src='{{$ctrl.avatar}}' class='avatar' alt='avatar'>
+      </div>
     </div>
 
     <div flex="50">
@@ -51,8 +53,26 @@
   </div>
 
   <div layout="row" layout-align="none" class="profile-main profile-title-update">
-    <div flex="50">
-      <img alt="Avatar 4" src="https://letsshareapps.s3.amazonaws.com/teachers/logos/000/000/003/medium/avatar-4.png?1476046377">
+    <div class='report report-teacher' flex="50">
+      <md-list>
+        <md-list-item>
+          <div class='student teacher' layout='row'>
+            <form name='uploadForm'>
+              <div class='upload-photo upload-photo-teacher'>
+                <img src='{{$ctrl.avatar}}' class='avatar' alt='avatar'>
+                <label for='file{{$ctrl.teacher.id}}' class='overlay'>
+                  <md-icon>add_a_photo</md-icon>
+                </label>
+
+                <input id='file{{$ctrl.teacher.id}}' name='file'
+                       class='ng-hide' ng-model='file' type='file'
+                       ng-change='$ctrl.uploadPhoto($ctrl.teacher, file)'
+                       base-sixty-four-input/>
+              </div>
+            </form>
+          </div>
+       </md-list-item>
+      </md-list>
     </div>
 
     <div flex="50">

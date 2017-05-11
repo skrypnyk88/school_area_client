@@ -8,5 +8,6 @@ module.exports = angular
     id: '',
     first_name: '',
     last_name: '',
-    locale: 'en'
+    locale: 'en',
+    url: ''
   });

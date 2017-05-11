@@ -127,5 +127,6 @@ function AuthFactory(
     currentUser.last_name = response.last_name;
     currentUser.locale = response.locale;
     currentUser.id = response.id;
+    currentUser.url = response.url;
   }
 }

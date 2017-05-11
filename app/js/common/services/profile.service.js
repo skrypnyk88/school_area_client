@@ -6,12 +6,13 @@ module.exports = angular
   ])
   .factory('profileService', profileService);
 
-profileService.$inject = ['profileResource', '$mdToast', 'toggleMessage'];
+profileService.$inject = ['profileResource', '$mdToast', 'toggleMessage', '$q'];
 
-function profileService(profileResource, $mdToast, toggleMessage) {
+function profileService(profileResource, $mdToast, toggleMessage, $q) {
   var service = {
     getProfile: getProfile,
-    updateProfile: updateProfile
+    updateProfile: updateProfile,
+    uploadPhoto: uploadPhoto
   };
   return service;
 
@@ -35,5 +36,20 @@ function profileService(profileResource, $mdToast, toggleMessage) {
     }, function(response) {
       toggleMessage.showMessages(response.data.errors);
     });
+  };
+
+  function uploadPhoto(id, file) {
+    var params = {
+      id: id,
+      file: file
+    };
+    return profileResource.upload(params).$promise.then(
+      function(data) {
+        return $q.resolve(data);
+      },
+      function(response) {
+        return $q.reject(response.data.errors);
+      }
+    );
   };
 }

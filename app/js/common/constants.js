@@ -54,10 +54,10 @@ module.exports = angular
       {name: 'Teacher report',  link: '#', submenu: [
         {name: 'Presence',          link: 'main.presenceReport'},
         {name: 'Diet',              link: '#'},
-        {name: 'Bottle',            link: '#'},
+        {name: 'Bottle',            link: 'main.bottleReport'},
         {name: 'Meals',             link: '#'},
         {name: 'Potty',             link: '#'},
-        {name: 'Nap',               link: '#'},
+        {name: 'Nap',               link: 'main.static'},
         {name: 'Rewards',           link: '#'},
         {name: 'Personal notes',    link: '#'},
         {name: 'Class notes',       link: '#'}

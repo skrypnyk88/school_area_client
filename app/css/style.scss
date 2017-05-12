@@ -17,15 +17,21 @@ $red-color: #ec4e2c;
 $btn-border: 1px solid #b1b1b1;
 $text-transform: none;
 
+<<<<<<< 407f24440d41ffd5046efd0286002bf8ee9d3fcd
 <<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
+=======
+>>>>>>> LVRUBYM-347: Add upload photo form for student template and styles
 html,
 body,
 main {
   height: 100%;
+<<<<<<< 407f24440d41ffd5046efd0286002bf8ee9d3fcd
 =======
 body {
   text-align: center;
 >>>>>>> LVRUBYM-344: Create main template style
+=======
+>>>>>>> LVRUBYM-347: Add upload photo form for student template and styles
 }
 
 * {
@@ -38,6 +44,7 @@ body {
 }
 
 .md-accent {
+<<<<<<< 407f24440d41ffd5046efd0286002bf8ee9d3fcd
 <<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
 <<<<<<< c1277f2601881303dd01af6f108129014ab59b51
   color: white;
@@ -87,6 +94,9 @@ body {
 >>>>>>> change some styles
 =======
 >>>>>>> LVRUBYM-349:Fixed css
+=======
+  color: white;
+>>>>>>> LVRUBYM-347: Add upload photo form for student template and styles
 }
 <<<<<<< b4c6fc7a641cbed9d17fed7ac7f693846f859a93
 
@@ -1133,9 +1143,9 @@ button {
 }
 
 .bottles {
-  display:inline-block;
-  width:300px;
+  display: inline-block;
   float: left;
+  width: 300px;
 }
 
 .display {
@@ -1144,14 +1154,14 @@ button {
 
 .buttonposition {
   float: left;
-  width: 20%;
   height: 100%;
+  width: 20%;
 }
 
 .position {
   float: right;
-  width: 80%;
   height: 100%;
+  width: 80%;
 }
 
 .invalid {
@@ -1159,8 +1169,8 @@ button {
   font-size: 14px;
 }
 
+//  Default Styles for reports  //
 
-//style for static.html
 @mixin border {
   border-bottom: 1px solid #ebebeb;
   border-top: 1px solid #ebebeb;
@@ -1310,7 +1320,6 @@ button {
   }
 }
 
-
 .gray-btn {
   background-color: #fff;
   border: 1px solid #e1e1e1;
@@ -1327,7 +1336,6 @@ button {
     }
   }
 }
-
 
 .report {
   @include border;
@@ -1471,6 +1479,13 @@ button {
   text-align: center;
   width: 85px;
 
+<<<<<<< 407f24440d41ffd5046efd0286002bf8ee9d3fcd
+=======
+  &.time {
+    margin: 0 5px;
+  }
+
+>>>>>>> LVRUBYM-347: Add upload photo form for student template and styles
   &:hover {
     border: 1px solid #dfdbdb;
     border-radius: 12px;
@@ -1974,9 +1989,15 @@ md-content {
   background-color: white;
 }
 
+<<<<<<< 407f24440d41ffd5046efd0286002bf8ee9d3fcd
 //  Login, ForgotPassword, ResetPassword components  //
 
 login-component, forgot-component, reset-component {
+=======
+//  Login component  //
+
+login-component {
+>>>>>>> LVRUBYM-347: Add upload photo form for student template and styles
   text-align: center;
 
   .hero-container {
@@ -1988,6 +2009,7 @@ login-component, forgot-component, reset-component {
     width: 300px;
   }
 }
+<<<<<<< 407f24440d41ffd5046efd0286002bf8ee9d3fcd
 
 side-bar {
   border-right: 1px solid #cdcdd5;
@@ -2192,3 +2214,5 @@ button {
 >>>>>>> LVRUBYM-221:Changed fail response
 =======
 >>>>>>> LVRUBYM-349:Fixed css
+=======
+>>>>>>> LVRUBYM-347: Add upload photo form for student template and styles

@@ -9,6 +9,7 @@ var myDayReportModule = require('./../myDayReport/myDayReport.module.js');
 var toggleMessage = require('./../common/services/toggleMessage/toggleMessage.service.js');
 var bottleReportModule = require('.././bottleReport/bottleReport.module.js');
 var sideBarModule = require('./../sidebar/sidebar.module.js');
+var studentService = require('./../common/services/student.service.js');
 
 require('../../css/style.scss');
 
@@ -25,6 +26,7 @@ module.exports = angular
     toggleMessage.name,
     myDayReportModule.name,
     sideBarModule.name
+    studentService.name
   ])
   .config(['$translateProvider', function($translateProvider) {
     $translateProvider.useStaticFilesLoader({

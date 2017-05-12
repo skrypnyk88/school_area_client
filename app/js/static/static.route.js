@@ -8,6 +8,7 @@ module.exports = angular
         templateUrl: './app/js/static/components/static.template.html'
       });
     }]);
+<<<<<<< 76b4ece52139ef5d1fd3e9adc079c82fe8a4dcc2
 <<<<<<< 4ac0622ae5f72bcd5cc1cb348264d9c657b9d123
 <<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
 <<<<<<< 699e9b37f1d13ef6c9a01fdab584884a4e8468d9
@@ -46,3 +47,5 @@ module.exports = angular
 =======
 >>>>>>> LVRUBYM-349:Fixed jscs
 >>>>>>> LVRUBYM-349:Fixed jscs
+=======
+>>>>>>> LVRUBYM-349:Fixed css

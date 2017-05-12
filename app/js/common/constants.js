@@ -9,11 +9,11 @@ module.exports = angular
   })
   .constant('errorMessages', {
     NO_AUTH: 'Invalid Email/Password',
-<<<<<<< HEAD
     AUTH_TIMEOUT: 'Session has expired',
 <<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
 <<<<<<< b1263744d5dbac2df9f7478c666c2beb7b7604de
     FAIL_RESPONSE: 'Oops! Something went wrong!Please, try again later!'
+<<<<<<< 76b4ece52139ef5d1fd3e9adc079c82fe8a4dcc2
   })
   .constant('menuItems', [
       {name: 'Teacher report',  link: '#', submenu: [
@@ -47,6 +47,8 @@ module.exports = angular
 =======
 =======
     AUTH_TIMEOUT: 'Session has expired'
+=======
+>>>>>>> LVRUBYM-349:Fixed css
   })
   .constant('menuItems', [
       {name: 'Teacher report',  link: '#', submenu: [
@@ -69,5 +71,8 @@ module.exports = angular
       {name: 'Contacts',        link: '#'}
     ]
   );
+<<<<<<< 76b4ece52139ef5d1fd3e9adc079c82fe8a4dcc2
 >>>>>>> LVRUBYM-344: Create main template style
 >>>>>>> LVRUBYM-344: Create main template style
+=======
+>>>>>>> LVRUBYM-349:Fixed css

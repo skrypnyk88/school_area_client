@@ -7,7 +7,7 @@
             {{menu.name}}
           </a>
         </li>
-        <ul class="submenu" ng-if="menu.submenu" ng-class="$ctrl.submenuOpened ? 'opened' : 'closed'">
+        <ul class="submenu" ng-class="$ctrl.submenuOpened ? 'opened' : 'closed'">
           <li ng-repeat="submenu in menu.submenu" ng-click="$ctrl.setActiveSubmenu($index)" ng-class="$ctrl.activeSubmenu == $index ? 'active-submenu' : ''">
             <a ui-sref={{submenu.link}}>
               {{submenu.name}}

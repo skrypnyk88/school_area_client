@@ -1,7 +1,25 @@
-<div class="student" layout="row">
-    <img class="avatar" src="app/img/profile/educator.svg" alt="profile">
-    <div class="name" layout="column" layout-align="center">
-        <span class="first-name">{{$ctrl.student.first_name}}</span>
-        <span class="last-name">{{$ctrl.student.last_name}}</span>
+<div class='student' layout='row'>
+  <form name='uploadForm'>
+    <div class='upload-photo'>
+      <img src='{{$ctrl.student.url || $ctrl.defaultPhoto}}' class='avatar' alt='avatar'>
+
+      <label for='file{{$ctrl.student.id}}' class='overlay'>
+        <md-icon>add_a_photo</md-icon>
+      </label>
+
+      <input id='file{{$ctrl.student.id}}'
+             name='file'
+             class='ng-hide'
+             ng-model='file'
+             type='file'
+             ng-change='$ctrl.uploadPhoto($ctrl.student, file)'
+             maxsize='5000'
+             accept='image/*'
+             base-sixty-four-input/>
     </div>
+  </form>
+  <div class='name' layout='column' layout-align='center'>
+    <span class='first-name'>{{$ctrl.student.first_name}}</span>
+    <span class='last-name'>{{$ctrl.student.last_name}}</span>
+  </div>
 </div>

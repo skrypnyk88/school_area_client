@@ -8,13 +8,23 @@ $red-color: #ec4e2c;
 $btn-border: 1px solid #b1b1b1;
 $text-transform: none;
 
+html,
+body,
+main {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .hero-container {
   display: block;
   height: 100%;
 }
 
 .md-accent {
-  color: white !important;
+  color: white;
 }
 
 .header {
@@ -726,9 +736,9 @@ button {
 }
 
 .bottles {
-  display:inline-block;
-  width:300px;
+  display: inline-block;
   float: left;
+  width: 300px;
 }
 
 .display {
@@ -737,14 +747,14 @@ button {
 
 .buttonposition {
   float: left;
-  width: 20%;
   height: 100%;
+  width: 20%;
 }
 
 .position {
   float: right;
-  width: 80%;
   height: 100%;
+  width: 80%;
 }
 
 .invalid {
@@ -752,8 +762,8 @@ button {
   font-size: 14px;
 }
 
+//  Default Styles for reports  //
 
-//style for static.html
 @mixin border {
   border-bottom: 1px solid #ebebeb;
   border-top: 1px solid #ebebeb;
@@ -797,7 +807,6 @@ button {
   }
 }
 
-
 .gray-btn {
   background-color: #fff;
   border: 1px solid #e1e1e1;
@@ -814,7 +823,6 @@ button {
     }
   }
 }
-
 
 .report {
   @include border;
@@ -926,8 +934,9 @@ button {
   width: 85px;
 
   &.time {
-    margin:0 5px;
-   }
+    margin: 0 5px;
+  }
+
   &:hover {
     border: 1px solid #dfdbdb;
     border-radius: 12px;
@@ -1038,5 +1047,93 @@ md-toast {
 .md-bottom {
   .md-toast-content {
     margin-top: 20px;
+  }
+}
+
+// Upload photo //
+
+.report {
+  padding: 25px 45px;
+
+  md-list-item {
+    padding: 0;
+  }
+
+  .student {
+    margin-bottom: 0;
+
+    .avatar {
+      height: 75px;
+      margin: 0;
+      width: 75px;
+    }
+  }
+}
+
+.upload-photo {
+  border-radius: 50%;
+  height: 75px;
+  margin-right: 25px;
+  overflow: hidden;
+  position: relative;
+  width: 75px;
+
+  label {
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    padding-top: 30%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+
+    -webkit-transition: all .2s;
+       -moz-transition: all .2s;
+        -ms-transition: all .2s;
+         -o-transition: all .2s;
+            transition: all .2s;
+    &:hover {
+      opacity: 1;
+    }
+
+    md-icon {
+      color: #fff;
+    }
+  }
+}
+
+
+// Bottle report styles fix //
+
+.report,
+.container {
+  border-bottom: 0;
+}
+
+.buttonposition {
+  button {
+    top: 15px;
+  }
+}
+
+md-content {
+  background-color: white;
+}
+
+//  Login component  //
+
+login-component {
+  text-align: center;
+
+  .hero-container {
+    background-image: url('../img/misc/pattern.png');
+  }
+
+  .login-form {
+    margin-top: 15vh;
+    width: 300px;
   }
 }

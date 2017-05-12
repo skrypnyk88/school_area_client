@@ -8,22 +8,23 @@
     <md-content layout-wrap flex="100">    
       <div class="buttonposition">  
         <md-button class="btn green-btn addbottle" 
-            ng-click="$ctrl.addBottle(bottleReport)" 
-            class="button">Add Bottle
+                   ng-click="$ctrl.addBottle(bottleReport)" 
+                   class="button">Add Bottle
         </md-button>   
       </div>
       <div class="position">  
         <div ng-repeat="bottle in bottleReport.bottles" class="bottles" >
-          <div ng-messages="bottleReportsForm['time_' + bottle.id].$error" role="alert">
+          <div ng-messages="bottleReportsForm['time_' + bottle.id].$error" 
+               role="alert">
             <ng-message when="pattern" class="invalid">Must be a valid time format.</ng-message>
             <ng-message when="required" class="invalid">Can't be empty.</ng-message>
           </div>  
         <md-select ng-change="$ctrl.updateBottle(bottle, bottleReport)"   
-          name="bottle_{{bottle.id}}_quantity" 
-          id="quantity" 
-          ng-model="bottle.quantity" 
-          placeholder="30 ml"
-          class="blue-select md-no-underline display" layout="row" layout-align="end end" >
+                   name="bottle_{{bottle.id}}_quantity" 
+                   id="quantity" 
+                   ng-model="bottle.quantity" 
+                   placeholder="30 ml"
+                   class="blue-select md-no-underline display" layout="row" layout-align="end end" >
           <md-option value="30">30 ml</md-option>
           <md-option value="45">45 ml</md-option>
           <md-option value="60">60 ml</md-option>
@@ -41,7 +42,7 @@
                  required/>        
         </div>
         <button class="btn gray-btn" 
-          ng-click="$ctrl.deleteBottle(bottle, bottleReport)">x
+                ng-click="$ctrl.deleteBottle(bottle, bottleReport)">x
         </button>        
         </div>
       </div>

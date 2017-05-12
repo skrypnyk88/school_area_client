@@ -73,9 +73,7 @@ describe('Service: BottleReport', function() {
 
   it('is should updated bottle', function() {
     $httpBackend.whenPUT('http://localhost:3000/v1/bottle_reports/' +
-      bottleReport.id +
-      '/bottles/' +
-      bottle.id + '.json').respond(bottle);
+      bottleReport.id + '/bottles/' + bottle.id + '.json').respond(bottle);
     var response;
     service.updateBottle(bottle, bottleReport).then(function(updatedBottle) {
       response = updatedBottle;
@@ -88,8 +86,7 @@ describe('Service: BottleReport', function() {
 
   it('is should create new bottle', function() {
     $httpBackend.whenPOST('http://localhost:3000/v1/bottle_reports/' +
-      bottleReport.id +
-      '/bottles.json').respond(bottle);
+      bottleReport.id + '/bottles.json').respond(bottle);
     var response;
     service.addBottle(bottleReport).then(function(newBottle) {
       response = newBottle;

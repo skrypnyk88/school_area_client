@@ -43,6 +43,7 @@ var bottleReportModule = require('.././bottleReport/bottleReport.module.js');
 >>>>>>> LVRUBYM-221:Changed fail response
 var bottleReportModule = require('.././bottleReport/bottleReport.module.js');
 var sideBarModule = require('./../sidebar/sidebar.module.js');
+var studentService = require('./../common/services/student.service.js');
 
 require('../../css/style.scss');
 
@@ -107,7 +108,11 @@ module.exports = angular
     myDayReportModule.name,
 >>>>>>> LVRUBYM-349:Fixed jscs
     sideBarModule.name
+<<<<<<< e751d26b89ff24d1009a8759da2b99e8b53c8160
 >>>>>>> LVRUBYM-349:Create sidebar component
+=======
+    studentService.name
+>>>>>>> LVRUBYM-347: Add student resource and service
   ])
 <<<<<<< 5f08931b1824729a65c08636eb4467c854ebded3
   .config(['$mdThemingProvider',

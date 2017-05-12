@@ -39,39 +39,42 @@ describe('Service: Password', function() {
     expect(service.reset).toBeDefined();
   });
 
-  // it('forgot should return error message', function() {
-  //   $httpBackend.whenPOST('http://localhost:3000/passwords/' + 'forgot').respond(400, errors);
-  //   var response;
-  //   service.forgot(user).then(function(errorMsg) {
-  //     response = errorMsg;
-  //   });
+  it('forgot should return error message', inject(function(toggleMessage) {
+    $httpBackend.whenPOST('http://localhost:3000/passwords/' + 'forgot').respond(400, errors);
+    var response;
+    spyOn(toggleMessage, 'showMessages');
+    service.forgot(user).then(function(errorMsg) {
+      response = errorMsg;
+    });
 
-  //   $httpBackend.flush();
+    $httpBackend.flush();
 
-  //   expect(JSON.stringify(response)).toEqual(JSON.stringify(errors));
-  // });
+    expect(JSON.stringify(response)).toEqual(JSON.stringify(errors));
+  }));
 
-  // it('forgot should return success message', function() {
-  //   $httpBackend.whenPOST('http://localhost:3000/passwords/' + 'forgot').respond(200, successes);
-  //   var response;
-  //   service.forgot(user).then(function(successMsg) {
-  //     response = successMsg;
-  //   });
+  it('forgot should return success message', inject(function(toggleMessage) {
+    $httpBackend.whenPOST('http://localhost:3000/passwords/' + 'forgot').respond(200, successes);
+    var response;
+    spyOn(toggleMessage, 'showMessages');
+    service.forgot(user).then(function(successMsg) {
+      response = successMsg;
+    });
 
-  //   $httpBackend.flush();
+    $httpBackend.flush();
 
-  //   expect(JSON.stringify(response)).toEqual(JSON.stringify(successes));
-  // });
+    expect(JSON.stringify(response)).toEqual(JSON.stringify(successes));
+  }));
 
-  // it('reset should return error message', function() {
-  //   $httpBackend.whenPOST('http://localhost:3000/passwords/' + 'reset').respond(400, errors);
-  //   var response;
-  //   service.reset(user).then(function(errorMsg) {
-  //     response = errorMsg;
-  //   });
+  it('reset should return error message', inject(function(toggleMessage) {
+    $httpBackend.whenPOST('http://localhost:3000/passwords/' + 'reset').respond(400, errors);
+    var response;
+    spyOn(toggleMessage, 'showMessages');
+    service.reset(user).then(function(errorMsg) {
+      response = errorMsg;
+    });
 
-  //   $httpBackend.flush();
+    $httpBackend.flush();
 
-  //   expect(JSON.stringify(response)).toEqual(JSON.stringify(errors));
-  // });
+    expect(JSON.stringify(response)).toEqual(JSON.stringify(errors));
+  }));
 });

@@ -8,12 +8,8 @@ module.exports = angular
   })
   .constant('errorMessages', {
     NO_AUTH: 'Invalid Email/Password',
-<<<<<<< HEAD
     AUTH_TIMEOUT: 'Session has expired',
     FAIL_RESPONSE: 'Oops! Something went wrong!Please, try again later!'
-  });
-=======
-    AUTH_TIMEOUT: 'Session has expired'
   })
   .constant('menuItems', [
       {name: 'Teacher report',  link: '#', submenu: [
@@ -36,4 +32,3 @@ module.exports = angular
       {name: 'Contacts',        link: '#'}
     ]
   );
->>>>>>> LVRUBYM-344: Create main template style

@@ -6,24 +6,22 @@ module.exports = angular
   ])
   .factory('passwordService', passwordService);
 
-passwordService.$inject = ['passwordResource', 'messageService', '$state'];
+passwordService.$inject = ['passwordResource', 'toggleMessage', '$state'];
 
-function passwordService(passwordResource, messageService, $state) {
+function passwordService(passwordResource, toggleMessage, $state) {
   var service = {
     forgot: forgot,
-    reset: reset,
-    returnDataSuccess: returnDataSuccess,
-    returnDataErrors: returnDataErrors
+    reset: reset
   };
   return service;
 
   function forgot(user) {
     return passwordResource.forgot(user).$promise.then(
       function(response) {
-        service.returnDataSuccess(response);
+        toggleMessage.returnDataSuccess(response);
         return response.data;
       }, function(response) {
-        service.returnDataErrors(response);
+        toggleMessage.returnDataErrors(response);
         return response.data;
       });
   };
@@ -32,19 +30,11 @@ function passwordService(passwordResource, messageService, $state) {
     return passwordResource.reset(user).$promise.then(
       function(response) {
         $state.go('login');
-        service.returnDataSuccess(response);
+        toggleMessage.returnDataSuccess(response);
         return response.data;
       }, function(response) {
-        service.returnDataErrors(response);
+        toggleMessage.returnDataErrors(response);
         return response.data;
       });
   };
-
-  function returnDataSuccess(response) {
-    return messageService.toggleMsg(response.data.success);
-  }
-
-  function returnDataErrors(response) {
-    return messageService.toggleMsg(response.data.errors);
-  }
 };

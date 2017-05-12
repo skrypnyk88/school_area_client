@@ -465,34 +465,12 @@ main {
     }
   }
 
-<<<<<<< 3fc71fb2f29cec0285d82d7a5f174033e0025c2f
   a {
     font-size: 17px;
     font-weight: 400;
     text-decoration: none;
   }
 
-=======
-//  Login, ForgotPassword, ResetPassword components  //
-
-login-component, forgot-component, reset-component {
-  .hero-container{
-    background-image: url('../img/misc/pattern.png');
-  }
-
-  .login-form {
-    width: 300px;
-    margin-top: 15vh;
-  }
-
-  md-input-container:last-of-type {
-    margin-bottom: 0;
-  }
-
-  md-card-content{
-    padding-bottom: 0;
-  }
->>>>>>> LVRUBYM-300: Added forgotPassword and resetPassword components
 }
 
 //style for static.html
@@ -1141,9 +1119,9 @@ md-content {
   background-color: white;
 }
 
-//  Login component  //
+//  Login, ForgotPassword, ResetPassword components  //
 
-login-component {
+login-component, forgot-component, reset-component {
   text-align: center;
 
   .hero-container {
@@ -1162,4 +1140,12 @@ side-bar {
 
 .menu {
   margin-top: 0;
+}
+
+md-input-container:last-of-type {
+  margin-bottom: 0;
+}
+
+md-card-content{
+  padding-bottom: 0;
 }

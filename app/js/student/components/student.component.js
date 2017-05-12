@@ -8,6 +8,18 @@ module.exports = angular
     controller: StudentController
   });
 
-function StudentController() {
+StudentController.$inject = ['studentService', 'globalSettings'];
+
+function StudentController(studentService, globalSettings) {
   var ctrl = this;
+
+  ctrl.defaultPhoto = globalSettings.STUDENT_IMG;
+
+  ctrl.uploadPhoto = function(student, file) {
+    studentService.uploadPhoto(student.id, file).then(
+      function(response) {
+        student.url = response.url;
+      }
+    );
+  };
 };

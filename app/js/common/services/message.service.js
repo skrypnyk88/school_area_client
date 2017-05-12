@@ -13,10 +13,10 @@ function messageService($mdToast) {
 
   function toggleMsg(response) {
 
-    if (Array.isArray(response.data)) {
-      var msgs = response.data.join('; ');
+    if (Array.isArray(response)) {
+      var msgs = response.join('; ');
     } else {
-      var msgs = response.data;
+      var msgs = response;
     }
 
     var toast = $mdToast.simple()

@@ -11,26 +11,40 @@ passwordService.$inject = ['passwordResource', 'messageService', '$state'];
 function passwordService(passwordResource, messageService, $state) {
   var service = {
     forgot: forgot,
-    reset: reset
+    reset: reset,
+    returnDataSuccess: returnDataSuccess,
+    returnDataErrors: returnDataErrors
   };
   return service;
 
   function forgot(user) {
-    passwordResource.forgot(user).$promise.then(
+    return passwordResource.forgot(user).$promise.then(
       function(response) {
-        messageService.toggleMsg(response);
+        service.returnDataSuccess(response);
+        return response.data;
       }, function(response) {
-        messageService.toggleMsg(response);
+        service.returnDataErrors(response);
+        return response.data;
       });
   };
 
   function reset(user) {
-    passwordResource.reset(user).$promise.then(
+    return passwordResource.reset(user).$promise.then(
       function(response) {
         $state.go('login');
-        messageService.toggleMsg(response);
+        service.returnDataSuccess(response);
+        return response.data;
       }, function(response) {
-        messageService.toggleMsg(response);
+        service.returnDataErrors(response);
+        return response.data;
       });
   };
+
+  function returnDataSuccess(response) {
+    return messageService.toggleMsg(response.data.success);
+  }
+
+  function returnDataErrors(response) {
+    return messageService.toggleMsg(response.data.errors);
+  }
 };

@@ -7,20 +7,24 @@ describe('MyDayReport Test', function() {
   var service;
   var $httpBackend;
 
-  var myDayReports = {};
+  var myDayReports = [{id: 151,
+                      note: null,
+                      student: { 
+                      id: 1,
+                      first_name: 'Annabel',
+                      last_name: 'Cummings'}}];
+  // var myDayReports = [my_day_report];                    
+  // var student = {id: 1,
+  //                first_name: 'Annabel',
+  //                last_name: 'Cummings'};
 
   var my_day = {day: '2017-02-05',
                 note: 'changed2',
                 updated_at: '2017-05-06T17:09:44.215Z'
               };
 
-  var my_day_report = {student: {
-    id: 1,
-    first_name: 'Viva',
-    last_name: 'Hamill'},
-    my_day_report: {
-      id: 151,
-      note: null}};
+  var my_day_report = {id: 151,
+                      note: null};
 
   beforeEach(angular.mock.module(requirements.name,
                                  constantsModule.name,
@@ -46,28 +50,23 @@ describe('MyDayReport Test', function() {
   });
 
   it('is should return all MyDay reports', function() {
-    $httpBackend.whenGET('http://localhost:3000/v1/my_day_reports.json?day=2017-05-07&group_id=2')
-    .respond(myDayReports);
+    $httpBackend.when("GET", 'http://localhost:3000/v1/my_day_reports.json?group_id=0').respond(myDayReports);
     var response;
-    service.getReports().then(function(myReports) {
-      response = myReports;
+    service.getReports().then(function(mReports) {
+      response = mReports;
     });
-    console.log(response);
-    console.log(myDayReports);
+    console.log(response)
     $httpBackend.flush();
     expect(JSON.stringify(response)).toEqual(JSON.stringify(myDayReports));
   });
 
   it('is should updated report', function() {
-    $httpBackend.whenPUT('http://localhost:3000/v1/my_day_reports/' +
-     my_day_report.my_day_report.id + '.json?group_id=1')
-    .respond(my_day_report);
+    $httpBackend.whenPUT('http://localhost:3000/v1/my_day_reports/' + my_day_report.id + '.json?group_id=0').respond(my_day);
     var response;
-    service.updateReports(my_day_report, my_day.note).then(function(updatedReport) {
+    service.updateReports(my_day_report.id, my_day.note).then(function(updatedReport) {
       response = updatedReport;
     });
-    console.log(response);
-    console.log(my_day_report);
+    
     $httpBackend.flush();
     expect(JSON.stringify(response)).toEqual(JSON.stringify(bottle));
   });

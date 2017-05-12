@@ -21,7 +21,7 @@ function MyDayReportController(MyDayReport) {
       });
 
   ctrl.myDayReportUpdate = function(student) {
-    MyDayReport.updateReports(student.my_day_report.note, student.my_day_report.id)
+    MyDayReport.updateReports(student.note, student.id)
       .then(function(note) {
       return note;
     }, function(errors) {

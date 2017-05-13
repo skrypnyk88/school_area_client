@@ -2,27 +2,18 @@
   <nav class="navbar">
     <ul class="menu">
       <div ng-repeat="menu in $ctrl.menuItems">
-<<<<<<< e07b464d152d3e24981a7fada5ff913310f40da3
         <li class="menu-item"
             ng-click="$ctrl.setActiveMenu($index)"
             ng-class="$ctrl.activeMenu == $index ? 'active-menu' : ''">
-=======
-        <li class="menu-item" ng-click="$ctrl.setActiveMenu($index)" ng-class="$ctrl.activeMenu == $index ? 'active-menu' : ''">
->>>>>>> LVRUBYM-349:Create sidebar component
           <a ui-sref={{menu.link}}>
             {{menu.name}}
           </a>
         </li>
-<<<<<<< e07b464d152d3e24981a7fada5ff913310f40da3
         <ul class="submenu"
             ng-class="$ctrl.submenuOpened ? 'opened' : 'closed'">
           <li ng-repeat="submenu in menu.submenu"
               ng-click="$ctrl.setActiveSubmenu($index)"
               ng-class="$ctrl.activeSubmenu == $index ? 'active-submenu' : ''">
-=======
-        <ul class="submenu" ng-if="menu.submenu" ng-class="$ctrl.submenuOpened ? 'opened' : 'closed'">
-          <li ng-repeat="submenu in menu.submenu" ng-click="$ctrl.setActiveSubmenu($index)" ng-class="$ctrl.activeSubmenu == $index ? 'active-submenu' : ''">
->>>>>>> LVRUBYM-349:Create sidebar component
             <a ui-sref={{submenu.link}}>
               {{submenu.name}}
             </a>
@@ -32,4 +23,3 @@
     </ul>
   </nav>
 </div>
-

@@ -1,25 +1,10 @@
-{
+
     "excludeFiles": [
        "app/js/coverage/**",
        "node_modules/**"
     ],
     "preset": "google",
     "fileExtensions": [".js", "jscs"],
-<<<<<<< d9d7a29521927b85dfed3c5ee9f0ab998ec013d4
-<<<<<<< ae62f48681472c72961377fd0034e564f05352f7
-     "excludeFiles": [
-       "app/js/coverage/**",
-       "node_modules/**"
-    ],
-
-=======
-    "excludeFiles": [
-      "app/js/coverage/**",
-      "node_modules/**"
-       ],
->>>>>>> LVRUBYM-242:added files
-=======
->>>>>>> LVRUBYM-325: Change profile.template
     "requireCurlyBraces": [
         "if",
         "else",
@@ -31,19 +16,7 @@
     ],
     "requireOperatorBeforeLineBreak": true,
     "requireCamelCaseOrUpperCaseIdentifiers": {
-<<<<<<< b1263744d5dbac2df9f7478c666c2beb7b7604de
-<<<<<<< c1277f2601881303dd01af6f108129014ab59b51
        "allExcept": ["var_args", {regex:{pattern:"^ignore",flags:"i"}}]
-=======
-<<<<<<< 2f2697354c6b16cf178aeb75d84096f1e9bfcf9c
-        "allExcept": ["var_args", {regex:{pattern:"^ignore",flags:"i"}}]
-=======
-       "allExcept": ["var_args", {regex:{pattern:"^ignore",flags:"i"}}]
->>>>>>> LVRUBYM-221:Add action on front-end
->>>>>>> LVRUBYM-221:Add action on front-end
-=======
-       "allExcept": ["var_args", {regex:{pattern:"^ignore",flags:"i"}}]
->>>>>>> LVRUBYM-221:Added validation and failure response
     },
     "maximumLineLength": {
       "value": 100,

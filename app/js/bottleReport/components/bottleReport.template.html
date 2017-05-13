@@ -1,8 +1,3 @@
-<<<<<<< 407f24440d41ffd5046efd0286002bf8ee9d3fcd
-<<<<<<< 4d2e088911569f28dbc8ad1c75137c5f102ce51b
-<<<<<<< b1263744d5dbac2df9f7478c666c2beb7b7604de
-=======
->>>>>>> LVRUBYM-347: Add upload photo form for student template and styles
 <div class="bottle-report">
   <form name='bottleReportsForm' novalidate>
     <div ng-repeat="bottleReport in $ctrl.bottleReports" class="report container"  layout="row" flex>
@@ -30,63 +25,13 @@
                    ng-model="bottle.quantity"
                    placeholder="30 ml"
                    class="blue-select md-no-underline display" layout="row" layout-align="end end" >
-=======
-<div class="bottle_report">
-=======
-<div class="report">
-<<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
->>>>>>> LVRUBYM-221:Added success and error function; fixed tests; changed css style and template
-  <md-toolbar><span>Bottle</span></md-toolbar>
-=======
->>>>>>> LVRUBYM-221:Changed fail response
-  <form name='bottleReportsForm' novalidate>
-    <div ng-repeat="bottleReport in $ctrl.bottleReports" class="container"  layout="row" flex>
-     <div flex="25">
-      <student-component student="bottleReport.student"></student-component>
-    </div>
-<<<<<<< 4d2e088911569f28dbc8ad1c75137c5f102ce51b
-    <md-content layout-wrap flex="50">  
-       <md-button class="group-btn red-group-btn" ng-click="$ctrl.addBottle(bottleReport)" class="button">Add Bottle</md-button>   
-       
-      <div ng-repeat="bottle in bottleReport.bottles" class="bottles">
-<<<<<<< f850bfdd973ddd81d4c9a8b834d6fb260d39f714
-        <md-select ng-change="$ctrl.updateBottle(bottle, bottleReport)" name="bottle_{{bottle.id}}_quantity" id="quantity" ng-model="bottle.quantity" convert-to-number placeholder="30 ml">
->>>>>>> LVRUBYM-221:Added validation and failure response
-=======
-        <md-select ng-change="$ctrl.updateBottle(bottle, bottleReport)" name="bottle_{{bottle.id}}_quantity" id="quantity" 
-        ng-model="bottle.quantity" convert-to-number placeholder="30 ml"
-        flex="5" class="blue-select md-no-underline" layout="row" layout-align="end end">
->>>>>>> LVRUBYM-221:Changed template
-=======
-    <md-content layout-wrap flex="100">    
-      <div class="buttonposition">  
-       <md-button class="btn green-btn addbottle" ng-click="$ctrl.addBottle(bottleReport)" class="button">Add Bottle
-       </md-button>   
-     </div>
-     <div class="position">  
-      <div ng-repeat="bottle in bottleReport.bottles" class="bottles" >
-        <div ng-messages="bottleReportsForm['time_' + bottle.id].$error" role="alert">
-          <ng-message when="pattern" class="invalid">Must be a valid time format.</ng-message>
-          <ng-message when="required" class="invalid">Can't be empty.</ng-message>
-        </div>  
-        <md-select ng-change="$ctrl.updateBottle(bottle, bottleReport)" name="bottle_{{bottle.id}}_quantity" id="quantity" 
-        ng-model="bottle.quantity" placeholder="30 ml"
-<<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
-         class="blue-select md-no-underline display" layout="row" layout-align="end end" >
->>>>>>> LVRUBYM-221:Added success and error function; fixed tests; changed css style and template
           <md-option value="30">30 ml</md-option>
           <md-option value="45">45 ml</md-option>
           <md-option value="60">60 ml</md-option>
           <md-option value="75">75 ml</md-option>
           <md-option value="90">90 ml</md-option>
           <md-option value="105">105 ml</md-option>
-<<<<<<< 407f24440d41ffd5046efd0286002bf8ee9d3fcd
-<<<<<<< 4d2e088911569f28dbc8ad1c75137c5f102ce51b
         </md-select>
-<<<<<<< b1263744d5dbac2df9f7478c666c2beb7b7604de
-=======
-        </md-select>
->>>>>>> LVRUBYM-347: Add upload photo form for student template and styles
         <div class="display">
           <input name="time_{{bottle.id}}"
                  ng-blur="$ctrl.updateBottle(bottle, bottleReport)"
@@ -100,58 +45,8 @@
                 ng-click="$ctrl.deleteBottle(bottle, bottleReport)">x
         </button>
         </div>
-=======
-        
-        <md-input-container>
-        <label>Time</label>
-        <input name="time_{{bottle.id}}" 
-=======
-        </md-select>  
-=======
-        class="blue-select md-no-underline display" layout="row" layout-align="end end" >
-        <md-option value="30">30 ml</md-option>
-        <md-option value="45">45 ml</md-option>
-        <md-option value="60">60 ml</md-option>
-        <md-option value="75">75 ml</md-option>
-        <md-option value="90">90 ml</md-option>
-        <md-option value="105">105 ml</md-option>
-      </md-select>  
->>>>>>> LVRUBYM-221:Changed fail response
-
-      <div class="display">
-        <input name="time_{{bottle.id}}"                 
-<<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
->>>>>>> LVRUBYM-221:Added success and error function; fixed tests; changed css style and template
-               ng-blur="$ctrl.updateBottle(bottle, bottleReport)" 
-               ng-model="bottle.time" type='text'
-               placeholder="HH:mm" 
-                class="input-time time" 
-                pattern="{{$ctrl.timePattern}}" required/>        
-        </div>
-<<<<<<< 4d2e088911569f28dbc8ad1c75137c5f102ce51b
-        </md-input-container>
-        <button class="delete" ng-click="$ctrl.deleteBottle(bottle, bottleReport)">X</button>
->>>>>>> LVRUBYM-221:Added validation and failure response
-=======
-        <button class="btn gray-btn" ng-click="$ctrl.deleteBottle(bottle, bottleReport)">x</button>        
-      </div>
->>>>>>> LVRUBYM-221:Added success and error function; fixed tests; changed css style and template
       </div>
     </md-content>
   </div>
  </form>
-=======
-        ng-blur="$ctrl.updateBottle(bottle, bottleReport)" 
-        ng-model="bottle.time" type='text'
-        placeholder="HH:mm" 
-        class="input-time time" 
-        pattern="{{$ctrl.timePattern}}" required/>        
-      </div>
-      <button class="btn gray-btn" ng-click="$ctrl.deleteBottle(bottle, bottleReport)">x</button>        
-    </div>
-  </div>
-</md-content>
-</div>
-</form>
->>>>>>> LVRUBYM-221:Changed fail response
 </div>

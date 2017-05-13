@@ -13,48 +13,12 @@ angular
     mainModule.name,
     tokenInjector.name
   ])
-<<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
-<<<<<<< 699e9b37f1d13ef6c9a01fdab584884a4e8468d9
  .config(['$locationProvider', '$httpProvider', 'localStorageServiceProvider',
-=======
-  .config(['$locationProvider', '$httpProvider', 'localStorageServiceProvider',
->>>>>>> LVRUBYM-339: Fix injections
-=======
- .config(['$locationProvider', '$httpProvider', 'localStorageServiceProvider',
->>>>>>> LVRUBYM-221:Changed fail response
     function($locationProvider, $httpProvider, localStorageServiceProvider) {
       $locationProvider.html5Mode(true);
       localStorageServiceProvider.setPrefix('schoolArea');
       $httpProvider.interceptors.push('tokenInjector');
-<<<<<<< 16a7a21a21fa4e6b69535f96494473fefcbeeacf
-<<<<<<< 699e9b37f1d13ef6c9a01fdab584884a4e8468d9
-<<<<<<< 5aa93ff66840d81756341fcc2ce5b06387f4ab36
     }])
-=======
-    })
-<<<<<<< 5f08931b1824729a65c08636eb4467c854ebded3
-  .config(['$translateProvider', function($translateProvider) {
-    $translateProvider.useStaticFilesLoader({
-      prefix: 'app/js/i18n/locale-',
-      suffix: '.json'
-    });
-    $translateProvider.preferredLanguage('en');
-  }])
-  .controller('Ctrl', ['$translate', function($translate) {
-    var ctrl = this;
-    ctrl.changeLanguage = function(langKey) {
-      $translate.use(langKey);
-    };
-  }])
->>>>>>> LVRUBYM-328:added files
-=======
->>>>>>> LVRUBYM-328:moved config and function to main component
-=======
-    }])
->>>>>>> LVRUBYM-339: Fix injections
-=======
-    }])
->>>>>>> LVRUBYM-221:Changed fail response
   .run(['$rootScope', '$state', 'auth',
     function($rootScope, $state, auth) {
       $rootScope.$on('$stateChangeStart',

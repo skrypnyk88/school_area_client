@@ -6,13 +6,9 @@ toggleMessage.$inject = ['$mdToast'];
 
 function toggleMessage($mdToast) {
   var service = {
-<<<<<<< 432dd6448ea5a85579652742e0f542a28624147a
     showMessages: showMessages,
     returnDataSuccess: returnDataSuccess,
     returnDataErrors: returnDataErrors
-=======
-    showMessages: showMessages
->>>>>>> LVRUBYM-351: Add toggleMessage service
   };
   return service;
 
@@ -36,7 +32,6 @@ function toggleMessage($mdToast) {
       }
     );
   };
-<<<<<<< 432dd6448ea5a85579652742e0f542a28624147a
 
   function returnDataSuccess(response) {
     return service.showMessages(response.data.success);
@@ -45,6 +40,4 @@ function toggleMessage($mdToast) {
   function returnDataErrors(response) {
     return service.showMessages(response.data.errors);
   }
-=======
->>>>>>> LVRUBYM-351: Add toggleMessage service
 }

@@ -51,7 +51,6 @@
   <div class="profile-title ">
     <h1>Edit profile</h1>
   </div>
-
   <div layout="row" layout-align="none" class="profile-main profile-title-update">
     <div class='report report-teacher' flex="50">
       <md-list>
@@ -59,7 +58,7 @@
           <div class='student teacher' layout='row'>
             <form name='uploadForm'>
               <div class='upload-photo upload-photo-teacher'>
-                <img src='{{$ctrl.avatar}}' class='avatar' alt='avatar'>
+                <img src='{{$ctrl.teacher.url}}' class='avatar' alt='avatar'>
                 <label for='file{{$ctrl.teacher.id}}' class='overlay'>
                   <md-icon>add_a_photo</md-icon>
                 </label>
@@ -76,6 +75,7 @@
     </div>
 
     <div flex="50">
+      <form name="teacherForm">
       <div layout="row" class="profile-main-info"  layout-align="center center">
         <div flex="20">
           <b>First Name:</b>
@@ -83,7 +83,11 @@
         <div flex="80">
           <md-input-container class="profile-input-container">
             <label>First Name</label>
-            <input type="text" ng-model="$ctrl.teacher.first_name" required md-maxlength="25">
+            <input type="text" ng-model="$ctrl.teacher.first_name" name="firstName" required md-maxlength="25" ng-minlength="2">
+            <div ng-messages="teacherForm.firstName.$error" style="color:maroon" role="alert">
+              <div ng-message="minlength">Your field is too short</div>
+              <div ng-message="maxlength">Your field is too long</div>
+            </div>
           </md-input-container>
         </div>
       </div>
@@ -95,7 +99,11 @@
         <div flex="80">
           <md-input-container class="profile-input-container">
             <label>Last Name</label>
-            <input type="text" ng-model="$ctrl.teacher.last_name" required md-maxlength="25">
+            <input name="lastName" type="text" ng-model="$ctrl.teacher.last_name" required md-maxlength="25" ng-minlength="2">
+             <div ng-messages="teacherForm.lastName.$error" style="color:maroon" role="alert">
+              <div ng-message="minlength">Your field is too short</div>
+              <div ng-message="maxlength">Your field is too long</div>
+            </div>
           </md-input-container>
         </div>
       </div>
@@ -143,17 +151,15 @@
         <div flex="50">
         </div>
         <div flex="25">
-          <md-button ng-click="showDiv=false; $ctrl.renderProfile()" class="btn gray-btn">Cancel</md-button>
+          <md-button ng-click="$ctrl.hideDiv()" class="btn gray-btn">Cancel</md-button>
         </div>
         <div flex="25">
-          <md-button class="btn green-btn"
-                     ng-click="$ctrl.profileUpdate($ctrl.teacher);
-                               showDiv=false;
-                               $ctrl.renderProfile()">
-                               Update
-          </md-button>
+          <md-card-actions>
+            <md-button class='btn green-btn' type='submit' ng-click="teacherForm.$valid && $ctrl.profileUpdate($ctrl.teacher)">Update</md-button>
+          </md-card-actions>
         </div>
       </div>
+    </form>
     </div>
   </div>
 </div>

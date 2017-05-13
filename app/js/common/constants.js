@@ -21,7 +21,7 @@ module.exports = angular
         {name: 'Potty',             link: '#'},
         {name: 'Nap',               link: 'main.static'},
         {name: 'Rewards',           link: '#'},
-        {name: 'Personal notes',    link: '#'},
+        {name: 'Personal notes',    link: 'main.myDayReport'},
         {name: 'Class notes',       link: '#'}
       ]},
       {name: 'Parens Sharing',  link: '#'},

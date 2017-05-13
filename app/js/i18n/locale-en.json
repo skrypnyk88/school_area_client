@@ -1,4 +1,5 @@
 {
+  "TeacherR": "Teacher report",
   "HELLO": "Hello",
   "TEACHER": "Teacher",
   "PROFILE": "Profile",
@@ -15,5 +16,13 @@
   "OUR_DAY": "Our day",
   "MY_DAY": "My day",
   "BUTTON_LANG_UA": "Ukrainian",
-  "BUTTON_LANG_EN": "English"
+  "BUTTON_LANG_EN": "English",
+  "my_day_report": {
+    "UPDATE_NOTE": "Update note"
+  },
+  "bottle_report": {
+    "ADD_BOTTLE": "Add bottle",
+    "VALID_FORMAT": "Must be a valid time format.",
+    "EMPTY": "Can't be empty."
+  }
 }

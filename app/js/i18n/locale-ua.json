@@ -1,4 +1,5 @@
 {
+  "TeacherR": "Звіт вчителя",
   "HELLO": "Привіт",
   "TEACHER": "Вчитель",
   "PROFILE": "Профіль",
@@ -15,5 +16,13 @@
   "OUR_DAY": "Наш день",
   "MY_DAY": "Мій день",
   "BUTTON_LANG_UA": "Українська",
-  "BUTTON_LANG_EN": "Англійська"
+  "BUTTON_LANG_EN": "Англійська",
+  "my_day_report": {
+    "UPDATE_NOTE": "Оновити звіт"
+  },
+  "bottle_report": {
+    "ADD_BOTTLE": "Додати пляшечку",
+    "VALID_FORMAT": "Має бути валідний формат часу.",
+    "EMPTY": "Не може бути пустим"
+  }
 }

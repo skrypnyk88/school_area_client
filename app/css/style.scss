@@ -1226,6 +1226,7 @@ md-card-content {
   }
 }
 
+
 // Presence Report
 
 .delete {
@@ -1244,4 +1245,125 @@ md-card-content {
 
 .student-btn {
   padding-left: 50px;
+}
+
+// Style for health report
+
+.health-report-title {
+  h3 {
+    color: #ccc;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}
+
+.health-report {
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+
+
+
+  button {
+    background-color: #92c948;
+    border: 1px solid #92c948;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    // margin: 20px 0;
+    min-width: 100px;
+    padding: 10px 15px;
+    text-transform: none;
+    transition: background .3s linear;
+  }
+
+  * {
+    outline: none;
+  }
+
+  .text-area-health-note {
+    border-color: #ccc;
+    border-radius: 10px;
+    color: #555;
+    line-height: 1.43;
+    padding: 10px;
+    resize: none;
+  }
+
+  .button-switch {
+    button {
+      background: white;
+      height: 40px;
+    }
+
+    .left {
+      background: white;
+      border-radius: 10px 0 0 10px;
+      color: #92c948;
+
+      &:hover {
+        background: #92c948;
+        border: 1px solid #92c948;
+        color: white;
+      }
+    }
+
+    .right {
+      border: 1px solid #bd362f;
+      border-radius: 0 10px 10px 0;
+      color: #bd362f;
+
+      &:hover {
+        background: #bd362f;
+        border: 1px solid #bd362f;
+        color: white;
+      }
+    }
+  }
+
+  .true {
+    .left {
+      background: #92c948;
+      border: 1px solid #92c948;
+      color: white;
+
+      &:hover {
+        background: white;
+        color: #92c948;
+      }
+    }
+  }
+
+  .false {
+    .right {
+      background: #bd362f;
+      border: 1px solid #bd362f;
+      color: white;
+
+      &:hover {
+        background: white;
+        border: 1px solid #bd362f;
+        color: #bd362f;
+      }
+    }
+  }
+
+
+  .double-button {
+    margin-top: 0;
+  }
+
+  .update {
+    button {
+      border-radius: 10px;
+      color: white;
+      margin-left: 40px;
+
+      &:hover {
+        background-color: white;
+        border-color: #92c948;
+        color: #92c948;
+      }
+    }
+  }
 }

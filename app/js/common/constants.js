@@ -15,7 +15,7 @@ module.exports = angular
   .constant('menuItems', [
       {name: 'Teacher report',  link: '#', submenu: [
         {name: 'Presence',          link: 'main.presenceReport'},
-        {name: 'Diet',              link: '#'},
+        {name: 'Diet',              link: 'main.healthReport'},
         {name: 'Bottle',            link: 'main.bottleReport'},
         {name: 'Meals',             link: '#'},
         {name: 'Potty',             link: '#'},

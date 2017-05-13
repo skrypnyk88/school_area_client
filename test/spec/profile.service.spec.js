@@ -14,6 +14,11 @@ describe('Profile Test', function() {
       last_name: 'Fox',
       locale: 'ua'
     };
+  var file = {
+    filename: 'test.png',
+    filetype: 'image/png',
+    base64: 'base64'
+  };
 
   beforeEach(angular.mock.module(profileVendor.name,
                                  profileService.name,
@@ -32,27 +37,12 @@ describe('Profile Test', function() {
     $httpBackend.verifyNoOutstandingRequest();
   });
 
-  it('getProfile is define', function() {
-    expect(service.getProfile).toBeDefined();
-  });
-
   it('updateProfile is define', function() {
     expect(service.updateProfile).toBeDefined();
   });
 
-  it('should return teacher json when resolved', function() {
-    $httpBackend.whenGET(constant.SERVER_URL_V1 + '/teachers/' + teacher.id + '.json')
-      .respond(200, teacher);
-    var response;
-    service.getProfile(teacher.id).then(
-      function(data) {
-        response = data;
-      }
-    );
-
-    $httpBackend.flush();
-
-    expect(JSON.stringify(response)).toEqual(JSON.stringify(teacher));
+  it('#uploadPhoto is defined', function() {
+    expect(service.uploadPhoto).toBeDefined();
   });
 
   it('is should updated teacher', function() {
@@ -62,6 +52,21 @@ describe('Profile Test', function() {
     service.updateProfile(teacher).then(function(updateProfile) {
       response = updateProfile;
     });
+
+    $httpBackend.flush();
+
+    expect(JSON.stringify(response)).toEqual(JSON.stringify(teacher));
+  });
+
+  it('should return teacher json when resolved', function() {
+    var response;
+    $httpBackend.whenPUT(constant.SERVER_URL_V1 + '/teachers/' + teacher.id + '/upload.json')
+      .respond(200, teacher);
+    service.uploadPhoto(teacher.id, file).then(
+      function(data) {
+        response = data;
+      }
+    );
 
     $httpBackend.flush();
 

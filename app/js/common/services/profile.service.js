@@ -10,15 +10,11 @@ profileService.$inject = ['profileResource', '$mdToast', 'toggleMessage', '$q'];
 
 function profileService(profileResource, $mdToast, toggleMessage, $q) {
   var service = {
-    getProfile: getProfile,
     updateProfile: updateProfile,
     uploadPhoto: uploadPhoto
+
   };
   return service;
-
-  function getProfile(id) {
-    return profileResource.get({id: id}).$promise.then(responseSuccess, responseFailure);
-  };
 
   function updateProfile(teacher) {
     var params = {teacher: {

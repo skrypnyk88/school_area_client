@@ -24,5 +24,9 @@
     "ADD_BOTTLE": "Add bottle",
     "VALID_FORMAT": "Must be a valid time format.",
     "EMPTY": "Can't be empty."
+  },
+  "presence_report": {
+    "PRESENT": "Present",
+    "ABSENT": "Absent"
   }
 }

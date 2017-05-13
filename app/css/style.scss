@@ -830,7 +830,8 @@ button {
   background-color: #fff;
 
   .student {
-    margin: 10px 150px 10px 10px;
+    margin: 10px;
+    width: 300px;
 
     .avatar {
       border-radius: 50%;
@@ -932,7 +933,7 @@ button {
   outline: none;
   resize: none;
   text-align: center;
-  width: 85px;
+  width: 65px;
 
   &.time {
     margin: 0 5px;
@@ -1223,4 +1224,24 @@ md-card-content {
   .profile-select-language {
     width: 50%;
   }
+}
+
+// Presence Report
+
+.delete {
+  background-color: white;
+  background-image: url('./../img/icons/cross-out.svg');
+  background-repeat: no-repeat;
+  border: hidden;
+  height: 10px;
+  margin-top: 12px;
+  width: 10px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.student-btn {
+  padding-left: 50px;
 }

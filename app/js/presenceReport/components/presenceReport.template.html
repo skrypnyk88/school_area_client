@@ -1,1 +1,19 @@
-<h1>{{ 'HELLO' | translate }}</h1>
+<div class="report" ng-repeat="presenceReport in $ctrl.presenceReports" layout="row" flex>
+    <md-list>
+    <md-list-item>
+    <student-component student="presenceReport.student" class="student" layout="row">
+    </student-component>
+    <section class="student-btn" layout="column" layout-align="center center">
+        <div class="btn-container" layout="row">
+            <md-button ng-click="$ctrl.addReportTime(presenceReport)" class="group-btn green-group-btn">{{ 'presence_report.PRESENT'| translate}}</md-button>
+            <md-button ng-click="$ctrl.updateEndTime(presenceReport)" class="group-btn red-group-btn">{{ 'presence_report.ABSENT'| translate}}</md-button>
+        </div>
+        <div ng-repeat="reportTime in presenceReport.report_time" class="input-container" layout="row" layout-align="space-around">
+            <input name="report_start_{reportTime.id}}_time" ng-blur="$ctrl.updateReportTime(reportTime, presenceReport)"  ng-model="reportTime.start_time" type='datetime' placeholder="HH:mm" class="input-time">
+            <input name="report_end_{{reportTime.id}}_time" ng-blur="$ctrl.updateReportTime(reportTime, presenceReport)"  ng-model="reportTime.end_time" type='datetime' placeholder="HH:mm" class="input-time" ng-if="reportTime.end_time != null" class="end-time-hidden">
+            <button class="delete" ng-click="$ctrl.deleteReportTime(reportTime, presenceReport)"></button>
+        </div>
+    </section>
+    </md-list-item>
+    </md-list>
+</div>

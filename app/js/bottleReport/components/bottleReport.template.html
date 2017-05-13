@@ -9,15 +9,15 @@
       <div class="buttonposition">
         <md-button class="btn green-btn addbottle"
                    ng-click="$ctrl.addBottle(bottleReport)"
-                   class="button">{{ 'bottle_report.ADD_BOTTLE'| translate}}
+                   class="button">Add Bottle
         </md-button>
       </div>
       <div class="position">
         <div ng-repeat="bottle in bottleReport.bottles" class="bottles" >
           <div ng-messages="bottleReportsForm['time_' + bottle.id].$error"
                role="alert">
-            <ng-message when="pattern" class="invalid">{{ 'bottle_report.VALID_FORMAT'| translate}}</ng-message>
-            <ng-message when="required" class="invalid">{{ 'bottle_report.EMPTY'| translate}}</ng-message>
+            <ng-message when="pattern" class="invalid">Must be a valid time format.</ng-message>
+            <ng-message when="required" class="invalid">Can't be empty.</ng-message>
           </div>
         <md-select ng-change="$ctrl.updateBottle(bottle, bottleReport)"
                    name="bottle_{{bottle.id}}_quantity"

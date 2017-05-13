@@ -23,7 +23,8 @@ MainController.$inject = [
   '$translate'
 ];
 
-function MainController($scope, $state, auth, currentGroupDay, currentUser, globalSettings,  $translate) {
+function MainController($scope, $state, auth, currentGroupDay,
+                        currentUser, globalSettings, $translate) {
   var ctrl = this;
 
   ctrl.currentGroupDay = currentGroupDay;
@@ -66,9 +67,6 @@ function MainController($scope, $state, auth, currentGroupDay, currentUser, glob
     localStorage.removeItem('activeSubmenu');
   };
 
-  ctrl.changeLanguage = function(langKey) {
-      $translate.use(langKey);
-    };
   $scope.$watch(
     function() { return currentGroupDay.group_id; },
     function() { $state.reload($state.current); }
@@ -76,6 +74,7 @@ function MainController($scope, $state, auth, currentGroupDay, currentUser, glob
 
   $scope.$watch(
     function() { return currentUser; },
+    function() { $translate.use(currentUser.locale); },
     function(currentUser) { $scope.currentUser = currentUser; }
   );
 };

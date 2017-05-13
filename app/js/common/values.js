@@ -9,5 +9,7 @@ module.exports = angular
     first_name: '',
     last_name: '',
     locale: 'en',
-    url: ''
+    url: '',
+    phone: '',
+    email: ''
   });

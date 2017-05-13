@@ -9,26 +9,34 @@ module.exports = angular
     controller: ProfileController
   });
 
-ProfileController.$inject = ['profileService', 'currentUser', 'toggleMessage', 'globalSettings', '$state'];
+ProfileController.$inject = ['profileService',
+                             'currentUser',
+                             'toggleMessage',
+                             'globalSettings',
+                             '$state'];
 
 function ProfileController(profileService, currentUser, toggleMessage, globalSettings, $state) {
   var ctrl = this;
-  ctrl.teacher = [];
+  ctrl.teacher = currentUser;
+  ctrl.fullname = ctrl.teacher.first_name + ' ' + ctrl.teacher.last_name;
+  ctrl.showDiv = true;
+  ctrl.avatar = ctrl.teacher.url || globalSettings.STUDENT_IMG;
 
   ctrl.renderProfile = function() {profileService.getProfile(currentUser.id).then(
     function(data) {
       ctrl.teacher = data;
-      ctrl.fullname = ctrl.teacher.first_name + ' ' + ctrl.teacher.last_name;
-      ctrl.showDiv = true;
-      ctrl.currentUser = currentUser;
-      ctrl.avatar = ctrl.currentUser.url || globalSettings.STUDENT_IMG;
-
     });
+  };
+
+  ctrl.hideDiv = function() {
+    ctrl.showDiv = true;
   };
 
   ctrl.profileUpdate = function(teacher) {
     profileService.updateProfile(teacher).then(function() {
-      return teacher;
+      currentUser = teacher;
+      ctrl.hideDiv();
+      ctrl.reload();
     });
   };
 
@@ -36,14 +44,9 @@ function ProfileController(profileService, currentUser, toggleMessage, globalSet
     profileService.uploadPhoto(currentUser.id, file).then(
       function(response) {
         currentUser.url = response.url;
-        // reload();
-      },
-      function(errors) {
-        toggleMessage.showMessages(errors);
       }
     );
   };
 
-  // var reload = function() { $state.reload($state.current); };
-  ctrl.renderProfile();
+  ctrl.reload = function() { $state.reload($state.current); };
 };

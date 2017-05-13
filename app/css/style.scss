@@ -2173,14 +2173,20 @@ md-toast {
 // Style for profile component
 
 .profile-title {
-  background-color: $main-color;
+  background-color: $green-color;
+
+  .ng-binding {
+    margin-top: 0;
+  }
 
   h1 {
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-size: 24px;
     font-weight: 100;
+    margin-top: 0;
     padding: 42px 25px;
+    text-align: center;
   }
 }
 

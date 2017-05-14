@@ -1,6 +1,8 @@
 var mainComponent = require('./components/main.component.js');
 var mainRoute = require('./main.route.js');
 var loginModule = require('./../login/login.module.js');
+var forgotPasswordModule = require('./../forgotPassword/forgotPassword.module.js');
+var resetPasswordModule = require('./../resetPassword/resetPassword.module.js');
 var presenceReportModule = require('./../presenceReport/presenceReport.module.js');
 var studentModule = require('./../student/student.module.js');
 var groupService = require('./../common/services/group.service.js');
@@ -12,6 +14,8 @@ var sideBarModule = require('./../sidebar/sidebar.module.js');
 var studentService = require('./../common/services/student.service.js');
 var profileModule = require('./../profile/profile.module.js');
 var toggleMessage = require('./../common/services/toggleMessage/toggleMessage.service.js');
+var healthReportModule = require('./../healthReport/healthReport.module.js');
+var ourDayReportModule = require('./../ourDayReport/ourDayReport.module.js');
 
 require('../../css/style.scss');
 
@@ -29,7 +33,11 @@ module.exports = angular
     myDayReportModule.name,
     sideBarModule.name,
     studentService.name,
-    profileModule.name
+    profileModule.name,
+    forgotPasswordModule.name,
+    resetPasswordModule.name,
+    healthReportModule.name,
+    ourDayReportModule.name
   ])
   .config(['$translateProvider', function($translateProvider) {
     $translateProvider.useStaticFilesLoader({

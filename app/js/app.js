@@ -4,6 +4,8 @@ var constantsModule = require('./common/constants.js');
 var tokenInjector = require('./common/services/tokenInjector.service.js');
 var vendorModule = require('./requirements.js');
 var valuesModule = require('./common/values.js');
+var healthReportModule = require('./healthReport/healthReport.module.js');
+var healthReportResourceModule = require('./common/resources/healthReport.resource.js');
 
 angular
   .module('schoolArea', [
@@ -11,7 +13,9 @@ angular
     constantsModule.name,
     valuesModule.name,
     mainModule.name,
-    tokenInjector.name
+    tokenInjector.name,
+    healthReportModule.name,
+    healthReportResourceModule.name
   ])
  .config(['$locationProvider', '$httpProvider', 'localStorageServiceProvider',
     function($locationProvider, $httpProvider, localStorageServiceProvider) {

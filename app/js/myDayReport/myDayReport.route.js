@@ -1,8 +1,9 @@
 module.exports = angular
   .module('myDayReport.route', [])
-  .config(function($stateProvider) {
-    $stateProvider.state('main.myDayReport', {
-      url: '/my-day-report',
-      template: '<my-day-report></my-day-report>'
-    });
-  });
+  .config(['$stateProvider',
+    function($stateProvider) {
+      $stateProvider.state('main.myDayReport', {
+        url: '/my-day-report',
+        template: '<my-day-report></my-day-report>'
+      });
+    }]);

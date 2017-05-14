@@ -6,7 +6,9 @@ toggleMessage.$inject = ['$mdToast'];
 
 function toggleMessage($mdToast) {
   var service = {
-    showMessages: showMessages
+    showMessages: showMessages,
+    returnDataSuccess: returnDataSuccess,
+    returnDataErrors: returnDataErrors
   };
   return service;
 
@@ -30,4 +32,12 @@ function toggleMessage($mdToast) {
       }
     );
   };
+
+  function returnDataSuccess(response) {
+    return service.showMessages(response.data.success);
+  }
+
+  function returnDataErrors(response) {
+    return service.showMessages(response.data.errors);
+  }
 }

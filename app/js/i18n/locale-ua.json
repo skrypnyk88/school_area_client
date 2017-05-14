@@ -1,22 +1,27 @@
-{
-  "TeacherR": "Звіт вчителя",
-  "HELLO": "Привіт",
-  "TEACHER": "Вчитель",
+{  
   "PROFILE": "Профіль",
   "SIGN_OUT": "Вийти з акаунту",
-  "JOURNAL": "Журнал",
-  "ATTENDANCE": "Присутність",
-  "HEALTH": "Здоровя",
-  "BOTTLE": "Пляшечки",
-  "MEALS": "Їжа",
-  "POTTY": "Туалет",
-  "NAP": "Сон",
-  "ACHIVEMENTS": "Досягнення",
-  "SUPPLIES": "Продовольство",
-  "OUR_DAY": "Наш день",
-  "MY_DAY": "Мій день",
-  "BUTTON_LANG_UA": "Українська",
-  "BUTTON_LANG_EN": "Англійська",
+  "submenu": {
+    "PRESENCE": "Присутність",
+    "HEALTH": "Здоровя",
+    "BOTTLE": "Пляшечки",
+    "MEALS": "Їжа",
+    "POTTY": "Туалет",
+    "NAP": "Сон",
+    "REWARDS": "Досягнення",
+    "PERSONAL_NOTES": "Персональні звіти",
+    "CLASS_NOTES": "Звіт про групу"
+  },
+  "sidebar": {
+    "TEACHER_REPORT": "Звіт вчителя",
+    "PARENTS_SHARING": "Відпрвити батькам",
+    "MESSAGES": "Повідомлення",
+    "NOTIFICATIONS": "Нагадування",
+    "CALENDAR": "Календар",
+    "PHOTO_GALERY": "Фотогалерея",
+    "REWARDS": "Нагороди",
+    "CONTACTS": "Контакти"
+  },
   "my_day_report": {
     "UPDATE_NOTE": "Оновити звіт"
   },
@@ -24,5 +29,40 @@
     "ADD_BOTTLE": "Додати пляшечку",
     "VALID_FORMAT": "Має бути валідний формат часу.",
     "EMPTY": "Не може бути пустим"
+  },
+  "presence_report": {
+    "PRESENT": "Присутній",
+    "ABSENT": "Відсутній"
+  },
+  "health_report": {
+    "SPECIAL_CARE": "Турбота",
+    "NORMAL": "Здоровий",
+    "UPDATE": "Оновити дані"
+  },
+  "profile": {
+    "PROFILE_OF": "Профіль",
+    "FIRST_NAME": "Ім'я:",
+    "LAST_NAME": "Прізвище:",
+    "PHONE": "Телефон:",
+    "LANGUAGE": "Мова:",
+    "EDIT": "Редагувати",
+    "EDIT_PROFILE": "Редагувати профіль",
+    "ADD_PHOTO": "Додати фото",
+    "SHORT_FIELD": "Занадто коротке поле",
+    "LONG_FIELD": "Занадто довге поле",
+    "CANCEL": "Відмінити",
+    "UPDATE": "Оновити"
+  },
+  "our_day_report": {
+    "STUDENTS_ABSENT": "Студенти відсутні.",
+    "ALL_STUDENTS_ABSENT": "Всі студенти сьогодні відсутні.",
+    "UPDATE": "Оновити"
+  },
+  "report_title": {
+    "CLASS_NOTES": "ЗВІТ ПРО ГРУПУ",
+    "MY_DAY": "ПЕРСОНАЛЬНІ ЗВІТИ",
+    "HEALTH_REPORT": "СПЕЦІАЛЬНИЙ ДОГЛЯД",
+    "BOTTLE_REPORT": "ПЛЯШЕЧКИ",
+    "PRESENCE_REPORT": "ПРИСУТНІСТЬ"
   }
 }

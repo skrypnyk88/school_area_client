@@ -1,14 +1,12 @@
 <div class="teacher-report" layout="row">
   <nav class="navbar">
     <ul class="menu">
-       <div ng-if="$ctrl.loc == 'en'">
-      <div  ng-repeat="menu in $ctrl.menuItems">
+      <div ng-repeat="menu in $ctrl.menuItems">
         <li class="menu-item"
             ng-click="$ctrl.setActiveMenu($index)"
             ng-class="$ctrl.activeMenu == $index ? 'active-menu' : ''">
           <a ui-sref={{menu.link}}>
             {{menu.name}}
-            {{$ctrl.loc}}
           </a>
         </li>
         <ul class="submenu"
@@ -22,29 +20,6 @@
           </li>
         </ul>
       </div>
-       </div> 
-      <div ng-if="$ctrl.loc !== 'en'" ng-model="$ctrl.loc">
-      <div  ng-repeat="menu in $ctrl.menuItemss">
-        <li class="menu-item"
-            ng-click="$ctrl.setActiveMenu($index)"
-            ng-class="$ctrl.activeMenu == $index ? 'active-menu' : ''">
-          <a ui-sref={{menu.link}}>
-            {{menu.name}}
-            {{$ctrl.loc}}
-          </a>
-        </li>
-        <ul class="submenu"
-            ng-class="$ctrl.submenuOpened ? 'opened' : 'closed'">
-          <li ng-repeat="submenu in menu.submenu"
-              ng-click="$ctrl.setActiveSubmenu($index)"
-              ng-class="$ctrl.activeSubmenu == $index ? 'active-submenu' : ''">
-            <a ui-sref={{submenu.link}}>
-              {{submenu.name}}
-            </a>
-          </li>
-        </ul>
-      </div>
-       </div> 
     </ul>
   </nav>
 </div>

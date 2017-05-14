@@ -10,12 +10,14 @@ module.exports = function(config) {
     preprocessors: {
       './specs.webpack.js': ['webpack', 'coverage']
     },
+
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['PhantomJS'],
+    singleRun: true,
     concurrency: Infinity,
-    failOnEmptyTestSuite: false
+    failOnEmptyTestSuite : false
   });
 };

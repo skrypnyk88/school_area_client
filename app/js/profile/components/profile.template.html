@@ -1,6 +1,6 @@
 <div ng-if="$ctrl.showDiv">
   <div class="profile-title">
-    <h1>Profile of {{$ctrl.teacher.first_name}} {{$ctrl.teacher.last_name}}</h1>
+    <h1>{{'profile.PROFILE_OF'| translate}} {{$ctrl.teacher.first_name}} {{$ctrl.teacher.last_name}}</h1>
   </div>
 
   <div layout="row" class="profile-main"  layout-align="none">
@@ -13,19 +13,19 @@
     <div flex="50">
       <div layout="row" class="profile-main-info">
         <div flex="50">
-          <b>First name:</b>{{$ctrl.teacher.first_name}}
+          <b>{{'profile.FIRST_NAME'| translate}}</b>{{$ctrl.teacher.first_name}}
         </div>
       </div>
 
       <div layout="row" class="profile-main-info">
         <div flex="50">
-          <b>Last name:</b>{{$ctrl.teacher.last_name}}
+          <b>{{'profile.LAST_NAME'| translate}}</b>{{$ctrl.teacher.last_name}}
         </div>
       </div>
 
       <div layout="row" class="profile-main-info">
         <div flex="50">
-          <b>Phone:</b>{{$ctrl.teacher.phone}}
+          <b>{{'profile.PHONE'| translate}}</b>{{$ctrl.teacher.phone}}
         </div>
       </div>
 
@@ -37,7 +37,7 @@
 
       <div layout="row" class="profile-main-info">
         <div flex="50">
-          <b>Language:</b>{{$ctrl.teacher.locale}}
+          <b>{{'profile.LANGUAGE'| translate}}</b>{{$ctrl.teacher.locale}}
         </div>
       </div>
 
@@ -45,7 +45,7 @@
         <div flex="50">
         </div>
         <div flex="50">
-          <md-button class="btn green-btn" ng-click="$ctrl.showDiv=false">Edit</md-button>
+          <md-button class="btn green-btn" ng-click="$ctrl.showDiv=false">{{'profile.EDIT'| translate}}</md-button>
         </div>
       </div>
     </div>
@@ -55,7 +55,7 @@
 
 <div ng-if="!$ctrl.showDiv">
   <div class="profile-title ">
-    <h1>Edit profile</h1>
+    <h1>{{'profile.EDIT_PROFILE'| translate}}</h1>
   </div>
   <div layout="row" layout-align="none" class="profile-main profile-title-update">
     <div class='report report-teacher' flex="50">
@@ -84,15 +84,15 @@
       <form name="teacherForm">
       <div layout="row" class="profile-main-info"  layout-align="center center">
         <div flex="20">
-          <b>First Name:</b>
+          <b>{{'profile.FIRST_NAME'| translate}}</b>
         </div>
         <div flex="80">
           <md-input-container class="profile-input-container">
-            <label>First Name</label>
+            <label>{{'profile.FIRST_NAME'| translate}}</label>
             <input type="text" ng-model="$ctrl.teacher.first_name" name="firstName" required md-maxlength="25" ng-minlength="2">
             <div ng-messages="teacherForm.firstName.$error" style="color:maroon" role="alert">
-              <div ng-message="minlength">Your field is too short</div>
-              <div ng-message="maxlength">Your field is too long</div>
+              <div ng-message="minlength">{{'profile.SHORT_FIELD'| translate}}</div>
+              <div ng-message="maxlength">{{'profile.LONG_FIELD'| translate}}</div>
             </div>
           </md-input-container>
         </div>
@@ -100,15 +100,15 @@
 
       <div layout="row" class="profile-main-info" layout-align="center center">
         <div flex="20">
-          <b>Last Name:</b>
+          <b>{{'profile.LAST_NAME'| translate}}</b>
         </div>
         <div flex="80">
           <md-input-container class="profile-input-container">
-            <label>Last Name</label>
+            <label>{{'profile.LAST_NAME'| translate}}</label>
             <input name="lastName" type="text" ng-model="$ctrl.teacher.last_name" required md-maxlength="25" ng-minlength="2">
              <div ng-messages="teacherForm.lastName.$error" style="color:maroon" role="alert">
-              <div ng-message="minlength">Your field is too short</div>
-              <div ng-message="maxlength">Your field is too long</div>
+              <div ng-message="minlength">{{'profile.SHORT_FIELD'| translate}}</div>
+              <div ng-message="maxlength">{{'profile.LONG_FIELD'| translate}}</div>
             </div>
           </md-input-container>
         </div>
@@ -116,11 +116,11 @@
 
       <div layout="row" class="profile-main-info" layout-align="center center">
         <div flex="20">
-          <b>Phone:</b>
+          <b>{{'profile.PHONE'| translate}}</b>
         </div>
         <div flex="80">
           <md-input-container class="profile-input-container">
-            <label>Phone</label>
+            <label>{{'profile.PHONE'| translate}}</label>
             <input type="text" ng-model="$ctrl.teacher.phone" required md-maxlength="9">
           </md-input-container>
         </div>
@@ -140,7 +140,7 @@
 
       <div layout="row" class="profile-main-info" layout-align="center center">
         <div flex="20">
-          <b>Language:</b>
+          <b>{{'profile.LANGUAGE'| translate}}</b>
         </div>
         <div flex="80">
           <md-select flex="45"
@@ -157,11 +157,11 @@
         <div flex="50">
         </div>
         <div flex="25">
-          <md-button ng-click="$ctrl.hideDiv(); $ctrl.reload();" class="btn gray-btn">Cancel</md-button>
+          <md-button ng-click="$ctrl.hideDiv(); $ctrl.reload();" class="btn gray-btn">{{'profile.CANCEL'| translate}}</md-button>
         </div>
         <div flex="25">
           <md-card-actions>
-            <md-button class='btn green-btn' type='submit' ng-click="teacherForm.$valid && $ctrl.profileUpdate($ctrl.teacher)">Update</md-button>
+            <md-button class='btn green-btn' type='submit' ng-click="teacherForm.$valid && $ctrl.profileUpdate($ctrl.teacher)">{{'profile.UPDATE'| translate}}</md-button>
           </md-card-actions>
         </div>
       </div>

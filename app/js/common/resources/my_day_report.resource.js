@@ -14,4 +14,3 @@ function myDayReportResource($resource, globalSettings, currentGroupDay) {
     day: currentGroupDay.day},
   {'update': {method: 'PUT'}});
 }
-

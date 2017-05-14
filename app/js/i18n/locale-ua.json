@@ -1,22 +1,27 @@
-{
-  "TeacherR": "Звіт вчителя",
-  "HELLO": "Привіт",
-  "TEACHER": "Вчитель",
+{  
   "PROFILE": "Профіль",
   "SIGN_OUT": "Вийти з акаунту",
-  "JOURNAL": "Журнал",
-  "ATTENDANCE": "Присутність",
-  "HEALTH": "Здоровя",
-  "BOTTLE": "Пляшечки",
-  "MEALS": "Їжа",
-  "POTTY": "Туалет",
-  "NAP": "Сон",
-  "ACHIVEMENTS": "Досягнення",
-  "SUPPLIES": "Продовольство",
-  "OUR_DAY": "Наш день",
-  "MY_DAY": "Мій день",
-  "BUTTON_LANG_UA": "Українська",
-  "BUTTON_LANG_EN": "Англійська",
+  "submenu": {
+    "PRESENCE": "Присутність",
+    "HEALTH": "Здоровя",
+    "BOTTLE": "Пляшечки",
+    "MEALS": "Їжа",
+    "POTTY": "Туалет",
+    "NAP": "Сон",
+    "REWARDS": "Досягнення",
+    "PERSONAL_NOTES": "Персональні звіти",
+    "CLASS_NOTES": "Звіт про групу"
+  },
+  "sidebar": {
+    "TEACHER_REPORT": "Звіт вчителя",
+    "PARENTS_SHARING": "Відпрвити батькам",
+    "MESSAGES": "Повідомлення",
+    "NOTIFICATIONS": "Нагадування",
+    "CALENDAR": "Календар",
+    "PHOTO_GALERY": "Фотогалерея",
+    "REWARDS": "Нагороди",
+    "CONTACTS": "Контакти"
+  },
   "my_day_report": {
     "UPDATE_NOTE": "Оновити звіт"
   },
@@ -55,8 +60,8 @@
     "UPDATE": "Оновити"
   },
   "report_title": {
-    "CLASS_NOTES": "НАШ ДЕНЬ",
-    "MY_DAY": "МІЙ ДЕНЬ",
+    "CLASS_NOTES": "ЗВІТ ПРО ГРУПУ",
+    "MY_DAY": "ПЕРСОНАЛЬНІ ЗВІТИ",
     "HEALTH_REPORT": "СПЕЦІАЛЬНИЙ ДОГЛЯД",
     "BOTTLE_REPORT": "ПЛЯШЕЧКИ",
     "PRESENCE_REPORT": "ПРИСУТНІСТЬ"

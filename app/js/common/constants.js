@@ -22,7 +22,7 @@ module.exports = angular
         {name: 'Personal notes',    link: 'main.myDayReport'},
         {name: 'Class notes',       link: 'main.ourDayReport'}
       ]},
-      {name: 'Parens Sharing',  link: '#'},
+      {name: 'Parents Sharing',  link: '#'},
       {name: 'Messages',        link: '#'},
       {name: 'Notifications',   link: '#'},
       {name: 'Calendar',        link: '#'},

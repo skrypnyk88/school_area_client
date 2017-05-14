@@ -1,22 +1,27 @@
 {
-  "TeacherR": "Teacher report",
-  "HELLO": "Hello",
-  "TEACHER": "Teacher",
   "PROFILE": "Profile",
   "SIGN_OUT": "Sign out",
-  "JOURNAL": "Journal",
-  "ATTENDANCE": "Attendance",
-  "HEALTH": "Health",
-  "BOTTLE": "Bottle",
-  "MEALS": "Meals",
-  "POTTY": "Potty",
-  "NAP": "Nap",
-  "ACHIVEMENTS": "Achivements",
-  "SUPPLIES": "Supplies",
-  "OUR_DAY": "Our day",
-  "MY_DAY": "My day",
-  "BUTTON_LANG_UA": "Ukrainian",
-  "BUTTON_LANG_EN": "English",
+  "submenu": {
+    "PRESENCE": "Presence",
+    "HEALTH": "Health",
+    "BOTTLE": "Bottle",
+    "MEALS": "Meals",
+    "POTTY": "Potty",
+    "NAP": "Nap",
+    "REWARDS": "Rewards",
+    "PERSONAL_NOTES": "Personal notes",
+    "CLASS_NOTES": "Class notes"
+  },
+  "sidebar": {
+    "TEACHER_REPORT": "Teacher report",
+    "PARENTS_SHARING": "Parents Sharing",
+    "MESSAGES": "Messages",
+    "NOTIFICATIONS": "Notifications",
+    "CALENDAR": "Calendar",
+    "PHOTO_GALERY": "Photo Gallery",
+    "REWARDS": "Rewards",
+    "CONTACTS": "Contacts"
+  },
   "my_day_report": {
     "UPDATE_NOTE": "Update note"
   },

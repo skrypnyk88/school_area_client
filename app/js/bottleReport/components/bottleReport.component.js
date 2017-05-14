@@ -9,9 +9,9 @@ module.exports = angular
   controller: BottleReportController
 });
 
-BottleReportController.$inject = ['bottleReportService'];
+BottleReportController.$inject = ['bottleReportService', '$filter'];
 
-function BottleReportController(bottleReportService) {
+function BottleReportController(bottleReportService, $filter) {
   var ctrl = this;
 
   ctrl.timePattern = '([01]?[0-9]{1}|2[0-3]{1}):[0-5]{1}[0-9]{1}';
@@ -37,7 +37,7 @@ function BottleReportController(bottleReportService) {
   };
 
   ctrl.deleteBottle = function(bottle, bottleReport) {
-    if (confirm('Are you sure, you want to delete this bottle?')) {
+    if (confirm($filter('translate')('bottle_report.CONFIRM'))) {
       bottleReportService.deleteBottle(bottle, bottleReport).then(function() {
         loadBottleReports();
       });

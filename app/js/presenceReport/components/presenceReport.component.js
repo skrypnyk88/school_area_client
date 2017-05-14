@@ -31,6 +31,7 @@ function PresenceReportController(presenceReportService, toggleMessage) {
       presenceReportService.addReportTime(presenceReport)
                        .then(function(reportTime) {
           presenceReport.report_time.push(reportTime);
+          ctrl.loadPresenceReports();
         });
       ctrl.loadPresenceReports();
     };

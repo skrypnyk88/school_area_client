@@ -28,5 +28,24 @@
   "presence_report": {
     "PRESENT": "Присутній",
     "ABSENT": "Відсутній"
+  },
+  "health_report": {
+    "SPECIAL_CARE": "Турбота",
+    "NORMAL": "Здоровий",
+    "UPDATE": "Обновити дані"
+  },
+  "profile": {
+    "PROFILE_OF": "Профіль",
+    "FIRST_NAME": "Ім'я:",
+    "LAST_NAME": "Прізвище:",
+    "PHONE": "Телефон:",
+    "LANGUAGE": "Мова:",
+    "EDIT": "Редагувати:",
+    "EDIT_PROFILE": "Редагувати профіль:",
+    "ADD_PHOTO": "Додати фото:",
+    "SHORT_FIELD": "Занодто коротке поле",
+    "LONG_FIELD": "Занодто довге поле",
+    "CANCEL": "Відмінити:",
+    "UPDATE": "Оновити:"
   }
 }

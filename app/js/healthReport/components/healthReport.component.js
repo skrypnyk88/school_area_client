@@ -13,7 +13,7 @@ HealthReportController.$inject = ['HealthReport', 'currentGroupDay', '$state'];
 
 function HealthReportController(HealthReport, currentGroupDay, $state) {
   var ctrl = this;
-  ctrl.reports = [];
+  ctrl.reports = {};
   ctrl.currentGroupDay = currentGroupDay;
 
   ctrl.loadHealthReport = function() {

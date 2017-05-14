@@ -33,7 +33,6 @@ function PresenceReportController(presenceReportService, toggleMessage) {
           presenceReport.report_time.push(reportTime);
           ctrl.loadPresenceReports();
         });
-      ctrl.loadPresenceReports();
     };
   };
 
@@ -66,8 +65,8 @@ function PresenceReportController(presenceReportService, toggleMessage) {
       reportTime.end_time = new Date().toLocaleTimeString([], validTime);
       presenceReportService.updateEndTime(reportTime, presenceReport).then(function(reportTime) {
         return reportTime;
+        presenceReport.report_time.push(reportTime);
       });
-      ctrl.loadPresenceReports();
     };
   };
 

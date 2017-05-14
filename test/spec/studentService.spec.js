@@ -1,7 +1,8 @@
 var vendorModule = require('./../../app/js/requirements.js');
 var constantsModule = require('./../../app/js/common/constants.js');
 var valuesModule = require('./../../app/js/common/values.js');
-var msgService = require('./../../app/js/common/services/toggleMessage/toggleMessage.service.js');
+var toggleMessage =
+  require('./../../app/js/common/services/toggleMessage/toggleMessage.service.js');
 var studentService = require('./../../app/js/common/services/student.service.js');
 
 describe('Service: Student', function() {
@@ -32,7 +33,7 @@ describe('Service: Student', function() {
   beforeEach(angular.mock.module(vendorModule.name,
                                  constantsModule.name,
                                  valuesModule.name,
-                                 msgService.name,
+                                 toggleMessage.name,
                                  studentService.name));
 
   beforeEach(inject(function($injector) {
@@ -59,12 +60,26 @@ describe('Service: Student', function() {
     service.uploadPhoto(student.id, file).then(
       function(data) {
         response = data;
-      }
-    );
+      });
 
     $httpBackend.flush();
 
     expect(JSON.stringify(response)).toEqual(JSON.stringify(student));
   });
+
+  it('reset should return error message', inject(function(toggleMessage) {
+      studentServiceResponse.respond(400, errors);
+
+      var errorsResponse;
+      spyOn(toggleMessage, 'showMessages');
+      service.uploadPhoto(student.id, file).then(
+        function(response) {
+          errorsResponse = response.data;
+        });
+
+      $httpBackend.flush();
+
+      expect(JSON.stringify(errorsResponse)).toEqual(JSON.stringify(errors));
+    }));
 });
 

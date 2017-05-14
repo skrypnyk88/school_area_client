@@ -8,8 +8,6 @@ module.exports = angular
     STUDENT_IMG: './app/img/student.png'
   })
   .constant('errorMessages', {
-    NO_AUTH: 'Invalid Email/Password',
-    AUTH_TIMEOUT: 'Session has expired',
     FAIL_RESPONSE: 'Oops! Something went wrong!Please, try again later!'
   })
   .constant('menuItems', [

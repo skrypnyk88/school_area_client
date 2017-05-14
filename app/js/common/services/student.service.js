@@ -26,6 +26,7 @@ function studentService(studentResource, currentGroupDay, toggleMessage) {
       },
       function(response) {
         toggleMessage.showMessages(response.data.errors);
+        return response;
       }
     );
   };

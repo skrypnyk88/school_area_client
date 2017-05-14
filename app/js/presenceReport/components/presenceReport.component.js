@@ -33,6 +33,7 @@ function PresenceReportController(presenceReportService, toggleMessage) {
           presenceReport.report_time.push(reportTime);
           ctrl.loadPresenceReports();
         });
+      ctrl.loadPresenceReports();
     };
   };
 

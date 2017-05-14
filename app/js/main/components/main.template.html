@@ -3,7 +3,7 @@
     <img src="app/img/profile/logo.gif" alt="logo">
   </div>
 
-    <md-select class="group-select" ng-model="$ctrl.currentGroupDay.group_id" >
+    <md-select ng-model="$ctrl.currentGroupDay.group_id" >
       <md-option ng-value="group.id" ng-repeat="group in $ctrl.groups">
         {{ group.name }}
       </md-option>

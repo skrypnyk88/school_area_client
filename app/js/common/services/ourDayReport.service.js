@@ -26,7 +26,6 @@ function OurDayReportService(ourDayReportResource, currentGroupDay) {
 
   function updateReport(description) {
     var params = {
-      // id: '9',
       group_id: currentGroupDay.group_id,
       day: currentGroupDay.day,
       our_day: {description: description}

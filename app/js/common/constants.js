@@ -8,7 +8,7 @@ module.exports = angular
     STUDENT_IMG: './app/img/student.png'
   })
   .constant('errorMessages', {
-    FAIL_RESPONSE: 'Oops! Something went wrong!Please, try again later!'
+    FAIL_RESPONSE: 'Oops! Something went wrong! Please,try again later!'
   })
   .constant('menuItems', [
       {name: 'Teacher report',  link: '#', submenu: [
@@ -17,7 +17,7 @@ module.exports = angular
         {name: 'Bottle',            link: 'main.bottleReport'},
         {name: 'Meals',             link: '#'},
         {name: 'Potty',             link: '#'},
-        {name: 'Nap',               link: 'main.static'},
+        {name: 'Nap',               link: '#'},
         {name: 'Rewards',           link: '#'},
         {name: 'Personal notes',    link: 'main.myDayReport'},
         {name: 'Class notes',       link: 'main.ourDayReport'}

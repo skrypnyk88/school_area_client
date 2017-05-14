@@ -10,16 +10,20 @@ module.exports = angular
   });
 
 SideBarController.$inject = [
-  'menuItems'
+  'menuItems',
+  'menuItemss',
+  'currentUser'
 ];
 
-function SideBarController(menuItems) {
+function SideBarController(menuItems, menuItemss, currentUser) {
   var ctrl = this;
-
+debugger;
   ctrl.menuItems = menuItems;
+  ctrl.menuItemss = menuItemss;
   ctrl.activeMenu = localStorage.getItem('activeMenu') || 0;
   ctrl.activeSubmenu = localStorage.getItem('activeSubmenu') || 0;
-
+  ctrl.loc = currentUser.locale;
+    console.log(ctrl.loc);
   ctrl.setActiveMenu = function(index) {
     ctrl.activeMenu = index;
     localStorage.setItem('activeMenu', index);

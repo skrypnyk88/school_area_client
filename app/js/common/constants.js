@@ -32,4 +32,25 @@ module.exports = angular
       {name: 'Rewards',         link: '#'},
       {name: 'Contacts',        link: '#'}
     ]
+  )
+  .constant('menuItemss', [
+      {name: 'Укр',  link: '#', submenu: [
+        {name: 'Presence',          link: 'main.presenceReport'},
+        {name: 'Diet',              link: '#'},
+        {name: 'Bottle',            link: 'main.bottleReport'},
+        {name: 'Meals',             link: '#'},
+        {name: 'Potty',             link: '#'},
+        {name: 'Nap',               link: 'main.static'},
+        {name: 'Rewards',           link: '#'},
+        {name: 'Personal notes',    link: 'main.myDayReport'},
+        {name: 'Class notes',       link: '#'}
+      ]},
+      {name: 'Parens Sharing',  link: '#'},
+      {name: 'Messages',        link: '#'},
+      {name: 'Notifications',   link: '#'},
+      {name: 'Calendar',        link: '#'},
+      {name: 'Photo Gallery',   link: '#'},
+      {name: 'Rewards',         link: '#'},
+      {name: 'Contacts',        link: '#'}
+    ]
   );

@@ -1367,3 +1367,36 @@ md-card-content {
     }
   }
 }
+
+// Styles Our-day report
+
+.report-title {
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+  h1 {
+    flex: 100;
+    color: #55585e;
+    font-weight: 300;
+    margin: 15.5px 0;
+    text-align-last: center;
+  }
+}
+
+.our-day-report{
+  border-left: 1px solid #ebebeb;
+  padding: 10px 50px;
+
+  h1 {
+    margin: 0;
+    color: red;
+    font-weight: 300;
+  }
+
+  .students {
+    border-right: 1px solid #ebebeb;
+  }
+}
+
+* {
+  outline: none;
+}

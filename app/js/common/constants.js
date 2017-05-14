@@ -15,14 +15,14 @@ module.exports = angular
   .constant('menuItems', [
       {name: 'Teacher report',  link: '#', submenu: [
         {name: 'Presence',          link: 'main.presenceReport'},
-        {name: 'Diet',              link: 'main.healthReport'},
+        {name: 'Health',              link: 'main.healthReport'},
         {name: 'Bottle',            link: 'main.bottleReport'},
         {name: 'Meals',             link: '#'},
         {name: 'Potty',             link: '#'},
         {name: 'Nap',               link: 'main.static'},
         {name: 'Rewards',           link: '#'},
         {name: 'Personal notes',    link: 'main.myDayReport'},
-        {name: 'Class notes',       link: '#'}
+        {name: 'Class notes',       link: 'main.ourDayReport'}
       ]},
       {name: 'Parens Sharing',  link: '#'},
       {name: 'Messages',        link: '#'},

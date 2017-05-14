@@ -15,7 +15,7 @@ var studentService = require('./../common/services/student.service.js');
 var profileModule = require('./../profile/profile.module.js');
 var toggleMessage = require('./../common/services/toggleMessage/toggleMessage.service.js');
 var healthReportModule = require('./../healthReport/healthReport.module.js');
-
+var ourDayReportModule = require('./../ourDayReport/ourDayReport.module.js');
 
 require('../../css/style.scss');
 
@@ -36,8 +36,8 @@ module.exports = angular
     profileModule.name,
     forgotPasswordModule.name,
     resetPasswordModule.name,
-    healthReportModule.name
-
+    healthReportModule.name,
+    ourDayReportModule.name
   ])
   .config(['$translateProvider', function($translateProvider) {
     $translateProvider.useStaticFilesLoader({

@@ -4,16 +4,16 @@
     </student-component>
   </div>
 
-  <div flex="25" ng-class="report.special_care == true ? 'true' : 'false'"
+  <div flex="25" ng-class="report.special_care == true ? 'red' : 'green'"
                  layout="row"
                  class="button-switch">
     <button ng-click="report.special_care = true"
             class="group-x left double-button">
-      Spacial care
+      {{'health_report.SPECIAL_CARE'| translate}}
     </button>
     <button ng-click="report.special_care = false"
             class="group-x right double-button">
-      Normal
+      {{'health_report.NORMAL'| translate}}
     </button>
   </div>
   <div flex="30">
@@ -24,7 +24,7 @@
   <div flex="20" class="update" >
     <button class="group-x update-note-button"
             ng-click="$ctrl.healthReportUpdate(report); $ctrl.reloadRoute()">
-      Update note
+     {{'health_report.UPDATE'| translate}}
     </button>
   </div>
 </div>

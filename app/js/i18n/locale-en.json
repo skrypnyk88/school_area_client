@@ -28,5 +28,24 @@
   "presence_report": {
     "PRESENT": "Present",
     "ABSENT": "Absent"
+  },
+  "health_report": {
+    "SPECIAL_CARE": "Special care",
+    "NORMAL": "Normal",
+    "UPDATE": "Update note"
+  },
+  "profile": {
+    "PROFILE_OF": "Profile of",
+    "FIRST_NAME": "First name:",
+    "LAST_NAME": "Last name:",
+    "PHONE": "Phone:",
+    "LANGUAGE": "Language:",
+    "EDIT": "Edit:",
+    "EDIT_PROFILE": "Edit profile:",
+    "ADD_PHOTO": "Add photo:",
+    "SHORT_FIELD": "Your field is too short",
+    "LONG_FIELD": "Your field is too long",
+    "CANCEL": "Cancel:",
+    "UPDATE": "Update:"
   }
 }

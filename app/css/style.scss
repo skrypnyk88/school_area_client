@@ -1521,3 +1521,41 @@ md-toast {
 .md-toast-animating {
   overflow: auto !important;
 }
+
+.submenu.opened {
+    background: white;
+}
+
+.submenu li {
+    background: white;
+}
+
+.menu div:first-child {
+    background: white;
+}
+
+.submenu li:first-child {
+    margin-top: 10px;
+}
+
+.navbar {
+  width: 300px;
+}
+
+.teacher-report .navbar .menu div ul.submenu li a {
+  padding: 10px 0 10px 110px;
+}
+
+.teacher-report .navbar .menu div ul.submenu li a:before {
+  left: 60px;
+  right: 0;
+}
+
+.teacher-report .navbar .menu div li.menu-item a {
+  padding: 20px 0 20px 90px;
+}
+
+.teacher-report .navbar .menu div li.menu-item a:before {
+  left: 30px;
+  right: 0;
+}

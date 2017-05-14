@@ -14,9 +14,16 @@ function TokenInjector($q, $injector, localStorageService, globalSettings) {
       return config;
     },
     responseError: function(response) {
+      var auth = $injector.get('auth');
+      var toggleMessage = $injector.get('toggleMessage');
+
       if (response.status === 401) {
-        var auth = $injector.get('auth');
         auth.removeToken();
+      };
+
+      if (response.status === -1) {
+        auth.removeToken();
+        toggleMessage.showMessages(['Server is down']);
       }
       return $q.reject(response);
     }

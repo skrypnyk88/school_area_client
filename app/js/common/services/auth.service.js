@@ -8,20 +8,18 @@ module.exports = angular
 
 AuthFactory.$inject = [
   '$state',
-  '$mdToast',
   'localStorageService',
   'globalSettings',
-  'errorMessages',
+  'toggleMessage',
   'authResource',
   'currentUser'
 ];
 
 function AuthFactory(
   $state,
-  $mdToast,
   localStorageService,
   globalSettings,
-  errorMessages,
+  toggleMessage,
   authResource,
   currentUser
 ) {
@@ -38,8 +36,6 @@ function AuthFactory(
     logout: logout,
     removeToken: removeToken,
     redirect: redirect,
-    getErrorMsg: getErrorMsg,
-    toggleErrorMsg: toggleErrorMsg,
     saveCurrentUser: saveCurrentUser
   };
 
@@ -66,7 +62,7 @@ function AuthFactory(
         $state.go(savedState);
       },
       function(response) {
-        service.toggleErrorMsg(response);
+        toggleMessage.showMessages(response.data.errors);
       });
   }
 
@@ -77,7 +73,7 @@ function AuthFactory(
         service.saveCurrentUser(response.data);
       },
       function(response) {
-        service.toggleErrorMsg(response);
+        toggleMessage.showMessages(response.data.errors);
         service.removeToken();
       });
   }
@@ -101,25 +97,6 @@ function AuthFactory(
   function redirect(event, to) {
     event.preventDefault();
     $state.go(to);
-  }
-
-  function getErrorMsg(status) {
-    var errors = {
-      401: errorMessages.NO_AUTH,
-      419: errorMessages.AUTH_TIMEOUT
-    };
-    return errors[status];
-  }
-
-  function toggleErrorMsg(response) {
-    var msg = service.getErrorMsg(response.status);
-
-    $mdToast.show({
-      template: '<md-toast><div class="md-toast-content">' +
-                  msg +
-                '</div></md-toast>',
-      position: 'top right'
-    });
   }
 
   function saveCurrentUser(response) {

@@ -1,19 +1,19 @@
 <div class="report-title" layout="row">
   <h1>{{ 'report_title.PRESENCE_REPORT'| translate}}</h1>
 </div>
-<div class="report" ng-repeat="presenceReport in $ctrl.presenceReports" layout="row" flex>
+<div class="report presence-report" ng-repeat="presenceReport in $ctrl.presenceReports" layout="row" flex>
     <md-list>
     <md-list-item>
     <student-component student="presenceReport.student" class="student" layout="row">
     </student-component>
-    <section class="student-btn" layout="column" layout-align="center center">
-        <div class="btn-container" layout="row">
-            <md-button ng-click="$ctrl.addReportTime(presenceReport)" class="group-btn green-group-btn">{{ 'presence_report.PRESENT'| translate}}</md-button>
-            <md-button ng-click="$ctrl.updateEndTime(presenceReport)" class="group-btn red-group-btn">{{ 'presence_report.ABSENT'| translate}}</md-button>
+    <section class="student-btn center-class" layout="column" layout-align="center center">
+        <div class="btn-container button-switch" layout="row" ng-class="presenceReport.report_time.slice(-1)[0].end_time == fasle?  'red':'green'  " >
+            <button ng-click="$ctrl.addReportTime(presenceReport)" class="group-btn  green-group-btn left">{{'presence_report.PRESENT'| translate}}</button>
+            <md-button ng-click="$ctrl.updateEndTime(presenceReport)" class="group-btn red-group-btn right">{{'presence_report.ABSENT'| translate}}</button>
         </div>
-        <div ng-repeat="reportTime in presenceReport.report_time" class="input-container" layout="row" layout-align="space-around">
-            <input name="report_start_{reportTime.id}}_time" ng-blur="$ctrl.updateReportTime(reportTime, presenceReport)"  ng-model="reportTime.start_time" type='datetime' placeholder="HH:mm" class="input-time">
-            <input name="report_end_{{reportTime.id}}_time" ng-blur="$ctrl.updateReportTime(reportTime, presenceReport)"  ng-model="reportTime.end_time" type='datetime' placeholder="HH:mm" class="input-time" ng-if="reportTime.end_time != null" class="end-time-hidden">
+        <div ng-repeat="reportTime in presenceReport.report_time" class="input-container" layout="row" layout-align="space-around" flex >
+            <input name="report_start_{reportTime.id}}_time" ng-blur="$ctrl.updateReportTime(reportTime, presenceReport)"  ng-model="reportTime.start_time" type='datetime' placeholder="00:00" class="input-time">
+            <input name="report_end_{{reportTime.id}}_time" ng-blur="$ctrl.updateReportTime(reportTime, presenceReport)"  ng-model="reportTime.end_time" type='datetime' placeholder="00:00" class="input-time" ng-if="reportTime.end_time != null" class="end-time-hidden">
             <button class="delete" ng-click="$ctrl.deleteReportTime(reportTime, presenceReport)"></button>
         </div>
     </section>

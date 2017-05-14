@@ -27,8 +27,8 @@
   },
   "bottle_report": {
     "ADD_BOTTLE": "Add bottle",
-    "VALID_FORMAT": "Must be a valid time format.",
-    "EMPTY": "Can't be empty.",
+    "VALID_FORMAT": "Must be a valid time format",
+    "EMPTY": "Can't be empty",
     "CONFIRM": "Are you sure, you want to delete this bottle?"
   },
   "presence_report": {

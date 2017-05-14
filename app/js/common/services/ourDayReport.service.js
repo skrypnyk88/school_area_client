@@ -4,9 +4,9 @@ module.exports = angular
   .module('ourDayReport.service', [ourDayReportResource.name])
   .factory('OurDayReportService', OurDayReportService);
 
-OurDayReportService.$inject = ['ourDayReportResource', 'currentGroupDay'];
+OurDayReportService.$inject = ['ourDayReportResource', 'currentGroupDay', 'toggleMessage'];
 
-function OurDayReportService(ourDayReportResource, currentGroupDay) {
+function OurDayReportService(ourDayReportResource, currentGroupDay, toggleMessage) {
   var service = {
    getReport: getReport,
    updateReport: updateReport
@@ -19,7 +19,6 @@ function OurDayReportService(ourDayReportResource, currentGroupDay) {
       day: currentGroupDay.day
     }
     return ourDayReportResource.get(params).$promise.then(function(data) {
-      console.log(data);
       return data;
     });
   };
@@ -30,8 +29,15 @@ function OurDayReportService(ourDayReportResource, currentGroupDay) {
       day: currentGroupDay.day,
       our_day: {description: description}
     };
-    return ourDayReportResource.update(params).$promise.then(function(description){
-      return description;
-    });
+    return ourDayReportResource.update(params).$promise.then(responseSuccess, responseFailure);
+  };
+
+  function responseSuccess(data) {
+    toggleMessage.showMessages(["OK!"]);
+    return data;
+  };
+
+  function responseFailure(response) {
+    toggleMessage.showMessages(response.data.errors);
   };
 };

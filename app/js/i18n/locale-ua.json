@@ -32,7 +32,7 @@
   "health_report": {
     "SPECIAL_CARE": "Турбота",
     "NORMAL": "Здоровий",
-    "UPDATE": "Обновити дані"
+    "UPDATE": "Оновити дані"
   },
   "profile": {
     "PROFILE_OF": "Профіль",
@@ -40,12 +40,24 @@
     "LAST_NAME": "Прізвище:",
     "PHONE": "Телефон:",
     "LANGUAGE": "Мова:",
-    "EDIT": "Редагувати:",
-    "EDIT_PROFILE": "Редагувати профіль:",
-    "ADD_PHOTO": "Додати фото:",
-    "SHORT_FIELD": "Занодто коротке поле",
-    "LONG_FIELD": "Занодто довге поле",
-    "CANCEL": "Відмінити:",
-    "UPDATE": "Оновити:"
+    "EDIT": "Редагувати",
+    "EDIT_PROFILE": "Редагувати профіль",
+    "ADD_PHOTO": "Додати фото",
+    "SHORT_FIELD": "Занадто коротке поле",
+    "LONG_FIELD": "Занадто довге поле",
+    "CANCEL": "Відмінити",
+    "UPDATE": "Оновити"
+  },
+  "our_day_report": {
+    "STUDENTS_ABSENT": "Студенти відсутні.",
+    "ALL_STUDENTS_ABSENT": "Всі студенти сьогодні відсутні.",
+    "UPDATE": "Оновити"
+  },
+  "report_title": {
+    "CLASS_NOTES": "НАШ ДЕНЬ",
+    "MY_DAY": "МІЙ ДЕНЬ",
+    "HEALTH_REPORT": "СПЕЦІАЛЬНИЙ ДОГЛЯД",
+    "BOTTLE_REPORT": "ПЛЯШЕЧКИ",
+    "PRESENCE_REPORT": "ПРИСУТНІСТЬ"
   }
 }

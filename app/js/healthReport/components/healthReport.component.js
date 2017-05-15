@@ -28,8 +28,8 @@ function HealthReportController(HealthReport, currentGroupDay, $state) {
     HealthReport.updateReports(report.health_note,
                                report.special_care,
                                report.id)
-      .then(function(note) {
-      return note;
+      .then(function(data) {
+      return data;
     });
   };
 

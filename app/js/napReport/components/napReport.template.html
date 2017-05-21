@@ -1,0 +1,22 @@
+<div class="report-title" layout="row">
+  <h1>{{ 'report_title.NAP_REPORT'| translate}}</h1>
+</div>
+<div class="report presence-report" ng-repeat="napReport in $ctrl.napReports" layout="row" flex>
+    <md-list>
+    <md-list-item>
+    <student-component student="napReport.student" class="student" layout="row">
+    </student-component>
+    <section class="student-btn center-class" layout="column" layout-align="center center">
+        <div class="btn-container button-switch" layout="row" ng-class="napReport.report_time.slice(-1)[0].end_time == fasle?  'red':'green'  " >
+            <button ng-click="$ctrl.addReportTime(napReport)" id="myBtn_{reportTime.id}}_time" class="group-btn  green-group-btn left">{{'nap_report.PRESENT'| translate}}</button>
+            <md-button ng-click="$ctrl.updateEndTime(napReport)" class="group-btn red-group-btn right">{{'nap_report.ABSENT'| translate}}</button>
+        </div>
+        <div ng-repeat="reportTime in napReport.report_time" class="input-container" layout="row" layout-align="space-around" flex >
+            <input name="report_start_{reportTime.id}}_time" ng-blur="$ctrl.updateReportTime(reportTime, napReport)"  ng-model="reportTime.start_time" type='datetime' placeholder="00:00" class="input-time">
+            <input name="report_end_{{reportTime.id}}_time" ng-blur="$ctrl.updateReportTime(reportTime, napReport)"  ng-model="reportTime.end_time" type='datetime' placeholder="00:00" class="input-time" ng-if="reportTime.end_time != null" class="end-time-hidden">
+            <button class="delete" ng-click="$ctrl.deleteReportTime(reportTime, napReport)"></button>
+        </div>
+    </section>
+    </md-list-item>
+    </md-list>
+</div>

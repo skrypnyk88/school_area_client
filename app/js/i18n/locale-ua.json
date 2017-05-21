@@ -33,7 +33,17 @@
   },
   "presence_report": {
     "PRESENT": "Присутній",
-    "ABSENT": "Відсутній"
+    "ABSENT": "Відсутній",
+    "CONFIRM": "Ви впевнені, що хочете видалити присутність?",
+    "VALIDATION": "Невалідні дані",
+    "TIME": "Час прибуття повинен бути раніший ніж відбуття",
+    "EDIT": "Спочатку додайте час коли студент пішов",
+    "SERVER": "Проблеми з сервером"
+  },
+  "nap_report": {
+    "PRESENT": "Заснув",
+    "ABSENT": "Проснувся",
+    "CONFIRM": "Ви впевнені, що хочете видалити репорт сну?"
   },
   "health_report": {
     "SPECIAL_CARE": "Турбота",
@@ -64,10 +74,15 @@
     "MY_DAY": "ПЕРСОНАЛЬНІ ЗВІТИ",
     "HEALTH_REPORT": "СПЕЦІАЛЬНИЙ ДОГЛЯД",
     "BOTTLE_REPORT": "ПЛЯШЕЧКИ",
+<<<<<<< d20409001d823fb1e6dfd4dc6ee7dfe2deefb101
     "PRESENCE_REPORT": "ПРИСУТНІСТЬ"
   },
   "all_reports": {
     "STUDENTS_ABSENT": "Студенти відсутні.",
     "ALL_STUDENTS_ABSENT": "Всі студенти сьогодні відсутні."
+=======
+    "PRESENCE_REPORT": "ПРИСУТНІСТЬ",
+    "NAP_REPORT": "CОН"
+>>>>>>> LVRUBYM-191: add Nap Report
   }
 }

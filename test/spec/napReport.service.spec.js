@@ -1,11 +1,11 @@
-var presenceReportService = require('./../../app/js/common/services/presenceReport.service.js');
+var napReportService = require('./../../app/js/common/services/napReport.service.js');
 var requirements = require('./../../app/js/requirements.js');
 var values = require('./../../app/js/common/values.js');
 var constants = require('./../../app/js/common/constants.js');
 var toggleMessage =
   require('./../../app/js/common/services/toggleMessage/toggleMessage.service.js');
 
-describe('PresenceReport Test', function() {
+describe('Nap Report Test', function() {
   var service;
   var $httpBackend;
 
@@ -13,7 +13,7 @@ describe('PresenceReport Test', function() {
                 first_name: 'Misha',
                 last_name: 'Shtogryn'};
 
-  var presenceReport = {id: 1,
+  var napReport = {id: 1,
                       day: '2017-05-08',
                       group_id: 1,
                       student: student,
@@ -24,20 +24,20 @@ describe('PresenceReport Test', function() {
                 end_time: '22:22',
                 reportable_id: 1};
 
-  var presenceReports = [presenceReport];
+  var napReports = [napReport];
 
   var errors = {
     errors: ['Error message']
   };
 
   beforeEach(angular.mock.module(requirements.name,
-                                 presenceReportService.name,
+                                 napReportService.name,
                                  values.name,
                                  toggleMessage.name,
                                  constants.name));
 
   beforeEach(inject(function($injector) {
-    service = $injector.get('presenceReportService');
+    service = $injector.get('napReportService');
     $httpBackend = $injector.get('$httpBackend');
   }));
 
@@ -46,8 +46,8 @@ describe('PresenceReport Test', function() {
     $httpBackend.verifyNoOutstandingRequest();
   });
 
-  it('is define getPresenceReports', function() {
-    expect(service.getPresenceReports).toBeDefined();
+  it('is define getNapReports', function() {
+    expect(service.getNapReports).toBeDefined();
   });
 
   it('is define addReportTime', function() {
@@ -70,24 +70,24 @@ describe('PresenceReport Test', function() {
                                                               globalSettings,
                                                               currentGroupDay) {
     $httpBackend.whenGET(globalSettings.SERVER_URL_V1 +
-                        '/presence_reports.json?group_id=' + currentGroupDay.group_id)
-    .respond(200, presenceReports);
+                        '/nap_reports.json?group_id=' + currentGroupDay.group_id)
+    .respond(200, napReports);
     var response;
     spyOn(toggleMessage, 'showMessages');
-    service.getPresenceReports().then(function(Reports) {
+    service.getNapReports().then(function(Reports) {
       response = Reports;
     });
 
     $httpBackend.flush();
 
-    expect(JSON.stringify(response)).toEqual(JSON.stringify(presenceReports));
+    expect(JSON.stringify(response)).toEqual(JSON.stringify(napReports));
   }));
 
   it('is should updated report Time', inject(function(toggleMessage, globalSettings) {
-    $httpBackend.whenPUT(globalSettings.SERVER_URL_V1 + '/presence_reports/' +
-      presenceReport.id + '/report_times/' + reportTime.id + '.json').respond(200, reportTime);
+    $httpBackend.whenPUT(globalSettings.SERVER_URL_V1 + '/nap_reports/' +
+      napReport.id + '/report_times/' + reportTime.id + '.json').respond(200, reportTime);
     var response;
-    service.updateReportTime(reportTime, presenceReport).then(function(updatedReport) {
+    service.updateReportTime(reportTime, napReport).then(function(updatedReport) {
       response = updatedReport;
     });
 
@@ -97,11 +97,11 @@ describe('PresenceReport Test', function() {
   }));
 
   it('error message updated report Time', inject(function(toggleMessage, globalSettings) {
-    $httpBackend.whenPUT(globalSettings.SERVER_URL_V1 + '/presence_reports/' +
-      presenceReport.id + '/report_times/' + reportTime.id + '.json').respond(400, errors);
+    $httpBackend.whenPUT(globalSettings.SERVER_URL_V1 + '/nap_reports/' +
+      napReport.id + '/report_times/' + reportTime.id + '.json').respond(400, errors);
     var response;
     spyOn(toggleMessage, 'returnDataErrors');
-    service.updateReportTime(reportTime, presenceReport).then(function(updatedReport) {
+    service.updateReportTime(reportTime, napReport).then(function(updatedReport) {
       response = updatedReport;
     });
 
@@ -111,10 +111,10 @@ describe('PresenceReport Test', function() {
   }));
 
   it('is should updated end report Time', inject(function(toggleMessage, globalSettings) {
-    $httpBackend.whenPUT(globalSettings.SERVER_URL_V1 + '/presence_reports/' +
-      presenceReport.id + '/report_times/' + reportTime.id + '.json').respond(200, reportTime);
+    $httpBackend.whenPUT(globalSettings.SERVER_URL_V1 + '/nap_reports/' +
+      napReport.id + '/report_times/' + reportTime.id + '.json').respond(200, reportTime);
     var response;
-    service.updateEndTime(reportTime, presenceReport).then(function(updatedReport) {
+    service.updateEndTime(reportTime, napReport).then(function(updatedReport) {
       response = updatedReport;
     });
 
@@ -124,11 +124,11 @@ describe('PresenceReport Test', function() {
   }));
 
   it('error message updated end report Time', inject(function(toggleMessage, globalSettings) {
-    $httpBackend.whenPUT(globalSettings.SERVER_URL_V1 + '/presence_reports/' +
-      presenceReport.id + '/report_times/' + reportTime.id + '.json').respond(400, errors);
+    $httpBackend.whenPUT(globalSettings.SERVER_URL_V1 + '/nap_reports/' +
+      napReport.id + '/report_times/' + reportTime.id + '.json').respond(400, errors);
     var response;
     spyOn(toggleMessage, 'returnDataErrors');
-    service.updateEndTime(reportTime, presenceReport).then(function(updatedReport) {
+    service.updateEndTime(reportTime, napReport).then(function(updatedReport) {
       response = updatedReport;
     });
 
@@ -138,10 +138,10 @@ describe('PresenceReport Test', function() {
   }));
 
   it('is should create new report Time', inject(function(toggleMessage, globalSettings) {
-    $httpBackend.whenPOST(globalSettings.SERVER_URL_V1 + '/presence_reports/' +
-      presenceReport.id + '/report_times.json').respond(200, reportTime);
+    $httpBackend.whenPOST(globalSettings.SERVER_URL_V1 + '/nap_reports/' +
+      napReport.id + '/report_times.json').respond(200, reportTime);
     var response;
-    service.addReportTime(presenceReport).then(function(newReport) {
+    service.addReportTime(napReport).then(function(newReport) {
       response = newReport;
     });
 
@@ -151,11 +151,11 @@ describe('PresenceReport Test', function() {
   }));
 
   it('error message add report Time', inject(function(toggleMessage, globalSettings) {
-    $httpBackend.whenPOST(globalSettings.SERVER_URL_V1 + '/presence_reports/' +
-      presenceReport.id + '/report_times.json').respond(400, errors);
+    $httpBackend.whenPOST(globalSettings.SERVER_URL_V1 + '/nap_reports/' +
+      napReport.id + '/report_times.json').respond(400, errors);
     var response;
     spyOn(toggleMessage, 'returnDataErrors');
-    service.addReportTime(presenceReport).then(function(postReport) {
+    service.addReportTime(napReport).then(function(postReport) {
       response = postReport;
     });
 

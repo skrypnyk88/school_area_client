@@ -4,6 +4,7 @@ var loginModule = require('./../login/login.module.js');
 var forgotPasswordModule = require('./../forgotPassword/forgotPassword.module.js');
 var resetPasswordModule = require('./../resetPassword/resetPassword.module.js');
 var presenceReportModule = require('./../presenceReport/presenceReport.module.js');
+var napReportModule = require('./../napReport/napReport.module.js');
 var studentModule = require('./../student/student.module.js');
 var groupService = require('./../common/services/group.service.js');
 var staticModule = require('./../static/static.module.js');
@@ -22,6 +23,7 @@ module.exports = angular
     mainRoute.name,
     loginModule.name,
     presenceReportModule.name,
+    napReportModule.name,
     studentModule.name,
     bottleReportModule.name,
     groupService.name,

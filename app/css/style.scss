@@ -14,15 +14,8 @@ main {
   height: 100%;
 }
 
-<<<<<<< 379f0a8c4c1289155443946b2927dc8657f0fd6c
 * {
   box-sizing: border-box;
-=======
-html,
-body,
-main {
-  height: 100%;
->>>>>>> LVRUBYM-191: created presenceReport
 }
 
 .hero-container {
@@ -31,11 +24,7 @@ main {
 }
 
 .md-accent {
-<<<<<<< 379f0a8c4c1289155443946b2927dc8657f0fd6c
   color: white;
-=======
-  color: white !important;
->>>>>>> LVRUBYM-191: created presenceReport
 }
 
 .header {
@@ -477,25 +466,14 @@ main {
     }
   }
 
-<<<<<<< 379f0a8c4c1289155443946b2927dc8657f0fd6c
   a {
     font-size: 17px;
     font-weight: 400;
     text-decoration: none;
   }
 
-=======
-login-component {
-  .hero-container {
-    background-image: url('../img/misc/pattern.png');
-  }
-
-  .login-form {
-    margin-top: 15vh;
-    width: 300px;
-  }
->>>>>>> LVRUBYM-191: created presenceReport
 }
+
 //style for static.html
 @mixin border {
   border-bottom: 1px solid #ebebeb;
@@ -564,8 +542,7 @@ login-component {
   background-color: #fff;
 
   .student {
-    margin: 10px;
-    width: 300px;
+    margin: 10px 150px 10px 10px;
 
     .avatar {
       border-radius: 50%;
@@ -610,7 +587,9 @@ login-component {
         background-color: #fff;
         border: 1px solid $green-color;
         color: #55585e;
+
       }
+
     }
   }
 }
@@ -622,32 +601,15 @@ login-component {
   border-radius: 0 20px 20px 0;
   color: #e1e1e1;
   text-transform: $text-transform;
-
-  &:not([disabled]) {
-    &:hover {
-      background-color: $red-color;
-      color: #fff;
-    }
-
-    &:focus {
-      background-color: $red-color;
-      border: $btn-border;
-      color: #fff;
-
-      &:hover {
-        background-color: #fff;
-        border: 1px solid $red-color;
-        color: #55585e;
-      }
-    }
-  }
 }
+
 
 .group-btn {
   margin: 10px 0;
   min-height: 25px;
   min-width: 200px;
   padding: 3px 15px;
+
 }
 
 .input-time {
@@ -657,7 +619,7 @@ login-component {
   font-family: 'Lato', sans-serif;
   font-size: 18px;
   height: 30px;
-  margin: 0 50px;
+  margin: 0 60px;
   outline: none;
   resize: none;
   text-align: center;
@@ -667,13 +629,6 @@ login-component {
     border: 1px solid #dfdbdb;
     border-radius: 12px;
   }
-
-  &:focus {
-    border: 1px solid #dfdbdb;
-    border-radius: 12px;
-    outline: none;
-  }
-
 }
 
 .blue-btn {
@@ -750,8 +705,6 @@ button {
   }
 }
 
-<<<<<<< 6769fb5de075bf9e4907a8f0cc63c0caa37b0dcf
-<<<<<<< d67a62bd3f27dfc6312ee18febfeaba50bf23308
 //  Bottle Report component  //
 
 .container {
@@ -917,27 +870,6 @@ button {
   border-radius: 0 20px 20px 0;
   color: #e1e1e1;
   text-transform: $text-transform;
-
-  &:not([disabled]) {
-    &:hover {
-      background-color: $red-color;
-      color: #fff;
-    }
-
-    &:focus {
-      background-color: $red-color;
-      border: $btn-border;
-      color: #fff;
-
-      &:hover {
-        background-color: #fff;
-        border: 1px solid $red-color;
-        color: #55585e;
-
-      }
-    }
-
-  }
 }
 
 
@@ -1052,9 +984,15 @@ button {
 
 // ToggleMessages //
 
+.md-toast-animating {
+  overflow: auto !important;
+}
+
 md-toast {
+
   .md-toast-content {
     background-color: #666;
+    padding-right: 60px;
     position: relative;
     padding-right: 50px;
 
@@ -1269,6 +1207,7 @@ md-card-content {
   }
 }
 
+<<<<<<< d20409001d823fb1e6dfd4dc6ee7dfe2deefb101
 .health-report {
   border-bottom: 1px solid #ebebeb;
   border-top: 1px solid #ebebeb;
@@ -1596,37 +1535,179 @@ md-toast {
     font-weight: 300;
     margin: 0;
   }
+=======
+md-card-content {
+  padding-bottom: 0;
+>>>>>>> LVRUBYM-191: add Nap Report
 }
-=======
-=======
-// PresenceReport
-.delete {
-  background-color: white;
-  background-image: url('../img/icon/cross-out.svg');
-  background-repeat: no-repeat;
-  border: hidden;
-  height: 10px;
-  margin-top: 12px;
-  width: 10px;
->>>>>>> LVRUBYM-191: Add message service
 
-  &:focus {
+//  Presence Report
+.presence-report {
+  button {
+    background-color: #92c948;
+    border: 1px solid #92c948;
+    color: white;
+    text-transform: none;
+    transition: background .3s linear;
+  }
+
+  * {
     outline: none;
+  }
+
+  .button-switch {
+    button {
+      background: white;
+      height: 40px;
+    }
+
+    .left {
+      background: white;
+      border-radius: 10px 0 0 10px;
+      color: #92c948;
+
+      &:hover {
+        background: #92c948;
+        border: 1px solid #92c948;
+        color: white;
+      }
+    }
+
+    .right {
+      border: 1px solid #bd362f;
+      border-radius: 0 10px 10px 0;
+      color: #bd362f;
+
+      &:hover {
+        background: #bd362f;
+        border: 1px solid #bd362f;
+        color: white;
+      }
+    }
+  }
+
+  .red {
+    .left {
+      background: #92c948;
+      border: 1px solid #92c948;
+      color: white;
+
+      &:hover {
+        background: white;
+        color: #92c948;
+      }
+    }
+  }
+
+  .green {
+    .right {
+      background: #bd362f;
+      border: 1px solid #bd362f;
+      color: white;
+
+      &:hover {
+        background: white;
+        border: 1px solid #bd362f;
+        color: #bd362f;
+      }
+    }
+  }
+
+  .center-class {
+    padding-left: 0;
+  }
+
+  .delete {
+    background-color: white;
+    background-image: url('./../img/icons/cross-out.svg');
+    background-repeat: no-repeat;
+    border: hidden;
+    height: 10px;
+    margin-top: 12px;
+    width: 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .student-btn {
+    padding-left: 50px;
+  }
+
+  .student {
+    margin: 10px;
+    width: 210px;
   }
 }
 
-.student-btn {
-  padding-left: 50px;
+.report-title {
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+
+  h1 {
+    color: #55585e;
+    flex: 100;
+    font-weight: 300;
+    margin: 15.5px 0;
+    text-align-last: center;
+  }
 }
 
-// .btn-container {
-//   padding-left: 50px;
-// }
+@media only screen and (max-width: 1100px) {
+  .presence-report {
 
-<<<<<<< 6769fb5de075bf9e4907a8f0cc63c0caa37b0dcf
->>>>>>> LVRUBYM-191: Changed component, resourse, and service
-=======
-// .input-container {
-//   padding-left: 50px;
-// }
->>>>>>> LVRUBYM-191: Add message service
+    md-list-item {
+      display: flex;
+    }
+
+    .button-switch {
+      button {
+        height: 40px;
+      }
+    }
+
+    button {
+      color: white;
+      font-size: 16px;
+      font-weight: 400;
+      min-width: 100px;
+      text-transform: none;
+      transition: background .3s linear;
+    }
+
+    .input-time {
+      margin: 0 20px;
+      width: 60px;
+    }
+
+    .student-btn {
+      padding-left: 0;
+    }
+
+    .input-container {
+      text-align: center;
+    }
+
+    .delete {
+      margin: 10px 0;
+      min-width: 10px;
+      padding: 0;
+      width: 10px;
+    }
+}
+}
+
+@media only screen and (max-width: 800px) {
+  .presence-report {
+    padding: 0;
+
+    md-list {
+      margin: 0 auto;
+    }
+
+    md-list-item {
+      flex-direction: column;
+    }
+  }
+}

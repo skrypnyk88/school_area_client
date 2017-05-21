@@ -16,8 +16,11 @@
 =======
         <img src='{{currentUser.url}}' class='avatar' alt='avatar'>
       </div>
+<<<<<<< d20409001d823fb1e6dfd4dc6ee7dfe2deefb101
 <<<<<<< 379f0a8c4c1289155443946b2927dc8657f0fd6c
 >>>>>>> LVRUBYM-191: created presenceReport
+=======
+>>>>>>> LVRUBYM-191: add Nap Report
   <span class="username">{{currentUser.last_name}}</span>
     <md-menu md-position-mode="target-right bottom">
     <md-icon ng-click="$mdOpenMenu()">expand_more</md-icon>
@@ -35,49 +38,5 @@
 </header>
 <div layout='row'>
   <side-bar></side-bar>
-=======
-
-      <md-button class="user-button" layout="row" layout-align="center center">
-        <img md-menu-align-target class="avatar" src="app/img/profile/educator.svg" alt="profile">
-        <span class="username">Teacher</span>
-        <md-menu md-position-mode="target-right bottom">
-          <md-icon ng-click="$mdOpenMenu()">expand_more</md-icon>
-          <md-menu-content width="3">
-            <md-menu-item>
-              <md-button>Profile</md-button>
-            </md-menu-item>
-            <md-menu-divider role="separator"></md-menu-divider>
-            <md-menu-item>
-              <md-button ng-click="$ctrl.logout()">Sign out</md-button>
-            </md-menu-item>
-          </md-menu-content>
-        </md-menu>
-      </md-button>
-    </div>
-  </md-toolbar>
-</div>
-
-<div layout="row">
-  <nav flex>
-    <ul>
-      <li class="journal"><a ui-sref="#">Journal</a></li>
-      <li>
-        <ul>
-          <li class="active"><a ui-sref="main.presenceReport">Attendance</a></li>
-          <li><a ui-sref="#">Health</a></li>
-          <li><a ui-sref="#">Bottle</a></li>
-          <li><a ui-sref="#">Meals</a></li>
-          <li><a ui-sref="#">Potty</a></li>
-          <li><a ui-sref="main.static">Nap</a></li>
-          <li><a ui-sref="#">Achivements</a></li>
-          <li><a ui-sref="#">Supplies</a></li>
-          <li><a ui-sref="#">Our Day</a></li>
-          <li><a ui-sref="#">My Day</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-
->>>>>>> LVRUBYM-191: created presenceReport
   <section flex ui-view></section>
 </div>

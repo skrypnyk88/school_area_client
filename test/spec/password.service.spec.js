@@ -2,6 +2,7 @@ var vendorModule = require('./../../app/js/requirements.js');
 var passwordService = require('./../../app/js/common/services/password.service.js');
 var toggleMessage =
   require('./../../app/js/common/services/toggleMessage/toggleMessage.service.js');
+var constants = require('./../../app/js/common/constants.js');
 
 describe('Service: Password', function() {
   var service;
@@ -19,6 +20,7 @@ describe('Service: Password', function() {
 
   beforeEach(angular.mock.module(vendorModule.name,
                                  passwordService.name,
+                                 constants.name,
                                  toggleMessage.name));
 
   beforeEach(inject(function($injector) {
@@ -39,8 +41,9 @@ describe('Service: Password', function() {
     expect(service.reset).toBeDefined();
   });
 
-  it('forgot should return error message', inject(function(toggleMessage) {
-    $httpBackend.whenPOST('http://localhost:3000/passwords/' + 'forgot').respond(400, errors);
+  it('forgot should return error message', inject(function(toggleMessage, globalSettings) {
+    $httpBackend.whenPOST(globalSettings.SERVER_URL + '/passwords/' + 'forgot')
+                .respond(400, errors);
     var response;
     spyOn(toggleMessage, 'showMessages');
     service.forgot(user).then(function(errorMsg) {
@@ -52,8 +55,9 @@ describe('Service: Password', function() {
     expect(JSON.stringify(response)).toEqual(JSON.stringify(errors));
   }));
 
-  it('forgot should return success message', inject(function(toggleMessage) {
-    $httpBackend.whenPOST('http://localhost:3000/passwords/' + 'forgot').respond(200, successes);
+  it('forgot should return success message', inject(function(toggleMessage, globalSettings) {
+    $httpBackend.whenPOST(globalSettings.SERVER_URL + '/passwords/' + 'forgot')
+                .respond(200, successes);
     var response;
     spyOn(toggleMessage, 'showMessages');
     service.forgot(user).then(function(successMsg) {

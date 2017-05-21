@@ -1,9 +1,11 @@
-<div class='hero-container' md-colors="::{'background-color': 'primary'}">
+<div class='hero-container'>
   <div layout layout-align='center'>
     <md-card class='login-form' layout='column' layout-align='center'>
-      <md-toolbar class="md-accent">
-        <h3>Sign in</h3>
-      </md-toolbar>
+      <div class="logo">
+        <img src="/app/img/logo.png" alt="Tiny tweets">
+      </div>
+
+      <h2>Sign In</h2>
 
       <form class='md-padding' name='loginForm' novalidate ng-submit='$ctrl.login(user, loginForm.$valid)' layout='column' >
         <md-card-content layout='column'>
@@ -23,12 +25,10 @@
               <div ng-message="required">Password is required</div>
             </div>
           </md-input-container>
+          <a class="md-primary" ui-sref="forgotPassword">Forgot password?</a>
         </md-card-content>
-        <div layout="row" layout-align="start">
-          <md-button class="md-primary" ui-sref="forgotPassword">Forgot password?</md-button>
-        </div>
         <md-card-actions>
-          <md-button class='md-raised md-accent' type='submit'>Sign in</md-button>
+          <md-button class='btn green-btn' type='submit'>Sign in</md-button>
         </md-card-actions>
       </form>
     </md-card>

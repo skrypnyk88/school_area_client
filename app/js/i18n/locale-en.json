@@ -1,28 +1,69 @@
 {
-  "TeacherR": "Teacher report",
-  "HELLO": "Hello",
-  "TEACHER": "Teacher",
   "PROFILE": "Profile",
   "SIGN_OUT": "Sign out",
-  "JOURNAL": "Journal",
-  "ATTENDANCE": "Attendance",
-  "HEALTH": "Health",
-  "BOTTLE": "Bottle",
-  "MEALS": "Meals",
-  "POTTY": "Potty",
-  "NAP": "Nap",
-  "ACHIVEMENTS": "Achivements",
-  "SUPPLIES": "Supplies",
-  "OUR_DAY": "Our day",
-  "MY_DAY": "My day",
-  "BUTTON_LANG_UA": "Ukrainian",
-  "BUTTON_LANG_EN": "English",
+  "submenu": {
+    "PRESENCE": "Presence",
+    "HEALTH": "Health",
+    "BOTTLE": "Bottle",
+    "MEALS": "Meals",
+    "POTTY": "Potty",
+    "NAP": "Nap",
+    "REWARDS": "Rewards",
+    "PERSONAL_NOTES": "Personal notes",
+    "CLASS_NOTES": "Class notes"
+  },
+  "sidebar": {
+    "TEACHER_REPORT": "Teacher report",
+    "PARENTS_SHARING": "Parents Sharing",
+    "MESSAGES": "Messages",
+    "NOTIFICATIONS": "Notifications",
+    "CALENDAR": "Calendar",
+    "PHOTO_GALERY": "Photo Gallery",
+    "REWARDS": "Rewards",
+    "CONTACTS": "Contacts"
+  },
   "my_day_report": {
     "UPDATE_NOTE": "Update note"
   },
   "bottle_report": {
     "ADD_BOTTLE": "Add bottle",
-    "VALID_FORMAT": "Must be a valid time format.",
-    "EMPTY": "Can't be empty."
+    "VALID_FORMAT": "Must be a valid time format",
+    "EMPTY": "Can't be empty",
+    "CONFIRM": "Are you sure, you want to delete this bottle?"
+  },
+  "presence_report": {
+    "PRESENT": "Present",
+    "ABSENT": "Absent"
+  },
+  "health_report": {
+    "SPECIAL_CARE": "Special care",
+    "NORMAL": "Normal",
+    "UPDATE": "Update note"
+  },
+  "profile": {
+    "PROFILE_OF": "Profile of",
+    "FIRST_NAME": "First name:",
+    "LAST_NAME": "Last name:",
+    "PHONE": "Phone:",
+    "LANGUAGE": "Language:",
+    "EDIT": "Edit",
+    "EDIT_PROFILE": "Edit profile",
+    "ADD_PHOTO": "Add photo",
+    "SHORT_FIELD": "Your field is too short",
+    "LONG_FIELD": "Your field is too long",
+    "CANCEL": "Cancel",
+    "UPDATE": "Update"
+  },
+  "our_day_report": {
+    "STUDENTS_ABSENT": "Students are absent.",
+    "ALL_STUDENTS_ABSENT": "All students in class are absent today.",
+    "UPDATE": "Update"
+  },
+  "report_title": {
+    "CLASS_NOTES": "CLASS NOTES",
+    "MY_DAY": "PERSONAL NOTES",
+    "HEALTH_REPORT": "HEALTH REPORT",
+    "BOTTLE_REPORT": "BOTTLE REPORT",
+    "PRESENCE_REPORT": "PRESENCE REPORT"
   }
 }

@@ -1,0 +1,33 @@
+<div class="report-title" layout="row">
+  <h1>{{ 'report_title.HEALTH_REPORT'| translate}}</h1>
+</div>
+<div class="health-report report container" layout="row" ng-repeat="report in $ctrl.reports">
+  <div flex="25">
+    <student-component student="report.student">
+    </student-component>
+  </div>
+
+  <div flex="25" ng-class="report.special_care == true ? 'red' : 'green'"
+                 layout="row"
+                 class="button-switch">
+    <button ng-click="report.special_care = true"
+            class="group-x left double-button">
+      {{'health_report.SPECIAL_CARE'| translate}}
+    </button>
+    <button ng-click="report.special_care = false"
+            class="group-x right double-button">
+      {{'health_report.NORMAL'| translate}}
+    </button>
+  </div>
+  <div flex="30">
+    <textarea rows="5" cols="45" ng-model="report.health_note"
+                                 name="text"
+                                 class="text-area-health-note"></textarea>
+  </div>
+  <div flex="20" class="update" >
+    <button class="group-x update-note-button"
+            ng-click="$ctrl.healthReportUpdate(report); $ctrl.reloadRoute()">
+     {{'health_report.UPDATE'| translate}}
+    </button>
+  </div>
+</div>

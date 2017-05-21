@@ -1,6 +1,7 @@
 var authService = require('./../../common/services/auth.service.js');
 
 module.exports = angular
+
   .module('main.component', [
     authService.name
   ])
@@ -45,7 +46,11 @@ function MainController($scope, $state, auth, currentGroupDay,
 
   $scope.$watch(
     function() { return currentUser; },
-    function() { $translate.use(currentUser.locale); },
     function(currentUser) { $scope.currentUser = currentUser; }
+  );
+
+  $scope.$watch(
+    function() { return currentUser.locale; },
+    function() { $translate.use(currentUser.locale); }
   );
 };

@@ -8,5 +8,6 @@ module.exports = angular
     'pascalprecht.translate',
     require('angular-translate'),
     require('angular-translate-loader-static-files'),
-    require('angular-base64-upload')
+    require('angular-base64-upload'),
+    require('angular-sidebarjs')
     ]);

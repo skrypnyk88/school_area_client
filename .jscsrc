@@ -1,4 +1,4 @@
-
+{
     "excludeFiles": [
        "app/js/coverage/**",
        "node_modules/**"

@@ -1,5 +1,6 @@
-@import './../../node_modules/angular-material/angular-material.css';
 
+@import './../../node_modules/angular-material/angular-material.css';
+@import './../../node_modules/angular-sidebarjs/dist/angular-sidebarjs.css';
 //  General  //
 
 $blue-color: #00bff3;
@@ -132,6 +133,7 @@ main {
             border-left: 5px solid transparent;
             outline: none;
             width: 100%;
+            cursor: pointer;
 
             &:hover {
               color: $green-color;
@@ -639,7 +641,7 @@ main {
   font-family: 'Lato', sans-serif;
   font-size: 18px;
   height: 30px;
-  margin: 0 60px;
+  margin: 0 50px;
   outline: none;
   resize: none;
   text-align: center;
@@ -749,13 +751,13 @@ button {
 .buttonposition {
   float: left;
   height: 100%;
-  width: 20%;
+  width: 30%;
 }
 
 .position {
   float: right;
   height: 100%;
-  width: 80%;
+  width: 70%;
 }
 
 .invalid {
@@ -830,7 +832,8 @@ button {
   background-color: #fff;
 
   .student {
-    margin: 10px 150px 10px 10px;
+    margin: 10px;
+    width: 300px;
 
     .avatar {
       border-radius: 50%;
@@ -932,7 +935,7 @@ button {
   outline: none;
   resize: none;
   text-align: center;
-  width: 85px;
+  width: 65px;
 
   &.time {
     margin: 0 5px;
@@ -1224,3 +1227,531 @@ md-card-content {
     width: 50%;
   }
 }
+
+
+// Presence Report
+
+
+
+// Style for health report
+
+.health-report-title {
+  h3 {
+    color: #ccc;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}
+
+.health-report {
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+
+
+
+  button {
+    background-color: #92c948;
+    border: 1px solid #92c948;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    // margin: 20px 0;
+    min-width: 100px;
+    padding: 10px 15px;
+    text-transform: none;
+    transition: background .3s linear;
+  }
+
+  * {
+    outline: none;
+  }
+
+  .text-area-health-note {
+    border-color: #ccc;
+    border-radius: 10px;
+    color: #555;
+    line-height: 1.43;
+    padding: 10px;
+    resize: none;
+  }
+
+  .button-switch {
+    button {
+      background: white;
+      height: 40px;
+    }
+
+    .left {
+      background: white;
+      border-radius: 10px 0 0 10px;
+      color: #92c948;
+
+      &:hover {
+        background: #92c948;
+        border: 1px solid #92c948;
+        color: white;
+      }
+    }
+
+    .right {
+      border: 1px solid #bd362f;
+      border-radius: 0 10px 10px 0;
+      color: #bd362f;
+
+      &:hover {
+        background: #bd362f;
+        border: 1px solid #bd362f;
+        color: white;
+      }
+    }
+  }
+
+  .red {
+    .left {
+      background: #92c948;
+      border: 1px solid #92c948;
+      color: white;
+
+      &:hover {
+        background: white;
+        color: #92c948;
+      }
+    }
+  }
+
+  .green {
+    .right {
+      background: #bd362f;
+      border: 1px solid #bd362f;
+      color: white;
+
+      &:hover {
+        background: white;
+        border: 1px solid #bd362f;
+        color: #bd362f;
+      }
+    }
+  }
+
+
+  .double-button {
+    margin-top: 0;
+  }
+
+  .update {
+    button {
+      border-radius: 10px;
+      color: white;
+      margin-left: 40px;
+
+      &:hover {
+        background-color: white;
+        border-color: #92c948;
+        color: #92c948;
+      }
+    }
+  }
+}
+
+// Styles Our-day report
+
+.report-title {
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+  h1 {
+    flex: 100;
+    color: #55585e;
+    font-weight: 300;
+    margin: 15.5px 0;
+    text-align-last: center;
+  }
+}
+
+.our-day-report{
+  border-left: 1px solid #ebebeb;
+  padding: 10px 50px;
+
+  h1 {
+    margin: 0;
+    color: red;
+    font-weight: 300;
+  }
+
+  .students {
+    border-right: 1px solid #ebebeb;
+  }
+}
+
+* {
+  outline: none;
+}
+
+
+.presence-report {
+  button {
+    background-color: #92c948;
+    border: 1px solid #92c948;
+    color: white;
+    text-transform: none;
+    transition: background .3s linear;
+  }
+
+  * {
+    outline: none;
+  }
+    .button-switch {
+      button {
+        background: white;
+        height: 40px;
+      }
+
+      .left {
+        background: white;
+        border-radius: 10px 0 0 10px;
+        color: #92c948;
+
+        &:hover {
+          background: #92c948;
+          border: 1px solid #92c948;
+          color: white;
+        }
+      }
+
+      .right {
+        border: 1px solid #bd362f;
+        border-radius: 0 10px 10px 0;
+        color: #bd362f;
+
+        &:hover {
+          background: #bd362f;
+          border: 1px solid #bd362f;
+          color: white;
+        }
+      }
+    }
+
+    .red {
+      .left {
+        background: #92c948;
+        border: 1px solid #92c948;
+        color: white;
+
+        &:hover {
+          background: white;
+          color: #92c948;
+        }
+      }
+    }
+
+    .green {
+      .right {
+        background: #bd362f;
+        border: 1px solid #bd362f;
+        color: white;
+
+        &:hover {
+          background: white;
+          border: 1px solid #bd362f;
+          color: #bd362f;
+        }
+      }
+    }
+
+  .center-class {
+    padding-left: 0;
+  }
+  .delete {
+  background-color: white;
+  background-image: url('./../img/icons/cross-out.svg');
+  background-repeat: no-repeat;
+  border: hidden;
+  height: 10px;
+  margin-top: 12px;
+  width: 10px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.student-btn {
+  padding-left: 50px;
+}
+}
+
+
+// Fixed Login, forgot, reset styles //
+
+login-component, forgot-component, reset-component {
+  md-card {
+    border-radius: 4px;
+  }
+
+  text-align: center;
+
+  .logo {
+    padding: 40px 0 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  h2,
+  h3 {
+    margin-bottom: 0;
+  }
+
+  .hero-container {
+    background-image: url('../img/misc/pattern-30.png');
+  }
+
+  .login-form {
+    margin-top: 15vh;
+    width: 360px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+md-toast {
+  position: fixed;
+}
+
+.md-toast-animating {
+  overflow: auto !important;
+}
+
+.submenu.opened {
+    background: white;
+}
+
+.submenu li {
+    background: white;
+}
+
+.menu div:first-child {
+    background: white;
+}
+
+.submenu li:first-child {
+    margin-top: 10px;
+}
+
+.navbar {
+  width: 300px;
+}
+
+.teacher-report .navbar .menu div ul.submenu li a {
+  padding: 10px 0 10px 110px;
+}
+
+.teacher-report .navbar .menu div ul.submenu li a:before {
+  left: 60px;
+  right: 0;
+}
+
+.teacher-report .navbar .menu div li.menu-item a {
+  padding: 20px 0 20px 90px;
+}
+
+.teacher-report .navbar .menu div li.menu-item a:before {
+  left: 30px;
+  right: 0;
+}
+
+// relative
+.burger-menu {
+  display: none;
+}
+
+
+.health-report .text-area-health-note {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1300px) {
+  .full-menu {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .upload-photo {
+      margin: 0;
+  }
+
+  .health-report, .presence-report, md-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .report .student{
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+
+    .name > span{
+      display: inline-block;
+      padding:0 0.25em;
+    }
+
+    & > .name {
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 0;
+      font-size: 18px;
+    }
+
+    .first-name {
+      padding-bottom: 0;
+    }
+  }
+
+  .health-report {
+    height: 450px;
+
+    .flex-25, .flex-30, .flex-20 {
+      max-width: 100%;
+    }
+
+    .update button{
+      margin-left: 0;
+      margin: 10px 0;
+    }
+
+    .button-switch button {
+      padding: 0;
+    }
+  }
+
+  .presence-report {
+    section .student-btn {
+      width: 100%;
+      padding: 0;
+    }
+    .group-btn {
+      margin: 0;
+      min-width: 70%;
+      min-height: 25%;
+    }
+    .green-group-btn, .red-group-btn {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .input-time {
+      margin: 0 40px;
+    }
+  }
+
+
+  .bottle-report {
+    md-content, form .container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    md-content {
+      overflow: visible;
+    }
+
+    .buttonposition {
+      text-align: center;
+      width: 100%;
+      padding-bottom: 20px;
+      button {
+        top: 0;
+      }
+    }
+
+    .position {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .blue-select:not([disabled]) {
+      margin: 0;
+    }
+
+    .bottles {
+      text-align: center;
+      height: 90px;
+    }
+  }
+
+  .my-day, .our-day-report {
+    .general, .class-notes {
+      min-width: 70%;
+    }
+
+    .our-day-report-form textarea {
+      margin-right: 0;
+    }
+  }
+  .navbar .menu{
+    ul li>a{
+    display: none;
+    }
+  }
+
+  .burger {
+    position: absolute;
+    left: 20px;
+    top: 85px;
+  }
+
+}
+
+// .health-report .button-switch{
+//   position:absolute;
+//   left:250px;
+
+// }
+// .health-report{
+//      position: relative;
+//      height: 250px;
+//      justify-content: center;
+// }
+// .health-report .text-area-health-note {
+//    position: absolute;
+//    left:250px;
+//    top:70px;
+//    width:250px;
+// }
+
+//  .layout-row .flex-20 {
+//    position: absolute;
+//    left:250px;
+//    top:205px;
+//   }
+//   .health-report .update button{
+//     margin-left:0;
+//     width: 140px;
+//   }
+
+
+// @media only screen and (max-width: 830px) {
+//   .health-report .text-area-health-note {
+//    width:200px;
+//   }
+//   side-bar{
+//     width: 100px;
+
+//     li{
+//       padding-top: 20px;
+//     }
+//     a>span {
+//       display: none;
+//     }
+// }
+
+// }

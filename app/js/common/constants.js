@@ -8,23 +8,21 @@ module.exports = angular
     STUDENT_IMG: './app/img/student.png'
   })
   .constant('errorMessages', {
-    NO_AUTH: 'Invalid Email/Password',
-    AUTH_TIMEOUT: 'Session has expired',
-    FAIL_RESPONSE: 'Oops! Something went wrong!Please, try again later!'
+    FAIL_RESPONSE: 'Oops! Something went wrong! Please,try again later!'
   })
   .constant('menuItems', [
       {name: 'Teacher report',  link: '#', submenu: [
         {name: 'Presence',          link: 'main.presenceReport'},
-        {name: 'Diet',              link: '#'},
+        {name: 'Health',              link: 'main.healthReport'},
         {name: 'Bottle',            link: 'main.bottleReport'},
         {name: 'Meals',             link: '#'},
         {name: 'Potty',             link: '#'},
-        {name: 'Nap',               link: 'main.static'},
+        {name: 'Nap',               link: '#'},
         {name: 'Rewards',           link: '#'},
         {name: 'Personal notes',    link: 'main.myDayReport'},
-        {name: 'Class notes',       link: '#'}
+        {name: 'Class notes',       link: 'main.ourDayReport'}
       ]},
-      {name: 'Parens Sharing',  link: '#'},
+      {name: 'Parents Sharing',  link: '#'},
       {name: 'Messages',        link: '#'},
       {name: 'Notifications',   link: '#'},
       {name: 'Calendar',        link: '#'},

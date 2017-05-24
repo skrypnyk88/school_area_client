@@ -74,15 +74,11 @@
     "MY_DAY": "ПЕРСОНАЛЬНІ ЗВІТИ",
     "HEALTH_REPORT": "СПЕЦІАЛЬНИЙ ДОГЛЯД",
     "BOTTLE_REPORT": "ПЛЯШЕЧКИ",
-<<<<<<< d20409001d823fb1e6dfd4dc6ee7dfe2deefb101
-    "PRESENCE_REPORT": "ПРИСУТНІСТЬ"
+    "PRESENCE_REPORT": "ПРИСУТНІСТЬ",
+    "NAP_REPORT": "CОН"
   },
   "all_reports": {
     "STUDENTS_ABSENT": "Студенти відсутні.",
     "ALL_STUDENTS_ABSENT": "Всі студенти сьогодні відсутні."
-=======
-    "PRESENCE_REPORT": "ПРИСУТНІСТЬ",
-    "NAP_REPORT": "CОН"
->>>>>>> LVRUBYM-191: add Nap Report
   }
 }

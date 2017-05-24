@@ -74,15 +74,11 @@
     "MY_DAY": "PERSONAL NOTES",
     "HEALTH_REPORT": "HEALTH REPORT",
     "BOTTLE_REPORT": "BOTTLE REPORT",
-<<<<<<< d20409001d823fb1e6dfd4dc6ee7dfe2deefb101
-    "PRESENCE_REPORT": "PRESENCE REPORT"
+    "PRESENCE_REPORT": "PRESENCE REPORT",
+    "NAP_REPORT": "NAP REPORT"
   },
   "all_reports": {
     "STUDENTS_ABSENT": "Students are absent.",
     "ALL_STUDENTS_ABSENT": "All students in class are absent today."
-=======
-    "PRESENCE_REPORT": "PRESENCE REPORT",
-    "NAP_REPORT": "NAP REPORT"
->>>>>>> LVRUBYM-191: add Nap Report
   }
 }

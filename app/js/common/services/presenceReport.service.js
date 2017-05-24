@@ -13,11 +13,10 @@ presenceReportService.$inject = ['presenceReportResource',
                                  'currentGroupDay',
                                  'toggleMessage'];
 
-function presenceReportService(
-  presenceReportResource,
-  reportTimeResource,
-  currentGroupDay,
-  toggleMessage) {
+function presenceReportService(presenceReportResource,
+                               reportTimeResource,
+                               currentGroupDay,
+                               toggleMessage) {
   var service = {
     getPresenceReports: getPresenceReports,
     addReportTime: addReportTime,
@@ -29,72 +28,51 @@ function presenceReportService(
 
   function getPresenceReports() {
     return presenceReportResource.query({group_id: currentGroupDay.group_id})
-    .$promise.then(function(presenceReports) {
-      return presenceReports;
-    }
-    , function() { toggleMessage.showMessages($filter('translate')(['presence_report.SERVER']));
-    }
-    );
+                                 .$promise.then(responseSuccess, responseFailure);
   };
 
   function addReportTime(presenceReport) {
     return reportTimeResource.save({presence_report_id: presenceReport.id,
-                                group_id: currentGroupDay.group_id,
-                                student_id: presenceReport.student_id,
-                                report_time: {start_time: presenceReport.start_time}})
+                                    group_id: currentGroupDay.group_id,
+                                    student_id: presenceReport.student_id,
+                                    report_time: {start_time: presenceReport.start_time}})
     .$promise
-    .then(function(reportTimes) {
-      return reportTimes;
-    }, function(response) {
-      toggleMessage.returnDataErrors(response);
-      return response.data;
-    });
+    .then(responseSuccess, responseFailure);
   };
 
   function deleteReportTime(reportTime, presenceReport) {
     return reportTimeResource.delete({id: reportTime.id,
-                                  presence_report_id: presenceReport.id,
-                                  group_id: presenceReport.group_id,
-                                  student_id: presenceReport.student_id})
+                                      presence_report_id: presenceReport.id,
+                                      group_id: presenceReport.group_id,
+                                      student_id: presenceReport.student_id})
     .$promise
-    .then(function() {
-    }, function(response) {
-      toggleMessage.returnDataErrors(response);
-      return response.data;
-    });
+    .then(responseSuccess, responseFailure);
   };
 
   function updateReportTime(reportTime, presenceReport) {
-    return reportTimeResource.update({
-                                  id: reportTime.id,
-                                  presence_report_id: presenceReport.id,
-                                  group_id: presenceReport.group_id,
-                                  report_time: reportTime}
-                                  )
-
+    return reportTimeResource.update({id: reportTime.id,
+                                      presence_report_id: presenceReport.id,
+                                      group_id: presenceReport.group_id,
+                                      report_time: reportTime})
     .$promise
-    .then(function(updatedReportTime) {
-      return updatedReportTime;
-    }, function(response) {
-      toggleMessage.returnDataErrors(response);
-      return response.data;
-    });
+    .then(responseSuccess, responseFailure);
   };
 
   function updateEndTime(reportTime, presenceReport) {
-    return reportTimeResource.update({
-                                  id: reportTime.id,
-                                  presence_report_id: presenceReport.id,
-                                  group_id: presenceReport.group_id,
-                                  report_time: reportTime}
-                                  )
-
+    return reportTimeResource.update({id: reportTime.id,
+                                      presence_report_id: presenceReport.id,
+                                      group_id: presenceReport.group_id,
+                                      report_time: reportTime})
     .$promise
-    .then(function(updatedReportTime) {
-      return updatedReportTime;
-    }, function(response) {
-      toggleMessage.returnDataErrors(response);
-      return response.data;
-    });
+    .then(responseSuccess, responseFailure);
+  };
+
+  function responseSuccess(data) {
+    return data;
+  };
+
+  function responseFailure(response) {
+    toggleMessage.returnDataErrors(response);
+    return response.data;
   };
 };

@@ -7,48 +7,48 @@
      layout="row"
      flex>
     <md-list>
-    <md-list-item>
-    <student-component student="presenceReport.student"
-                       class="student"
-                       layout="row">
-    </student-component>
-    <section class="student-btn center-class"
-             layout="column"
-             layout-align="center center">
-        <div class="btn-container button-switch"
-             layout="row"
-             ng-class="presenceReport.report_time.slice(-1)[0].end_time == fasle?  'red':'green'  " >
-            <button ng-click="$ctrl.addReportTimeValidation(presenceReport)"
-                    id="myBtn_{reportTime.id}}_time"
-                    class="group-btn  green-group-btn left">{{'presence_report.PRESENT'| translate}}</button>
-            <md-button ng-click="$ctrl.updateEndTimeValidation(presenceReport)"
-                       class="group-btn red-group-btn right">{{'presence_report.ABSENT'| translate}}</button>
-        </div>
-        <div ng-repeat="reportTime in presenceReport.report_time"
-             class="input-container"
-             layout="row"
-             layout-align="space-around"
-             flex >
-            <form>
-                <input name="report_start_{reportTime.id}}_time"
-                       ng-blur="$ctrl.updateReportTimeValidation(reportTime, presenceReport)"
-                       ng-model="reportTime.start_time"
-                       type='datetime'
-                       placeholder="00:00"
-                       class="input-time">
-                <input name="report_end_{{reportTime.id}}_time"
-                       ng-blur="$ctrl.updateReportTimeValidation(reportTime, presenceReport)"
-                       ng-model="reportTime.end_time"
-                       type='datetime'
-                       placeholder="00:00"
-                       class="input-time"
-                       ng-if="reportTime.end_time != null"
-                       class="end-time-hidden">
-                <button class="delete"
-                        ng-click="$ctrl.deleteReportTime(reportTime, presenceReport)"></button>
-            </form>
-        </div>
-    </section>
-    </md-list-item>
+      <md-list-item>
+        <student-component student="presenceReport.student"
+                           class="student"
+                           layout="row">
+        </student-component>
+        <section class="student-btn center-class"
+                 layout="column"
+                 layout-align="center center">
+            <div class="btn-container button-switch"
+                 layout="row"
+                 ng-class="presenceReport.report_time.slice(-1)[0].end_time == fasle?  'red':'green'  " >
+                <button ng-click="$ctrl.addReportTimeValidation(presenceReport)"
+                        id="myBtn_{reportTime.id}}_time"
+                        class="group-btn  green-group-btn left">{{'presence_report.PRESENT'| translate}}</button>
+                <md-button ng-click="$ctrl.updateEndTimeValidation(presenceReport)"
+                           class="group-btn red-group-btn right">{{'presence_report.ABSENT'| translate}}</button>
+            </div>
+            <div ng-repeat="reportTime in presenceReport.report_time"
+                 class="input-container"
+                 layout="row"
+                 layout-align="space-around"
+                 flex >
+                <form ng-submit="$ctrl.deleteReportTime(reportTime, presenceReport); $ctrl.reload()">
+                    <input name="report_start_{reportTime.id}}_time"
+                           ng-blur="$ctrl.updateReportTimeValidation(reportTime, presenceReport)"
+                           ng-model="reportTime.start_time"
+                           type='datetime'
+                           placeholder="00:00"
+                           class="input-time">
+                    <input name="report_end_{{reportTime.id}}_time"
+                           ng-blur="$ctrl.updateReportTimeValidation(reportTime, presenceReport)"
+                           ng-model="reportTime.end_time"
+                           type='datetime'
+                           placeholder="00:00"
+                           class="input-time"
+                           ng-if="reportTime.end_time != null"
+                           class="end-time-hidden">
+                    <button class="delete"
+                            type="submit"></button>
+                </form>
+            </div>
+        </section>
+      </md-list-item>
     </md-list>
 </div>

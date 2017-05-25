@@ -36,8 +36,7 @@ function napReportService(napReportResource,
                                       group_id: currentGroupDay.group_id,
                                       student_id: napReport.student_id,
                                       report_time: {start_time: napReport.start_time}})
-    .$promise
-    .then(responseSuccess, responseFailure);
+    .$promise.then(responseSuccess, responseFailure);
   };
 
   function deleteReportTime(reportTime, napReport) {
@@ -45,18 +44,15 @@ function napReportService(napReportResource,
                                         nap_report_id: napReport.id,
                                         group_id: napReport.group_id,
                                         student_id: napReport.student_id})
-    .$promise
-    .then(responseSuccess, responseFailure);
+    .$promise.then(responseSuccess, responseFailure);
   };
 
   function updateReportTime(reportTime, napReport) {
-
     return napReportTimeResource.update({id: reportTime.id,
                                         nap_report_id: napReport.id,
                                         group_id: napReport.group_id,
                                         report_time: reportTime})
-    .$promise
-    .then(responseSuccess, responseFailure);
+    .$promise.then(responseSuccess, responseFailure);
   };
 
   function updateEndTime(reportTime, napReport) {
@@ -64,8 +60,7 @@ function napReportService(napReportResource,
                                         nap_report_id: napReport.id,
                                         group_id: napReport.group_id,
                                         report_time: reportTime})
-    .$promise
-    .then(responseSuccess, responseFailure);
+    .$promise.then(responseSuccess, responseFailure);
   };
 
   function responseSuccess(data) {

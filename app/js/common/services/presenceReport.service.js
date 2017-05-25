@@ -36,8 +36,7 @@ function presenceReportService(presenceReportResource,
                                     group_id: currentGroupDay.group_id,
                                     student_id: presenceReport.student_id,
                                     report_time: {start_time: presenceReport.start_time}})
-    .$promise
-    .then(responseSuccess, responseFailure);
+    .$promise.then(responseSuccess, responseFailure);
   };
 
   function deleteReportTime(reportTime, presenceReport) {
@@ -45,8 +44,7 @@ function presenceReportService(presenceReportResource,
                                       presence_report_id: presenceReport.id,
                                       group_id: presenceReport.group_id,
                                       student_id: presenceReport.student_id})
-    .$promise
-    .then(responseSuccess, responseFailure);
+    .$promise.then(responseSuccess, responseFailure);
   };
 
   function updateReportTime(reportTime, presenceReport) {
@@ -54,8 +52,7 @@ function presenceReportService(presenceReportResource,
                                       presence_report_id: presenceReport.id,
                                       group_id: presenceReport.group_id,
                                       report_time: reportTime})
-    .$promise
-    .then(responseSuccess, responseFailure);
+    .$promise.then(responseSuccess, responseFailure);
   };
 
   function updateEndTime(reportTime, presenceReport) {
@@ -63,8 +60,7 @@ function presenceReportService(presenceReportResource,
                                       presence_report_id: presenceReport.id,
                                       group_id: presenceReport.group_id,
                                       report_time: reportTime})
-    .$promise
-    .then(responseSuccess, responseFailure);
+    .$promise.then(responseSuccess, responseFailure);
   };
 
   function responseSuccess(data) {

@@ -53,5 +53,4 @@ function MainController($scope, $state, auth, currentGroupDay,
     function() { return currentUser.locale; },
     function() { $translate.use(currentUser.locale); }
   );
-
 };

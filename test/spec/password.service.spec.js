@@ -1,7 +1,6 @@
 var vendorModule = require('./../../app/js/requirements.js');
 var passwordService = require('./../../app/js/common/services/password.service.js');
-var toggleMessage =
-  require('./../../app/js/common/services/toggleMessage/toggleMessage.service.js');
+var toggle = require('./../../app/js/common/services/toggleMessage/toggleMessage.service.js');
 var constants = require('./../../app/js/common/constants.js');
 
 describe('Service: Password', function() {
@@ -21,7 +20,7 @@ describe('Service: Password', function() {
   beforeEach(angular.mock.module(vendorModule.name,
                                  passwordService.name,
                                  constants.name,
-                                 toggleMessage.name));
+                                 toggle.name));
 
   beforeEach(inject(function($injector) {
     service = $injector.get('passwordService');

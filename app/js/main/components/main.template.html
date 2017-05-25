@@ -2,30 +2,28 @@
   <div class="logo">
     <img src="app/img/profile/logo.gif" alt="logo">
   </div>
-
-    <md-select class="group-select" ng-model="$ctrl.currentGroupDay.group_id" >
-      <md-option ng-value="group.id" ng-repeat="group in $ctrl.groups">
-        {{ group.name }}
-      </md-option>
-    </md-select>
+  <md-select class="group-select" ng-model="$ctrl.currentGroupDay.group_id" >
+    <md-option ng-value="group.id" ng-repeat="group in $ctrl.groups">
+      {{ group.name }}
+    </md-option>
+  </md-select>
   <md-button class="user-button" layout="row" layout-align="center center">
-  <div class="student">
-    <img src='{{currentUser.url || $ctrl.defaultPhoto}}' class='avatar' alt='avatar'>
-  </div>
-
-  <span class="username">{{currentUser.last_name}}</span>
+    <div class="student">
+      <img src='{{currentUser.url || $ctrl.defaultPhoto}}' class='avatar' alt='avatar'>
+    </div>
+    <span class="username">{{currentUser.last_name}}</span>
     <md-menu md-position-mode="target-right bottom">
-    <md-icon ng-click="$mdOpenMenu()">expand_more</md-icon>
-    <md-menu-content width="3">
-    <md-menu-item>
-      <md-button ui-sref="main.profile">{{ 'PROFILE' | translate }}</md-button>
-    </md-menu-item>
-    <md-menu-divider role="separator"></md-menu-divider>
-    <md-menu-item>
-      <md-button ng-click="$ctrl.logout()">{{ 'SIGN_OUT' | translate }}</md-button>
-    </md-menu-item>
-  </md-menu-content>
-  </md-menu>
+      <md-icon ng-click="$mdOpenMenu()">expand_more</md-icon>
+      <md-menu-content width="3">
+        <md-menu-item>
+          <md-button ui-sref="main.profile">{{ 'PROFILE' | translate }}</md-button>
+        </md-menu-item>
+        <md-menu-divider role="separator"></md-menu-divider>
+        <md-menu-item>
+          <md-button ng-click="$ctrl.logout()">{{ 'SIGN_OUT' | translate }}</md-button>
+        </md-menu-item>
+      </md-menu-content>
+    </md-menu>
   </md-button>
 </header>
 <div layout='row'>

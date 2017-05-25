@@ -2,8 +2,7 @@ var presenceReportService = require('./../../app/js/common/services/presenceRepo
 var requirements = require('./../../app/js/requirements.js');
 var values = require('./../../app/js/common/values.js');
 var constants = require('./../../app/js/common/constants.js');
-var toggleMessage =
-  require('./../../app/js/common/services/toggleMessage/toggleMessage.service.js');
+var toggle = require('./../../app/js/common/services/toggleMessage/toggleMessage.service.js');
 
 describe('PresenceReport Test', function() {
   var service;
@@ -14,26 +13,24 @@ describe('PresenceReport Test', function() {
                 last_name: 'Shtogryn'};
 
   var presenceReport = {id: 1,
-                      day: '2017-05-08',
-                      group_id: 1,
-                      student: student,
-                      report_times: [reportTime]};
+                        day: '2017-05-08',
+                        group_id: 1,
+                        student: student,
+                        report_times: [reportTime]};
 
   var reportTime = {id: 1,
-                start_time: '11:11',
-                end_time: '22:22',
-                reportable_id: 1};
+                    start_time: '11:11',
+                    end_time: '22:22',
+                    reportable_id: 1};
 
   var presenceReports = [presenceReport];
 
-  var errors = {
-    errors: ['Error message']
-  };
+  var errors = {errors: ['Error message']};
 
   beforeEach(angular.mock.module(requirements.name,
                                  presenceReportService.name,
                                  values.name,
-                                 toggleMessage.name,
+                                 toggle.name,
                                  constants.name));
 
   beforeEach(inject(function($injector) {
@@ -69,9 +66,8 @@ describe('PresenceReport Test', function() {
   it('is should return all presence reports', inject(function(toggleMessage,
                                                               globalSettings,
                                                               currentGroupDay) {
-    $httpBackend.whenGET(globalSettings.SERVER_URL_V1 +
-                        '/presence_reports.json?group_id=' + currentGroupDay.group_id)
-    .respond(200, presenceReports);
+    $httpBackend.whenGET(globalSettings.SERVER_URL_V1 + '/presence_reports.json?group_id=' +
+                         currentGroupDay.group_id).respond(200, presenceReports);
     var response;
     spyOn(toggleMessage, 'showMessages');
     service.getPresenceReports().then(function(Reports) {

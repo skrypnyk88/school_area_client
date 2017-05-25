@@ -2,8 +2,7 @@ var napReportService = require('./../../app/js/common/services/napReport.service
 var requirements = require('./../../app/js/requirements.js');
 var values = require('./../../app/js/common/values.js');
 var constants = require('./../../app/js/common/constants.js');
-var toggleMessage =
-  require('./../../app/js/common/services/toggleMessage/toggleMessage.service.js');
+var toggle = require('./../../app/js/common/services/toggleMessage/toggleMessage.service.js');
 
 describe('Nap Report Test', function() {
   var service;
@@ -14,10 +13,10 @@ describe('Nap Report Test', function() {
                 last_name: 'Shtogryn'};
 
   var napReport = {id: 1,
-                      day: '2017-05-08',
-                      group_id: 1,
-                      student: student,
-                      report_times: [reportTime]};
+                  day: '2017-05-08',
+                  group_id: 1,
+                  student: student,
+                  report_times: [reportTime]};
 
   var reportTime = {id: 1,
                 start_time: '11:11',
@@ -26,14 +25,12 @@ describe('Nap Report Test', function() {
 
   var napReports = [napReport];
 
-  var errors = {
-    errors: ['Error message']
-  };
+  var errors = {errors: ['Error message']};
 
   beforeEach(angular.mock.module(requirements.name,
                                  napReportService.name,
                                  values.name,
-                                 toggleMessage.name,
+                                 toggle.name,
                                  constants.name));
 
   beforeEach(inject(function($injector) {
@@ -69,9 +66,8 @@ describe('Nap Report Test', function() {
   it('is should return all presence reports', inject(function(toggleMessage,
                                                               globalSettings,
                                                               currentGroupDay) {
-    $httpBackend.whenGET(globalSettings.SERVER_URL_V1 +
-                        '/nap_reports.json?group_id=' + currentGroupDay.group_id)
-    .respond(200, napReports);
+    $httpBackend.whenGET(globalSettings.SERVER_URL_V1 + '/nap_reports.json?group_id=' +
+                         currentGroupDay.group_id).respond(200, napReports);
     var response;
     spyOn(toggleMessage, 'showMessages');
     service.getNapReports().then(function(Reports) {

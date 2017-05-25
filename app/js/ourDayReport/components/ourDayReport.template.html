@@ -1,0 +1,27 @@
+<div class="report-title" layout="row">
+  <h1>{{ 'report_title.CLASS_NOTES'| translate}}</h1>
+</div>
+<div layout="row">
+  <div class="students" flex="25">
+    <div  ng-repeat="student in $ctrl.students" class='report'>
+      <div><student-component student="student"></student-component></div>
+    </div>
+  </div>
+  <div class="our-day-report" flex="75">
+    <div class="all-student-absent" ng-if="!$ctrl.report">
+      <h1>{{ 'our_day_report.STUDENTS_ABSENT'| translate}}</h1>
+      <p>{{ 'our_day_report.ALL_STUDENTS_ABSENT'| translate}}</p>
+    </div>
+    <form ng-submit="$ctrl.ourDayReportUpdate($ctrl.report.description)"
+          ng-if="$ctrl.report">
+      <textarea class="class-notes"
+                ng-model="$ctrl.report.description">
+      </textarea>
+      <md-card-actions>
+        <md-button class="btn green-btn" type='submit'>
+          {{ 'our_day_report.UPDATE'| translate}}
+        </md-button>
+      </md-card-actions>
+    </form>
+  </div>
+</div>

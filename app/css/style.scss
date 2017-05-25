@@ -130,9 +130,9 @@ main {
         li {
           &.menu-item {
             border-left: 5px solid transparent;
+            cursor: pointer;
             outline: none;
             width: 100%;
-            cursor: pointer;
 
             &:hover {
               color: $green-color;
@@ -709,6 +709,7 @@ main {
 }
 
 .class-notes {
+  display: block;
   height: 125px;
   @extend.general;
 }
@@ -1369,14 +1370,14 @@ md-card-content {
   }
 }
 
-.our-day-report{
+.our-day-report {
   border-left: 1px solid #ebebeb;
   padding: 10px 50px;
 
   h1 {
-    margin: 0;
     color: red;
     font-weight: 300;
+    margin: 0;
   }
 
   .students {
@@ -1564,12 +1565,12 @@ md-toast {
 //all-student-absent
 
 .all-student-absent {
-  margin: 20px;
   h1 {
     color: red;
     font-weight: 300;
     margin: 0;
   }
+  margin: 20px;
 }
 
 .my-day .student-info {

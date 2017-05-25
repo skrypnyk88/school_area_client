@@ -6,13 +6,12 @@ module.exports = angular
   ])
   .factory('profileService', profileService);
 
-profileService.$inject = ['profileResource', '$mdToast', 'toggleMessage', '$q'];
+profileService.$inject = ['profileResource', 'toggleMessage'];
 
-function profileService(profileResource, $mdToast, toggleMessage, $q) {
+function profileService(profileResource, toggleMessage) {
   var service = {
     updateProfile: updateProfile,
     uploadPhoto: uploadPhoto
-
   };
   return service;
 

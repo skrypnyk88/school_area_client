@@ -67,4 +67,3 @@ describe('Service: Student', function() {
     expect(JSON.stringify(response)).toEqual(JSON.stringify(student));
   });
 });
-

@@ -17,17 +17,18 @@ function HealthReport(healthReportResource, currentGroupDay, toggleMessage) {
 
   function getReports() {
     var params = {group_id: currentGroupDay.group_id};
-    return healthReportResource.query(params).
-      $promise.then(responseSuccess, responseFailure);
+    return healthReportResource.query(params)
+      .$promise.then(responseSuccess, responseFailure);
   };
 
   function updateReports(health_note, special_care, id) {
-    debugger;
-    var params = {report: {health_note: health_note, special_care: special_care},
-                  id: id,
-                  group_id: currentGroupDay.group_id};
-    return healthReportResource.update(params).
-      $promise.then(responseSuccess, responseFailure);
+    var params = {
+      report: {health_note: health_note, special_care: special_care},
+      id: id,
+      group_id: currentGroupDay.group_id
+    };
+    return healthReportResource.update(params)
+      .$promise.then(responseSuccess, responseFailure);
   };
 
   function responseSuccess(data) {

@@ -13,6 +13,7 @@ var studentService = require('./../common/services/student.service.js');
 var profileModule = require('./../profile/profile.module.js');
 var healthReportModule = require('./../healthReport/healthReport.module.js');
 var myDayReportModule = require('./../myDayReport/myDayReport.module.js');
+var ourDayReportModule = require('./../ourDayReport/ourDayReport.module.js');
 
 require('../../css/style.scss');
 
@@ -32,7 +33,8 @@ module.exports = angular
     forgotPasswordModule.name,
     resetPasswordModule.name,
     healthReportModule.name,
-    myDayReportModule.name
+    myDayReportModule.name,
+    ourDayReportModule.name
   ])
 
   .config(['$translateProvider', function($translateProvider) {

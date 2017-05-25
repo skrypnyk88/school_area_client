@@ -15,6 +15,7 @@ var profileModule = require('./../profile/profile.module.js');
 var healthReportModule = require('./../healthReport/healthReport.module.js');
 var myDayReportModule = require('./../myDayReport/myDayReport.module.js');
 var ourDayReportModule = require('./../ourDayReport/ourDayReport.module.js');
+var staticModule = require('./../static/static.module.js');
 
 require('../../css/style.scss');
 
@@ -36,7 +37,8 @@ module.exports = angular
     resetPasswordModule.name,
     healthReportModule.name,
     myDayReportModule.name,
-    ourDayReportModule.name
+    ourDayReportModule.name,
+    staticModule.name
   ])
 
   .config(['$translateProvider', function($translateProvider) {

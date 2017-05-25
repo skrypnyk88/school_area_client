@@ -589,7 +589,6 @@ main {
         color: #55585e;
 
       }
-
     }
   }
 }
@@ -601,27 +600,6 @@ main {
   border-radius: 0 20px 20px 0;
   color: #e1e1e1;
   text-transform: $text-transform;
-
-  &:not([disabled]) {
-    &:hover {
-      background-color: $red-color;
-      color: #fff;
-    }
-
-    &:focus {
-      background-color: $red-color;
-      border: $btn-border;
-      color: #fff;
-
-      &:hover {
-        background-color: #fff;
-        border: 1px solid $red-color;
-        color: #55585e;
-
-      }
-    }
-
-  }
 }
 
 
@@ -640,7 +618,7 @@ main {
   font-family: 'Lato', sans-serif;
   font-size: 18px;
   height: 30px;
-  margin: 0 50px;
+  margin: 0 60px;
   outline: none;
   resize: none;
   text-align: center;
@@ -892,27 +870,6 @@ button {
   border-radius: 0 20px 20px 0;
   color: #e1e1e1;
   text-transform: $text-transform;
-
-  &:not([disabled]) {
-    &:hover {
-      background-color: $red-color;
-      color: #fff;
-    }
-
-    &:focus {
-      background-color: $red-color;
-      border: $btn-border;
-      color: #fff;
-
-      &:hover {
-        background-color: #fff;
-        border: 1px solid $red-color;
-        color: #55585e;
-
-      }
-    }
-
-  }
 }
 
 
@@ -1027,9 +984,15 @@ button {
 
 // ToggleMessages //
 
+.md-toast-animating {
+  overflow: auto !important;
+}
+
 md-toast {
+
   .md-toast-content {
     background-color: #666;
+    padding-right: 60px;
     position: relative;
     padding-right: 50px;
 
@@ -1575,4 +1538,179 @@ md-toast {
 
 .my-day .student-info {
   width: 30%
+}
+
+md-card-content {
+  padding-bottom: 0;
+}
+
+//  Presence Report
+.presence-report {
+  button {
+    background-color: #92c948;
+    border: 1px solid #92c948;
+    color: white;
+    text-transform: none;
+    transition: background .3s linear;
+  }
+
+  * {
+    outline: none;
+  }
+
+  .button-switch {
+    button {
+      background: white;
+      height: 40px;
+    }
+
+    .left {
+      background: white;
+      border-radius: 10px 0 0 10px;
+      color: #92c948;
+
+      &:hover {
+        background: #92c948;
+        border: 1px solid #92c948;
+        color: white;
+      }
+    }
+
+    .right {
+      border: 1px solid #bd362f;
+      border-radius: 0 10px 10px 0;
+      color: #bd362f;
+
+      &:hover {
+        background: #bd362f;
+        border: 1px solid #bd362f;
+        color: white;
+      }
+    }
+  }
+
+  .red {
+    .left {
+      background: #92c948;
+      border: 1px solid #92c948;
+      color: white;
+
+      &:hover {
+        background: white;
+        color: #92c948;
+      }
+    }
+  }
+
+  .green {
+    .right {
+      background: #bd362f;
+      border: 1px solid #bd362f;
+      color: white;
+
+      &:hover {
+        background: white;
+        border: 1px solid #bd362f;
+        color: #bd362f;
+      }
+    }
+  }
+
+  .center-class {
+    padding-left: 0;
+  }
+
+  .delete {
+    background-color: white;
+    background-image: url('./../img/icons/cross-out.svg');
+    background-repeat: no-repeat;
+    border: hidden;
+    height: 10px;
+    margin-top: 12px;
+    width: 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .student-btn {
+    padding-left: 50px;
+  }
+
+  .student {
+    margin: 10px;
+    width: 210px;
+  }
+}
+
+.report-title {
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+
+  h1 {
+    color: #55585e;
+    flex: 100;
+    font-weight: 300;
+    margin: 15.5px 0;
+    text-align-last: center;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .presence-report {
+
+    md-list-item {
+      display: flex;
+    }
+
+    .button-switch {
+      button {
+        height: 40px;
+      }
+    }
+
+    button {
+      color: white;
+      font-size: 16px;
+      font-weight: 400;
+      min-width: 100px;
+      text-transform: none;
+      transition: background .3s linear;
+    }
+
+    .input-time {
+      margin: 0 20px;
+      width: 60px;
+    }
+
+    .student-btn {
+      padding-left: 0;
+    }
+
+    .input-container {
+      text-align: center;
+    }
+
+    .delete {
+      margin: 10px 0;
+      min-width: 10px;
+      padding: 0;
+      width: 10px;
+    }
+}
+}
+
+@media only screen and (max-width: 800px) {
+  .presence-report {
+    padding: 0;
+
+    md-list {
+      margin: 0 auto;
+    }
+
+    md-list-item {
+      flex-direction: column;
+    }
+  }
 }

@@ -33,7 +33,17 @@
   },
   "presence_report": {
     "PRESENT": "Present",
-    "ABSENT": "Absent"
+    "ABSENT": "Absent",
+    "CONFIRM": "Are you sure, you want to delete this presenceReport?",
+    "VALIDATION": "Problem with validation",
+    "TIME": "Start time must be earlier than end time",
+    "EDIT": "Can edit after enter end time",
+    "SERVER": "Problems with server"
+  },
+  "nap_report": {
+    "PRESENT": "Fell asleep",
+    "ABSENT": "Woke up",
+    "CONFIRM": "Are you sure, you want to delete this napReport?"
   },
   "health_report": {
     "SPECIAL_CARE": "Special care",
@@ -64,7 +74,8 @@
     "MY_DAY": "PERSONAL NOTES",
     "HEALTH_REPORT": "HEALTH REPORT",
     "BOTTLE_REPORT": "BOTTLE REPORT",
-    "PRESENCE_REPORT": "PRESENCE REPORT"
+    "PRESENCE_REPORT": "PRESENCE REPORT",
+    "NAP_REPORT": "NAP REPORT"
   },
   "all_reports": {
     "STUDENTS_ABSENT": "Students are absent.",

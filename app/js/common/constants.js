@@ -17,10 +17,10 @@ module.exports = angular
         {name: 'Presence',          link: 'main.presenceReport'},
         {name: 'Diet',              link: 'main.healthReport'},
         {name: 'Bottle',            link: 'main.bottleReport'},
-        {name: 'Meals',             link: '#'},
-        {name: 'Potty',             link: '#'},
+        {name: 'Meals',             link: 'main.static'},
+        {name: 'Potty',             link: 'main.static'},
         {name: 'Nap',               link: 'main.napReport'},
-        {name: 'Rewards',           link: '#'},
+        {name: 'Rewards',           link: 'main.static'},
         {name: 'Personal notes',    link: 'main.myDayReport'},
         {name: 'Class notes',       link: 'main.ourDayReport'}
       ]},

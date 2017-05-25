@@ -1,4 +1,5 @@
 @import './../../node_modules/angular-material/angular-material.css';
+@import './../../node_modules/angular-sidebarjs/dist/angular-sidebarjs.css';
 
 //  General  //
 
@@ -1147,19 +1148,22 @@ md-card-content {
 // Style for profile component
 
 .profile-title {
-  background-color: $green-color;
+  border-bottom: 2px solid $green-color;
+  border-top: 2px solid $green-color;
+  margin-bottom: 25px;
 
   .ng-binding {
     margin-top: 0;
   }
 
   h1 {
-    color: white;
+    color: $green-color;
     font-family: 'Open Sans', sans-serif;
     font-size: 24px;
     font-weight: 100;
     margin-top: 0;
-    padding: 42px 25px;
+    margin-bottom: 0;
+    padding: 15px;
     text-align: center;
   }
 }
@@ -1657,6 +1661,235 @@ md-card-content {
   }
 }
 
+.burger-menu {
+  display: none;
+}
+
+
+.health-report .text-area-health-note {
+  width: 100%;
+}
+
+
+@media only screen and (max-width: 1300px) {
+  .full-menu {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+  .burger {
+    position: absolute;
+    left: 15px;
+    top: 95px;
+  }
+
+  .upload-photo {
+      margin: 0;
+  }
+
+  .health-report, .presence-report, md-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .report .student{
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+
+    .name > span{
+      display: inline-block;
+      padding:0 0.25em;
+    }
+
+    & > .name {
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 0;
+      font-size: 18px;
+    }
+
+    .first-name {
+      padding-bottom: 0;
+    }
+  }
+
+  .health-report {
+    height: 450px;
+
+    .flex-35, .flex-40, .flex-25 {
+      max-width: 100%;
+    }
+    .flex-25 {
+      max-height: 101px;
+      text-align: center;
+    }
+
+    form .update button{
+      margin-left: 0;
+      margin: 10px 0;
+    }
+
+    .button-switch button {
+      padding: 0;
+    }
+
+    form {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .bottle-report {
+    md-content, form .container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    md-content {
+      overflow: visible;
+    }
+
+    .buttonposition {
+      text-align: center;
+      width: 100%;
+      padding-bottom: 20px;
+      button {
+        top: 0;
+      }
+    }
+
+    .position {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .blue-select:not([disabled]) {
+      margin: 0;
+    }
+
+    .bottles {
+      text-align: center;
+      height: 90px;
+    }
+  }
+
+  .my-day, .our-day-report {
+    .general, .class-notes {
+      min-width: 70%;
+      padding: 0;
+    }
+
+    .our-day-report-form textarea {
+      margin-right: 0;
+    }
+  }
+
+
+  .my-day {
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      textarea {
+         width: 100%;
+      }
+    }
+  }
+
+  our-day-report {
+    .report .student > .name {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+  }
+
+  .navbar .menu{
+    ul li>a{
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .logo-resp {
+    display: none;
+  }
+
+  .burger {
+    left: 15px;
+    top: 90px;
+  }
+
+  .report-title {
+    h1 {
+      font-size: 16px;
+    }
+  }
+
+  .profile-title {
+    h1 {
+      font-size: 16px;
+    }
+  }
+
+  .report .teacher {
+    padding-top: 0;
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+    }
+
+    .upload-photo-teacher {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .report-teacher{
+    md-list-item {
+      flex-direction: row;
+    }
+  }
+
+  .profile-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .flex-50 {
+      max-width: 100%;
+    }
+
+    .profile-main-info {
+      .flex-20 {
+        max-width: 40%;
+      }
+    }
+    form {
+      div .flex-50 {
+        display: none;
+      }
+      .layout-row:last-of-type {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 1100px) {
   .presence-report {
 
@@ -1701,6 +1934,23 @@ md-card-content {
 }
 }
 
+@media only screen and (max-width: 350px) {
+  .header {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .burger {
+    left: 2px;
+    top: 155px;
+  }
+
+  .our-day-report .class-notes, .our-day-report .class-notes {
+    width: 160px;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .presence-report {
     padding: 0;
@@ -1712,5 +1962,15 @@ md-card-content {
     md-list-item {
       flex-direction: column;
     }
+  }
+}
+.static {
+  img {
+    width: 100%;
+  }
+  p {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 700;
   }
 }

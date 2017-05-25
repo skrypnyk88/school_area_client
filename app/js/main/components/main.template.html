@@ -1,6 +1,8 @@
 <header class="header" layout="row" layout-align="space-between center">
-  <div class="logo">
-    <img src="app/img/profile/logo.gif" alt="logo">
+  <div class="logo logo-resp">
+    <a ui-sref='main.presenceReport'>
+      <img src="app/img/profile/logo.gif" alt="logo">
+    </a>
   </div>
   <md-select class="group-select" ng-model="$ctrl.currentGroupDay.group_id" >
     <md-option ng-value="group.id" ng-repeat="group in $ctrl.groups">
